@@ -45,6 +45,7 @@ extern "C"
 #define DEF_USER_HANDSHAKE 0              //!< Default handshake setting (no handshake)
 #define DEF_USER_STATUS 0                 //!< Default status (disabled)
 #define DEF_TIMEOUT_MS 1000               //!< Default timeout duration in milliseconds
+#define DEF_EOL  1                        //!< Default character added at the end of string (1= '\n')
 #define DEF_LASTCHAR '\n'                 //!< Default last character for received strings
 
 /**
@@ -64,10 +65,13 @@ extern "C"
   void scpi_uart_enable(void);
   void scpi_uart_disable(void);
   bool scpi_uart_status(void);
+  void add_eol(void);
   void scpi_uart_set_baudrate(uint32_t speed);
   uint32_t scpi_uart_get_baudrate(void);
   void scpi_uart_set_timeout(uint32_t time);
   uint32_t scpi_uart_get_timeout(void);
+  void scpi_uart_set_eol(uint8_t val);
+  uint8_t scpi_uart_get_eol(void);
   void scpi_uart_set_handshake(bool val);
   bool scpi_uart_get_handshake(void);
   uint8_t scpi_uart_set_protocol(char* str);

@@ -187,7 +187,6 @@ eep ee;  ///< Global variable representing the EEPROM data
  */
 void on_uart_rx()
 {
-  char eol;
   while (uart_is_readable(UART_ID))
   {
     uart_read_blocking(UART_ID, &rxser.rx.data[rxser.ch],1);  // read one character and save on array
@@ -386,8 +385,7 @@ void Hardware_Default_Setting()
  *
  * @return int
  */
-int main(void)
-{
+int main(void){
   MESSAGE rec;
   char nb_char;
   int result;
@@ -471,6 +469,9 @@ int main(void)
         sleep_ms(50);
       }
 
+if (rec.data[0] != '*') {
+  sleep_ms(100);
+}
       fprintf(stdout, "SCPI Command: %s \r\n",&rec.data[0]);  // send message to debug port
       result = SCPI_Input(&scpi_context, &rec.data[0],nb_char);  // send command to SCPI parser
       sleep_ms(50);

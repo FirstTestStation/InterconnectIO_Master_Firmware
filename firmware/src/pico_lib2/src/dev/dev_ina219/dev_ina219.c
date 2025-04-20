@@ -560,7 +560,7 @@ int16_t ina219GetCurrent(void)
             config settings and current LSB
 */
 /**************************************************************************/
-int16_t ina219GetCurrent_mA(void)
+float ina219GetCurrent_mA(void)
 {
   int16_t value;
   ina219Read16(INA219_REG_CURRENT, &value);
@@ -570,7 +570,9 @@ int16_t ina219GetCurrent_mA(void)
     value = 0;
   }  // if negative value, round to 0
 
-  return value / ina219_currentDivider_mA;
+  float fvalue = value / (float)ina219_currentDivider_mA;
+
+  return fvalue;
 }
 
 /**************************************************************************/

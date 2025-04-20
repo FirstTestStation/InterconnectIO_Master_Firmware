@@ -126,10 +126,12 @@ size_t SCPI_write(scpi_t* context, const char* data, size_t len) {
  */
 #define AIRCR_Register (*((volatile uint32_t*)(PPB_BASE + 0x0ED0C)))
 
+
 /**
- * @brief function to execute the reset of the interconnect IO board following the
- *        SCPI command. Only master Pico is reset because the Pico slaves are
- *        reset during boot-up
+ * @brief Executes a delayed reset of the Interconnect IO board following the SCPI *RST command.
+ * 
+ * This function schedules a system reset of the master Pico with a 200ms delay.
+ * Only the master Pico is reset, as Pico slaves are automatically reset during boot-up.
  *
  * @param context  SCPI instance
  * @return scpi_result_t  True if reset performed with success
@@ -817,7 +819,7 @@ static scpi_result_t Callback_system_scpi(scpi_t* context)
   scpi_parameter_t param1;
   scpi_number_t paramRun;
   uint16_t ans[8];  // will contains the answer returned by command
-  char pv[50];
+  char pv[80];
   uint8_t tag = 0;
   uint32_t value = 0;
   float fval;
@@ -948,7 +950,15 @@ static scpi_result_t Callback_system_scpi(scpi_t* context)
       fprintf(stdout, "Run Internal Selftest # %d\n", value);
       context->buffer.position = 0;
       internal_test_sequence(ee.cfg.testboard_num, value);
+      SCPI_Flush(context);
       SCPI_Reset(context);  // reset hardware after selftest
+      break;
+
+    case STBW:
+      fprintf(stdout, "Read result Internal Selftest\n");
+      const char* test= internal_test_sequence_result();  // get result
+    
+      SCPI_ResultText(context, test);
       break;
 
     default:
@@ -1383,7 +1393,7 @@ static scpi_result_t Callback_com_scpi(scpi_t* context)
     }
   }
 
-  if (tag == C1W || tag == R1W || tag == CSWB || tag == CSWT)
+  if (tag == C1W || tag == R1W || tag == CSWB || tag == CSWT || tag == CSWE)
   {
     res = SCPI_Parameter(context, &param1, true);  // Read first parameter
     if (res)
@@ -1410,7 +1420,7 @@ static scpi_result_t Callback_com_scpi(scpi_t* context)
       for (i = 0; i < strlen(str); i++)
       {
         // remove not informative character from string
-        if (str[i] != '\'' && str[i] != '"' && str[i] != '\n' && str[i] != '\r')
+        if (str[i] != '\'' && str[i] != '"')
         {
           winfo[j++] = str[i];
         }
@@ -1545,6 +1555,19 @@ static scpi_result_t Callback_com_scpi(scpi_t* context)
       fprintf(stdout, "Serial readback actual Baudrate, speed= %d\n", val);
       SCPI_ResultInt32(context, val);
       break;
+
+  case CSWE:
+      fprintf(stdout, "Serial set EOL to:%d\n", val);
+      scpi_uart_set_eol(val);
+      break;
+
+  case CSRE:
+      val = scpi_uart_get_eol();
+      fprintf(stdout, "Serial readback EOL, mode: %d\n", val);
+      SCPI_ResultInt8(context, val);
+      break;
+
+
 
     case CSWT:
       fprintf(stdout, "Serial set Timeout_ms to %d\n", val);
@@ -2157,6 +2180,7 @@ scpi_command_t scpi_commands[] = {
     {.pattern = "SYSTem:SLAves?", .callback = Callback_system_scpi, GRUN},
     {.pattern = "SYSTem:SLAves:STAtus?", .callback = Callback_system_scpi, GSTA},
     {.pattern = "SYSTem:TESTboard", .callback = Callback_system_scpi, STBR},
+    {.pattern = "SYSTem:TESTboard?", .callback = Callback_system_scpi, STBW},
 
     {.pattern = "ANAlog:DAC:Volt", .callback = Callback_analog_scpi, SDAC},
     {.pattern = "ANAlog:DAC:Save", .callback = Callback_analog_scpi, WDAC},
@@ -2189,6 +2213,8 @@ scpi_command_t scpi_commands[] = {
     {.pattern = "COM:SERIAL:Baudrate?", .callback = Callback_com_scpi, CSRB},
     {.pattern = "COM:SERIAL:Protocol", .callback = Callback_com_scpi, CSWP},
     {.pattern = "COM:SERIAL:Protocol?", .callback = Callback_com_scpi, CSRP},
+    {.pattern = "COM:SERIAL:Eol", .callback = Callback_com_scpi, CSWE},
+    {.pattern = "COM:SERIAL:Eol?", .callback = Callback_com_scpi, CSRE},
     {.pattern = "COM:SERIAL:Handshake", .callback = Callback_com_scpi, CSWH},
     {.pattern = "COM:SERIAL:Handshake?", .callback = Callback_com_scpi, CSRH},
     {.pattern = "COM:SERIAL:Timeout", .callback = Callback_com_scpi, CSWT},

@@ -19,7 +19,7 @@
  * @def BUFFER_SIZE
  * @brief Maximum depth size of the circular buffer.
  */
-#define BUFFER_SIZE 32
+#define BUFFER_SIZE 64
 
 /**
  * @def MESSAGE_LENGTH
@@ -75,5 +75,6 @@ void test_spi_adx(void);
 void test_i2c_adx(void);
 void test_i2c_ina219(void);
 void wait_button_pressed(void);
+const char* internal_test_sequence_result(void);
 
 #endif /* BUFFER_H */

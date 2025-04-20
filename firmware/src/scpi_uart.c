@@ -38,6 +38,7 @@ struct user_com
   bool status;           //!< uart enable or disable.  1 = enable
   uint actual_baud;      //!< uart actual true value of baudrate based on Pico clock
   uint32_t timeout_ms;   //!< uart Timeout for receive character
+  uint8_t eol;           //!< uart Eol to add at the end of string 
   uint8_t lastchr;       //!< content last character of a string. Used to detect the last character of the receive string
 };
 
@@ -58,6 +59,7 @@ struct user_com u_com = {
     DEF_USER_STATUS,     //!< Default UART status (enabled/disabled).
     DEF_USER_BAUD,       //!< Default actual baud rate.
     DEF_TIMEOUT_MS,      //!< Default timeout for receiving data.
+    DEF_EOL,             //!< Default EOL.
     DEF_LASTCHAR         //!< Default last received character.
 };
 
@@ -157,6 +159,26 @@ void scpi_uart_set_baudrate(uint32_t speed)
 uint32_t scpi_uart_get_baudrate()
 {
   return u_com.actual_baud;
+}
+
+/**
+ * @brief Function to set the EOL  on the structure, EOL will be added at the end of string to send.
+ *
+ * @param val EOL (End-Of-Line) to save on structure
+ */
+void scpi_uart_set_eol(uint8_t val)
+{
+  u_com.eol = val;
+}
+
+/**
+ * @brief Function to get the EOL  on the structure
+ *
+ * @return uint32_t actual eol value */
+
+uint8_t scpi_uart_get_eol()
+{
+  return u_com.eol;
 }
 
 /**
@@ -418,8 +440,12 @@ uint8_t scpi_uart_write_data(char* dwt)
     }
   } while (dwt[tcr] != '\0');  // loop until end of string
 
-  u_com.lastchr = dwt[tcr - 1];  // identify the last valid character of string, expect CR or LF
-  fprintf(stdout, "lastchar Tx only: 0x%x\n", dwt[tcr - 1]);
+  add_eol;
+
+ 
+
+ // u_com.lastchr = dwt[tcr - 1];  // identify the last valid character of string, expect CR or LF
+ // fprintf(stdout, "lastchar Tx only: 0x%x\n", dwt[tcr - 1]);
   return NOCERR;
 }
 
@@ -474,11 +500,15 @@ uint8_t scpi_uart_write_read_data(char* dwt, char* dread, size_t rsize)
   } while (dwt[tcr] != '\0');  // loop until all characters has been sent
 
   if (tcr > 0)
-  {                                // if character send, save last character of the string
-    u_com.lastchr = dwt[tcr - 1];  // identify the last valid character of string, expect CR or LF
-    fprintf(stdout, "lastchar Tx: 0x%x, Rx:  0x%x\n", dwt[tcr - 1], dread[rtr - 1]);
+  {     
+     // if all character send, save last character of the string
+     add_eol();
+
+  //  u_com.lastchr = dwt[tcr - 1];  // identify the last valid character of string, expect CR or LF
+   // fprintf(stdout, "lastchar Tx: 0x%x, Rx:  0x%x\n", dwt[tcr - 1], dread[rtr - 1]);
   }
 
+ 
   if (dread[rtr - 1] != u_com.lastchr)
   {  // if more character to receive
     // receive loop with timeout
@@ -493,8 +523,14 @@ uint8_t scpi_uart_write_read_data(char* dwt, char* dread, size_t rsize)
         start_time = time_us_32();     // reset timeout
         if (received_char == u_com.lastchr)
         {
-          // printf("Last char Received: 0x%x, %c\n", received_char);
-          dread[rtr] = '\0';  // Null-terminate the received string
+          fprintf(stdout,"Last char Received and removed: 0x%x\n", received_char);
+          if (dread[rtr-2] == '\n' || dread[rtr-2] == '\r') {
+            fprintf(stdout,"Two Last char Received and removed: 0x%x, 0x%x  \n", dread[rtr-2] ,received_char);
+            dread[rtr-2] = '\0';  // Null-terminate the received string
+          } else {
+            fprintf(stdout,"Last char Received and removed: 0x%x\n", received_char);
+            dread[rtr-1] = '\0';  // Null-terminate the received string
+          }
           return NOCERR;      // Return 1 to indicate success
         }
       }
@@ -519,4 +555,45 @@ uint8_t scpi_uart_write_read_data(char* dwt, char* dread, size_t rsize)
   }
 
   return NOCERR;  // return no error
+}
+
+/**
+ * @brief Function to add the defined EOL character at the end of write string.
+ */
+void add_eol(void)
+{
+ // Add EOL to the send of string
+  switch(u_com.eol)
+  {
+
+    case 1:
+      send_char('\n'); 
+      u_com.lastchr = '\n';
+      fprintf(stdout, "Sent EOL = LF \n");
+      break;
+
+    case 2:
+      send_char('\r'); 
+      u_com.lastchr = '\r';
+      fprintf(stdout, "Sent EOL = CR \n");
+      break;
+
+    case 3:
+      send_char('\n'); 
+      send_char('\r'); 
+      u_com.lastchr = '\r';
+      fprintf(stdout, "Sent EOL = LFCR \n");
+      break;
+
+    case 4:
+      send_char('\r'); 
+      send_char('\n'); 
+      u_com.lastchr = '\n';
+      fprintf(stdout, "Sent EOL = CRLF \n");
+      break;
+    
+    default:
+       fprintf(stdout, "No EOL added for val: %d \n",u_com.eol);
+
+  }
 }

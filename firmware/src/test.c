@@ -51,12 +51,14 @@
  */
 char out_buffer[MAX_OUT_BUFFER];
 
+
 /**
  * @brief Current position in the output buffer.
  *
  * Tracks the position in the `out_buffer` where the next byte of data will be written.
  */
 size_t out_buffer_pos;
+
 
 /**
  * @brief Macro to simulate SCPI command input via the master serial port.
@@ -132,37 +134,36 @@ typedef struct
   int full;                                   /**< Flag indicating if the buffer is full */
 } CircularBuffer;
 
-/**
- * @brief Initialisation of the index for circular buffer
- *
- * @param buffer Structure who contains the index and message
- */
+
 void init_buffer(CircularBuffer* buffer)
 {
-  buffer->start = 0; /**< Initialize Start index of the buffer */
-  buffer->end = 0;   /**< Initialize End index of the buffer */
-  buffer->full = 0;  /**< Initialize Flag indicating if the buffer is full */
+    buffer->start = 0; /**< Initialize Start index of the buffer */
+    buffer->end = 0;   /**< Initialize End index of the buffer */
+    buffer->full = 0;  /**< Initialize Flag indicating if the buffer is full */
 }
 
 /**
- * @brief Function to add_message on circular buffer
+ * @brief Function to add_message to circular buffer
  *
- * @param buffer    pointer to structure who contains messages
- * @param message   pointer to message to save on structure
+ * @param buffer    Pointer to structure that contains messages
+ * @param message   Pointer to message to save in the structure
  */
 void add_message(CircularBuffer* buffer, const char* message)
 {
-  strncpy(buffer->messages[buffer->end], message, MESSAGE_LENGTH);
-  buffer->end = (buffer->end + 1) % BUFFER_SIZE;
-  if (buffer->full)
-  {
-    buffer->start = (buffer->start + 1) % BUFFER_SIZE;
-  }
-  if (buffer->end == buffer->start)
-  {
-    buffer->full = 1;
-  }
+    strncpy(buffer->messages[buffer->end], message, MESSAGE_LENGTH);
+    
+    if (buffer->full)
+    {
+        // Overwrite oldest message, advance start
+        buffer->start = (buffer->start + 1) % BUFFER_SIZE;
+    }
+
+    buffer->end = (buffer->end + 1) % BUFFER_SIZE;
+
+    // If end has caught up with start, buffer is full
+    buffer->full = (buffer->end == buffer->start);
 }
+
 
 /**
  * @brief Function to print message saved on circular buffer
@@ -171,16 +172,23 @@ void add_message(CircularBuffer* buffer, const char* message)
  */
 void print_messages(const CircularBuffer* buffer)
 {
-  int i = buffer->start;
-  while (i != buffer->end || buffer->full)
-  {
-    fprintf(stdout, "%s\n", buffer->messages[i]);
-    uart_puts(UART_ID, buffer->messages[i]);  // send message to serial port
-    uart_puts(UART_ID, "\n");                 // Send newline
-    i = (i + 1) % BUFFER_SIZE;
-    if (i == buffer->end && !buffer->full) break;
-  }
+    if (!buffer->full && buffer->start == buffer->end)
+    {
+        // Buffer is empty
+        return;
+    }
+
+    int i = buffer->start;
+    do
+    {
+        fprintf(stdout, "%s\n", buffer->messages[i]);
+        uart_puts(UART_ID, buffer->messages[i]);
+        uart_puts(UART_ID, "\n");
+        i = (i + 1) % BUFFER_SIZE;
+    }
+    while (i != buffer->end);
 }
+
 
 /*!
  * @struct TestResult
@@ -474,6 +482,10 @@ void internal_test_sequence(char* testboard_num, uint8_t run)
     }
   }
 
+  uart_set_hw_flow(UART_ID, false, false); // Disable UART temporarily
+  uart_set_hw_flow(UART_ID, true, true);   // Enable UART again
+
+
   // Enable RX interrupt to take control of serial input
   uart_set_irq_enables(UART_ID, true, false);
 
@@ -483,6 +495,24 @@ void internal_test_sequence(char* testboard_num, uint8_t run)
   sprintf(strval, "\nEnd of Internal Test Sequence\n");
   uart_puts(UART_ID, strval);  // Send string
 }
+
+/*! @brief - Return contains of the last test
+ *
+ *
+ *    @return    return pointer to result str
+ */
+#include <stdio.h>
+#include <stdlib.h>
+
+const char* internal_test_sequence_result(void)
+{
+    char* tbd = malloc(20);  // Allocated on the heap
+    if (tbd) {
+        sprintf(tbd, "NOT IMPLANTED");  // build string to return
+    }
+    return tbd;
+}
+
 
 /*! @brief - Run test sequence to validate hardware with selftest board
  *
@@ -1141,7 +1171,7 @@ uint8_t test_selftest(char* testboard_num, uint8_t run)
   fprintf(stdout, "\t Number of Tests ERROR:\t%d\n", c_test.error);
 
   // send result string to serial port
-  sprintf(strval, "SELFTEST RESULTS: \n NbTotal: %d, NbGood: %d, NbBad: %d, NbError: %d\n", c_test.total, c_test.good, c_test.bad,
+  sprintf(strval, "SELFTEST %d RESULTS: NbTotal: %d, NbGood: %d, NbBad: %d, NbError: %d\n",run, c_test.total, c_test.good, c_test.bad,
           c_test.error);       // build string to return
   uart_puts(UART_ID, strval);  // Send result
 

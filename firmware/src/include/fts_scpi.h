@@ -97,6 +97,7 @@ extern "C"
 #define GOE 57    //!< Read status Output Enable ON/OFF
 #define GSTA 58   //!< Read Slave Device status byte
 #define STBR 59   //!< Run complete test with selftest board connected
+#define STBW 60   //!< Read result from the complete test with selftest board connected
 
 #define SDAC 63   //!< Set DAC Voltage
 #define WDAC 64   //!< Set DAC Voltage and save as default value
@@ -124,27 +125,30 @@ extern "C"
 #define CID 89  //!< Disable communication protocol, set pin as GPIO
 #define CRI 90  //!< Read status communication protocol
 
-#define CSWD 100  //!< Write Data on user serial port, no answer
+#define CSWD 100 //!< Write Data on user serial port, no answer
 #define CSRD 101  //!< Write Data on user serial port and wait for the answer
 #define CSWB 102  //!< Write user serial baudrate
 #define CSRB 103  //!< Read user serial baudrate
 #define CSWP 104  //!< Write user serial Protocol
 #define CSRP 105  //!< Read user serial Protocol
-#define CSWH 106  //!< Write user serial Handshake (RTS-CTS)
-#define CSRH 107  //!< Read user serial Handshake
-#define CSWT 108  //!< Write user serial Timeout
-#define CSRT 109  //!< Read user serial Timeout
+#define CSWE 106  //!< Write user serial End-of-line character 
+#define CSRE 107  //!< Read user serial End-of-line character
 
-#define SPWD 111   //!< Write Data on SPI port, read data
-#define SPRD 112   //!< Read Data  on SPI port
-#define SPWF 113   //!< Write user Spi baudrate
-#define SPRF 114   //!< Read user Spi baudrate
-#define SPWDB 115  //!< Write user Spi databits
-#define SPRDB 116  //!< Read user Spi databits
-#define SPWM 117   //!< Write user Spi mode
-#define SPRM 118   //!< Read user Spi mode
-#define SPWCS 119  //!< Set gpio used for SPI chipselect
-#define SPRCS 120  //!< Read Gpio used for SPI chipselect
+#define CSWH 108  //!< Write user serial Handshake (RTS-CTS)
+#define CSRH 109  //!< Read user serial Handshake
+#define CSWT 110  //!< Write user serial Timeout
+#define CSRT 111  //!< Read user serial Timeout
+
+#define SPWD 115   //!< Write Data on SPI port, read data
+#define SPRD 116   //!< Read Data  on SPI port
+#define SPWF 117   //!< Write user Spi baudrate
+#define SPRF 118   //!< Read user Spi baudrate
+#define SPWDB 119  //!< Write user Spi databits
+#define SPRDB 120  //!< Read user Spi databits
+#define SPWM 121   //!< Write user Spi mode
+#define SPRM 122   //!< Read user Spi mode
+#define SPWCS 123  //!< Set gpio used for SPI chipselect
+#define SPRCS 124  //!< Read Gpio used for SPI chipselect
 
 #define ICWD 131   //!< Write Data on I2C port
 #define ICRD 132   //!< Read Data  on I2C port

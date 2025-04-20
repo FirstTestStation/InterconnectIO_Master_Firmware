@@ -46,32 +46,6 @@ Build of this cmake project is performed with Visual Studio
 (../.pico-sdk/openocd/0.12.0+dev/scripts/interface/) if GPIO pins is used to debug project.
 
 
-## Firmware loading Instructions
-
-### 1. Download the Latest Firmware UF2 File:
-   You can download the latest firmware UF2 file from the following link:
-
-   [Download UF2 File](https://github.com/dlock8/InterconnectIO_Master/tree/main/firmware/build/INTERCONNECTIO_MASTER.uf2)
-
-   On the GitHub page, select **Download Raw file** to get the UF2 file.
-
-### 2. Prepare your Raspberry Pi Pico:
-   - Make sure your Raspberry Pi Pico is not connected to your computer.
-
-### 3. Enter Bootloader Mode:
-   - Hold down the **BOOTSEL** button on your Raspberry Pi Pico.
-   - While holding the **BOOTSEL** button, connect the Pico to your computer via USB.
-   - Release the **BOOTSEL** button after the Pico appears as a mass storage device on your computer.
-
-### 4. Copy the UF2 File:
-   - Once in bootloader mode, the Raspberry Pi Pico will show up as a removable storage drive named `RPI-RP2`.
-   - Copy the downloaded UF2 file (e.g., `INTERCONNECTIO_MASTER.uf2`) to the `RPI-RP2` drive.
-
-### 5. Eject the Device:
-   - After the file is copied, safely eject the `RPI-RP2` drive from your computer.
-
-### 6. Reboot:
-   - The Raspberry Pi Pico will automatically reboot and start running the new firmware.
 
 
 
@@ -138,9 +112,9 @@ The main communication for the InterconnectIO Board is based on the SCPI standar
 |ROUTe:CHANnel:STATe?| (@<ch_list>)|  Return state of the relay in the channel list,  0: open relay, 1: Close relay
 |ROUTe:BANK:STATe?| {BANK1-BANK4}|  Read decimal value of relays state on the particular bank. Each bank is a byte long
 |ROUTe:REV:STATe? |{BANK1-BANK4}| Read contact side of reverse relay, LOW Side = 0, HIGH side = 1
-|ROUTe:CLOSe:PWR |{LPR1\|LPR2\|HPR1\|SSR1}|  Close the designated power relay
-|ROUTe:OPEN:PWR |{LPR1\|LPR2\|HPR1\|SSR1}|  Open the designated power relay
-|ROUTe:STATe:PWR? |{LPR1\|LPR2\|HPR`\|SSR1}| Read state of the power relay, 0: Open, 1:Closed
+|ROUTe:CLOSe:PWR |{LPR1\|HPR1\|HPR2\|SSR1}|  Close the designated power relay
+|ROUTe:OPEN:PWR |{LPR1\|HPR1\|HPR2\|SSR1}|  Open the designated power relay
+|ROUTe:STATe:PWR? |{LPR1\|HPR1\|HPR2\|SSR1}| Read state of the power relay, 0: Open, 1:Closed
 |ROUTE:CLOSe:OC |{OC1\|OC2\|OC3}|   Close or activate the designated open collector transistor
 |ROUTE:OPEN:OC |{OC1\|OC2\|OC3}|    Open or deactivate the designated open collector transistor
 |ROUTE:STATe:OC?|{OC1\|OC2\|OC3}|   Read state of the the designated open collector transistor, 0: Open, 1:Closed

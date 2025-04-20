@@ -116,7 +116,7 @@ float read_master_adc(uint8_t channel)
  */
 float read_power(uint8_t mode)
 {
-  int16_t readv;
+  float readv;
   char meas[3] = {0, 0, 0};
   char rmd[8] = {0, 0, 0, 0, 0, 0, 0, 0};
 
@@ -147,7 +147,7 @@ float read_power(uint8_t mode)
       break;
   }
 
-  fprintf(stdout, "INA219,read: %s ,  value: %d %s \n", rmd, readv, meas);
+  fprintf(stdout, "INA219,read: %s ,  value: %f %s \n", rmd, readv, meas);
   return readv;
 }
 

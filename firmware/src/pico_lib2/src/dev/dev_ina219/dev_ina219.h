@@ -133,7 +133,7 @@ int16_t ina219GetBusVoltage(void);
 int16_t ina219GetPower(void);
 int16_t ina219GetPower_mW(void);
 int16_t ina219GetCurrent(void);
-int16_t ina219GetCurrent_mA(void);
+float   ina219GetCurrent_mA(void);
 bool    ina219CalibrateCurrent_mA(float,float);
 void    ina219SetCalibration_32V_2A(void);
 void    ina219SetCalibration_32V_1A(void);
