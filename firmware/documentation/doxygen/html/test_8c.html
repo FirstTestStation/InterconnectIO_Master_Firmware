@@ -182,10 +182,9 @@ Functions</h2></td></tr>
  <a href="test_8c.html#a9313b8b09e2402dbd3215a879dfa18d2">More...</a><br /></td></tr>
 <tr class="separator:a9313b8b09e2402dbd3215a879dfa18d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a964f12386d49fd5a0df6add2daf20508"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#a964f12386d49fd5a0df6add2daf20508">init_buffer</a> (<a class="el" href="structCircularBuffer.html">CircularBuffer</a> *buffer)</td></tr>
-<tr class="memdesc:a964f12386d49fd5a0df6add2daf20508"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisation of the index for circular buffer.  <a href="test_8c.html#a964f12386d49fd5a0df6add2daf20508">More...</a><br /></td></tr>
 <tr class="separator:a964f12386d49fd5a0df6add2daf20508"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac470ff61e56e684cfbe729e66aedf0c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#ac470ff61e56e684cfbe729e66aedf0c1">add_message</a> (<a class="el" href="structCircularBuffer.html">CircularBuffer</a> *buffer, const char *message)</td></tr>
-<tr class="memdesc:ac470ff61e56e684cfbe729e66aedf0c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to add_message on circular buffer.  <a href="test_8c.html#ac470ff61e56e684cfbe729e66aedf0c1">More...</a><br /></td></tr>
+<tr class="memdesc:ac470ff61e56e684cfbe729e66aedf0c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to add_message to circular buffer.  <a href="test_8c.html#ac470ff61e56e684cfbe729e66aedf0c1">More...</a><br /></td></tr>
 <tr class="separator:ac470ff61e56e684cfbe729e66aedf0c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade29dc0be6bd27144ab8ac944fad90de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#ade29dc0be6bd27144ab8ac944fad90de">print_messages</a> (const <a class="el" href="structCircularBuffer.html">CircularBuffer</a> *buffer)</td></tr>
 <tr class="memdesc:ade29dc0be6bd27144ab8ac944fad90de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to print message saved on circular buffer.  <a href="test_8c.html#ade29dc0be6bd27144ab8ac944fad90de">More...</a><br /></td></tr>
@@ -208,15 +207,21 @@ Functions</h2></td></tr>
 <tr class="memitem:a0c6f39b967bd2a9a74fd40a40cf54687"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#a0c6f39b967bd2a9a74fd40a40cf54687">read_uart_char</a> ()</td></tr>
 <tr class="memdesc:a0c6f39b967bd2a9a74fd40a40cf54687"><td class="mdescLeft">&#160;</td><td class="mdescRight">function to wait for read character from user. The loop refresh the watchdog timeout  <a href="test_8c.html#a0c6f39b967bd2a9a74fd40a40cf54687">More...</a><br /></td></tr>
 <tr class="separator:a0c6f39b967bd2a9a74fd40a40cf54687"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9d279cdda41da5b1e2775dbfeaae220"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#ac9d279cdda41da5b1e2775dbfeaae220">internal_test_sequence</a> (const char *testboard_num, uint8_t run)</td></tr>
-<tr class="memdesc:ac9d279cdda41da5b1e2775dbfeaae220"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main routine to perform internal test using selftest board. The routine has been used to validate hardware and software during development if run=0, the menu will be displayed to operator to select which internal test to run. IF run &gt; 0, the internal test will run directly.  <a href="test_8c.html#ac9d279cdda41da5b1e2775dbfeaae220">More...</a><br /></td></tr>
-<tr class="separator:ac9d279cdda41da5b1e2775dbfeaae220"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb420da0ba7e8e1e84b61fec9b4de4b9"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#acb420da0ba7e8e1e84b61fec9b4de4b9">test_selftest</a> (const char *testboard_num, uint8_t run)</td></tr>
-<tr class="memdesc:acb420da0ba7e8e1e84b61fec9b4de4b9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><ul>
+<tr class="memitem:a78b67679ee11d44f8ca2ad1a9ab58d53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#a78b67679ee11d44f8ca2ad1a9ab58d53">internal_test_sequence</a> (char *testboard_num, uint8_t run)</td></tr>
+<tr class="memdesc:a78b67679ee11d44f8ca2ad1a9ab58d53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main routine to perform internal test using selftest board. The routine has been used to validate hardware and software during development if run=0, the menu will be displayed to operator to select which internal test to run. IF run &gt; 0, the internal test will run directly.  <a href="test_8c.html#a78b67679ee11d44f8ca2ad1a9ab58d53">More...</a><br /></td></tr>
+<tr class="separator:a78b67679ee11d44f8ca2ad1a9ab58d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33510a8b3333bfec3368b10acddafd28"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#a33510a8b3333bfec3368b10acddafd28">internal_test_sequence_result</a> (void)</td></tr>
+<tr class="memdesc:a33510a8b3333bfec3368b10acddafd28"><td class="mdescLeft">&#160;</td><td class="mdescRight"><ul>
+<li>Return contains of the last test </li>
+</ul>
+ <a href="test_8c.html#a33510a8b3333bfec3368b10acddafd28">More...</a><br /></td></tr>
+<tr class="separator:a33510a8b3333bfec3368b10acddafd28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac70b7d6422a8c2b63fd63ed04ed046e6"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#ac70b7d6422a8c2b63fd63ed04ed046e6">test_selftest</a> (char *testboard_num, uint8_t run)</td></tr>
+<tr class="memdesc:ac70b7d6422a8c2b63fd63ed04ed046e6"><td class="mdescLeft">&#160;</td><td class="mdescRight"><ul>
 <li>Run test sequence to validate hardware with selftest board </li>
 </ul>
- <a href="test_8c.html#acb420da0ba7e8e1e84b61fec9b4de4b9">More...</a><br /></td></tr>
-<tr class="separator:acb420da0ba7e8e1e84b61fec9b4de4b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+ <a href="test_8c.html#ac70b7d6422a8c2b63fd63ed04ed046e6">More...</a><br /></td></tr>
+<tr class="separator:ac70b7d6422a8c2b63fd63ed04ed046e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c4492986b11310638a7730bf6658532"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#a7c4492986b11310638a7730bf6658532">test_inst_manual</a> ()</td></tr>
 <tr class="memdesc:a7c4492986b11310638a7730bf6658532"><td class="mdescLeft">&#160;</td><td class="mdescRight"><ul>
 <li>The function perform the selftest of the instruments connected to the interconnect_IO board. The instruments are controlled manually using instruction on the master serial port </li>
@@ -290,9 +295,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>test_i2c_adx</b> ()</
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:af4c8396614d93905c2a91f60b9d2b4fd"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#af4c8396614d93905c2a91f60b9d2b4fd">out_buffer</a> [1024]</td></tr>
-<tr class="memdesc:af4c8396614d93905c2a91f60b9d2b4fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output buffer for storing data to be sent.  <a href="test_8c.html#af4c8396614d93905c2a91f60b9d2b4fd">More...</a><br /></td></tr>
-<tr class="separator:af4c8396614d93905c2a91f60b9d2b4fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bd6c8fb710bc1dc1d1ae9e4b724da85"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#a9bd6c8fb710bc1dc1d1ae9e4b724da85">out_buffer</a> [MAX_OUT_BUFFER]</td></tr>
+<tr class="memdesc:a9bd6c8fb710bc1dc1d1ae9e4b724da85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output buffer for storing data to be sent.  <a href="test_8c.html#a9bd6c8fb710bc1dc1d1ae9e4b724da85">More...</a><br /></td></tr>
+<tr class="separator:a9bd6c8fb710bc1dc1d1ae9e4b724da85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a668cec89f06b89ddf4d1ee33527eba18"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#a668cec89f06b89ddf4d1ee33527eba18">out_buffer_pos</a></td></tr>
 <tr class="memdesc:a668cec89f06b89ddf4d1ee33527eba18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current position in the output buffer.  <a href="test_8c.html#a668cec89f06b89ddf4d1ee33527eba18">More...</a><br /></td></tr>
 <tr class="separator:a668cec89f06b89ddf4d1ee33527eba18"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -467,11 +472,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Function to add_message on circular buffer. </p>
+<p>Function to add_message to circular buffer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">buffer</td><td>pointer to structure who contains messages </td></tr>
-    <tr><td class="paramname">message</td><td>pointer to message to save on structure </td></tr>
+    <tr><td class="paramname">buffer</td><td>Pointer to structure that contains messages </td></tr>
+    <tr><td class="paramname">message</td><td>Pointer to message to save in the structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -493,22 +498,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Initialisation of the index for circular buffer. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">buffer</td><td>Structure who contains the index and message </td></tr>
-  </table>
-  </dd>
-</dl>
 <p >&lt; Initialize Start index of the buffer</p>
 <p >&lt; Initialize End index of the buffer</p>
 <p >&lt; Initialize Flag indicating if the buffer is full</p>
 
 </div>
 </div>
-<a id="ac9d279cdda41da5b1e2775dbfeaae220" name="ac9d279cdda41da5b1e2775dbfeaae220"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9d279cdda41da5b1e2775dbfeaae220">&#9670;&nbsp;</a></span>internal_test_sequence()</h2>
+<a id="a78b67679ee11d44f8ca2ad1a9ab58d53" name="a78b67679ee11d44f8ca2ad1a9ab58d53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78b67679ee11d44f8ca2ad1a9ab58d53">&#9670;&nbsp;</a></span>internal_test_sequence()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -516,7 +513,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void internal_test_sequence </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">char *&#160;</td>
           <td class="paramname"><em>testboard_num</em>, </td>
         </tr>
         <tr>
@@ -541,7 +538,31 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>Open Power Relay to remove power on Selftest board</p>
+<p >Open Power Relay to remove power on Selftest board</p>
+
+</div>
+</div>
+<a id="a33510a8b3333bfec3368b10acddafd28" name="a33510a8b3333bfec3368b10acddafd28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33510a8b3333bfec3368b10acddafd28">&#9670;&nbsp;</a></span>internal_test_sequence_result()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * internal_test_sequence_result </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><ul>
+<li>Return contains of the last test </li>
+</ul>
+</p>
+<dl class="section return"><dt>Returns</dt><dd>return pointer to result str </dd></dl>
 
 </div>
 </div>
@@ -783,6 +804,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 <p >Send command to SCPI engine</p>
+<p >refresh watchdog</p>
 
 </div>
 </div>
@@ -866,6 +888,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<p >refresh watchdog</p>
 <p >Send command to SCPI engine</p>
 
 </div>
@@ -1108,8 +1131,8 @@ false if an error occurred while setting the DAC value. </dd></dl>
 
 </div>
 </div>
-<a id="acb420da0ba7e8e1e84b61fec9b4de4b9" name="acb420da0ba7e8e1e84b61fec9b4de4b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb420da0ba7e8e1e84b61fec9b4de4b9">&#9670;&nbsp;</a></span>test_selftest()</h2>
+<a id="ac70b7d6422a8c2b63fd63ed04ed046e6" name="ac70b7d6422a8c2b63fd63ed04ed046e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac70b7d6422a8c2b63fd63ed04ed046e6">&#9670;&nbsp;</a></span>test_selftest()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1117,7 +1140,7 @@ false if an error occurred while setting the DAC value. </dd></dl>
         <tr>
           <td class="memname">uint8_t test_selftest </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">char *&#160;</td>
           <td class="paramname"><em>testboard_num</em>, </td>
         </tr>
         <tr>
@@ -1203,20 +1226,20 @@ false if an error occurred while setting the DAC value. </dd></dl>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="af4c8396614d93905c2a91f60b9d2b4fd" name="af4c8396614d93905c2a91f60b9d2b4fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4c8396614d93905c2a91f60b9d2b4fd">&#9670;&nbsp;</a></span>out_buffer</h2>
+<a id="a9bd6c8fb710bc1dc1d1ae9e4b724da85" name="a9bd6c8fb710bc1dc1d1ae9e4b724da85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bd6c8fb710bc1dc1d1ae9e4b724da85">&#9670;&nbsp;</a></span>out_buffer</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char out_buffer[1024]</td>
+          <td class="memname">char out_buffer[MAX_OUT_BUFFER]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Output buffer for storing data to be sent. </p>
-<p >This buffer holds the data that will be sent via the output channel (e.g., serial or communication port). It has a fixed size of 1024 bytes. </p>
+<p >This buffer holds the data that will be sent via the output channel (e.g., serial or communication port). It has a fixed size of MAX_OUT_BUFFER. </p>
 
 </div>
 </div>

@@ -121,6 +121,7 @@ void scpi_uart_disable()
   gpio_set_dir(USER_CTS_PIN, mode);  // set pins as input
   gpio_set_dir(USER_RTS_PIN, mode);  // set pins as input
 
+
   // Set UART flow control CTS/RTS, we don't want these, so turn them off
   uart_set_hw_flow(u_com.uart_id, false, false);
 

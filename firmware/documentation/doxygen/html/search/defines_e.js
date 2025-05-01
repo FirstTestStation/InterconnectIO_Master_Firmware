@@ -66,10 +66,11 @@ var searchData=
   ['state_5fbank_63',['STATE_BANK',['../i2c__com_8h.html#a202945ee08d725fa846599270268d154',1,'i2c_com.h']]],
   ['state_5frelay_64',['STATE_RELAY',['../i2c__com_8h.html#aa36df15a89f69c0a67a42c2031a2cb40',1,'i2c_com.h']]],
   ['stbr_65',['STBR',['../fts__scpi_8h.html#a0d6e88ae166e1673f12677eaf0b89c2a',1,'fts_scpi.h']]],
-  ['stop_5fbits_66',['STOP_BITS',['../master_8h.html#abd1123d1a3a1f52c36d99b27e993e282',1,'master.h']]],
-  ['sver_67',['SVER',['../fts__scpi_8h.html#a14ab2c8a9af0c4cfe71cb917ae08a471',1,'fts_scpi.h']]],
-  ['sys_5fscl0_68',['SYS_SCL0',['../sys__i2c_8h.html#a2938e965d50b59deec5ca6afbb82173f',1,'sys_i2c.h']]],
-  ['sys_5fscl1_69',['SYS_SCL1',['../sys__i2c_8h.html#a7af723a80de73c1b6cad2d822f93adcb',1,'sys_i2c.h']]],
-  ['sys_5fsda0_70',['SYS_SDA0',['../sys__i2c_8h.html#abb8661081d87f1da62f101fe8a0c533b',1,'sys_i2c.h']]],
-  ['sys_5fsda1_71',['SYS_SDA1',['../sys__i2c_8h.html#ac1df5f78fd5b016f49c2540818176bd6',1,'sys_i2c.h']]]
+  ['stbw_66',['STBW',['../fts__scpi_8h.html#a33689297b4a07d90fb934483cf78c217',1,'fts_scpi.h']]],
+  ['stop_5fbits_67',['STOP_BITS',['../master_8h.html#abd1123d1a3a1f52c36d99b27e993e282',1,'master.h']]],
+  ['sver_68',['SVER',['../fts__scpi_8h.html#a14ab2c8a9af0c4cfe71cb917ae08a471',1,'fts_scpi.h']]],
+  ['sys_5fscl0_69',['SYS_SCL0',['../sys__i2c_8h.html#a2938e965d50b59deec5ca6afbb82173f',1,'sys_i2c.h']]],
+  ['sys_5fscl1_70',['SYS_SCL1',['../sys__i2c_8h.html#a7af723a80de73c1b6cad2d822f93adcb',1,'sys_i2c.h']]],
+  ['sys_5fsda0_71',['SYS_SDA0',['../sys__i2c_8h.html#abb8661081d87f1da62f101fe8a0c533b',1,'sys_i2c.h']]],
+  ['sys_5fsda1_72',['SYS_SDA1',['../sys__i2c_8h.html#ac1df5f78fd5b016f49c2540818176bd6',1,'sys_i2c.h']]]
 ];

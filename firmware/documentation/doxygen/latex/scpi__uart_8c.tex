@@ -12,8 +12,7 @@ Complete software code library to communicate to the user serial port using SCPI
 {\ttfamily \#include \char`\"{}hardware/uart.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}hardware/irq.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}include/scpi\+\_\+uart.\+h\char`\"{}}\newline
-Include dependency graph for scpi\+\_\+uart.\+c\+:
-\nopagebreak
+Include dependency graph for scpi\+\_\+uart.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -40,6 +39,10 @@ void \mbox{\hyperlink{scpi__uart_8c_a8b9b7e507857261be73965271270d54f}{scpi\+\_\
 \begin{DoxyCompactList}\small\item\em Function to update the baudrate speed on the structure, Baudrate will be updated with function uart enable. \end{DoxyCompactList}\item 
 uint32\+\_\+t \mbox{\hyperlink{scpi__uart_8c_ac71c34a9bd3c9af0db03fa309dbed22e}{scpi\+\_\+uart\+\_\+get\+\_\+baudrate}} ()
 \begin{DoxyCompactList}\small\item\em function to return exact baudrate based on Pico clock and divider \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{scpi__uart_8c_a3c69ee3674bd2259a4f1035a0d9ceeac}{scpi\+\_\+uart\+\_\+set\+\_\+eol}} (uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Function to set the EOL on the structure, EOL will be added at the end of string to send. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{scpi__uart_8c_a9ab336f79fb62ddacb5c9bad745271ce}{scpi\+\_\+uart\+\_\+get\+\_\+eol}} ()
+\begin{DoxyCompactList}\small\item\em Function to get the EOL on the structure. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{scpi__uart_8c_a8c6e0b0b9a1aaa0c264b072b38aa70fc}{scpi\+\_\+uart\+\_\+set\+\_\+timeout}} (uint32\+\_\+t time)
 \begin{DoxyCompactList}\small\item\em Function to update the timeout time register on the structure, Timeout is used to define the maximum time to wait for a new character received by uart. \end{DoxyCompactList}\item 
 uint32\+\_\+t \mbox{\hyperlink{scpi__uart_8c_a4a7f811e2dfaf126e4e7d665c1b26a13}{scpi\+\_\+uart\+\_\+get\+\_\+timeout}} ()
@@ -55,7 +58,10 @@ const char $\ast$ \mbox{\hyperlink{scpi__uart_8c_a10b587fcd91c30f8e1625b3d236cf6
 uint8\+\_\+t \mbox{\hyperlink{scpi__uart_8c_a6c0e8e486d1af8b5bb549542d72af62f}{scpi\+\_\+uart\+\_\+write\+\_\+data}} (char $\ast$dwt)
 \begin{DoxyCompactList}\small\item\em function to send data to uart without checking to receive data. The last character is saved for later. \end{DoxyCompactList}\item 
 uint8\+\_\+t \mbox{\hyperlink{scpi__uart_8c_ad61fab939a7a5d722c42de5fc8176b58}{scpi\+\_\+uart\+\_\+write\+\_\+read\+\_\+data}} (char $\ast$dwt, char $\ast$dread, size\+\_\+t rsize)
-\begin{DoxyCompactList}\small\item\em Function to perform UART write and read operations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Function to perform UART write and read operations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{scpi__uart_8c_a3c15892e785168ea65b012576235528b}\label{scpi__uart_8c_a3c15892e785168ea65b012576235528b}} 
+void {\bfseries add\+\_\+eol} (void)
+\begin{DoxyCompactList}\small\item\em Function to add the defined EOL character at the end of write string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -92,6 +98,19 @@ function to return exact baudrate based on Pico clock and divider
 
 \begin{DoxyReturn}{Returns}
 uint32\+\_\+t actual exact baudrate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{scpi__uart_8c_a9ab336f79fb62ddacb5c9bad745271ce}\label{scpi__uart_8c_a9ab336f79fb62ddacb5c9bad745271ce}} 
+\index{scpi\_uart.c@{scpi\_uart.c}!scpi\_uart\_get\_eol@{scpi\_uart\_get\_eol}}
+\index{scpi\_uart\_get\_eol@{scpi\_uart\_get\_eol}!scpi\_uart.c@{scpi\_uart.c}}
+\doxysubsubsection{\texorpdfstring{scpi\_uart\_get\_eol()}{scpi\_uart\_get\_eol()}}
+{\footnotesize\ttfamily uint8\+\_\+t scpi\+\_\+uart\+\_\+get\+\_\+eol (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function to get the EOL on the structure. 
+
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t actual eol value 
 \end{DoxyReturn}
 \mbox{\Hypertarget{scpi__uart_8c_a6900c9ec067e00b9432ab92d47bea943}\label{scpi__uart_8c_a6900c9ec067e00b9432ab92d47bea943}} 
 \index{scpi\_uart.c@{scpi\_uart.c}!scpi\_uart\_get\_handshake@{scpi\_uart\_get\_handshake}}
@@ -145,6 +164,21 @@ Function to update the baudrate speed on the structure, Baudrate will be updated
 
 \begin{DoxyParams}{Parameters}
 {\em speed} & Baudrate to save on structure \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{scpi__uart_8c_a3c69ee3674bd2259a4f1035a0d9ceeac}\label{scpi__uart_8c_a3c69ee3674bd2259a4f1035a0d9ceeac}} 
+\index{scpi\_uart.c@{scpi\_uart.c}!scpi\_uart\_set\_eol@{scpi\_uart\_set\_eol}}
+\index{scpi\_uart\_set\_eol@{scpi\_uart\_set\_eol}!scpi\_uart.c@{scpi\_uart.c}}
+\doxysubsubsection{\texorpdfstring{scpi\_uart\_set\_eol()}{scpi\_uart\_set\_eol()}}
+{\footnotesize\ttfamily void scpi\+\_\+uart\+\_\+set\+\_\+eol (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+Function to set the EOL on the structure, EOL will be added at the end of string to send. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & EOL (End-\/\+Of-\/\+Line) to save on structure \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{scpi__uart_8c_abf113dcc339af90ccc3d4a63018e900e}\label{scpi__uart_8c_abf113dcc339af90ccc3d4a63018e900e}} 
@@ -297,6 +331,7 @@ uint8\+\_\+t Error code indicating success (0) or error (non-\/zero).
 \DoxyCodeLine{    \mbox{\hyperlink{scpi__uart_8h_a266e7368d402e301d4e3eefd57b913b1}{DEF\_USER\_STATUS}},     }
 \DoxyCodeLine{    \mbox{\hyperlink{scpi__uart_8h_a475e9358573ed20b335ae083b108261f}{DEF\_USER\_BAUD}},       }
 \DoxyCodeLine{    \mbox{\hyperlink{scpi__uart_8h_a8039b06489690dc2aec2fc790af162ad}{DEF\_TIMEOUT\_MS}},      }
+\DoxyCodeLine{    \mbox{\hyperlink{scpi__uart_8h_a8946ff8fb16989090bfa173b39f71e7f}{DEF\_EOL}},             }
 \DoxyCodeLine{    \mbox{\hyperlink{scpi__uart_8h_acf576a875f3b53b45cd89698e34aeec7}{DEF\_LASTCHAR}}         }
 \DoxyCodeLine{\}}
 

@@ -9,7 +9,8 @@ var test_8c =
     [ "adc_test", "test_8c.html#ada61a5d73ba9477f5805e729284f4e17", null ],
     [ "add_message", "test_8c.html#ac470ff61e56e684cfbe729e66aedf0c1", null ],
     [ "init_buffer", "test_8c.html#a964f12386d49fd5a0df6add2daf20508", null ],
-    [ "internal_test_sequence", "test_8c.html#ac9d279cdda41da5b1e2775dbfeaae220", null ],
+    [ "internal_test_sequence", "test_8c.html#a78b67679ee11d44f8ca2ad1a9ab58d53", null ],
+    [ "internal_test_sequence_result", "test_8c.html#a33510a8b3333bfec3368b10acddafd28", null ],
     [ "onewiretest", "test_8c.html#a47a0e9953fea609fecae7ddc8fbc33a3", null ],
     [ "power_test", "test_8c.html#afced784f998c7b95f4563f9ff40d5fc8", null ],
     [ "print_messages", "test_8c.html#ade29dc0be6bd27144ab8ac944fad90de", null ],
@@ -27,9 +28,9 @@ var test_8c =
     [ "test_ina219", "test_8c.html#a74346a55978a0cec00fea16b92e3cd35", null ],
     [ "test_inst_manual", "test_8c.html#a7c4492986b11310638a7730bf6658532", null ],
     [ "test_ioboard", "test_8c.html#a0acd1ee00e871f30689aab1a7246feb0", null ],
-    [ "test_selftest", "test_8c.html#acb420da0ba7e8e1e84b61fec9b4de4b9", null ],
+    [ "test_selftest", "test_8c.html#ac70b7d6422a8c2b63fd63ed04ed046e6", null ],
     [ "test_spi_adx", "test_8c.html#ae9ec3dc653dc7431f107092091e4dafc", null ],
     [ "wait_button_pressed", "test_8c.html#af935e2bc2c8e175077947a8197df0234", null ],
-    [ "out_buffer", "test_8c.html#af4c8396614d93905c2a91f60b9d2b4fd", null ],
+    [ "out_buffer", "test_8c.html#a9bd6c8fb710bc1dc1d1ae9e4b724da85", null ],
     [ "out_buffer_pos", "test_8c.html#a668cec89f06b89ddf4d1ee33527eba18", null ]
 ];

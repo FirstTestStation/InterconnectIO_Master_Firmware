@@ -21,6 +21,7 @@
 #include <stdlib.h>
 #include "pico/stdlib.h"
 #include "hardware/i2c.h"
+#include "hardware/resets.h"
 #include "pico_lib2/src/sys/include/sys_i2c.h"
 #include "include/scpi_i2c.h"
 
@@ -74,25 +75,42 @@ void scpi_i2c_enable()
   fprintf(stdout, "User I2C is enabled\r\n");
 }
 
+#define RESETS_RESET_I2C1 (1u << 4)
+
 /**
  * @brief  function to disable the user spi and configure pins reserved by SPI to normal GPIO, set as input.
  *
  */
 void scpi_i2c_disable()
 {
+
+ 
+
   // Disable.
   i2c_deinit(uiic.i2c_id);
 
+  reset_block(RESETS_RESET_I2C1);   // force reset of the I2C peripheral
+
+  gpio_deinit(USER_I2C_SDA_PIN);   // Deinit SDA (default pin for i2c1)
+  gpio_deinit(USER_I2C_SCL_PIN);   // Deinit SCL (default pin for i2c1)
+
   // set pins used for i2c to GPIO mode
+  gpio_init(USER_I2C_SDA_PIN);
+  gpio_init(USER_I2C_SCL_PIN);    
+
   gpio_set_function(USER_I2C_SDA_PIN, GPIO_FUNC_SIO);
   gpio_set_function(USER_I2C_SCL_PIN, GPIO_FUNC_SIO);
 
-  bool mode = 0;                         // define GPIO as input
+  bool mode = 1;                         // define GPIO as input
   gpio_set_dir(USER_I2C_SDA_PIN, mode);  // set pins as input if mode = 0
   gpio_set_dir(USER_I2C_SCL_PIN, mode);  // set pins as output if mode = 1
 
+  gpio_put(USER_I2C_SDA_PIN, 0);  // Drive low
+  gpio_put(USER_I2C_SCL_PIN, 0);  // Drive low
+
+
   uiic.status = 0;  // Reset flag to indicate of I2C port is disabled
-  fprintf(stdout, "User I2C is disabled\r\n");
+  fprintf(stdout, "User I2C is disabled, SDA & SCL set as output low\r\n");
 }
 
 /**

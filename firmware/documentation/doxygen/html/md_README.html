@@ -97,7 +97,7 @@ License</h1>
 Project setup</h1>
 <p >This project was initially developed in 2020 on a Raspberry Pi 4, following the installation instructions from Getting Started with Pico_C.pdf Version 1.4.</p>
 <p >The current version has been developed on a Raspberry Pi 5 using Visual Studio with the Raspberry Pi Pico extension, following the instructions in Getting Started with Pico_C.pdf dated 15 October 2024.</p>
-<p >For debugging, we utilize the GPIO pins of the Raspberry Pi 5, instead of the suggested debug probe.</p>
+<p >For debugging, we utilize a Pico board as debugger with a special software debug probe software (debugprobe_on_pico.uf2)</p>
 <p >Initially based on <a href="https://github.com/cronologic-de/webusb">https://github.com/cronologic-de/webusb</a>, the project has evolved to be a complete SCPI instrument without frontend interface (next phase).</p>
 <p >The compilation is performed using Visual Studio and the extension installed are:</p>
 <ul>
@@ -119,10 +119,9 @@ Development</h1>
 <h1><a class="anchor" id="autotoc_md5"></a>
 Installation</h1>
 <ul>
-<li>The Files INTERCONNECTIO_MASTER.uf2 contains the firmware to be loaded on the Pico RP2040 board using USB cable and boot button.</li>
 <li>When software loaded, the Pico board should be installed on the location marked MASTER on interconnectIO Board.</li>
 <li>On board Pico Led will flash slowly (heartbeat) on power ON.</li>
-<li>Loading INTERCONNECTIO_MASTER.uf2 will trigger the watchdog, resulting in a burst of beeps during the boot sequence to signal the watchdog timeout. Only cycling the power ON/OFF will reset the watchdog trigger flag.</li>
+<li>Loading new firmware will trigger the watchdog, resulting in a burst of beeps during the boot sequence to signal the watchdog timeout. Only cycling the power ON/OFF will reset the watchdog trigger flag.</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md6"></a>
 Beep code</h1>

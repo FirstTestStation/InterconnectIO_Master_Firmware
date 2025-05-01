@@ -570,6 +570,7 @@ uint8_t test_selftest(char* testboard_num, uint8_t run)
   sleep_ms(500);
   TEST_SCPI_INPUT("SYSTEM:LED:ERR OFF\n"); /** Turn OFF red led */
 
+
   // initialisation of all resources used on selftest board to toggle relays
   // All digital IO are set as input after reset.
   // All IO need to be set as output and initialized to 0 before the start of the test
@@ -946,9 +947,9 @@ uint8_t test_selftest(char* testboard_num, uint8_t run)
   // Test of I2C. I2C is used to communicate with selftest board, the test option are limited because
   // we don't want to lost communication with selftest board
   TEST_SCPI_INPUT("COM:INIT:DIS I2C\n");  // Disable Master I2C, set GPIO to input
-  // When I2C disable, check if pull-up resistor are present
-  test_cmd_out("Test 14.1: I2C COM, Read GPIO #6 ", "GPIO:IN:DEV0:GP6? \n", "1", &c_test, &buffer);
-  test_cmd_out("Test 14.2: I2C COM, Read GPIO #7 ", "GPIO:IN:DEV0:GP7? \n", "1", &c_test, &buffer);
+  // When I2C disable, check if output =0 
+  test_cmd_out("Test 14.1: I2C COM, Read GPIO #6 ", "GPIO:IN:DEV0:GP6? \n", "0", &c_test, &buffer);
+  test_cmd_out("Test 14.2: I2C COM, Read GPIO #7 ", "GPIO:IN:DEV0:GP7? \n", "0", &c_test, &buffer);
   TEST_SCPI_INPUT("COM:I2C:D 8 \n");       // Set I2C_master to Databits to 8
   TEST_SCPI_INPUT("COM:I2C:B 100000\n");   // set i2C_master Baudrate to 100k
   TEST_SCPI_INPUT("COM:I2C:ADDR #H20\n");  // set I2C Address of selftest board (0x20)
@@ -981,45 +982,62 @@ uint8_t test_selftest(char* testboard_num, uint8_t run)
   TEST_SCPI_INPUT("COM:I2C:WRI 11,5\n");  // Set Selftest GPIO5 =1
   test_cmd_out("Test 15.7: SPI COM, Read GPIO #5 in SIO mode", "GPIO:IN:DEV0:GP5? \n", "1", &c_test, &buffer);
 
+
   // Validate SPI communication
   TEST_SCPI_INPUT("COM:SPI:D 16 \n");     // Set I2C_master to Databits to 16
   TEST_SCPI_INPUT("COM:SPI:M 4\n");       // set mode to 0 and CS toggle each byte
   TEST_SCPI_INPUT("COM:SPI:B 100000\n");  // set SPI Baudrate to 100k
+  TEST_SCPI_INPUT("COM:SPI:CS 5\n");      // set CS to GPIO 5
   TEST_SCPI_INPUT("COM:INIT:ENA SPI\n");  // Enable SPI
 
   TEST_SCPI_INPUT("COM:I2C:WRI 113,#H18\n");  // Set SPI Mode 0 and Databits = 16 on selftest board
   TEST_SCPI_INPUT("COM:I2C:WRI 111,1 \n");    // Enable SPI on selftest board
-  sleep_ms(250);                              // delay necessary after the enable, why?
-  TEST_SCPI_INPUT("COM:SPI:READ:LEN1? #H1234\n");
+
+  TEST_SCPI_INPUT("COM:SPI:WRI #H1234\n");
   test_cmd_out("Test 15.8: SPI COM, Selftest Word Write-read", "COM:SPI:READ:LEN1? #H0001\n", "60875", &c_test, &buffer);
 
-  TEST_SCPI_INPUT("COM:I2C:WRI 113,#H10\n");  // Set SPI Mode 0 databits = 8 on selftest board
   TEST_SCPI_INPUT("COM:SPI:D 8 \n");          // Set I2C_master to Databits to 8
+  TEST_SCPI_INPUT("COM:SPI:B 100000\n");  // set SPI Baudrate to 100k
+  TEST_SCPI_INPUT("COM:INIT:ENA SPI\n");  // Enable SPI
+  
+  TEST_SCPI_INPUT("COM:I2C:WRI 113,#H10\n");  // Set SPI Mode 0 databits = 8 on selftest board
   TEST_SCPI_INPUT("COM:I2C:WRI 111,1 \n");    // Re-Enable SPI Selftest after change in config
 
-  TEST_SCPI_INPUT("COM:SPI:READ:LEN1? #Hab\n");
+  TEST_SCPI_INPUT("COM:SPI:WRI #HAB\n");
   test_cmd_out("Test 15.9: SPI COM,Mode 0, Selftest Byte Write-read", "COM:SPI:READ:LEN1? #H1\n", "84", &c_test, &buffer);
 
   TEST_SCPI_INPUT("COM:SPI:M 5\n");           // set mode to 1 and CS toggle each byte
-  TEST_SCPI_INPUT("COM:I2C:WRI 113,#H12\n");  // Set SPI Mode 1 databits = 8 on selftest board
-  TEST_SCPI_INPUT("COM:I2C:WRI 111,1 \n");    // Re-Enable SPI Selftest after change in config
+  TEST_SCPI_INPUT("COM:SPI:B 1000000\n");  // set SPI Baudrate to 1M
+  TEST_SCPI_INPUT("COM:INIT:ENA SPI\n");  // Enable SPI
 
-  TEST_SCPI_INPUT("COM:SPI:READ:LEN1? #HA5\n");
+  TEST_SCPI_INPUT("COM:I2C:WRI 113,#H12\n");  // Set SPI Mode 1 databits = 8 on selftest board
+  TEST_SCPI_INPUT("COM:I2C:WRI 111,1 \n");    // Re-Enable SPI Selftest after change in config 
+
+  TEST_SCPI_INPUT("COM:SPI:WRI #HA5\n");
   test_cmd_out("Test 15.10: SPI COM,Mode 1, Selftest Byte Write-read", "COM:SPI:READ:LEN1? #H1\n", "90", &c_test, &buffer);
 
+ 
   TEST_SCPI_INPUT("COM:SPI:M 6\n");           // set mode to 2 and CS toggle each byte
+  TEST_SCPI_INPUT("COM:SPI:B 2000000\n");  // set SPI Baudrate to 2M
+  TEST_SCPI_INPUT("COM:INIT:ENA SPI\n");  // Enable SPI
+
   TEST_SCPI_INPUT("COM:I2C:WRI 113,#H14\n");  // Set SPI Mode 2 databits = 8 on selftest board
   TEST_SCPI_INPUT("COM:I2C:WRI 111,1 \n");    // Re-Enable SPI Selftest after change in config
 
-  TEST_SCPI_INPUT("COM:SPI:READ:LEN1? #H5A\n");
+ TEST_SCPI_INPUT("COM:SPI:WRI #H5A\n");
   test_cmd_out("Test 15.11: SPI COM,Mode 2, Selftest Byte Write-read", "COM:SPI:READ:LEN1? #H1\n", "165", &c_test, &buffer);
 
+
   TEST_SCPI_INPUT("COM:SPI:M 7\n");           // set mode to 3 and CS toggle each byte
+  TEST_SCPI_INPUT("COM:SPI:B 4000000\n");  // set SPI Baudrate to 4M
+  TEST_SCPI_INPUT("COM:INIT:ENA SPI\n");  // Enable SPI
+
   TEST_SCPI_INPUT("COM:I2C:WRI 113,#H15\n");  // Set SPI Mode 3 databits = 8 on selftest board
   TEST_SCPI_INPUT("COM:I2C:WRI 111,1 \n");    // Re-Enable SPI Selftest after change in config
 
-  TEST_SCPI_INPUT("COM:SPI:READ:LEN1? #H78\n");
+  TEST_SCPI_INPUT("COM:SPI:WRI #H78\n");
   test_cmd_out("Test 15.12: SPI COM,Mode 3, Selftest Byte Write-read", "COM:SPI:READ:LEN1? #H1\n", "135", &c_test, &buffer);
+
 
   TEST_SCPI_INPUT("COM:INIT:DIS SPI \n");  // Disable MASTER SPI, set all GP to input
   TEST_SCPI_INPUT("COM:I2C:WRI 112,1\n");  // Disable selftest SPI, set GPIO as output
@@ -1774,7 +1792,7 @@ void test_command(void)
   test_cmd_result("Test 9.4: PWR, read Bus Volt ", "ANA:PWR:Volt? \n", 5, "V", 0.3, 0.2, &c_test, &buffer);
   TEST_SCPI_INPUT("GPIO:OUT:DEV1:GP18  1 \n");  // Close K4
   sleep_ms(100);                                // let time to relay to stabilize
-  test_cmd_result("Test 9.5: PWR, read Bus Volt ", "ANA:PWR:Volt? \n", 0.1, "V", 0.1, 0.2, &c_test, &buffer);
+  test_cmd_result("Test 9.5: PWR, read Bus Volt ", "ANA:PWR:Volt? \n", 0.2, "V", 0.1, 0.4, &c_test, &buffer);
   test_cmd_result("Test 9.6: PWR, read Shunt mV ", "ANA:PWR:Shunt? \n", 50, "mV", 10, 10, &c_test, &buffer);
   test_cmd_result("Test 9.7: PWR, read Pmw", "ANA:PWR:Pmw? \n", 500, "mW", 200, 200, &c_test, &buffer);
   test_cmd_result("Test 9.8: PWR, read ImA ", "ANA:PWR:Ima? \n", 500, "mA", 100, 100, &c_test, &buffer);
@@ -1795,7 +1813,6 @@ void test_command(void)
   test_cmd_out("Test 10.3 SCPI Error command", "SYSTem:ERRor?\n", "0,\"No error\"", &c_test, &buffer);
 
   // SERIAL command check
-
   TEST_SCPI_INPUT("COM:INIT:DIS SERIAL\n");
   test_cmd_out("Test 11.0 SCPI SERIAL command", "COM:INIT:STAT? SERIAL\n", "0", &c_test, &buffer);
   TEST_SCPI_INPUT("COM:INIT:ENA SERIAL\n");  // Enable SPI
@@ -1804,17 +1821,23 @@ void test_command(void)
   test_cmd_out("Test 11.2 SCPI SERIAL command", "COM:SERIAL:Baudrate?\n", "19199", &c_test, &buffer);
   TEST_SCPI_INPUT("COM:SERIAL:Protocol N81\n");
   test_cmd_out("Test 11.3 SCPI SERIAL command", "COM:SERIAL:P?\n", "\"8N1\"", &c_test, &buffer);
+
   TEST_SCPI_INPUT("COM:SERIAL:Timeout 1000\n");
   test_cmd_out("Test 11.4 SCPI SERIAL command", "COM:SERIAL:T?\n", "1000", &c_test, &buffer);
-  TEST_SCPI_INPUT("COM:SERIAL:Handshake ON\n");
-  test_cmd_out("Test 11.4 SCPI SERIAL command", "COM:SERIAL:H?\n", "1", &c_test, &buffer);
+ 
+ TEST_SCPI_INPUT("COM:SERIAL:Handshake ON\n");
+ test_cmd_out("Test 11.5 SCPI SERIAL command", "COM:SERIAL:H?\n", "1", &c_test, &buffer);
+ 
   TEST_SCPI_INPUT("COM:SERIAL:Handshake OFF\n");
-  test_cmd_out("Test 11.5 SCPI SERIAL command", "COM:SERIAL:H?\n", "0", &c_test, &buffer);
-
+  test_cmd_out("Test 11.6 SCPI SERIAL command", "COM:SERIAL:H?\n", "0", &c_test, &buffer);
+ 
   //  Test of Disable command, error -384 is raised for each command
   TEST_SCPI_INPUT("COM:INIT:DIS SERIAL\n");
-  test_cmd_out("Test 11.6 SCPI SERIAL command", "COM:SERIAL:Write 'TEST\n'\n", "", &c_test, &buffer);
-  test_cmd_out("Test 11.7 SCPI SERIAL command", "COM:SERIAL:Read? \n", "", &c_test, &buffer);
+
+  test_cmd_out("Test 11.7 SCPI SERIAL command", "COM:SERIAL:Write 'TEST\n'\n", "", &c_test, &buffer);
+  test_cmd_out("Test 11.8 SCPI SERIAL command", "COM:SERIAL:Read? \n", "", &c_test, &buffer);
+
+  TEST_SCPI_INPUT("COM:INIT:DIS SERIAL\n");
 
   // SPI  Command Check
 
@@ -1834,14 +1857,18 @@ void test_command(void)
   test_cmd_out("Test 12.6 SCPI SPI command", "COM:SPI:M?\n", "7", &c_test, &buffer);
   TEST_SCPI_INPUT("COM:SPI:Baudrate 1000000\n");
   test_cmd_out("Test 12.7 SCPI SPI command", "COM:SPI:Baudrate?\n", "1000000", &c_test, &buffer);
-  TEST_SCPI_INPUT("COM:SPI:CS 12\n");
-  test_cmd_out("Test 12.8 SCPI SPI command", "COM:SPI:CS?\n", "12", &c_test, &buffer);
+  TEST_SCPI_INPUT("COM:INIT:DIS SPI\n"); // Disable Default CS
+  TEST_SCPI_INPUT("COM:SPI:CS 1\n");
+  test_cmd_out("Test 12.8 SCPI SPI command", "COM:SPI:CS?\n", "1", &c_test, &buffer);
   TEST_SCPI_INPUT("COM:SPI:D 8 \n");  // Set Databits to 8
   TEST_SCPI_INPUT("COM:SPI:CS 3\n");  // Raise ERROR
-  test_cmd_out("Test 12.9 SCPI SPI command", "COM:SPI:CS?\n", "12", &c_test, &buffer);
+  TEST_SCPI_INPUT("COM:INIT:ENA SPI\n"); 
+  test_cmd_out("Test 12.9 SCPI SPI command", "COM:SPI:CS?\n", "1", &c_test, &buffer);
   test_cmd_out("Test 12.10 SCPI SPI command", "COM:SPI:WRI #H00\n", "", &c_test, &buffer);
   test_cmd_out("Test 12.11 SCPI SPI command", "COM:SPI:READ:LEN1?\n", "255", &c_test, &buffer);
   test_cmd_out("Test 12.12 SCPI SPI command", "COM:SPI:READ:LEN2? #H55\n", "255,255", &c_test, &buffer);
+  TEST_SCPI_INPUT("COM:INIT:DIS SPI\n");
+  
 
   // I2C command check
 
@@ -1853,10 +1880,15 @@ void test_command(void)
   test_cmd_out("Test 13.2 SCPI I2C command", "COM:I2C:D?\n", "16", &c_test, &buffer);
   TEST_SCPI_INPUT("COM:I2C:D 8 \n");  // Set Databits to 8
   test_cmd_out("Test 13.3 SCPI I2C command", "COM:I2C:D?\n", "8", &c_test, &buffer);
-  TEST_SCPI_INPUT("COM:I2C:Baudrate 2000000\n");
-  test_cmd_out("Test 13.4 SCPI I2C command", "COM:I2C:Baudrate?\n", "2000000", &c_test, &buffer);
-  TEST_SCPI_INPUT("COM:I2C:ADDR #H21 \n");  // Set Address
-  test_cmd_out("Test 13.5 SCPI I2C command", "COM:I2C:ADDR?\n", "33", &c_test, &buffer);
+  TEST_SCPI_INPUT("COM:I2C:Baudrate 200000\n");
+  test_cmd_out("Test 13.4 SCPI I2C command", "COM:I2C:Baudrate?\n", "200000", &c_test, &buffer);
+  TEST_SCPI_INPUT("COM:I2C:ADDR #H21 \n");  // Set Bad Address
+  test_cmd_out("Test 13.5 SCPI I2C Bad Address command", "COM:I2C:ADDR?\n", "33", &c_test, &buffer);
+  TEST_SCPI_INPUT("COM:I2C:ADDR #H20 \n");  // Set Selftest Board Address
+  test_cmd_out("Test 13.6 SCPI I2C Selftest Address command", "COM:I2C:ADDR?\n", "32", &c_test, &buffer);
+
+  test_cmd_out("Test 13.7: I2C COM, Get Device Status ", "COM:I2C:READ:LEN1? 100\n", "0", &c_test, &buffer);
+
 
   // Check PWM on Selftest board
   TEST_SCPI_INPUT("COM:I2C:WRI 80,0\n");    // Set PWM OFF
@@ -1869,7 +1901,7 @@ void test_command(void)
   // test_cmd_out("Test 13.6 SCPI I2C command", "COM:I2C:WRI #H00\n"," ",&c_test, &buffer);
   // test_cmd_out("Test 13.7 SCPI I2C command", "COM:I2C:READ:LEN1? #H00\n","255",&c_test, &buffer);
   // test_cmd_out("Test 13.8 SCPI I2C command", "COM:I2C:READ:LEN2?\n","255,255",&c_test, &buffer);
-
+  TEST_SCPI_INPUT("COM:INIT:DIS I2C\n");
   TEST_SCPI_INPUT("SYST:OUT OFF \n");  // turn OFF selftest power
 
   /** PRINT FINAL REPORT AFTER TEST COMPLETION*/

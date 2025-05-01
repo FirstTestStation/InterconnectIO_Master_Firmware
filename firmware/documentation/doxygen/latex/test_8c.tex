@@ -26,8 +26,7 @@ Software code used to validate the software and hardware developed on this proje
 {\ttfamily \#include \char`\"{}include/scpi\+\_\+spi.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}include/scpi\+\_\+i2c.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}include/test.\+h\char`\"{}}\newline
-Include dependency graph for test.\+c\+:
-\nopagebreak
+Include dependency graph for test.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -61,9 +60,9 @@ void \mbox{\hyperlink{test_8c_a9313b8b09e2402dbd3215a879dfa18d2}{remove\+CRLF}} 
 \item Chat\+GPt function to remove CR and LF from a string 
 \end{DoxyItemize}\end{DoxyCompactList}\item 
 void \mbox{\hyperlink{test_8c_a964f12386d49fd5a0df6add2daf20508}{init\+\_\+buffer}} (\mbox{\hyperlink{structCircularBuffer}{Circular\+Buffer}} $\ast$buffer)
-\begin{DoxyCompactList}\small\item\em Initialisation of the index for circular buffer. \end{DoxyCompactList}\item 
+\item 
 void \mbox{\hyperlink{test_8c_ac470ff61e56e684cfbe729e66aedf0c1}{add\+\_\+message}} (\mbox{\hyperlink{structCircularBuffer}{Circular\+Buffer}} $\ast$buffer, const char $\ast$message)
-\begin{DoxyCompactList}\small\item\em Function to add\+\_\+message on circular buffer. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Function to add\+\_\+message to circular buffer. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{test_8c_ade29dc0be6bd27144ab8ac944fad90de}{print\+\_\+messages}} (const \mbox{\hyperlink{structCircularBuffer}{Circular\+Buffer}} $\ast$buffer)
 \begin{DoxyCompactList}\small\item\em Function to print message saved on circular buffer. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{test_8c_a3a741d0c84f19f8a596e9db8a3055383}{test\+\_\+cmd\+\_\+result}} (const char $\ast$title, const char $\ast$cmd, float expect\+\_\+value, const char $\ast$unit, float lo\+\_\+limit, float hi\+\_\+limit, struct \mbox{\hyperlink{structTestResult}{Test\+Result}} $\ast$counter, \mbox{\hyperlink{structCircularBuffer}{Circular\+Buffer}} $\ast$buffer)
@@ -80,9 +79,14 @@ void \mbox{\hyperlink{test_8c_a032a8eab3b1447960ec13ee39358c450}{test\+\_\+cmd\+
 \begin{DoxyCompactList}\small\item\em Tests if the given command string contains the expected substring. \end{DoxyCompactList}\item 
 char \mbox{\hyperlink{test_8c_a0c6f39b967bd2a9a74fd40a40cf54687}{read\+\_\+uart\+\_\+char}} ()
 \begin{DoxyCompactList}\small\item\em function to wait for read character from user. The loop refresh the watchdog timeout \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{test_8c_ac9d279cdda41da5b1e2775dbfeaae220}{internal\+\_\+test\+\_\+sequence}} (const char $\ast$testboard\+\_\+num, uint8\+\_\+t run)
+void \mbox{\hyperlink{test_8c_a78b67679ee11d44f8ca2ad1a9ab58d53}{internal\+\_\+test\+\_\+sequence}} (char $\ast$testboard\+\_\+num, uint8\+\_\+t run)
 \begin{DoxyCompactList}\small\item\em Main routine to perform internal test using selftest board. The routine has been used to validate hardware and software during development if run=0, the menu will be displayed to operator to select which internal test to run. IF run \texorpdfstring{$>$}{>} 0, the internal test will run directly. \end{DoxyCompactList}\item 
-uint8\+\_\+t \mbox{\hyperlink{test_8c_acb420da0ba7e8e1e84b61fec9b4de4b9}{test\+\_\+selftest}} (const char $\ast$testboard\+\_\+num, uint8\+\_\+t run)
+const char $\ast$ \mbox{\hyperlink{test_8c_a33510a8b3333bfec3368b10acddafd28}{internal\+\_\+test\+\_\+sequence\+\_\+result}} (void)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item Return contains of the last test 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{test_8c_ac70b7d6422a8c2b63fd63ed04ed046e6}{test\+\_\+selftest}} (char $\ast$testboard\+\_\+num, uint8\+\_\+t run)
 \begin{DoxyCompactList}\small\item\em 
 \begin{DoxyItemize}
 \item Run test sequence to validate hardware with selftest board 
@@ -146,7 +150,7 @@ void \mbox{\hyperlink{test_8c_af935e2bc2c8e175077947a8197df0234}{wait\+\_\+butto
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-char \mbox{\hyperlink{test_8c_af4c8396614d93905c2a91f60b9d2b4fd}{out\+\_\+buffer}} \mbox{[}1024\mbox{]}
+char \mbox{\hyperlink{test_8c_a9bd6c8fb710bc1dc1d1ae9e4b724da85}{out\+\_\+buffer}} \mbox{[}MAX\+\_\+\+OUT\+\_\+\+BUFFER\mbox{]}
 \begin{DoxyCompactList}\small\item\em Output buffer for storing data to be sent. \end{DoxyCompactList}\item 
 size\+\_\+t \mbox{\hyperlink{test_8c_a668cec89f06b89ddf4d1ee33527eba18}{out\+\_\+buffer\+\_\+pos}}
 \begin{DoxyCompactList}\small\item\em Current position in the output buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -259,13 +263,13 @@ This macro assigns the result of {\ttfamily SCPI\+\_\+\+Input} to a variable nam
 
 
 
-Function to add\+\_\+message on circular buffer. 
+Function to add\+\_\+message to circular buffer. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em buffer} & pointer to structure who contains messages \\
+{\em buffer} & Pointer to structure that contains messages \\
 \hline
-{\em message} & pointer to message to save on structure \\
+{\em message} & Pointer to message to save in the structure \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{test_8c_a964f12386d49fd5a0df6add2daf20508}\label{test_8c_a964f12386d49fd5a0df6add2daf20508}} 
@@ -274,24 +278,15 @@ Function to add\+\_\+message on circular buffer.
 \doxysubsubsection{\texorpdfstring{init\_buffer()}{init\_buffer()}}
 {\footnotesize\ttfamily void init\+\_\+buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCircularBuffer}{Circular\+Buffer}} $\ast$}]{buffer }\end{DoxyParamCaption})}
 
-
-
-Initialisation of the index for circular buffer. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em buffer} & Structure who contains the index and message \\
-\hline
-\end{DoxyParams}
 \texorpdfstring{$<$}{<} Initialize Start index of the buffer
 
 \texorpdfstring{$<$}{<} Initialize End index of the buffer
 
-\texorpdfstring{$<$}{<} Initialize Flag indicating if the buffer is full\mbox{\Hypertarget{test_8c_ac9d279cdda41da5b1e2775dbfeaae220}\label{test_8c_ac9d279cdda41da5b1e2775dbfeaae220}} 
+\texorpdfstring{$<$}{<} Initialize Flag indicating if the buffer is full\mbox{\Hypertarget{test_8c_a78b67679ee11d44f8ca2ad1a9ab58d53}\label{test_8c_a78b67679ee11d44f8ca2ad1a9ab58d53}} 
 \index{test.c@{test.c}!internal\_test\_sequence@{internal\_test\_sequence}}
 \index{internal\_test\_sequence@{internal\_test\_sequence}!test.c@{test.c}}
 \doxysubsubsection{\texorpdfstring{internal\_test\_sequence()}{internal\_test\_sequence()}}
-{\footnotesize\ttfamily void internal\+\_\+test\+\_\+sequence (\begin{DoxyParamCaption}\item[{const char $\ast$}]{testboard\+\_\+num,  }\item[{uint8\+\_\+t}]{run }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void internal\+\_\+test\+\_\+sequence (\begin{DoxyParamCaption}\item[{char $\ast$}]{testboard\+\_\+num,  }\item[{uint8\+\_\+t}]{run }\end{DoxyParamCaption})}
 
 
 
@@ -304,7 +299,23 @@ Main routine to perform internal test using selftest board. The routine has been
 {\em run} & Test number to run, if equal to 0, the test menu will be displayed \\
 \hline
 \end{DoxyParams}
-Open Power Relay to remove power on Selftest board\mbox{\Hypertarget{test_8c_a47a0e9953fea609fecae7ddc8fbc33a3}\label{test_8c_a47a0e9953fea609fecae7ddc8fbc33a3}} 
+Open Power Relay to remove power on Selftest board\mbox{\Hypertarget{test_8c_a33510a8b3333bfec3368b10acddafd28}\label{test_8c_a33510a8b3333bfec3368b10acddafd28}} 
+\index{test.c@{test.c}!internal\_test\_sequence\_result@{internal\_test\_sequence\_result}}
+\index{internal\_test\_sequence\_result@{internal\_test\_sequence\_result}!test.c@{test.c}}
+\doxysubsubsection{\texorpdfstring{internal\_test\_sequence\_result()}{internal\_test\_sequence\_result()}}
+{\footnotesize\ttfamily const char $\ast$ internal\+\_\+test\+\_\+sequence\+\_\+result (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+
+\begin{DoxyItemize}
+\item Return contains of the last test 
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+return pointer to result str 
+\end{DoxyReturn}
+\mbox{\Hypertarget{test_8c_a47a0e9953fea609fecae7ddc8fbc33a3}\label{test_8c_a47a0e9953fea609fecae7ddc8fbc33a3}} 
 \index{test.c@{test.c}!onewiretest@{onewiretest}}
 \index{onewiretest@{onewiretest}!test.c@{test.c}}
 \doxysubsubsection{\texorpdfstring{onewiretest()}{onewiretest()}}
@@ -441,7 +452,9 @@ String without CR and LF
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
-Send command to SCPI engine\mbox{\Hypertarget{test_8c_a3a741d0c84f19f8a596e9db8a3055383}\label{test_8c_a3a741d0c84f19f8a596e9db8a3055383}} 
+Send command to SCPI engine
+
+refresh watchdog\mbox{\Hypertarget{test_8c_a3a741d0c84f19f8a596e9db8a3055383}\label{test_8c_a3a741d0c84f19f8a596e9db8a3055383}} 
 \index{test.c@{test.c}!test\_cmd\_result@{test\_cmd\_result}}
 \index{test\_cmd\_result@{test\_cmd\_result}!test.c@{test.c}}
 \doxysubsubsection{\texorpdfstring{test\_cmd\_result()}{test\_cmd\_result()}}
@@ -476,6 +489,8 @@ Send command to SCPI engine\mbox{\Hypertarget{test_8c_a3a741d0c84f19f8a596e9db8a
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
+refresh watchdog
+
 Send command to SCPI engine\mbox{\Hypertarget{test_8c_a032a8eab3b1447960ec13ee39358c450}\label{test_8c_a032a8eab3b1447960ec13ee39358c450}} 
 \index{test.c@{test.c}!test\_cmd\_substring@{test\_cmd\_substring}}
 \index{test\_cmd\_substring@{test\_cmd\_substring}!test.c@{test.c}}
@@ -625,11 +640,11 @@ Wait to let time to relay to close and power the selftest board\mbox{\Hypertarge
 \item Function not used during normal execution The function is used to validate the hardware after parts has been soldered and pico has firmware programmed 
 \end{DoxyItemize}
 
-Normally run step by step with debugger and hardware verified by visual check or by measuring voltage \mbox{\Hypertarget{test_8c_acb420da0ba7e8e1e84b61fec9b4de4b9}\label{test_8c_acb420da0ba7e8e1e84b61fec9b4de4b9}} 
+Normally run step by step with debugger and hardware verified by visual check or by measuring voltage \mbox{\Hypertarget{test_8c_ac70b7d6422a8c2b63fd63ed04ed046e6}\label{test_8c_ac70b7d6422a8c2b63fd63ed04ed046e6}} 
 \index{test.c@{test.c}!test\_selftest@{test\_selftest}}
 \index{test\_selftest@{test\_selftest}!test.c@{test.c}}
 \doxysubsubsection{\texorpdfstring{test\_selftest()}{test\_selftest()}}
-{\footnotesize\ttfamily uint8\+\_\+t test\+\_\+selftest (\begin{DoxyParamCaption}\item[{const char $\ast$}]{testboard\+\_\+num,  }\item[{uint8\+\_\+t}]{run }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily uint8\+\_\+t test\+\_\+selftest (\begin{DoxyParamCaption}\item[{char $\ast$}]{testboard\+\_\+num,  }\item[{uint8\+\_\+t}]{run }\end{DoxyParamCaption})}
 
 
 
@@ -698,17 +713,17 @@ Utility function to help debug of firmware Button is connected between pin 1 and
 function exit when button pressed 
 
 \doxysubsection{Variable Documentation}
-\mbox{\Hypertarget{test_8c_af4c8396614d93905c2a91f60b9d2b4fd}\label{test_8c_af4c8396614d93905c2a91f60b9d2b4fd}} 
+\mbox{\Hypertarget{test_8c_a9bd6c8fb710bc1dc1d1ae9e4b724da85}\label{test_8c_a9bd6c8fb710bc1dc1d1ae9e4b724da85}} 
 \index{test.c@{test.c}!out\_buffer@{out\_buffer}}
 \index{out\_buffer@{out\_buffer}!test.c@{test.c}}
 \doxysubsubsection{\texorpdfstring{out\_buffer}{out\_buffer}}
-{\footnotesize\ttfamily char out\+\_\+buffer\mbox{[}1024\mbox{]}}
+{\footnotesize\ttfamily char out\+\_\+buffer\mbox{[}MAX\+\_\+\+OUT\+\_\+\+BUFFER\mbox{]}}
 
 
 
 Output buffer for storing data to be sent. 
 
-This buffer holds the data that will be sent via the output channel (e.\+g., serial or communication port). It has a fixed size of 1024 bytes. \mbox{\Hypertarget{test_8c_a668cec89f06b89ddf4d1ee33527eba18}\label{test_8c_a668cec89f06b89ddf4d1ee33527eba18}} 
+This buffer holds the data that will be sent via the output channel (e.\+g., serial or communication port). It has a fixed size of MAX\+\_\+\+OUT\+\_\+\+BUFFER. \mbox{\Hypertarget{test_8c_a668cec89f06b89ddf4d1ee33527eba18}\label{test_8c_a668cec89f06b89ddf4d1ee33527eba18}} 
 \index{test.c@{test.c}!out\_buffer\_pos@{out\_buffer\_pos}}
 \index{out\_buffer\_pos@{out\_buffer\_pos}!test.c@{test.c}}
 \doxysubsubsection{\texorpdfstring{out\_buffer\_pos}{out\_buffer\_pos}}

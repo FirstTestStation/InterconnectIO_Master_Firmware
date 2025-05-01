@@ -146,11 +146,17 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ae0f2dedb3d968ef8b00a3bddb46a78f0"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fts__scpi_8c.html#ae0f2dedb3d968ef8b00a3bddb46a78f0">output_buffer_write</a> (const char *data, size_t len)</td></tr>
+<tr class="memdesc:ae0f2dedb3d968ef8b00a3bddb46a78f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function used by module <a class="el" href="test_8c.html" title="Software code used to validate the software and hardware developed on this project.">test.c</a> to capture the SCPI answer from the SCPI command. Used to perform the selftest of the board.  <a href="fts__scpi_8c.html#ae0f2dedb3d968ef8b00a3bddb46a78f0">More...</a><br /></td></tr>
+<tr class="separator:ae0f2dedb3d968ef8b00a3bddb46a78f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3645008c6823af2701d99f6ed8dbe745"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fts__scpi_8c.html#a3645008c6823af2701d99f6ed8dbe745">SCPI_write</a> (scpi_t *context, const char *data, size_t len)</td></tr>
 <tr class="memdesc:a3645008c6823af2701d99f6ed8dbe745"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function write the SCPI answer to the main serial port. The answer is also saved on global variable to be analyzed on module <a class="el" href="test_8c.html" title="Software code used to validate the software and hardware developed on this project.">test.c</a>.  <a href="fts__scpi_8c.html#a3645008c6823af2701d99f6ed8dbe745">More...</a><br /></td></tr>
 <tr class="separator:a3645008c6823af2701d99f6ed8dbe745"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83c50f419ca88f80f55abe46090e547c"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fts__scpi_8c.html#a83c50f419ca88f80f55abe46090e547c">reset_callback</a> (alarm_id_t id, void *param)</td></tr>
+<tr class="memdesc:a83c50f419ca88f80f55abe46090e547c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes a delayed reset of the Interconnect IO board following the SCPI *RST command.  <a href="fts__scpi_8c.html#a83c50f419ca88f80f55abe46090e547c">More...</a><br /></td></tr>
+<tr class="separator:a83c50f419ca88f80f55abe46090e547c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a227bd87e4d70c678726de2bc952fce8e"><td class="memItemLeft" align="right" valign="top">scpi_result_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fts__scpi_8c.html#a227bd87e4d70c678726de2bc952fce8e">SCPI_Reset</a> (scpi_t *context)</td></tr>
-<tr class="memdesc:a227bd87e4d70c678726de2bc952fce8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">function to execute the reset of the interconnect IO board following the SCPI command. Only master Pico is reset because the Pico slaves are reset during boot-up  <a href="fts__scpi_8c.html#a227bd87e4d70c678726de2bc952fce8e">More...</a><br /></td></tr>
+<tr class="memdesc:a227bd87e4d70c678726de2bc952fce8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">SCPI function to handle the *RST command and schedule a delayed reset.  <a href="fts__scpi_8c.html#a227bd87e4d70c678726de2bc952fce8e">More...</a><br /></td></tr>
 <tr class="separator:a227bd87e4d70c678726de2bc952fce8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ed9955bb22ad94c13ec34edc9221443"><td class="memItemLeft" align="right" valign="top"><a id="a2ed9955bb22ad94c13ec34edc9221443" name="a2ed9955bb22ad94c13ec34edc9221443"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SCPI_Beep</b> ()</td></tr>
@@ -250,6 +256,44 @@ scpi_command_t&#160;</td><td class="memItemRight" valign="bottom"><b>scpi_comman
 
 </div>
 </div>
+<a id="ae0f2dedb3d968ef8b00a3bddb46a78f0" name="ae0f2dedb3d968ef8b00a3bddb46a78f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0f2dedb3d968ef8b00a3bddb46a78f0">&#9670;&nbsp;</a></span>output_buffer_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t output_buffer_write </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function used by module <a class="el" href="test_8c.html" title="Software code used to validate the software and hardware developed on this project.">test.c</a> to capture the SCPI answer from the SCPI command. Used to perform the selftest of the board. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>String of the SCPI answer </td></tr>
+    <tr><td class="paramname">len</td><td>Length of the answer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>size_t length </dd></dl>
+
+</div>
+</div>
 <a id="af42bc85669ec90cef60c7e9ff2559982" name="af42bc85669ec90cef60c7e9ff2559982"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af42bc85669ec90cef60c7e9ff2559982">&#9670;&nbsp;</a></span>RegBitHdwrErr()</h2>
 
@@ -327,6 +371,45 @@ scpi_command_t&#160;</td><td class="memItemRight" valign="bottom"><b>scpi_comman
 
 </div>
 </div>
+<a id="a83c50f419ca88f80f55abe46090e547c" name="a83c50f419ca88f80f55abe46090e547c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83c50f419ca88f80f55abe46090e547c">&#9670;&nbsp;</a></span>reset_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t reset_callback </td>
+          <td>(</td>
+          <td class="paramtype">alarm_id_t&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>param</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Executes a delayed reset of the Interconnect IO board following the SCPI *RST command. </p>
+<p >This function schedules a system reset of the master Pico with a 200ms delay. Only the master Pico is reset, as Pico slaves are automatically reset during boot-up.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Alarm ID (not used in this implementation) </td></tr>
+    <tr><td class="paramname">param</td><td>User-defined parameter (not used in this implementation) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int64_t Always returns 0, as this is a one-shot timer callback. </dd></dl>
+
+</div>
+</div>
 <a id="a9ef6f5ccdda155e42c384b2d26059ead" name="a9ef6f5ccdda155e42c384b2d26059ead"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9ef6f5ccdda155e42c384b2d26059ead">&#9670;&nbsp;</a></span>SCPI_Error()</h2>
 
@@ -381,14 +464,15 @@ scpi_command_t&#160;</td><td class="memItemRight" valign="bottom"><b>scpi_comman
       </table>
 </div><div class="memdoc">
 
-<p>function to execute the reset of the interconnect IO board following the SCPI command. Only master Pico is reset because the Pico slaves are reset during boot-up </p>
+<p>SCPI function to handle the *RST command and schedule a delayed reset. </p>
+<p >When the SCPI *RST command is received, this function schedules a system reset after a 200ms delay using the hardware alarm timer.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">context</td><td>SCPI instance </td></tr>
+    <tr><td class="paramname">context</td><td>SCPI instance (not used in this implementation) </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>scpi_result_t True if reset performed with success </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>scpi_result_t SCPI_RES_OK if the reset was successfully scheduled. </dd></dl>
 
 </div>
 </div>
@@ -507,9 +591,9 @@ scpi_command_t&#160;</td><td class="memItemRight" valign="bottom"><b>scpi_comman
 <div class="line">    .flush = SCPI_Flush,</div>
 <div class="line">    .reset = <a class="code hl_function" href="fts__scpi_8c.html#a227bd87e4d70c678726de2bc952fce8e">SCPI_Reset</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="afts__scpi_8c_html_a227bd87e4d70c678726de2bc952fce8e"><div class="ttname"><a href="fts__scpi_8c.html#a227bd87e4d70c678726de2bc952fce8e">SCPI_Reset</a></div><div class="ttdeci">scpi_result_t SCPI_Reset(scpi_t *context)</div><div class="ttdoc">function to execute the reset of the interconnect IO board following the SCPI command....</div><div class="ttdef"><b>Definition:</b> fts_scpi.c:115</div></div>
-<div class="ttc" id="afts__scpi_8c_html_a3645008c6823af2701d99f6ed8dbe745"><div class="ttname"><a href="fts__scpi_8c.html#a3645008c6823af2701d99f6ed8dbe745">SCPI_write</a></div><div class="ttdeci">size_t SCPI_write(scpi_t *context, const char *data, size_t len)</div><div class="ttdoc">The function write the SCPI answer to the main serial port. The answer is also saved on global variab...</div><div class="ttdef"><b>Definition:</b> fts_scpi.c:87</div></div>
-<div class="ttc" id="afts__scpi_8c_html_a9ef6f5ccdda155e42c384b2d26059ead"><div class="ttname"><a href="fts__scpi_8c.html#a9ef6f5ccdda155e42c384b2d26059ead">SCPI_Error</a></div><div class="ttdeci">int SCPI_Error(scpi_t *context, int_fast16_t err)</div><div class="ttdoc">function called by SCPI when error is found. The function will perform a short beep and turn on the e...</div><div class="ttdef"><b>Definition:</b> fts_scpi.c:180</div></div>
+<div class="ttc" id="afts__scpi_8c_html_a227bd87e4d70c678726de2bc952fce8e"><div class="ttname"><a href="fts__scpi_8c.html#a227bd87e4d70c678726de2bc952fce8e">SCPI_Reset</a></div><div class="ttdeci">scpi_result_t SCPI_Reset(scpi_t *context)</div><div class="ttdoc">SCPI function to handle the *RST command and schedule a delayed reset.</div><div class="ttdef"><b>Definition:</b> fts_scpi.c:159</div></div>
+<div class="ttc" id="afts__scpi_8c_html_a3645008c6823af2701d99f6ed8dbe745"><div class="ttname"><a href="fts__scpi_8c.html#a3645008c6823af2701d99f6ed8dbe745">SCPI_write</a></div><div class="ttdeci">size_t SCPI_write(scpi_t *context, const char *data, size_t len)</div><div class="ttdoc">The function write the SCPI answer to the main serial port. The answer is also saved on global variab...</div><div class="ttdef"><b>Definition:</b> fts_scpi.c:99</div></div>
+<div class="ttc" id="afts__scpi_8c_html_a9ef6f5ccdda155e42c384b2d26059ead"><div class="ttname"><a href="fts__scpi_8c.html#a9ef6f5ccdda155e42c384b2d26059ead">SCPI_Error</a></div><div class="ttdeci">int SCPI_Error(scpi_t *context, int_fast16_t err)</div><div class="ttdoc">function called by SCPI when error is found. The function will perform a short beep and turn on the e...</div><div class="ttdef"><b>Definition:</b> fts_scpi.c:226</div></div>
 </div><!-- fragment -->
 <p>Additional callbacks to be used by the SCPI library. </p>
 
@@ -547,21 +631,21 @@ scpi_command_t&#160;</td><td class="memItemRight" valign="bottom"><b>scpi_comman
 <div class="line"> </div>
 <div class="line">    SCPI_CHOICE_LIST_END,</div>
 <div class="line">}</div>
-<div class="ttc" id="afts__scpi_8h_html_a0e3d88ceee098bc6cbbd3864d15a062c"><div class="ttname"><a href="fts__scpi_8h.html#a0e3d88ceee098bc6cbbd3864d15a062c">SCPI_BANK4</a></div><div class="ttdeci">#define SCPI_BANK4</div><div class="ttdoc">Open BK4 relay tag.</div><div class="ttdef"><b>Definition:</b> fts_scpi.h:161</div></div>
-<div class="ttc" id="afts__scpi_8h_html_a27fdd8d53548fae89e39ba04c2708025"><div class="ttname"><a href="fts__scpi_8h.html#a27fdd8d53548fae89e39ba04c2708025">SCPI_LPR1</a></div><div class="ttdeci">#define SCPI_LPR1</div><div class="ttdoc">Power relay.</div><div class="ttdef"><b>Definition:</b> fts_scpi.h:163</div></div>
-<div class="ttc" id="afts__scpi_8h_html_a33c2cbb0189c7fb337d388046dcfac2b"><div class="ttname"><a href="fts__scpi_8h.html#a33c2cbb0189c7fb337d388046dcfac2b">SCPI_HPR1</a></div><div class="ttdeci">#define SCPI_HPR1</div><div class="ttdoc">Power relay.</div><div class="ttdef"><b>Definition:</b> fts_scpi.h:165</div></div>
-<div class="ttc" id="afts__scpi_8h_html_a37f051c653ab41ce9f0299696244bb82"><div class="ttname"><a href="fts__scpi_8h.html#a37f051c653ab41ce9f0299696244bb82">SCPI_SERIAL</a></div><div class="ttdeci">#define SCPI_SERIAL</div><div class="ttdoc">Uart serial communication.</div><div class="ttdef"><b>Definition:</b> fts_scpi.h:171</div></div>
-<div class="ttc" id="afts__scpi_8h_html_a398a5182ce2817de14dc1e156e5e9a44"><div class="ttname"><a href="fts__scpi_8h.html#a398a5182ce2817de14dc1e156e5e9a44">SCPI_SSR1</a></div><div class="ttdeci">#define SCPI_SSR1</div><div class="ttdoc">Power Solid State relay.</div><div class="ttdef"><b>Definition:</b> fts_scpi.h:166</div></div>
-<div class="ttc" id="afts__scpi_8h_html_a6031337a8cd4d4675bb22e00ffae67cf"><div class="ttname"><a href="fts__scpi_8h.html#a6031337a8cd4d4675bb22e00ffae67cf">SCPI_BANK1</a></div><div class="ttdeci">#define SCPI_BANK1</div><div class="ttdoc">Open BK1 relay tag.</div><div class="ttdef"><b>Definition:</b> fts_scpi.h:158</div></div>
-<div class="ttc" id="afts__scpi_8h_html_a696dcaf639b34f3568e3b6dd9dec7bca"><div class="ttname"><a href="fts__scpi_8h.html#a696dcaf639b34f3568e3b6dd9dec7bca">SCPI_LPR2</a></div><div class="ttdeci">#define SCPI_LPR2</div><div class="ttdoc">Power relay.</div><div class="ttdef"><b>Definition:</b> fts_scpi.h:164</div></div>
-<div class="ttc" id="afts__scpi_8h_html_a7e9a53011346bf2ca86a69745de35e38"><div class="ttname"><a href="fts__scpi_8h.html#a7e9a53011346bf2ca86a69745de35e38">SCPI_BANK2</a></div><div class="ttdeci">#define SCPI_BANK2</div><div class="ttdoc">Open BK2 relay tag.</div><div class="ttdef"><b>Definition:</b> fts_scpi.h:159</div></div>
-<div class="ttc" id="afts__scpi_8h_html_a7ea383096d73661616554fce92f6236e"><div class="ttname"><a href="fts__scpi_8h.html#a7ea383096d73661616554fce92f6236e">SCPI_BANK_ALL</a></div><div class="ttdeci">#define SCPI_BANK_ALL</div><div class="ttdoc">Open all relay tag.</div><div class="ttdef"><b>Definition:</b> fts_scpi.h:162</div></div>
-<div class="ttc" id="afts__scpi_8h_html_a801d1f948e3502082fdf78d631374239"><div class="ttname"><a href="fts__scpi_8h.html#a801d1f948e3502082fdf78d631374239">SCPI_OC1</a></div><div class="ttdeci">#define SCPI_OC1</div><div class="ttdoc">Open collector.</div><div class="ttdef"><b>Definition:</b> fts_scpi.h:167</div></div>
-<div class="ttc" id="afts__scpi_8h_html_a827384d14aa02c532effea0b3d4bf10e"><div class="ttname"><a href="fts__scpi_8h.html#a827384d14aa02c532effea0b3d4bf10e">SCPI_OC3</a></div><div class="ttdeci">#define SCPI_OC3</div><div class="ttdoc">Open collector.</div><div class="ttdef"><b>Definition:</b> fts_scpi.h:169</div></div>
-<div class="ttc" id="afts__scpi_8h_html_a893b08bb0d507f718b4e21b09ee535fe"><div class="ttname"><a href="fts__scpi_8h.html#a893b08bb0d507f718b4e21b09ee535fe">SCPI_OC2</a></div><div class="ttdeci">#define SCPI_OC2</div><div class="ttdoc">Open collector.</div><div class="ttdef"><b>Definition:</b> fts_scpi.h:168</div></div>
-<div class="ttc" id="afts__scpi_8h_html_ab05cdb891441427cac1aa2f84b4d2cb2"><div class="ttname"><a href="fts__scpi_8h.html#ab05cdb891441427cac1aa2f84b4d2cb2">SCPI_BANK3</a></div><div class="ttdeci">#define SCPI_BANK3</div><div class="ttdoc">Open BK3 relay tag.</div><div class="ttdef"><b>Definition:</b> fts_scpi.h:160</div></div>
-<div class="ttc" id="afts__scpi_8h_html_ab67e39d260d99c6c6cd8353e6d98d97b"><div class="ttname"><a href="fts__scpi_8h.html#ab67e39d260d99c6c6cd8353e6d98d97b">SCPI_SPI</a></div><div class="ttdeci">#define SCPI_SPI</div><div class="ttdoc">SPI communication.</div><div class="ttdef"><b>Definition:</b> fts_scpi.h:172</div></div>
-<div class="ttc" id="afts__scpi_8h_html_afdeb8fca6ceb7250201e85bd6c1ddea8"><div class="ttname"><a href="fts__scpi_8h.html#afdeb8fca6ceb7250201e85bd6c1ddea8">SCPI_I2C</a></div><div class="ttdeci">#define SCPI_I2C</div><div class="ttdoc">I2C communication.</div><div class="ttdef"><b>Definition:</b> fts_scpi.h:173</div></div>
+<div class="ttc" id="afts__scpi_8h_html_a0e3d88ceee098bc6cbbd3864d15a062c"><div class="ttname"><a href="fts__scpi_8h.html#a0e3d88ceee098bc6cbbd3864d15a062c">SCPI_BANK4</a></div><div class="ttdeci">#define SCPI_BANK4</div><div class="ttdoc">Open BK4 relay tag.</div><div class="ttdef"><b>Definition:</b> fts_scpi.h:165</div></div>
+<div class="ttc" id="afts__scpi_8h_html_a27fdd8d53548fae89e39ba04c2708025"><div class="ttname"><a href="fts__scpi_8h.html#a27fdd8d53548fae89e39ba04c2708025">SCPI_LPR1</a></div><div class="ttdeci">#define SCPI_LPR1</div><div class="ttdoc">Power relay.</div><div class="ttdef"><b>Definition:</b> fts_scpi.h:167</div></div>
+<div class="ttc" id="afts__scpi_8h_html_a33c2cbb0189c7fb337d388046dcfac2b"><div class="ttname"><a href="fts__scpi_8h.html#a33c2cbb0189c7fb337d388046dcfac2b">SCPI_HPR1</a></div><div class="ttdeci">#define SCPI_HPR1</div><div class="ttdoc">Power relay.</div><div class="ttdef"><b>Definition:</b> fts_scpi.h:169</div></div>
+<div class="ttc" id="afts__scpi_8h_html_a37f051c653ab41ce9f0299696244bb82"><div class="ttname"><a href="fts__scpi_8h.html#a37f051c653ab41ce9f0299696244bb82">SCPI_SERIAL</a></div><div class="ttdeci">#define SCPI_SERIAL</div><div class="ttdoc">Uart serial communication.</div><div class="ttdef"><b>Definition:</b> fts_scpi.h:175</div></div>
+<div class="ttc" id="afts__scpi_8h_html_a398a5182ce2817de14dc1e156e5e9a44"><div class="ttname"><a href="fts__scpi_8h.html#a398a5182ce2817de14dc1e156e5e9a44">SCPI_SSR1</a></div><div class="ttdeci">#define SCPI_SSR1</div><div class="ttdoc">Power Solid State relay.</div><div class="ttdef"><b>Definition:</b> fts_scpi.h:170</div></div>
+<div class="ttc" id="afts__scpi_8h_html_a6031337a8cd4d4675bb22e00ffae67cf"><div class="ttname"><a href="fts__scpi_8h.html#a6031337a8cd4d4675bb22e00ffae67cf">SCPI_BANK1</a></div><div class="ttdeci">#define SCPI_BANK1</div><div class="ttdoc">Open BK1 relay tag.</div><div class="ttdef"><b>Definition:</b> fts_scpi.h:162</div></div>
+<div class="ttc" id="afts__scpi_8h_html_a696dcaf639b34f3568e3b6dd9dec7bca"><div class="ttname"><a href="fts__scpi_8h.html#a696dcaf639b34f3568e3b6dd9dec7bca">SCPI_LPR2</a></div><div class="ttdeci">#define SCPI_LPR2</div><div class="ttdoc">Power relay.</div><div class="ttdef"><b>Definition:</b> fts_scpi.h:168</div></div>
+<div class="ttc" id="afts__scpi_8h_html_a7e9a53011346bf2ca86a69745de35e38"><div class="ttname"><a href="fts__scpi_8h.html#a7e9a53011346bf2ca86a69745de35e38">SCPI_BANK2</a></div><div class="ttdeci">#define SCPI_BANK2</div><div class="ttdoc">Open BK2 relay tag.</div><div class="ttdef"><b>Definition:</b> fts_scpi.h:163</div></div>
+<div class="ttc" id="afts__scpi_8h_html_a7ea383096d73661616554fce92f6236e"><div class="ttname"><a href="fts__scpi_8h.html#a7ea383096d73661616554fce92f6236e">SCPI_BANK_ALL</a></div><div class="ttdeci">#define SCPI_BANK_ALL</div><div class="ttdoc">Open all relay tag.</div><div class="ttdef"><b>Definition:</b> fts_scpi.h:166</div></div>
+<div class="ttc" id="afts__scpi_8h_html_a801d1f948e3502082fdf78d631374239"><div class="ttname"><a href="fts__scpi_8h.html#a801d1f948e3502082fdf78d631374239">SCPI_OC1</a></div><div class="ttdeci">#define SCPI_OC1</div><div class="ttdoc">Open collector.</div><div class="ttdef"><b>Definition:</b> fts_scpi.h:171</div></div>
+<div class="ttc" id="afts__scpi_8h_html_a827384d14aa02c532effea0b3d4bf10e"><div class="ttname"><a href="fts__scpi_8h.html#a827384d14aa02c532effea0b3d4bf10e">SCPI_OC3</a></div><div class="ttdeci">#define SCPI_OC3</div><div class="ttdoc">Open collector.</div><div class="ttdef"><b>Definition:</b> fts_scpi.h:173</div></div>
+<div class="ttc" id="afts__scpi_8h_html_a893b08bb0d507f718b4e21b09ee535fe"><div class="ttname"><a href="fts__scpi_8h.html#a893b08bb0d507f718b4e21b09ee535fe">SCPI_OC2</a></div><div class="ttdeci">#define SCPI_OC2</div><div class="ttdoc">Open collector.</div><div class="ttdef"><b>Definition:</b> fts_scpi.h:172</div></div>
+<div class="ttc" id="afts__scpi_8h_html_ab05cdb891441427cac1aa2f84b4d2cb2"><div class="ttname"><a href="fts__scpi_8h.html#ab05cdb891441427cac1aa2f84b4d2cb2">SCPI_BANK3</a></div><div class="ttdeci">#define SCPI_BANK3</div><div class="ttdoc">Open BK3 relay tag.</div><div class="ttdef"><b>Definition:</b> fts_scpi.h:164</div></div>
+<div class="ttc" id="afts__scpi_8h_html_ab67e39d260d99c6c6cd8353e6d98d97b"><div class="ttname"><a href="fts__scpi_8h.html#ab67e39d260d99c6c6cd8353e6d98d97b">SCPI_SPI</a></div><div class="ttdeci">#define SCPI_SPI</div><div class="ttdoc">SPI communication.</div><div class="ttdef"><b>Definition:</b> fts_scpi.h:176</div></div>
+<div class="ttc" id="afts__scpi_8h_html_afdeb8fca6ceb7250201e85bd6c1ddea8"><div class="ttname"><a href="fts__scpi_8h.html#afdeb8fca6ceb7250201e85bd6c1ddea8">SCPI_I2C</a></div><div class="ttdeci">#define SCPI_I2C</div><div class="ttdoc">I2C communication.</div><div class="ttdef"><b>Definition:</b> fts_scpi.h:177</div></div>
 </div><!-- fragment -->
 <p>List of special string not already defined on SCPI parser. </p>
 

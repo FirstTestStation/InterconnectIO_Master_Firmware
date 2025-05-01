@@ -235,7 +235,7 @@ int init_main_com()
   uint8_t valid;
 
   valid = stringtonumber(ee.cfg.com_ser_speed, sizeof(ee.cfg.com_ser_speed),&numval);  // read communication speed on EEprom
-  if (valid != 0)
+  if (valid != 0 || numval == 0 )
   {
     numval = 115200;
   }  // if value is not valid use default speed
@@ -399,7 +399,6 @@ int main(void){
   eep eed = DEF_EEPROM;  // Assign default value to structure eeprom
   pulse = 200;           // slow led flashing frequency
 
- 
 
   stdio_init_all();
 

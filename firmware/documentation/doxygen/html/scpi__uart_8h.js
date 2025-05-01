@@ -1,5 +1,6 @@
 var scpi__uart_8h =
 [
+    [ "DEF_EOL", "scpi__uart_8h.html#a8946ff8fb16989090bfa173b39f71e7f", null ],
     [ "DEF_LASTCHAR", "scpi__uart_8h.html#acf576a875f3b53b45cd89698e34aeec7", null ],
     [ "DEF_TIMEOUT_MS", "scpi__uart_8h.html#a8039b06489690dc2aec2fc790af162ad", null ],
     [ "DEF_USER_BAUD", "scpi__uart_8h.html#a475e9358573ed20b335ae083b108261f", null ],
@@ -21,13 +22,16 @@ var scpi__uart_8h =
     [ "USER_RX_PIN", "scpi__uart_8h.html#a190935489f01c1d910aa310705b8d710", null ],
     [ "USER_TX_PIN", "scpi__uart_8h.html#a4b730330fa92c6cb7cad55eb23c5a1e6", null ],
     [ "USER_UART", "scpi__uart_8h.html#ab10a1ba308338c61ba9da7d034b7d4f7", null ],
+    [ "add_eol", "scpi__uart_8h.html#a3c15892e785168ea65b012576235528b", null ],
     [ "scpi_uart_disable", "scpi__uart_8h.html#a92ecca314320f946136a7731e6abc3c0", null ],
     [ "scpi_uart_enable", "scpi__uart_8h.html#a8e4f9f87014ede07790adcdee9218a07", null ],
     [ "scpi_uart_get_baudrate", "scpi__uart_8h.html#a5762f30985131b1602ccf52aa0f5747a", null ],
+    [ "scpi_uart_get_eol", "scpi__uart_8h.html#a4202a867295a94338d06c5d26d7e7ec5", null ],
     [ "scpi_uart_get_handshake", "scpi__uart_8h.html#a140d39ce403d0abb4a61ed75c87ac366", null ],
     [ "scpi_uart_get_protocol", "scpi__uart_8h.html#ae76db62a14ef10d4921e2739b5221ee5", null ],
     [ "scpi_uart_get_timeout", "scpi__uart_8h.html#a4940674ea5d55c2b968af3e4eee8dca3", null ],
     [ "scpi_uart_set_baudrate", "scpi__uart_8h.html#a8b9b7e507857261be73965271270d54f", null ],
+    [ "scpi_uart_set_eol", "scpi__uart_8h.html#a3c69ee3674bd2259a4f1035a0d9ceeac", null ],
     [ "scpi_uart_set_handshake", "scpi__uart_8h.html#abf113dcc339af90ccc3d4a63018e900e", null ],
     [ "scpi_uart_set_protocol", "scpi__uart_8h.html#a7532b79fc626aa1915547c4ec7246e17", null ],
     [ "scpi_uart_set_timeout", "scpi__uart_8h.html#a8c6e0b0b9a1aaa0c264b072b38aa70fc", null ],

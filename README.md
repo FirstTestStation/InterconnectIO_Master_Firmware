@@ -1,10 +1,10 @@
 # First TestStation InterconnectIO firmware Master 700-2000-011
 
-The complete FTS project is documented on a github website:  https://dlock8.github.io/FTS_Website/
+The complete FTS project is documented on a github website:  https://FirstTestStation.github.io/FTS_Website/
 
 On this deposit, we have the firmware used to create the Master Pico load to control the interconnectIO board.
 
-The hardware support for the firmware is on github location: https://github.com/dlock8/InterconnectIO_Board
+The hardware support for the firmware is on github location: https://github.com/FirstTestStation/InterconnectIO_Board
 
 
 The Master Pico software is the earth of interconnectIO board. The software receive SCPI command from the serial port, 
@@ -21,7 +21,7 @@ This project was initially developed in 2020 on a Raspberry Pi 4, following the 
 
 The current version has been developed on a Raspberry Pi 5 using Visual Studio with the Raspberry Pi Pico extension, following the instructions in Getting Started with Pico_C.pdf dated 15 October 2024.
 
-For debugging, we utilize the GPIO pins of the Raspberry Pi 5, instead of the suggested debug probe.
+For debugging, we utilize a Pico board as debugger with a special software debug probe software (debugprobe_on_pico.uf2)
 
 Initially based on https://github.com/cronologic-de/webusb, the project has evolved to be a complete SCPI instrument 
 without frontend interface (next phase).
@@ -42,11 +42,6 @@ Build of this cmake project is performed with Visual Studio
 * [`master.c`](master.c) is the main source file for the firmware.
 * [`CMakeLists.txt`](CMakeLists.txt) contains build instructions for CMake, including how to build the SCPI library.
 * [`pico_sdk_import.cmake`](pico_sdk_import.cmake) was (as usual) copied verbatim from the Pico SDK and allows CMake to interact with the SDK’s functionality.
-* [`raspberrypi-swd.cfg`](raspberrypi-swd.cfg) need to be copied on openocd interface folder 
-(../.pico-sdk/openocd/0.12.0+dev/scripts/interface/) if GPIO pins is used to debug project.
-
-
-
 
 
 ## Installation

@@ -141,6 +141,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>scpi_uart_disable</b>
 <tr class="memitem:ac71c34a9bd3c9af0db03fa309dbed22e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scpi__uart_8c.html#ac71c34a9bd3c9af0db03fa309dbed22e">scpi_uart_get_baudrate</a> ()</td></tr>
 <tr class="memdesc:ac71c34a9bd3c9af0db03fa309dbed22e"><td class="mdescLeft">&#160;</td><td class="mdescRight">function to return exact baudrate based on Pico clock and divider  <a href="scpi__uart_8c.html#ac71c34a9bd3c9af0db03fa309dbed22e">More...</a><br /></td></tr>
 <tr class="separator:ac71c34a9bd3c9af0db03fa309dbed22e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c69ee3674bd2259a4f1035a0d9ceeac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scpi__uart_8c.html#a3c69ee3674bd2259a4f1035a0d9ceeac">scpi_uart_set_eol</a> (uint8_t val)</td></tr>
+<tr class="memdesc:a3c69ee3674bd2259a4f1035a0d9ceeac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to set the EOL on the structure, EOL will be added at the end of string to send.  <a href="scpi__uart_8c.html#a3c69ee3674bd2259a4f1035a0d9ceeac">More...</a><br /></td></tr>
+<tr class="separator:a3c69ee3674bd2259a4f1035a0d9ceeac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ab336f79fb62ddacb5c9bad745271ce"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scpi__uart_8c.html#a9ab336f79fb62ddacb5c9bad745271ce">scpi_uart_get_eol</a> ()</td></tr>
+<tr class="memdesc:a9ab336f79fb62ddacb5c9bad745271ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to get the EOL on the structure.  <a href="scpi__uart_8c.html#a9ab336f79fb62ddacb5c9bad745271ce">More...</a><br /></td></tr>
+<tr class="separator:a9ab336f79fb62ddacb5c9bad745271ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c6e0b0b9a1aaa0c264b072b38aa70fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scpi__uart_8c.html#a8c6e0b0b9a1aaa0c264b072b38aa70fc">scpi_uart_set_timeout</a> (uint32_t time)</td></tr>
 <tr class="memdesc:a8c6e0b0b9a1aaa0c264b072b38aa70fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to update the timeout time register on the structure, Timeout is used to define the maximum time to wait for a new character received by uart.  <a href="scpi__uart_8c.html#a8c6e0b0b9a1aaa0c264b072b38aa70fc">More...</a><br /></td></tr>
 <tr class="separator:a8c6e0b0b9a1aaa0c264b072b38aa70fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,6 +171,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>scpi_uart_disable</b>
 <tr class="memitem:ad61fab939a7a5d722c42de5fc8176b58"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scpi__uart_8c.html#ad61fab939a7a5d722c42de5fc8176b58">scpi_uart_write_read_data</a> (char *dwt, char *dread, size_t rsize)</td></tr>
 <tr class="memdesc:ad61fab939a7a5d722c42de5fc8176b58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to perform UART write and read operations.  <a href="scpi__uart_8c.html#ad61fab939a7a5d722c42de5fc8176b58">More...</a><br /></td></tr>
 <tr class="separator:ad61fab939a7a5d722c42de5fc8176b58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c15892e785168ea65b012576235528b"><td class="memItemLeft" align="right" valign="top"><a id="a3c15892e785168ea65b012576235528b" name="a3c15892e785168ea65b012576235528b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>add_eol</b> (void)</td></tr>
+<tr class="memdesc:a3c15892e785168ea65b012576235528b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to add the defined EOL character at the end of write string. <br /></td></tr>
+<tr class="separator:a3c15892e785168ea65b012576235528b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -198,6 +208,27 @@ Variables</h2></td></tr>
 
 <p>function to return exact baudrate based on Pico clock and divider </p>
 <dl class="section return"><dt>Returns</dt><dd>uint32_t actual exact baudrate </dd></dl>
+
+</div>
+</div>
+<a id="a9ab336f79fb62ddacb5c9bad745271ce" name="a9ab336f79fb62ddacb5c9bad745271ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ab336f79fb62ddacb5c9bad745271ce">&#9670;&nbsp;</a></span>scpi_uart_get_eol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t scpi_uart_get_eol </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to get the EOL on the structure. </p>
+<dl class="section return"><dt>Returns</dt><dd>uint32_t actual eol value </dd></dl>
 
 </div>
 </div>
@@ -285,6 +316,32 @@ Variables</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">speed</td><td>Baudrate to save on structure </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3c69ee3674bd2259a4f1035a0d9ceeac" name="a3c69ee3674bd2259a4f1035a0d9ceeac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c69ee3674bd2259a4f1035a0d9ceeac">&#9670;&nbsp;</a></span>scpi_uart_set_eol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void scpi_uart_set_eol </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to set the EOL on the structure, EOL will be added at the end of string to send. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">val</td><td>EOL (End-Of-Line) to save on structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -500,6 +557,7 @@ Variables</h2></td></tr>
 <div class="line">    <a class="code hl_define" href="scpi__uart_8h.html#a266e7368d402e301d4e3eefd57b913b1">DEF_USER_STATUS</a>,     </div>
 <div class="line">    <a class="code hl_define" href="scpi__uart_8h.html#a475e9358573ed20b335ae083b108261f">DEF_USER_BAUD</a>,       </div>
 <div class="line">    <a class="code hl_define" href="scpi__uart_8h.html#a8039b06489690dc2aec2fc790af162ad">DEF_TIMEOUT_MS</a>,      </div>
+<div class="line">    <a class="code hl_define" href="scpi__uart_8h.html#a8946ff8fb16989090bfa173b39f71e7f">DEF_EOL</a>,             </div>
 <div class="line">    <a class="code hl_define" href="scpi__uart_8h.html#acf576a875f3b53b45cd89698e34aeec7">DEF_LASTCHAR</a>         </div>
 <div class="line">}</div>
 <div class="ttc" id="ascpi__uart_8h_html_a12c053b86a87119de60637ccc4dd4f86"><div class="ttname"><a href="scpi__uart_8h.html#a12c053b86a87119de60637ccc4dd4f86">DEF_USER_STOP</a></div><div class="ttdeci">#define DEF_USER_STOP</div><div class="ttdoc">Default number of stop bits.</div><div class="ttdef"><b>Definition:</b> scpi_uart.h:44</div></div>
@@ -507,10 +565,11 @@ Variables</h2></td></tr>
 <div class="ttc" id="ascpi__uart_8h_html_a475e9358573ed20b335ae083b108261f"><div class="ttname"><a href="scpi__uart_8h.html#a475e9358573ed20b335ae083b108261f">DEF_USER_BAUD</a></div><div class="ttdeci">#define DEF_USER_BAUD</div><div class="ttdoc">Default configuration values for user UART.</div><div class="ttdef"><b>Definition:</b> scpi_uart.h:41</div></div>
 <div class="ttc" id="ascpi__uart_8h_html_a7f410a5eaa51b5b7a962eb20abf96077"><div class="ttname"><a href="scpi__uart_8h.html#a7f410a5eaa51b5b7a962eb20abf96077">DEF_USER_HANDSHAKE</a></div><div class="ttdeci">#define DEF_USER_HANDSHAKE</div><div class="ttdoc">Default handshake setting (no handshake)</div><div class="ttdef"><b>Definition:</b> scpi_uart.h:45</div></div>
 <div class="ttc" id="ascpi__uart_8h_html_a8039b06489690dc2aec2fc790af162ad"><div class="ttname"><a href="scpi__uart_8h.html#a8039b06489690dc2aec2fc790af162ad">DEF_TIMEOUT_MS</a></div><div class="ttdeci">#define DEF_TIMEOUT_MS</div><div class="ttdoc">Default timeout duration in milliseconds.</div><div class="ttdef"><b>Definition:</b> scpi_uart.h:47</div></div>
+<div class="ttc" id="ascpi__uart_8h_html_a8946ff8fb16989090bfa173b39f71e7f"><div class="ttname"><a href="scpi__uart_8h.html#a8946ff8fb16989090bfa173b39f71e7f">DEF_EOL</a></div><div class="ttdeci">#define DEF_EOL</div><div class="ttdoc">Default character added at the end of string (1= ' ')</div><div class="ttdef"><b>Definition:</b> scpi_uart.h:48</div></div>
 <div class="ttc" id="ascpi__uart_8h_html_a9fd6e3b732812e729e72a6ec9203038d"><div class="ttname"><a href="scpi__uart_8h.html#a9fd6e3b732812e729e72a6ec9203038d">DEF_USER_PARITY</a></div><div class="ttdeci">#define DEF_USER_PARITY</div><div class="ttdoc">Default parity setting (no parity)</div><div class="ttdef"><b>Definition:</b> scpi_uart.h:42</div></div>
 <div class="ttc" id="ascpi__uart_8h_html_ab10a1ba308338c61ba9da7d034b7d4f7"><div class="ttname"><a href="scpi__uart_8h.html#ab10a1ba308338c61ba9da7d034b7d4f7">USER_UART</a></div><div class="ttdeci">#define USER_UART</div><div class="ttdoc">uart for the user communication</div><div class="ttdef"><b>Definition:</b> scpi_uart.h:34</div></div>
 <div class="ttc" id="ascpi__uart_8h_html_accaee9330a5b89340f788bd0ae2ba540"><div class="ttname"><a href="scpi__uart_8h.html#accaee9330a5b89340f788bd0ae2ba540">DEF_USER_BITS</a></div><div class="ttdeci">#define DEF_USER_BITS</div><div class="ttdoc">Default number of data bits.</div><div class="ttdef"><b>Definition:</b> scpi_uart.h:43</div></div>
-<div class="ttc" id="ascpi__uart_8h_html_acf576a875f3b53b45cd89698e34aeec7"><div class="ttname"><a href="scpi__uart_8h.html#acf576a875f3b53b45cd89698e34aeec7">DEF_LASTCHAR</a></div><div class="ttdeci">#define DEF_LASTCHAR</div><div class="ttdoc">Default last character for received strings.</div><div class="ttdef"><b>Definition:</b> scpi_uart.h:48</div></div>
+<div class="ttc" id="ascpi__uart_8h_html_acf576a875f3b53b45cd89698e34aeec7"><div class="ttname"><a href="scpi__uart_8h.html#acf576a875f3b53b45cd89698e34aeec7">DEF_LASTCHAR</a></div><div class="ttdeci">#define DEF_LASTCHAR</div><div class="ttdoc">Default last character for received strings.</div><div class="ttdef"><b>Definition:</b> scpi_uart.h:49</div></div>
 </div><!-- fragment -->
 <p>Global structure to hold user UART communication parameters. </p>
 <p >The structure <code>u_com</code> contains various configuration settings for the UART interface, including baud rate, parity, data bits, and other communication settings. This structure is initialized with default values. </p>

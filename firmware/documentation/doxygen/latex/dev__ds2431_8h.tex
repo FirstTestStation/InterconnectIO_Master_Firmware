@@ -29,7 +29,7 @@ struct \mbox{\hyperlink{structrom}{rom}}
 \#define {\bfseries ADDR\+\_\+\+INFO}~0
 \begin{DoxyCompactList}\small\item\em Start address of the information string on EEPROM. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{dev__ds2431_8h_ac94f934c3a1db5b1405d62f7663f8442}\label{dev__ds2431_8h_ac94f934c3a1db5b1405d62f7663f8442}} 
-\#define {\bfseries NB\+\_\+\+INFO}~48
+\#define {\bfseries NB\+\_\+\+INFO}~64
 \begin{DoxyCompactList}\small\item\em Maximum characters allowed in the info field. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{dev__ds2431_8h_a8eb5531593f8b0ed7d1ead416f38aee6}\label{dev__ds2431_8h_a8eb5531593f8b0ed7d1ead416f38aee6}} 
 \#define {\bfseries ADDR\+\_\+\+TEST}~0x60
@@ -41,7 +41,7 @@ struct \mbox{\hyperlink{structrom}{rom}}
 \#define {\bfseries MAX\+\_\+\+ONEWIRE}~2
 \begin{DoxyCompactList}\small\item\em Maximum number of devices on the 1-\/Wire bus at the same time. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{dev__ds2431_8h_ab205d2e85504c5af57e74849cfb53eef}{WRITEMEMORY}}~0x0F
-\begin{DoxyCompactList}\small\item\em Format EEprom mandatory (reserved 48 Bytes) \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Format EEprom mandatory (reserved 64 Bytes) \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{dev__ds2431_8h_a73bca8a9a4a773829639bc83422f687a}{READ\+\_\+\+MEMORY}}~0x\+F0
 \item 
 \#define \mbox{\hyperlink{dev__ds2431_8h_af8162a9da284eb45c7f53f4a37c749f5}{READ\+\_\+\+SCRATCHPAD}}~0x\+AA
@@ -346,11 +346,11 @@ Command to write application register. \mbox{\Hypertarget{dev__ds2431_8h_ab205d2
 
 
 
-Format EEprom mandatory (reserved 48 Bytes) 
+Format EEprom mandatory (reserved 64 Bytes) 
 
 \begin{DoxyVerb} Address:  0
- Device_id, Board_part_number, Bd_serial_number, location (J1 or J2)
-     16   2   12            2      6           2    2
+ Device_id, ProductName, Partnumber, SerialNumber, location (J1 or J2)
+     16   2   22       2  12       2      6      2    2
 \end{DoxyVerb}
 
 

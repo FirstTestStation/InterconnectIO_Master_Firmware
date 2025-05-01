@@ -16,7 +16,7 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{test_8h_a6b20d41d6252e9871430c242cb1a56e7}\label{test_8h_a6b20d41d6252e9871430c242cb1a56e7}} 
-\#define {\bfseries BUFFER\+\_\+\+SIZE}~32
+\#define {\bfseries BUFFER\+\_\+\+SIZE}~64
 \begin{DoxyCompactList}\small\item\em Maximum depth size of the circular buffer. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{test_8h_ac146c3c7afc6f342ae4f476bd46d924a}\label{test_8h_ac146c3c7afc6f342ae4f476bd46d924a}} 
 \#define {\bfseries MESSAGE\+\_\+\+LENGTH}~120
@@ -28,7 +28,10 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \#define \mbox{\hyperlink{test_8h_a2748566f4c443ee77aa831e63dbb5ebe}{P}}~3
 \begin{DoxyCompactList}\small\item\em Constant for milli\+Watts. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{test_8h_af933676109efed7ab34cea71d748a517}{S}}~4
-\begin{DoxyCompactList}\small\item\em Constant for milli\+Volts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Constant for milli\+Volts. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{test_8h_a8ea3e2c06575687ad4f4ff37b3da8e83}\label{test_8h_a8ea3e2c06575687ad4f4ff37b3da8e83}} 
+\#define {\bfseries MAX\+\_\+\+OUT\+\_\+\+BUFFER}~1024
+\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -37,12 +40,12 @@ bool \mbox{\hyperlink{test_8h_a0acd1ee00e871f30689aab1a7246feb0}{test\+\_\+ioboa
 \begin{DoxyItemize}
 \item Function not used during normal execution The function is used to validate the hardware after parts has been soldered and pico has firmware programmed 
 \end{DoxyItemize}\end{DoxyCompactList}\item 
-uint8\+\_\+t \mbox{\hyperlink{test_8h_acb420da0ba7e8e1e84b61fec9b4de4b9}{test\+\_\+selftest}} (const char $\ast$testboard\+\_\+num, uint8\+\_\+t run)
+uint8\+\_\+t \mbox{\hyperlink{test_8h_ac70b7d6422a8c2b63fd63ed04ed046e6}{test\+\_\+selftest}} (char $\ast$testboard\+\_\+num, uint8\+\_\+t run)
 \begin{DoxyCompactList}\small\item\em 
 \begin{DoxyItemize}
 \item Run test sequence to validate hardware with selftest board 
 \end{DoxyItemize}\end{DoxyCompactList}\item 
-void \mbox{\hyperlink{test_8h_ac9d279cdda41da5b1e2775dbfeaae220}{internal\+\_\+test\+\_\+sequence}} (const char $\ast$testboard\+\_\+num, uint8\+\_\+t run)
+void \mbox{\hyperlink{test_8h_a78b67679ee11d44f8ca2ad1a9ab58d53}{internal\+\_\+test\+\_\+sequence}} (char $\ast$testboard\+\_\+num, uint8\+\_\+t run)
 \begin{DoxyCompactList}\small\item\em Main routine to perform internal test using selftest board. The routine has been used to validate hardware and software during development if run=0, the menu will be displayed to operator to select which internal test to run. IF run \texorpdfstring{$>$}{>} 0, the internal test will run directly. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{test_8h_a7c4492986b11310638a7730bf6658532}{test\+\_\+inst\+\_\+manual}} ()
 \begin{DoxyCompactList}\small\item\em 
@@ -84,11 +87,16 @@ void {\bfseries test\+\_\+i2c\+\_\+adx} (void)
 void \mbox{\hyperlink{test_8h_a026d0e0ebc5a0757923cb305d732fb94}{test\+\_\+i2c\+\_\+ina219}} (void)
 \begin{DoxyCompactList}\small\item\em the software code below is not used by application but could be used, as example on how to work with I2C interface. This example was a proof of concept on I2C command available with a true device (INA219). \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{test_8h_a29d41cdb93de0f716dbb20dd55eb2f5b}{wait\+\_\+button\+\_\+pressed}} (void)
-\begin{DoxyCompactList}\small\item\em Utility function to help debug of firmware Button is connected between pin 1 and 4 of CTRL INST connector on the back of interconnect IO. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Utility function to help debug of firmware Button is connected between pin 1 and 4 of CTRL INST connector on the back of interconnect IO. \end{DoxyCompactList}\item 
+const char $\ast$ \mbox{\hyperlink{test_8h_a33510a8b3333bfec3368b10acddafd28}{internal\+\_\+test\+\_\+sequence\+\_\+result}} (void)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item Return contains of the last test 
+\end{DoxyItemize}\end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-char \mbox{\hyperlink{test_8h_af4c8396614d93905c2a91f60b9d2b4fd}{out\+\_\+buffer}} \mbox{[}1024\mbox{]}
+char \mbox{\hyperlink{test_8h_a9bd6c8fb710bc1dc1d1ae9e4b724da85}{out\+\_\+buffer}} \mbox{[}MAX\+\_\+\+OUT\+\_\+\+BUFFER\mbox{]}
 \begin{DoxyCompactList}\small\item\em Output buffer for storing data to be sent. \end{DoxyCompactList}\item 
 size\+\_\+t \mbox{\hyperlink{test_8h_a668cec89f06b89ddf4d1ee33527eba18}{out\+\_\+buffer\+\_\+pos}}
 \begin{DoxyCompactList}\small\item\em Current position in the output buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -152,11 +160,11 @@ Constant for volts.
 Volts. 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{test_8h_ac9d279cdda41da5b1e2775dbfeaae220}\label{test_8h_ac9d279cdda41da5b1e2775dbfeaae220}} 
+\mbox{\Hypertarget{test_8h_a78b67679ee11d44f8ca2ad1a9ab58d53}\label{test_8h_a78b67679ee11d44f8ca2ad1a9ab58d53}} 
 \index{test.h@{test.h}!internal\_test\_sequence@{internal\_test\_sequence}}
 \index{internal\_test\_sequence@{internal\_test\_sequence}!test.h@{test.h}}
 \doxysubsubsection{\texorpdfstring{internal\_test\_sequence()}{internal\_test\_sequence()}}
-{\footnotesize\ttfamily void internal\+\_\+test\+\_\+sequence (\begin{DoxyParamCaption}\item[{const char $\ast$}]{testboard\+\_\+num,  }\item[{uint8\+\_\+t}]{run }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void internal\+\_\+test\+\_\+sequence (\begin{DoxyParamCaption}\item[{char $\ast$}]{testboard\+\_\+num,  }\item[{uint8\+\_\+t}]{run }\end{DoxyParamCaption})}
 
 
 
@@ -169,7 +177,23 @@ Main routine to perform internal test using selftest board. The routine has been
 {\em run} & Test number to run, if equal to 0, the test menu will be displayed \\
 \hline
 \end{DoxyParams}
-Open Power Relay to remove power on Selftest board\mbox{\Hypertarget{test_8h_ac0f9727a7b6c5bf2aa0f549679faca6c}\label{test_8h_ac0f9727a7b6c5bf2aa0f549679faca6c}} 
+Open Power Relay to remove power on Selftest board\mbox{\Hypertarget{test_8h_a33510a8b3333bfec3368b10acddafd28}\label{test_8h_a33510a8b3333bfec3368b10acddafd28}} 
+\index{test.h@{test.h}!internal\_test\_sequence\_result@{internal\_test\_sequence\_result}}
+\index{internal\_test\_sequence\_result@{internal\_test\_sequence\_result}!test.h@{test.h}}
+\doxysubsubsection{\texorpdfstring{internal\_test\_sequence\_result()}{internal\_test\_sequence\_result()}}
+{\footnotesize\ttfamily const char $\ast$ internal\+\_\+test\+\_\+sequence\+\_\+result (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+
+\begin{DoxyItemize}
+\item Return contains of the last test 
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+return pointer to result str 
+\end{DoxyReturn}
+\mbox{\Hypertarget{test_8h_ac0f9727a7b6c5bf2aa0f549679faca6c}\label{test_8h_ac0f9727a7b6c5bf2aa0f549679faca6c}} 
 \index{test.h@{test.h}!onewiretest@{onewiretest}}
 \index{onewiretest@{onewiretest}!test.h@{test.h}}
 \doxysubsubsection{\texorpdfstring{onewiretest()}{onewiretest()}}
@@ -322,11 +346,11 @@ Wait to let time to relay to close and power the selftest board\mbox{\Hypertarge
 \item Function not used during normal execution The function is used to validate the hardware after parts has been soldered and pico has firmware programmed 
 \end{DoxyItemize}
 
-Normally run step by step with debugger and hardware verified by visual check or by measuring voltage \mbox{\Hypertarget{test_8h_acb420da0ba7e8e1e84b61fec9b4de4b9}\label{test_8h_acb420da0ba7e8e1e84b61fec9b4de4b9}} 
+Normally run step by step with debugger and hardware verified by visual check or by measuring voltage \mbox{\Hypertarget{test_8h_ac70b7d6422a8c2b63fd63ed04ed046e6}\label{test_8h_ac70b7d6422a8c2b63fd63ed04ed046e6}} 
 \index{test.h@{test.h}!test\_selftest@{test\_selftest}}
 \index{test\_selftest@{test\_selftest}!test.h@{test.h}}
 \doxysubsubsection{\texorpdfstring{test\_selftest()}{test\_selftest()}}
-{\footnotesize\ttfamily uint8\+\_\+t test\+\_\+selftest (\begin{DoxyParamCaption}\item[{const char $\ast$}]{testboard\+\_\+num,  }\item[{uint8\+\_\+t}]{run }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily uint8\+\_\+t test\+\_\+selftest (\begin{DoxyParamCaption}\item[{char $\ast$}]{testboard\+\_\+num,  }\item[{uint8\+\_\+t}]{run }\end{DoxyParamCaption})}
 
 
 
@@ -395,17 +419,17 @@ Utility function to help debug of firmware Button is connected between pin 1 and
 function exit when button pressed 
 
 \doxysubsection{Variable Documentation}
-\mbox{\Hypertarget{test_8h_af4c8396614d93905c2a91f60b9d2b4fd}\label{test_8h_af4c8396614d93905c2a91f60b9d2b4fd}} 
+\mbox{\Hypertarget{test_8h_a9bd6c8fb710bc1dc1d1ae9e4b724da85}\label{test_8h_a9bd6c8fb710bc1dc1d1ae9e4b724da85}} 
 \index{test.h@{test.h}!out\_buffer@{out\_buffer}}
 \index{out\_buffer@{out\_buffer}!test.h@{test.h}}
 \doxysubsubsection{\texorpdfstring{out\_buffer}{out\_buffer}}
-{\footnotesize\ttfamily char out\+\_\+buffer\mbox{[}1024\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+{\footnotesize\ttfamily char out\+\_\+buffer\mbox{[}MAX\+\_\+\+OUT\+\_\+\+BUFFER\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
 
 
 
 Output buffer for storing data to be sent. 
 
-This buffer holds the data that will be sent via the output channel (e.\+g., serial or communication port). It has a fixed size of 1024 bytes. \mbox{\Hypertarget{test_8h_a668cec89f06b89ddf4d1ee33527eba18}\label{test_8h_a668cec89f06b89ddf4d1ee33527eba18}} 
+This buffer holds the data that will be sent via the output channel (e.\+g., serial or communication port). It has a fixed size of MAX\+\_\+\+OUT\+\_\+\+BUFFER. \mbox{\Hypertarget{test_8h_a668cec89f06b89ddf4d1ee33527eba18}\label{test_8h_a668cec89f06b89ddf4d1ee33527eba18}} 
 \index{test.h@{test.h}!out\_buffer\_pos@{out\_buffer\_pos}}
 \index{out\_buffer\_pos@{out\_buffer\_pos}!test.h@{test.h}}
 \doxysubsubsection{\texorpdfstring{out\_buffer\_pos}{out\_buffer\_pos}}

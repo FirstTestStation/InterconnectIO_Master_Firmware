@@ -54,9 +54,23 @@ union \mbox{\hyperlink{unioneef}{eef}}
 \item 
 \#define \mbox{\hyperlink{master_8h_a9bf6878c496371814521fcec4de2bd9d}{COM\+\_\+\+SER\+\_\+\+SPEED}}~\char`\"{}COM\+\_\+\+SER\+\_\+\+SPEED\char`\"{}
 \item 
+\#define \mbox{\hyperlink{master_8h_ab6baf52f2aa8c12bd22b336077d85d3a}{COM\+\_\+\+SER\+\_\+\+ECHO}}~\char`\"{}COM\+\_\+\+SER\+\_\+\+ECHO\char`\"{}
+\item 
 \#define \mbox{\hyperlink{master_8h_a346d06697805f5e12bf31d75160384fe}{PSLAVE\+\_\+\+RUN}}~\char`\"{}PICO\+\_\+\+SLAVES\+\_\+\+RUN\char`\"{}
 \item 
 \#define \mbox{\hyperlink{master_8h_a88cbeaa93ffda90a065bcf55988095b1}{TESTBOARD\+\_\+\+NUM}}~\char`\"{}TESTBOARD\+\_\+\+NUM\char`\"{}
+\item 
+\#define \mbox{\hyperlink{master_8h_ae855793864a05695356764e0c79e4029}{PARAMETER1}}~\char`\"{}PARAMETER1\char`\"{}
+\item 
+\#define \mbox{\hyperlink{master_8h_ae55ea7e53c2e689a7f4a45c7c1f6c044}{PARAMETER2}}~\char`\"{}PARAMETER2\char`\"{}
+\item 
+\#define \mbox{\hyperlink{master_8h_a0b5665fdb48e4d194b044f74f90f69c1}{PARAMETER3}}~\char`\"{}PARAMETER3\char`\"{}
+\item 
+\#define \mbox{\hyperlink{master_8h_a44ea87ecb2317115c29ce466fc55c3d2}{PARAMETER4}}~\char`\"{}PARAMETER4\char`\"{}
+\item 
+\#define \mbox{\hyperlink{master_8h_a532b126794e7148598558100afcf08f8}{PARAMETER5}}~\char`\"{}PARAMETER5\char`\"{}
+\item 
+\#define \mbox{\hyperlink{master_8h_ab946e2e7f7679350627acfded8e2658b}{TEST}}~\char`\"{}TEST\char`\"{}
 \item 
 \#define \mbox{\hyperlink{master_8h_aca7ea8703be4ab2e809f5df2643c413c}{EE\+\_\+\+CHECK\+\_\+\+CHAR}}~\textquotesingle{}\#\textquotesingle{}
 \begin{DoxyCompactList}\small\item\em Default value for EEPROM structure. \end{DoxyCompactList}\item 
@@ -68,9 +82,23 @@ union \mbox{\hyperlink{unioneef}{eef}}
 \item 
 \#define \mbox{\hyperlink{master_8h_a203871091e122fdead14f6891cf9122c}{EE\+\_\+\+CSER\+\_\+\+SPEED}}~\char`\"{}115200\char`\"{}
 \item 
+\#define \mbox{\hyperlink{master_8h_aa30994e07d1bbf8e8a709b0c464ec03e}{EE\+\_\+\+CSER\+\_\+\+ECHO}}~\char`\"{}0\char`\"{}
+\item 
 \#define \mbox{\hyperlink{master_8h_ab7e6b9b426f3f24800ed0e9085675138}{EE\+\_\+\+SLAVE\+\_\+\+RUN}}~\char`\"{}0\char`\"{}
 \item 
 \#define \mbox{\hyperlink{master_8h_aa8e998e0a83764e72707047b4fd42918}{EE\+\_\+\+TESTBOARD\+\_\+\+NUM}}~\char`\"{}500-\/1010-\/020\char`\"{}
+\item 
+\#define \mbox{\hyperlink{master_8h_a69019093ef7e25cf31882e14b7bba81b}{EE\+\_\+\+PARAMETER1}}~\char`\"{}NOT\+\_\+\+DEFINED1\char`\"{}
+\item 
+\#define \mbox{\hyperlink{master_8h_a7987a6a16e707741bdaa8b66adde7039}{EE\+\_\+\+PARAMETER2}}~\char`\"{}NOT\+\_\+\+DEFINED2\char`\"{}
+\item 
+\#define \mbox{\hyperlink{master_8h_a0c2046589c0239a0c6d8fadaf9bfc296}{EE\+\_\+\+PARAMETER3}}~\char`\"{}NOT\+\_\+\+DEFINED3\char`\"{}
+\item 
+\#define \mbox{\hyperlink{master_8h_aaa067f7a4bd9498796a2b76fa36404ce}{EE\+\_\+\+PARAMETER4}}~\char`\"{}NOT\+\_\+\+DEFINED4\char`\"{}
+\item 
+\#define \mbox{\hyperlink{master_8h_afa3bc74047bcc6e659e1bc053bbe9ba2}{EE\+\_\+\+PARAMETER5}}~\char`\"{}NOT\+\_\+\+DEFINED5\char`\"{}
+\item 
+\#define \mbox{\hyperlink{master_8h_a580c14174e51fba779157588dee7c502}{EE\+\_\+\+TEST}}~\char`\"{}TEST\char`\"{}
 \item 
 \#define \mbox{\hyperlink{master_8h_aec0ccc9a5a885b633db093704aeb6391}{DEF\+\_\+\+EEPROM}}
 \begin{DoxyCompactList}\small\item\em Default values for the EEPROM structure. \end{DoxyCompactList}\item 
@@ -151,7 +179,13 @@ Baud rate for UART communication. \mbox{\Hypertarget{master_8h_a4ccc9878008def89
 
 EEPROM parameters supported by SCPI commands. 
 
-These parameters can be accessed and modified via SCPI commands. EEPROM Check character. \mbox{\Hypertarget{master_8h_a9bf6878c496371814521fcec4de2bd9d}\label{master_8h_a9bf6878c496371814521fcec4de2bd9d}} 
+These parameters can be accessed and modified via SCPI commands. EEPROM Check character. \mbox{\Hypertarget{master_8h_ab6baf52f2aa8c12bd22b336077d85d3a}\label{master_8h_ab6baf52f2aa8c12bd22b336077d85d3a}} 
+\index{master.h@{master.h}!COM\_SER\_ECHO@{COM\_SER\_ECHO}}
+\index{COM\_SER\_ECHO@{COM\_SER\_ECHO}!master.h@{master.h}}
+\doxysubsubsection{\texorpdfstring{COM\_SER\_ECHO}{COM\_SER\_ECHO}}
+{\footnotesize\ttfamily \#define COM\+\_\+\+SER\+\_\+\+ECHO~\char`\"{}COM\+\_\+\+SER\+\_\+\+ECHO\char`\"{}}
+
+EEPROM Serial Echo Flag. \mbox{\Hypertarget{master_8h_a9bf6878c496371814521fcec4de2bd9d}\label{master_8h_a9bf6878c496371814521fcec4de2bd9d}} 
 \index{master.h@{master.h}!COM\_SER\_SPEED@{COM\_SER\_SPEED}}
 \index{COM\_SER\_SPEED@{COM\_SER\_SPEED}!master.h@{master.h}}
 \doxysubsubsection{\texorpdfstring{COM\_SER\_SPEED}{COM\_SER\_SPEED}}
@@ -171,15 +205,23 @@ Number of data bits. \mbox{\Hypertarget{master_8h_aec0ccc9a5a885b633db093704aeb6
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{  \{                                                                                                                                                  \(\backslash\)}
-\DoxyCodeLine{    EE\_CHECK\_CHAR,                                                                                                     \(\backslash\)}
-\DoxyCodeLine{        EE\_PARTNUMBER,                                                                                                     \(\backslash\)}
-\DoxyCodeLine{        EE\_SERIALNUMBER,                                                                                                 \(\backslash\)}
-\DoxyCodeLine{        EE\_MOD\_OPTION,                                                                                                          \(\backslash\)}
-\DoxyCodeLine{        EE\_CSER\_SPEED,                                                                                             \(\backslash\)}
-\DoxyCodeLine{        EE\_SLAVE\_RUN,                                                                                                          \(\backslash\)}
-\DoxyCodeLine{        EE\_TESTBOARD\_NUM                                                                                                    \(\backslash\)}
-\DoxyCodeLine{  \}}
+\DoxyCodeLine{\{                                                                               \(\backslash\)}
+\DoxyCodeLine{    EE\_CHECK\_CHAR,                                \(\backslash\)}
+\DoxyCodeLine{    EE\_PARTNUMBER,                                    \(\backslash\)}
+\DoxyCodeLine{    EE\_SERIALNUMBER,                                \(\backslash\)}
+\DoxyCodeLine{    EE\_MOD\_OPTION,                                         \(\backslash\)}
+\DoxyCodeLine{    EE\_CSER\_SPEED,                            \(\backslash\)}
+\DoxyCodeLine{    EE\_CSER\_ECHO,                   \(\backslash\)}
+\DoxyCodeLine{    EE\_SLAVE\_RUN,                                         \(\backslash\)}
+\DoxyCodeLine{    EE\_TESTBOARD\_NUM,                                  \(\backslash\)}
+\DoxyCodeLine{    EE\_PARAMETER1,                                  \(\backslash\)}
+\DoxyCodeLine{    EE\_PARAMETER2,                                  \(\backslash\)}
+\DoxyCodeLine{    EE\_PARAMETER3,                                  \(\backslash\)}
+\DoxyCodeLine{    EE\_PARAMETER4,                                  \(\backslash\)}
+\DoxyCodeLine{    EE\_PARAMETER5,                                  \(\backslash\)}
+\DoxyCodeLine{    EE\_TEST                                       \(\backslash\)}
+\DoxyCodeLine{                                                                                \(\backslash\)}
+\DoxyCodeLine{\}}
 
 \end{DoxyCode}
 
@@ -196,7 +238,13 @@ This macro assigns default values to the EEPROM structure. New parameters can be
 
 Default value for EEPROM structure. 
 
-This section defines the default values assigned to the EEPROM structure. Each parameter has a specific role in the system configuration. EEPROM check character \mbox{\Hypertarget{master_8h_a203871091e122fdead14f6891cf9122c}\label{master_8h_a203871091e122fdead14f6891cf9122c}} 
+This section defines the default values assigned to the EEPROM structure. Each parameter has a specific role in the system configuration. EEPROM check character \mbox{\Hypertarget{master_8h_aa30994e07d1bbf8e8a709b0c464ec03e}\label{master_8h_aa30994e07d1bbf8e8a709b0c464ec03e}} 
+\index{master.h@{master.h}!EE\_CSER\_ECHO@{EE\_CSER\_ECHO}}
+\index{EE\_CSER\_ECHO@{EE\_CSER\_ECHO}!master.h@{master.h}}
+\doxysubsubsection{\texorpdfstring{EE\_CSER\_ECHO}{EE\_CSER\_ECHO}}
+{\footnotesize\ttfamily \#define EE\+\_\+\+CSER\+\_\+\+ECHO~\char`\"{}0\char`\"{}}
+
+Communication flag, Echo ON\+: 1, Echo OFF\+: 0 \mbox{\Hypertarget{master_8h_a203871091e122fdead14f6891cf9122c}\label{master_8h_a203871091e122fdead14f6891cf9122c}} 
 \index{master.h@{master.h}!EE\_CSER\_SPEED@{EE\_CSER\_SPEED}}
 \index{EE\_CSER\_SPEED@{EE\_CSER\_SPEED}!master.h@{master.h}}
 \doxysubsubsection{\texorpdfstring{EE\_CSER\_SPEED}{EE\_CSER\_SPEED}}
@@ -208,7 +256,37 @@ Communication serial speed (e.\+g., baud rate) \mbox{\Hypertarget{master_8h_a0f9
 \doxysubsubsection{\texorpdfstring{EE\_MOD\_OPTION}{EE\_MOD\_OPTION}}
 {\footnotesize\ttfamily \#define EE\+\_\+\+MOD\+\_\+\+OPTION~\char`\"{}DAC,PWR\char`\"{}}
 
-Module options (e.\+g., DAC, Power) \mbox{\Hypertarget{master_8h_af5f89fadc953626c841f532aea4f5727}\label{master_8h_af5f89fadc953626c841f532aea4f5727}} 
+Module options (e.\+g., DAC, Power) \mbox{\Hypertarget{master_8h_a69019093ef7e25cf31882e14b7bba81b}\label{master_8h_a69019093ef7e25cf31882e14b7bba81b}} 
+\index{master.h@{master.h}!EE\_PARAMETER1@{EE\_PARAMETER1}}
+\index{EE\_PARAMETER1@{EE\_PARAMETER1}!master.h@{master.h}}
+\doxysubsubsection{\texorpdfstring{EE\_PARAMETER1}{EE\_PARAMETER1}}
+{\footnotesize\ttfamily \#define EE\+\_\+\+PARAMETER1~\char`\"{}NOT\+\_\+\+DEFINED1\char`\"{}}
+
+User available parameter \mbox{\Hypertarget{master_8h_a7987a6a16e707741bdaa8b66adde7039}\label{master_8h_a7987a6a16e707741bdaa8b66adde7039}} 
+\index{master.h@{master.h}!EE\_PARAMETER2@{EE\_PARAMETER2}}
+\index{EE\_PARAMETER2@{EE\_PARAMETER2}!master.h@{master.h}}
+\doxysubsubsection{\texorpdfstring{EE\_PARAMETER2}{EE\_PARAMETER2}}
+{\footnotesize\ttfamily \#define EE\+\_\+\+PARAMETER2~\char`\"{}NOT\+\_\+\+DEFINED2\char`\"{}}
+
+User available parameter \mbox{\Hypertarget{master_8h_a0c2046589c0239a0c6d8fadaf9bfc296}\label{master_8h_a0c2046589c0239a0c6d8fadaf9bfc296}} 
+\index{master.h@{master.h}!EE\_PARAMETER3@{EE\_PARAMETER3}}
+\index{EE\_PARAMETER3@{EE\_PARAMETER3}!master.h@{master.h}}
+\doxysubsubsection{\texorpdfstring{EE\_PARAMETER3}{EE\_PARAMETER3}}
+{\footnotesize\ttfamily \#define EE\+\_\+\+PARAMETER3~\char`\"{}NOT\+\_\+\+DEFINED3\char`\"{}}
+
+User available parameter \mbox{\Hypertarget{master_8h_aaa067f7a4bd9498796a2b76fa36404ce}\label{master_8h_aaa067f7a4bd9498796a2b76fa36404ce}} 
+\index{master.h@{master.h}!EE\_PARAMETER4@{EE\_PARAMETER4}}
+\index{EE\_PARAMETER4@{EE\_PARAMETER4}!master.h@{master.h}}
+\doxysubsubsection{\texorpdfstring{EE\_PARAMETER4}{EE\_PARAMETER4}}
+{\footnotesize\ttfamily \#define EE\+\_\+\+PARAMETER4~\char`\"{}NOT\+\_\+\+DEFINED4\char`\"{}}
+
+User available parameter \mbox{\Hypertarget{master_8h_afa3bc74047bcc6e659e1bc053bbe9ba2}\label{master_8h_afa3bc74047bcc6e659e1bc053bbe9ba2}} 
+\index{master.h@{master.h}!EE\_PARAMETER5@{EE\_PARAMETER5}}
+\index{EE\_PARAMETER5@{EE\_PARAMETER5}!master.h@{master.h}}
+\doxysubsubsection{\texorpdfstring{EE\_PARAMETER5}{EE\_PARAMETER5}}
+{\footnotesize\ttfamily \#define EE\+\_\+\+PARAMETER5~\char`\"{}NOT\+\_\+\+DEFINED5\char`\"{}}
+
+User available parameter \mbox{\Hypertarget{master_8h_af5f89fadc953626c841f532aea4f5727}\label{master_8h_af5f89fadc953626c841f532aea4f5727}} 
 \index{master.h@{master.h}!EE\_PARTNUMBER@{EE\_PARTNUMBER}}
 \index{EE\_PARTNUMBER@{EE\_PARTNUMBER}!master.h@{master.h}}
 \doxysubsubsection{\texorpdfstring{EE\_PARTNUMBER}{EE\_PARTNUMBER}}
@@ -226,7 +304,13 @@ Serial number of the device \mbox{\Hypertarget{master_8h_ab7e6b9b426f3f24800ed0e
 \doxysubsubsection{\texorpdfstring{EE\_SLAVE\_RUN}{EE\_SLAVE\_RUN}}
 {\footnotesize\ttfamily \#define EE\+\_\+\+SLAVE\+\_\+\+RUN~\char`\"{}0\char`\"{}}
 
-Slave run status (0 = Disable, 1 = Enable) \mbox{\Hypertarget{master_8h_aa8e998e0a83764e72707047b4fd42918}\label{master_8h_aa8e998e0a83764e72707047b4fd42918}} 
+Slave run status (0 = Disable, 1 = Enable) \mbox{\Hypertarget{master_8h_a580c14174e51fba779157588dee7c502}\label{master_8h_a580c14174e51fba779157588dee7c502}} 
+\index{master.h@{master.h}!EE\_TEST@{EE\_TEST}}
+\index{EE\_TEST@{EE\_TEST}!master.h@{master.h}}
+\doxysubsubsection{\texorpdfstring{EE\_TEST}{EE\_TEST}}
+{\footnotesize\ttfamily \#define EE\+\_\+\+TEST~\char`\"{}TEST\char`\"{}}
+
+User to test read write of EEprom \mbox{\Hypertarget{master_8h_aa8e998e0a83764e72707047b4fd42918}\label{master_8h_aa8e998e0a83764e72707047b4fd42918}} 
 \index{master.h@{master.h}!EE\_TESTBOARD\_NUM@{EE\_TESTBOARD\_NUM}}
 \index{EE\_TESTBOARD\_NUM@{EE\_TESTBOARD\_NUM}!master.h@{master.h}}
 \doxysubsubsection{\texorpdfstring{EE\_TESTBOARD\_NUM}{EE\_TESTBOARD\_NUM}}
@@ -238,7 +322,37 @@ Part number of the self-\/test board \mbox{\Hypertarget{master_8h_a595ac00d713ef
 \doxysubsubsection{\texorpdfstring{MOD\_OPTION}{MOD\_OPTION}}
 {\footnotesize\ttfamily \#define MOD\+\_\+\+OPTION~\char`\"{}MOD\+\_\+\+OPTION\char`\"{}}
 
-EEPROM Module options. \mbox{\Hypertarget{master_8h_af6996d12e71a534569c41a25de7d6d52}\label{master_8h_af6996d12e71a534569c41a25de7d6d52}} 
+EEPROM Module options. \mbox{\Hypertarget{master_8h_ae855793864a05695356764e0c79e4029}\label{master_8h_ae855793864a05695356764e0c79e4029}} 
+\index{master.h@{master.h}!PARAMETER1@{PARAMETER1}}
+\index{PARAMETER1@{PARAMETER1}!master.h@{master.h}}
+\doxysubsubsection{\texorpdfstring{PARAMETER1}{PARAMETER1}}
+{\footnotesize\ttfamily \#define PARAMETER1~\char`\"{}PARAMETER1\char`\"{}}
+
+EEPROM user defined field. \mbox{\Hypertarget{master_8h_ae55ea7e53c2e689a7f4a45c7c1f6c044}\label{master_8h_ae55ea7e53c2e689a7f4a45c7c1f6c044}} 
+\index{master.h@{master.h}!PARAMETER2@{PARAMETER2}}
+\index{PARAMETER2@{PARAMETER2}!master.h@{master.h}}
+\doxysubsubsection{\texorpdfstring{PARAMETER2}{PARAMETER2}}
+{\footnotesize\ttfamily \#define PARAMETER2~\char`\"{}PARAMETER2\char`\"{}}
+
+EEPROM user defined field. \mbox{\Hypertarget{master_8h_a0b5665fdb48e4d194b044f74f90f69c1}\label{master_8h_a0b5665fdb48e4d194b044f74f90f69c1}} 
+\index{master.h@{master.h}!PARAMETER3@{PARAMETER3}}
+\index{PARAMETER3@{PARAMETER3}!master.h@{master.h}}
+\doxysubsubsection{\texorpdfstring{PARAMETER3}{PARAMETER3}}
+{\footnotesize\ttfamily \#define PARAMETER3~\char`\"{}PARAMETER3\char`\"{}}
+
+EEPROM user defined field. \mbox{\Hypertarget{master_8h_a44ea87ecb2317115c29ce466fc55c3d2}\label{master_8h_a44ea87ecb2317115c29ce466fc55c3d2}} 
+\index{master.h@{master.h}!PARAMETER4@{PARAMETER4}}
+\index{PARAMETER4@{PARAMETER4}!master.h@{master.h}}
+\doxysubsubsection{\texorpdfstring{PARAMETER4}{PARAMETER4}}
+{\footnotesize\ttfamily \#define PARAMETER4~\char`\"{}PARAMETER4\char`\"{}}
+
+EEPROM user defined field. \mbox{\Hypertarget{master_8h_a532b126794e7148598558100afcf08f8}\label{master_8h_a532b126794e7148598558100afcf08f8}} 
+\index{master.h@{master.h}!PARAMETER5@{PARAMETER5}}
+\index{PARAMETER5@{PARAMETER5}!master.h@{master.h}}
+\doxysubsubsection{\texorpdfstring{PARAMETER5}{PARAMETER5}}
+{\footnotesize\ttfamily \#define PARAMETER5~\char`\"{}PARAMETER5\char`\"{}}
+
+EEPROM user defined field. \mbox{\Hypertarget{master_8h_af6996d12e71a534569c41a25de7d6d52}\label{master_8h_af6996d12e71a534569c41a25de7d6d52}} 
 \index{master.h@{master.h}!PARITY@{PARITY}}
 \index{PARITY@{PARITY}!master.h@{master.h}}
 \doxysubsubsection{\texorpdfstring{PARITY}{PARITY}}
@@ -290,7 +404,13 @@ EEPROM Serial number. \mbox{\Hypertarget{master_8h_abd1123d1a3a1f52c36d99b27e993
 \doxysubsubsection{\texorpdfstring{STOP\_BITS}{STOP\_BITS}}
 {\footnotesize\ttfamily \#define STOP\+\_\+\+BITS~1}
 
-Number of stop bits. \mbox{\Hypertarget{master_8h_a88cbeaa93ffda90a065bcf55988095b1}\label{master_8h_a88cbeaa93ffda90a065bcf55988095b1}} 
+Number of stop bits. \mbox{\Hypertarget{master_8h_ab946e2e7f7679350627acfded8e2658b}\label{master_8h_ab946e2e7f7679350627acfded8e2658b}} 
+\index{master.h@{master.h}!TEST@{TEST}}
+\index{TEST@{TEST}!master.h@{master.h}}
+\doxysubsubsection{\texorpdfstring{TEST}{TEST}}
+{\footnotesize\ttfamily \#define TEST~\char`\"{}TEST\char`\"{}}
+
+EEPROM test field. \mbox{\Hypertarget{master_8h_a88cbeaa93ffda90a065bcf55988095b1}\label{master_8h_a88cbeaa93ffda90a065bcf55988095b1}} 
 \index{master.h@{master.h}!TESTBOARD\_NUM@{TESTBOARD\_NUM}}
 \index{TESTBOARD\_NUM@{TESTBOARD\_NUM}!master.h@{master.h}}
 \doxysubsubsection{\texorpdfstring{TESTBOARD\_NUM}{TESTBOARD\_NUM}}

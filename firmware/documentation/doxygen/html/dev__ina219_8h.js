@@ -45,7 +45,7 @@ var dev__ina219_8h =
     [ "ina219CalibrateCurrent_mA", "dev__ina219_8h.html#a0106e7103c25bb310f1e2ec005bbad4e", null ],
     [ "ina219GetBusVoltage", "dev__ina219_8h.html#a439f8a8e2a42bbe0ca5b2b48da9a1e80", null ],
     [ "ina219GetCurrent", "dev__ina219_8h.html#a6817c5f0df62fbc15d365d4278e9fedc", null ],
-    [ "ina219GetCurrent_mA", "dev__ina219_8h.html#a8878cb36e1b8abff9203dfe682f3a067", null ],
+    [ "ina219GetCurrent_mA", "dev__ina219_8h.html#a702f33df6c637c52a60620cf94b77a0c", null ],
     [ "ina219GetPower", "dev__ina219_8h.html#a1cc61b66b7d48f392e3f71196df47d16", null ],
     [ "ina219GetPower_mW", "dev__ina219_8h.html#a9cecf583ae9c089a9e251c60c2ead1cd", null ],
     [ "ina219GetShuntVoltage", "dev__ina219_8h.html#a9dd812ec2d9030c7edaa1ea397d2c53e", null ],

@@ -7,5 +7,6 @@ var searchData=
   ['relay_5fchanlst_4',['Relay_Chanlst',['../fts__scpi_8c.html#acf3067fd6de75a9dbecc0d7a9d2520a2',1,'Relay_Chanlst(scpi_t *context, uint16_t *array):&#160;fts_scpi.c'],['../fts__scpi_8h.html#acf3067fd6de75a9dbecc0d7a9d2520a2',1,'Relay_Chanlst(scpi_t *context, uint16_t *array):&#160;fts_scpi.c']]],
   ['relay_5fexecute_5',['relay_execute',['../i2c__com_8c.html#a6ab31ae372e2f5df7d1d2791fc42491a',1,'relay_execute(uint16_t *list, uint8_t action, uint16_t *answer):&#160;i2c_com.c'],['../i2c__com_8h.html#a6ab31ae372e2f5df7d1d2791fc42491a',1,'relay_execute(uint16_t *list, uint8_t action, uint16_t *answer):&#160;i2c_com.c']]],
   ['removecrlf_6',['removeCRLF',['../test_8c.html#a9313b8b09e2402dbd3215a879dfa18d2',1,'test.c']]],
-  ['reserved_5faddr_7',['reserved_addr',['../functadv_8c.html#a8618bf928432d3969d2fde39e61fbeee',1,'functadv.c']]]
+  ['reserved_5faddr_7',['reserved_addr',['../functadv_8c.html#a8618bf928432d3969d2fde39e61fbeee',1,'functadv.c']]],
+  ['reset_5fcallback_8',['reset_callback',['../fts__scpi_8c.html#a83c50f419ca88f80f55abe46090e547c',1,'fts_scpi.c']]]
 ];

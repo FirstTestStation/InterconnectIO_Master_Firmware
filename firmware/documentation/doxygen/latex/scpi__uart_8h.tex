@@ -49,6 +49,10 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \mbox{\Hypertarget{scpi__uart_8h_a8039b06489690dc2aec2fc790af162ad}\label{scpi__uart_8h_a8039b06489690dc2aec2fc790af162ad}} 
 \#define {\bfseries DEF\+\_\+\+TIMEOUT\+\_\+\+MS}~1000
 \begin{DoxyCompactList}\small\item\em Default timeout duration in milliseconds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{scpi__uart_8h_a8946ff8fb16989090bfa173b39f71e7f}\label{scpi__uart_8h_a8946ff8fb16989090bfa173b39f71e7f}} 
+\#define {\bfseries DEF\+\_\+\+EOL}~1
+\begin{DoxyCompactList}\small\item\em Default character added at the end of string (1= \textquotesingle{}~\newline
+\textquotesingle{}) \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{scpi__uart_8h_acf576a875f3b53b45cd89698e34aeec7}\label{scpi__uart_8h_acf576a875f3b53b45cd89698e34aeec7}} 
 \#define {\bfseries DEF\+\_\+\+LASTCHAR}~\textquotesingle{}\textbackslash{}n\textquotesingle{}
 \begin{DoxyCompactList}\small\item\em Default last character for received strings. \end{DoxyCompactList}\item 
@@ -86,6 +90,9 @@ void {\bfseries scpi\+\_\+uart\+\_\+disable} (void)
 \begin{DoxyCompactList}\small\item\em function to disable the user uart and configure developed pins reserved by UART to normal GPIO, set as input. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{scpi__uart_8h_a1beb9ac537fc7db2337e750b61004e06}{scpi\+\_\+uart\+\_\+status}} (void)
 \begin{DoxyCompactList}\small\item\em Function who return if the user uart is enabled or not. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{scpi__uart_8h_a3c15892e785168ea65b012576235528b}\label{scpi__uart_8h_a3c15892e785168ea65b012576235528b}} 
+void {\bfseries add\+\_\+eol} (void)
+\begin{DoxyCompactList}\small\item\em Function to add the defined EOL character at the end of write string. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{scpi__uart_8h_a8b9b7e507857261be73965271270d54f}{scpi\+\_\+uart\+\_\+set\+\_\+baudrate}} (uint32\+\_\+t speed)
 \begin{DoxyCompactList}\small\item\em Function to update the baudrate speed on the structure, Baudrate will be updated with function uart enable. \end{DoxyCompactList}\item 
 uint32\+\_\+t \mbox{\hyperlink{scpi__uart_8h_a5762f30985131b1602ccf52aa0f5747a}{scpi\+\_\+uart\+\_\+get\+\_\+baudrate}} (void)
@@ -94,6 +101,10 @@ void \mbox{\hyperlink{scpi__uart_8h_a8c6e0b0b9a1aaa0c264b072b38aa70fc}{scpi\+\_\
 \begin{DoxyCompactList}\small\item\em Function to update the timeout time register on the structure, Timeout is used to define the maximum time to wait for a new character received by uart. \end{DoxyCompactList}\item 
 uint32\+\_\+t \mbox{\hyperlink{scpi__uart_8h_a4940674ea5d55c2b968af3e4eee8dca3}{scpi\+\_\+uart\+\_\+get\+\_\+timeout}} (void)
 \begin{DoxyCompactList}\small\item\em function to return the value of Timeout saved on user uart structure. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{scpi__uart_8h_a3c69ee3674bd2259a4f1035a0d9ceeac}{scpi\+\_\+uart\+\_\+set\+\_\+eol}} (uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Function to set the EOL on the structure, EOL will be added at the end of string to send. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{scpi__uart_8h_a4202a867295a94338d06c5d26d7e7ec5}{scpi\+\_\+uart\+\_\+get\+\_\+eol}} (void)
+\begin{DoxyCompactList}\small\item\em Function to get the EOL on the structure. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{scpi__uart_8h_abf113dcc339af90ccc3d4a63018e900e}{scpi\+\_\+uart\+\_\+set\+\_\+handshake}} (bool val)
 \begin{DoxyCompactList}\small\item\em Function to set or reset the uart handshake RTS-\/\+CTS. When disable the pins reserved the handshake are set for GPIO. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{scpi__uart_8h_a140d39ce403d0abb4a61ed75c87ac366}{scpi\+\_\+uart\+\_\+get\+\_\+handshake}} (void)
@@ -169,6 +180,19 @@ function to return exact baudrate based on Pico clock and divider
 \begin{DoxyReturn}{Returns}
 uint32\+\_\+t actual exact baudrate 
 \end{DoxyReturn}
+\mbox{\Hypertarget{scpi__uart_8h_a4202a867295a94338d06c5d26d7e7ec5}\label{scpi__uart_8h_a4202a867295a94338d06c5d26d7e7ec5}} 
+\index{scpi\_uart.h@{scpi\_uart.h}!scpi\_uart\_get\_eol@{scpi\_uart\_get\_eol}}
+\index{scpi\_uart\_get\_eol@{scpi\_uart\_get\_eol}!scpi\_uart.h@{scpi\_uart.h}}
+\doxysubsubsection{\texorpdfstring{scpi\_uart\_get\_eol()}{scpi\_uart\_get\_eol()}}
+{\footnotesize\ttfamily uint8\+\_\+t scpi\+\_\+uart\+\_\+get\+\_\+eol (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function to get the EOL on the structure. 
+
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t actual eol value 
+\end{DoxyReturn}
 \mbox{\Hypertarget{scpi__uart_8h_a140d39ce403d0abb4a61ed75c87ac366}\label{scpi__uart_8h_a140d39ce403d0abb4a61ed75c87ac366}} 
 \index{scpi\_uart.h@{scpi\_uart.h}!scpi\_uart\_get\_handshake@{scpi\_uart\_get\_handshake}}
 \index{scpi\_uart\_get\_handshake@{scpi\_uart\_get\_handshake}!scpi\_uart.h@{scpi\_uart.h}}
@@ -221,6 +245,21 @@ Function to update the baudrate speed on the structure, Baudrate will be updated
 
 \begin{DoxyParams}{Parameters}
 {\em speed} & Baudrate to save on structure \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{scpi__uart_8h_a3c69ee3674bd2259a4f1035a0d9ceeac}\label{scpi__uart_8h_a3c69ee3674bd2259a4f1035a0d9ceeac}} 
+\index{scpi\_uart.h@{scpi\_uart.h}!scpi\_uart\_set\_eol@{scpi\_uart\_set\_eol}}
+\index{scpi\_uart\_set\_eol@{scpi\_uart\_set\_eol}!scpi\_uart.h@{scpi\_uart.h}}
+\doxysubsubsection{\texorpdfstring{scpi\_uart\_set\_eol()}{scpi\_uart\_set\_eol()}}
+{\footnotesize\ttfamily void scpi\+\_\+uart\+\_\+set\+\_\+eol (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+Function to set the EOL on the structure, EOL will be added at the end of string to send. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & EOL (End-\/\+Of-\/\+Line) to save on structure \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{scpi__uart_8h_abf113dcc339af90ccc3d4a63018e900e}\label{scpi__uart_8h_abf113dcc339af90ccc3d4a63018e900e}} 

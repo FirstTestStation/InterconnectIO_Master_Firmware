@@ -128,7 +128,7 @@ Macros</h2></td></tr>
 <tr class="memdesc:ada85ace4c581616bc14462510ac45308"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start address of the information string on EEPROM. <br /></td></tr>
 <tr class="separator:ada85ace4c581616bc14462510ac45308"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac94f934c3a1db5b1405d62f7663f8442"><td class="memItemLeft" align="right" valign="top"><a id="ac94f934c3a1db5b1405d62f7663f8442" name="ac94f934c3a1db5b1405d62f7663f8442"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>NB_INFO</b>&#160;&#160;&#160;48</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>NB_INFO</b>&#160;&#160;&#160;64</td></tr>
 <tr class="memdesc:ac94f934c3a1db5b1405d62f7663f8442"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum characters allowed in the info field. <br /></td></tr>
 <tr class="separator:ac94f934c3a1db5b1405d62f7663f8442"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8eb5531593f8b0ed7d1ead416f38aee6"><td class="memItemLeft" align="right" valign="top"><a id="a8eb5531593f8b0ed7d1ead416f38aee6" name="a8eb5531593f8b0ed7d1ead416f38aee6"></a>
@@ -144,7 +144,7 @@ Macros</h2></td></tr>
 <tr class="memdesc:a2976a865ee778f90e7a031970625d152"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of devices on the 1-Wire bus at the same time. <br /></td></tr>
 <tr class="separator:a2976a865ee778f90e7a031970625d152"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab205d2e85504c5af57e74849cfb53eef"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__ds2431_8h.html#ab205d2e85504c5af57e74849cfb53eef">WRITEMEMORY</a>&#160;&#160;&#160;0x0F</td></tr>
-<tr class="memdesc:ab205d2e85504c5af57e74849cfb53eef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format EEprom mandatory (reserved 48 Bytes)  <a href="dev__ds2431_8h.html#ab205d2e85504c5af57e74849cfb53eef">More...</a><br /></td></tr>
+<tr class="memdesc:ab205d2e85504c5af57e74849cfb53eef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format EEprom mandatory (reserved 64 Bytes)  <a href="dev__ds2431_8h.html#ab205d2e85504c5af57e74849cfb53eef">More...</a><br /></td></tr>
 <tr class="separator:ab205d2e85504c5af57e74849cfb53eef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73bca8a9a4a773829639bc83422f687a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__ds2431_8h.html#a73bca8a9a4a773829639bc83422f687a">READ_MEMORY</a>&#160;&#160;&#160;0xF0</td></tr>
 <tr class="separator:a73bca8a9a4a773829639bc83422f687a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -743,10 +743,10 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Format EEprom mandatory (reserved 48 Bytes) </p>
+<p>Format EEprom mandatory (reserved 64 Bytes) </p>
 <pre class="fragment"> Address:  0
- Device_id, Board_part_number, Bd_serial_number, location (J1 or J2)
-     16   2   12            2      6           2    2
+ Device_id, ProductName, Partnumber, SerialNumber, location (J1 or J2)
+     16   2   22       2  12       2      6      2    2
 </pre><p >List of commands available for OneWire device DS2431. Command to write memory. </p>
 
 </div>

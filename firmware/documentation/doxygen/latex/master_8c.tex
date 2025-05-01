@@ -8,6 +8,7 @@ Main loop to control the Pico Master Device.
 {\ttfamily \#include \char`\"{}include/master.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
 {\ttfamily \#include \char`\"{}hardware/adc.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}hardware/i2c.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}hardware/uart.\+h\char`\"{}}\newline
@@ -58,12 +59,7 @@ bool \mbox{\hyperlink{master_8c_a6d1ccfb6a786c332e10a4f2c8e8765c1}{deque}} (\mbo
 \mbox{\Hypertarget{master_8c_ad7fec5b2b07b712822dc8182d1796c22}\label{master_8c_ad7fec5b2b07b712822dc8182d1796c22}} 
 void {\bfseries on\+\_\+uart\+\_\+rx} ()
 \begin{DoxyCompactList}\small\item\em RX Main communication interrupt handler. \end{DoxyCompactList}\item 
-<<<<<<< HEAD
 int \mbox{\hyperlink{master_8c_aea68381afe044625867caa3e9d3d5836}{init\+\_\+main\+\_\+com}} ()
-=======
-\mbox{\Hypertarget{master_8c_a580986de5963328695cc677384f0454a}\label{master_8c_a580986de5963328695cc677384f0454a}} 
-void {\bfseries init\+\_\+main\+\_\+com} ()
->>>>>>> f06e9b7 (build with Visual Code pico extension and with sdk 2.1.0)
 \begin{DoxyCompactList}\small\item\em Initialisation of the main communication uart (serial port) the SCPI command are received by the serial port. Baud rate is read from the Configuration EEPROM In case of error, default baud rate will be use. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{master_8c_a5f6549f2d2461465f770c1b277910225}{Hardware\+\_\+\+Default\+\_\+\+Setting}} ()
 \begin{DoxyCompactList}\small\item\em Initializes the hardware to default settings. \end{DoxyCompactList}\item 
@@ -77,7 +73,8 @@ xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
 struct \{\\
 \>\mbox{\hyperlink{structMESSAGE}{MESSAGE}} {\bfseries messages} \mbox{[}\mbox{\hyperlink{master_8c_a142810068f1b99cd93d3fc9f0e160e02}{QUEUE\_SIZE}}\mbox{]}\\
 \>\>{\em Array of messages stored in the queue. }\\
-\>char \mbox{\hyperlink{master_8c_aeac59056e9fe0881b3773cb2af260c41}{size}} \mbox{[}\mbox{\hyperlink{master_8c_a142810068f1b99cd93d3fc9f0e160e02}{QUEUE\_SIZE}}\mbox{]}\\
+\>char {\bfseries size} \mbox{[}\mbox{\hyperlink{master_8c_a142810068f1b99cd93d3fc9f0e160e02}{QUEUE\_SIZE}}\mbox{]}\\
+\>\>{\em Array containing sizes of each message in the queue. }\\
 \>int {\bfseries begin}\\
 \>\>{\em Index of the first message in the queue. }\\
 \>int {\bfseries end}\\
@@ -243,10 +240,4 @@ Instance of the EEPROM configuration union. \mbox{\Hypertarget{master_8c_ab0465a
 
 Global circular queue for storing messages. 
 
-This variable manages a circular queue that holds messages and tracks their sizes. It uses indices to mark the beginning and end of the queue, and keeps track of the current number of messages (load). \mbox{\Hypertarget{master_8c_aeac59056e9fe0881b3773cb2af260c41}\label{master_8c_aeac59056e9fe0881b3773cb2af260c41}} 
-\index{master.c@{master.c}!size@{size}}
-\index{size@{size}!master.c@{master.c}}
-\doxysubsubsection{\texorpdfstring{size}{size}}
-{\footnotesize\ttfamily char size\mbox{[}\mbox{\hyperlink{master_8c_a142810068f1b99cd93d3fc9f0e160e02}{QUEUE\+\_\+\+SIZE}}\mbox{]}}
-
-Array containing sizes of each message in the queue. 
+This variable manages a circular queue that holds messages and tracks their sizes. It uses indices to mark the beginning and end of the queue, and keeps track of the current number of messages (load). 
