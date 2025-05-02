@@ -1,0 +1,4 @@
+<map id="init_main_com" name="init_main_com">
+<area shape="rect" id="node1" title="Initialisation of the main communication uart (serial port) the SCPI command are received by the seri..." alt="" coords="5,5,124,32"/>
+<area shape="rect" id="node2" href="$functadv_8c.html#acfe7d8f6b31a062f1253cb4ecb10859e" title="Function to extract number from string. Mainly used to convert EEprom Cfg string to number." alt="" coords="172,5,295,32"/>
+</map>

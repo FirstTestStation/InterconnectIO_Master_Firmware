@@ -1,0 +1,6 @@
+<map id="reserved_addr" name="reserved_addr">
+<area shape="rect" id="node1" title="function to check if the I2C address required to check if a reserved address" alt="" coords="312,31,427,57"/>
+<area shape="rect" id="node2" href="$functadv_8c.html#a0a1dd209f11841a2690f544547c24cf2" title="Function found on internet to scan the internal I2C bus. Function called during boot up of the master..." alt="" coords="156,31,264,57"/>
+<area shape="rect" id="node3" href="$functadv_8c.html#a65d5a960b762f3f80432ac49bfd7a239" title="Perform Boot check by validating i2C device in the chain." alt="" coords="8,5,105,32"/>
+<area shape="rect" id="node4" href="$test_8c.html#a0acd1ee00e871f30689aab1a7246feb0" title="Function not used during normal execution The function is used to validate the hardware after parts h..." alt="" coords="5,56,108,83"/>
+</map>

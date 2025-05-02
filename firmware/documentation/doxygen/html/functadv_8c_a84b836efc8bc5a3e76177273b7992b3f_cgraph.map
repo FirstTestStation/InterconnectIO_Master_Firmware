@@ -1,0 +1,4 @@
+<map id="cfg_eeprom_rw" name="cfg_eeprom_rw">
+<area shape="rect" id="node1" title="Function to read and write data on the I2C configuration eeprom." alt="" coords="5,5,128,32"/>
+<area shape="rect" id="node2" href="$functadv_8c.html#a5733933b4f9b59a48e7a72422b4c63a7" title="This function check if the eeprom is detected and if the data is valid." alt="" coords="176,5,323,32"/>
+</map>

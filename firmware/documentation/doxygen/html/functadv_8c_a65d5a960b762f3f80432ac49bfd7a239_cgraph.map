@@ -1,0 +1,5 @@
+<map id="Boot_check" name="Boot_check">
+<area shape="rect" id="node1" title="Perform Boot check by validating i2C device in the chain." alt="" coords="5,5,103,32"/>
+<area shape="rect" id="node2" href="$functadv_8c.html#a0a1dd209f11841a2690f544547c24cf2" title="Function found on internet to scan the internal I2C bus. Function called during boot up of the master..." alt="" coords="151,5,259,32"/>
+<area shape="rect" id="node3" href="$functadv_8c.html#a8618bf928432d3969d2fde39e61fbeee" title="function to check if the I2C address required to check if a reserved address" alt="" coords="307,5,421,32"/>
+</map>

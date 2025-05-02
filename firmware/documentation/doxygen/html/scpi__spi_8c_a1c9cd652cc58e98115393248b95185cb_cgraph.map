@@ -1,0 +1,4 @@
+<map id="scpi_spi_enable" name="scpi_spi_enable">
+<area shape="rect" id="node1" title="function to configure the parameters of the user spi based on the data set on the spi structure" alt="" coords="5,5,131,32"/>
+<area shape="rect" id="node2" href="$scpi__spi_8c.html#ac54dd17786f3ac8a65578d6cd470c1fe" title="function to set the mode to use for spi communication" alt="" coords="179,5,324,32"/>
+</map>

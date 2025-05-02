@@ -1,0 +1,4 @@
+<map id="dev_mcp4725_get" name="dev_mcp4725_get">
+<area shape="rect" id="node1" title="Sets adc output" alt="" coords="5,5,147,32"/>
+<area shape="rect" id="node2" href="$sys__i2c_8c.html#a2810577779f498a4feb4ac77ca881b9f" title="Read i2c buffer by byte" alt="" coords="195,5,297,32"/>
+</map>

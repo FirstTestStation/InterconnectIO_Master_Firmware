@@ -6,58 +6,61 @@
 \DoxyCodeLine{15 \textcolor{preprocessor}{\#ifndef \_SCPI\_UART\_H\_}}
 \DoxyCodeLine{16 \textcolor{preprocessor}{\#define \_SCPI\_UART\_H\_}}
 \DoxyCodeLine{17 }
-\DoxyCodeLine{18 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
-\DoxyCodeLine{19 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}}}
-\DoxyCodeLine{20 \{}
-\DoxyCodeLine{21 \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{22 }
-\DoxyCodeLine{29 \textcolor{preprocessor}{\#define USER\_TX\_PIN 12   }}
-\DoxyCodeLine{30 \textcolor{preprocessor}{\#define USER\_RX\_PIN 13   }}
-\DoxyCodeLine{31 \textcolor{preprocessor}{\#define USER\_CTS\_PIN 14  }}
-\DoxyCodeLine{32 \textcolor{preprocessor}{\#define USER\_RTS\_PIN 15  }}
-\DoxyCodeLine{33 }
-\DoxyCodeLine{34 \textcolor{preprocessor}{\#define USER\_UART uart0  }}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include <stdbool.h>}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{21 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}}}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#define USER\_TX\_PIN 12  }}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#define USER\_RX\_PIN 13  }}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#define USER\_CTS\_PIN 14 }}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#define USER\_RTS\_PIN 15 }}
 \DoxyCodeLine{35 }
-\DoxyCodeLine{41 \textcolor{preprocessor}{\#define DEF\_USER\_BAUD 115200              }}
-\DoxyCodeLine{42 \textcolor{preprocessor}{\#define DEF\_USER\_PARITY UART\_PARITY\_NONE  }}
-\DoxyCodeLine{43 \textcolor{preprocessor}{\#define DEF\_USER\_BITS 8                   }}
-\DoxyCodeLine{44 \textcolor{preprocessor}{\#define DEF\_USER\_STOP 1                   }}
-\DoxyCodeLine{45 \textcolor{preprocessor}{\#define DEF\_USER\_HANDSHAKE 0              }}
-\DoxyCodeLine{46 \textcolor{preprocessor}{\#define DEF\_USER\_STATUS 0                 }}
-\DoxyCodeLine{47 \textcolor{preprocessor}{\#define DEF\_TIMEOUT\_MS 1000               }}
-\DoxyCodeLine{48 \textcolor{preprocessor}{\#define DEF\_EOL  1                        }}
-\DoxyCodeLine{49 \textcolor{preprocessor}{\#define DEF\_LASTCHAR '\(\backslash\)n'                 }}
-\DoxyCodeLine{50 }
-\DoxyCodeLine{56 \textcolor{preprocessor}{\#define UART\_PROT\_NUM\_NOTVALID 31    }}
-\DoxyCodeLine{57 \textcolor{preprocessor}{\#define UART\_PROT\_LETTER\_NOVALID 32  }}
-\DoxyCodeLine{58 \textcolor{preprocessor}{\#define UART\_PROT\_MISSING 33         }}
-\DoxyCodeLine{59 \textcolor{preprocessor}{\#define NOCERR 0                     }}
-\DoxyCodeLine{60 \textcolor{preprocessor}{\#define UART\_RX\_TIMEOUT\_MS 34        }}
-\DoxyCodeLine{61 \textcolor{preprocessor}{\#define UART\_LASTCHAR\_TIMEOUT\_MS 35  }}
-\DoxyCodeLine{62 \textcolor{preprocessor}{\#define UART\_BUFFER\_FULL 36          }}
-\DoxyCodeLine{63 \textcolor{preprocessor}{\#define UART\_NOT\_ENABLED 37          }}
-\DoxyCodeLine{64 }
-\DoxyCodeLine{65   \textcolor{keywordtype}{void} \mbox{\hyperlink{scpi__uart_8h_a8e4f9f87014ede07790adcdee9218a07}{scpi\_uart\_enable}}(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{66   \textcolor{keywordtype}{void} \mbox{\hyperlink{scpi__uart_8h_a92ecca314320f946136a7731e6abc3c0}{scpi\_uart\_disable}}(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{67   \textcolor{keywordtype}{bool} \mbox{\hyperlink{scpi__uart_8h_a1beb9ac537fc7db2337e750b61004e06}{scpi\_uart\_status}}(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{68   \textcolor{keywordtype}{void} \mbox{\hyperlink{scpi__uart_8h_a3c15892e785168ea65b012576235528b}{add\_eol}}(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{69   \textcolor{keywordtype}{void} \mbox{\hyperlink{scpi__uart_8h_a8b9b7e507857261be73965271270d54f}{scpi\_uart\_set\_baudrate}}(uint32\_t speed);}
-\DoxyCodeLine{70   uint32\_t \mbox{\hyperlink{scpi__uart_8h_a5762f30985131b1602ccf52aa0f5747a}{scpi\_uart\_get\_baudrate}}(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{71   \textcolor{keywordtype}{void} \mbox{\hyperlink{scpi__uart_8h_a8c6e0b0b9a1aaa0c264b072b38aa70fc}{scpi\_uart\_set\_timeout}}(uint32\_t time);}
-\DoxyCodeLine{72   uint32\_t \mbox{\hyperlink{scpi__uart_8h_a4940674ea5d55c2b968af3e4eee8dca3}{scpi\_uart\_get\_timeout}}(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{73   \textcolor{keywordtype}{void} \mbox{\hyperlink{scpi__uart_8h_a3c69ee3674bd2259a4f1035a0d9ceeac}{scpi\_uart\_set\_eol}}(uint8\_t val);}
-\DoxyCodeLine{74   uint8\_t \mbox{\hyperlink{scpi__uart_8h_a4202a867295a94338d06c5d26d7e7ec5}{scpi\_uart\_get\_eol}}(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{75   \textcolor{keywordtype}{void} \mbox{\hyperlink{scpi__uart_8h_abf113dcc339af90ccc3d4a63018e900e}{scpi\_uart\_set\_handshake}}(\textcolor{keywordtype}{bool} val);}
-\DoxyCodeLine{76   \textcolor{keywordtype}{bool} \mbox{\hyperlink{scpi__uart_8h_a140d39ce403d0abb4a61ed75c87ac366}{scpi\_uart\_get\_handshake}}(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{77   uint8\_t \mbox{\hyperlink{scpi__uart_8h_a7532b79fc626aa1915547c4ec7246e17}{scpi\_uart\_set\_protocol}}(\textcolor{keywordtype}{char}* str);}
-\DoxyCodeLine{78   \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{scpi__uart_8h_ae76db62a14ef10d4921e2739b5221ee5}{scpi\_uart\_get\_protocol}}(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{79   uint8\_t \mbox{\hyperlink{scpi__uart_8h_a64d2478f69302269dd2157554ccdd1eb}{scpi\_uart\_write\_data}}(\textcolor{keywordtype}{char}* dwrt);}
-\DoxyCodeLine{80   uint8\_t \mbox{\hyperlink{scpi__uart_8h_aaa29248e0b2b7e6cac5308a706a2b4ae}{scpi\_uart\_write\_read\_data}}(\textcolor{keywordtype}{char}* strd, \textcolor{keywordtype}{char}* dpr, \textcolor{keywordtype}{size\_t} rsize);  \textcolor{comment}{// write data, expect answer}}
-\DoxyCodeLine{81 }
-\DoxyCodeLine{82 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
-\DoxyCodeLine{83 \}}
-\DoxyCodeLine{84 \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{85 }
-\DoxyCodeLine{86 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{// \_SCPI\_UART\_H\_}}
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#define USER\_UART uart0 }}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#define DEF\_USER\_BAUD 115200             }}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#define DEF\_USER\_PARITY UART\_PARITY\_NONE }}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#define DEF\_USER\_BITS 8                  }}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#define DEF\_USER\_STOP 1                  }}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#define DEF\_USER\_HANDSHAKE 0             }}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#define DEF\_USER\_STATUS 0                }}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#define DEF\_TIMEOUT\_MS 1000              }}
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#define DEF\_EOL 1                        }}
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#define DEF\_LASTCHAR '\(\backslash\)n'                }}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#define UART\_PROT\_NUM\_NOTVALID 31   }}
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#define UART\_PROT\_LETTER\_NOVALID 32 }}
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#define UART\_PROT\_MISSING 33        }}
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#define NOCERR 0                    }}
+\DoxyCodeLine{62 \textcolor{preprocessor}{\#define UART\_RX\_TIMEOUT\_MS 34       }}
+\DoxyCodeLine{63 \textcolor{preprocessor}{\#define UART\_LASTCHAR\_TIMEOUT\_MS 35 }}
+\DoxyCodeLine{64 \textcolor{preprocessor}{\#define UART\_BUFFER\_FULL 36         }}
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#define UART\_NOT\_ENABLED 37         }}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67     \textcolor{keywordtype}{void} \mbox{\hyperlink{scpi__uart_8h_a8e4f9f87014ede07790adcdee9218a07}{scpi\_uart\_enable}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{68     \textcolor{keywordtype}{void} \mbox{\hyperlink{scpi__uart_8h_a92ecca314320f946136a7731e6abc3c0}{scpi\_uart\_disable}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{69     \textcolor{keywordtype}{bool} \mbox{\hyperlink{scpi__uart_8h_a1beb9ac537fc7db2337e750b61004e06}{scpi\_uart\_status}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{70     \textcolor{keywordtype}{void} \mbox{\hyperlink{scpi__uart_8h_a3c15892e785168ea65b012576235528b}{add\_eol}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{71     \textcolor{keywordtype}{void} \mbox{\hyperlink{scpi__uart_8h_a8b9b7e507857261be73965271270d54f}{scpi\_uart\_set\_baudrate}}(uint32\_t speed);}
+\DoxyCodeLine{72     uint32\_t \mbox{\hyperlink{scpi__uart_8h_a5762f30985131b1602ccf52aa0f5747a}{scpi\_uart\_get\_baudrate}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{73     \textcolor{keywordtype}{void} \mbox{\hyperlink{scpi__uart_8h_a8c6e0b0b9a1aaa0c264b072b38aa70fc}{scpi\_uart\_set\_timeout}}(uint32\_t time);}
+\DoxyCodeLine{74     uint32\_t \mbox{\hyperlink{scpi__uart_8h_a4940674ea5d55c2b968af3e4eee8dca3}{scpi\_uart\_get\_timeout}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{75     \textcolor{keywordtype}{void} \mbox{\hyperlink{scpi__uart_8h_a3c69ee3674bd2259a4f1035a0d9ceeac}{scpi\_uart\_set\_eol}}(uint8\_t val);}
+\DoxyCodeLine{76     uint8\_t \mbox{\hyperlink{scpi__uart_8h_a4202a867295a94338d06c5d26d7e7ec5}{scpi\_uart\_get\_eol}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{77     \textcolor{keywordtype}{void} \mbox{\hyperlink{scpi__uart_8h_abf113dcc339af90ccc3d4a63018e900e}{scpi\_uart\_set\_handshake}}(\textcolor{keywordtype}{bool} val);}
+\DoxyCodeLine{78     \textcolor{keywordtype}{bool} \mbox{\hyperlink{scpi__uart_8h_a140d39ce403d0abb4a61ed75c87ac366}{scpi\_uart\_get\_handshake}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{79     uint8\_t \mbox{\hyperlink{scpi__uart_8h_a7532b79fc626aa1915547c4ec7246e17}{scpi\_uart\_set\_protocol}}(\textcolor{keywordtype}{char}* str);}
+\DoxyCodeLine{80     \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{scpi__uart_8h_ae76db62a14ef10d4921e2739b5221ee5}{scpi\_uart\_get\_protocol}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{81     uint8\_t \mbox{\hyperlink{scpi__uart_8h_a64d2478f69302269dd2157554ccdd1eb}{scpi\_uart\_write\_data}}(\textcolor{keywordtype}{char}* dwrt);}
+\DoxyCodeLine{82     uint8\_t \mbox{\hyperlink{scpi__uart_8h_aaa29248e0b2b7e6cac5308a706a2b4ae}{scpi\_uart\_write\_read\_data}}(\textcolor{keywordtype}{char}* strd, \textcolor{keywordtype}{char}* dpr,}
+\DoxyCodeLine{83                                       \textcolor{keywordtype}{size\_t} rsize); \textcolor{comment}{// write data, expect answer}}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{86 \}}
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_SCPI\_UART\_H\_}}
 
 \end{DoxyCode}

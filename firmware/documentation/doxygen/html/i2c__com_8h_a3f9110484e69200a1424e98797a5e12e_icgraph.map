@@ -1,0 +1,8 @@
+<map id="send_master" name="send_master">
+<area shape="rect" id="node1" title="The function of the code is to read and write data on internal I2C port." alt="" coords="360,81,467,108"/>
+<area shape="rect" id="node2" href="$i2c__com_8c.html#a2dc087f9c9da6f696935dc364f9003e2" title="Function to execute the digital command to perform action on GPIO port located on pico slave1." alt="" coords="187,5,309,32"/>
+<area shape="rect" id="node3" href="$i2c__com_8c.html#ab088f05e0e9346b5a3a4fa3a06a6c33b" title="Function to execute action on GPIO bit." alt="" coords="194,56,302,83"/>
+<area shape="rect" id="node4" href="$i2c__com_8c.html#a6ab31ae372e2f5df7d1d2791fc42491a" title="From a list of relay (list) and the action to perform the sub will perform the action (close,..." alt="" coords="191,107,305,133"/>
+<area shape="rect" id="node5" href="$i2c__com_8c.html#a96f4bb6ce057649e766460dfecebc542" title="function to execute system command on Pico devices. The action is executed on all the Pico devices (1..." alt="" coords="184,157,312,184"/>
+<area shape="rect" id="node6" href="$functadv_8c.html#acb717495a9c37a468e5494f571ef1607" title="Run internal board tests to verifies hardware functionality,." alt="" coords="5,157,136,184"/>
+</map>

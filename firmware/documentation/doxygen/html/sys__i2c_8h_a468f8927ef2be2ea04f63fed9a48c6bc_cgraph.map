@@ -1,0 +1,4 @@
+<map id="sys_i2c_init_def" name="sys_i2c_init_def">
+<area shape="rect" id="node1" title="Init default i2c" alt="" coords="5,5,132,32"/>
+<area shape="rect" id="node2" href="$sys__i2c_8c.html#aa4c5aeb76145bf94e5a455722c43a568" title="Init i2c with user assignment pins" alt="" coords="180,5,279,32"/>
+</map>

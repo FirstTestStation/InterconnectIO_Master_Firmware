@@ -1,0 +1,4 @@
+<map id="cfg_eeprom_write_default" name="cfg_eeprom_write_default">
+<area shape="rect" id="node1" title="Write the default values on EEprom. EEprom is written by page EEprom structure is global (defined on ..." alt="" coords="5,5,197,32"/>
+<area shape="rect" id="node2" href="$functadv_8c.html#a5733933b4f9b59a48e7a72422b4c63a7" title="This function check if the eeprom is detected and if the data is valid." alt="" coords="245,5,392,32"/>
+</map>

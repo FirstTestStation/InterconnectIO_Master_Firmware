@@ -20,6 +20,8 @@ extern "C"
 {
 #endif
 
+#include <stdbool.h>
+
 /**
  * @brief User-defined SPI pin configurations.
  */
@@ -33,19 +35,19 @@ extern "C"
  */
 #define SPI_BUF_LEN 8 /**< Length of the SPI buffer in bytes. */
 
-#define DEF_SPI_USER spi0      //!< spi0 is the user communication channel to external
-#define DEF_SPI_BAUD 1E5       //!< spi baudrate is set at 100Khz by default
-#define DEF_SPI_DATABITS 8     //!< spi number of bits used for communication
-#define DEF_SPI_CS 5           //!< spi gpio used to perform chipselect
-#define DEF_SPI_MODE 0         //!< define mode parameters: cs,cpol,cpha and MSB
-#define DEF_SPI_STATUS 0       //!< spi is disable by default
-#define ALARM_TIMEOUT 1000000  //!< Timeout value
+#define DEF_SPI_USER spi0     //!< spi0 is the user communication channel to external
+#define DEF_SPI_BAUD 1E5      //!< spi baudrate is set at 100Khz by default
+#define DEF_SPI_DATABITS 8    //!< spi number of bits used for communication
+#define DEF_SPI_CS 5          //!< spi gpio used to perform chipselect
+#define DEF_SPI_MODE 0        //!< define mode parameters: cs,cpol,cpha and MSB
+#define DEF_SPI_STATUS 0      //!< spi is disable by default
+#define ALARM_TIMEOUT 1000000 //!< Timeout value
 
-#define SPI_DEFAULT_VALUE 0  //!< spi data to write when we perform read
+#define SPI_DEFAULT_VALUE 0 //!< spi data to write when we perform read
 
-#define SPIW 0   //!< mode = SPI write
-#define SPIWR 1  //!< mode = SPI write-read
-#define SPIR 2   //!< mode = SPI read
+#define SPIW 0  //!< mode = SPI write
+#define SPIWR 1 //!< mode = SPI write-read
+#define SPIR 2  //!< mode = SPI read
 
 /**
  * @brief Error code definitions for SPI communication and other errors.
@@ -57,25 +59,25 @@ extern "C"
 #define SPI_TIMEOUT 43           /**< SPI communication timeout. */
 #define SPI_NOT_ENABLED 44       /**< SPI not enabled error. */
 
-  void scpi_spi_enable(void);
-  void scpi_spi_disable(void);
-  bool scpi_spi_status(void);
-  void scpi_spi_set_baudrate(uint32_t speed);
-  uint32_t scpi_spi_get_baudrate(void);
-  uint8_t scpi_spi_set_chipselect(uint32_t num);
-  uint32_t scpi_spi_get_chipselect(void);
+    void scpi_spi_enable(void);
+    void scpi_spi_disable(void);
+    bool scpi_spi_status(void);
+    void scpi_spi_set_baudrate(uint32_t speed);
+    uint32_t scpi_spi_get_baudrate(void);
+    uint8_t scpi_spi_set_chipselect(uint32_t num);
+    uint32_t scpi_spi_get_chipselect(void);
 
-  uint8_t scpi_spi_set_databits(uint32_t num);
-  uint32_t scpi_spi_get_databits(void);
-  uint8_t scpi_spi_set_mode(uint8_t mode);
-  uint8_t scpi_spi_get_mode(void);
+    uint8_t scpi_spi_set_databits(uint32_t num);
+    uint32_t scpi_spi_get_databits(void);
+    uint8_t scpi_spi_set_mode(uint8_t mode);
+    uint8_t scpi_spi_get_mode(void);
 
-  uint8_t scpi_spi_wri_read_data(uint8_t* wdata, uint8_t wlen, uint8_t* rdata, uint8_t rlen, bool* wflag);
-  void spi_bytes_to_words(uint8_t* byte_array, uint16_t* word_array, size_t length);
-  void spi_words_to_bytes(uint16_t* word_array, uint8_t* byte_array, size_t length);
+    uint8_t scpi_spi_wri_read_data(uint8_t* wdata, uint8_t wlen, uint8_t* rdata, uint8_t rlen, bool* wflag);
+    void spi_bytes_to_words(uint8_t* byte_array, uint16_t* word_array, size_t length);
+    void spi_words_to_bytes(uint16_t* word_array, uint8_t* byte_array, size_t length);
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif  // _SYS_SPI_H_
+#endif // _SYS_SPI_H_

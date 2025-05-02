@@ -6,9 +6,9 @@ Main loop to control the Pico Master Device.
 
 
 {\ttfamily \#include \char`\"{}include/master.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
-{\ttfamily \#include $<$stdint.\+h$>$}\newline
 {\ttfamily \#include \char`\"{}hardware/adc.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}hardware/i2c.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}hardware/uart.\+h\char`\"{}}\newline
@@ -171,6 +171,13 @@ This function is called by the main program and when the SCPI command $\ast$\+RS
 \begin{DoxyReturn}{Returns}
 None 
 \end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{master_8c_a5f6549f2d2461465f770c1b277910225_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{master_8c_aea68381afe044625867caa3e9d3d5836}\label{master_8c_aea68381afe044625867caa3e9d3d5836}} 
 \index{master.c@{master.c}!init\_main\_com@{init\_main\_com}}
 \index{init\_main\_com@{init\_main\_com}!master.c@{master.c}}
@@ -184,6 +191,20 @@ Initialisation of the main communication uart (serial port) the SCPI command are
 \begin{DoxyReturn}{Returns}
 int actual Baudrate 
 \end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{master_8c_aea68381afe044625867caa3e9d3d5836_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{master_8c_aea68381afe044625867caa3e9d3d5836_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{master_8c_ae733fe874122894bac75e1be37326ceb}\label{master_8c_ae733fe874122894bac75e1be37326ceb}} 
 \index{master.c@{master.c}!init\_queue@{init\_queue}}
 \index{init\_queue@{init\_queue}!master.c@{master.c}}
@@ -217,7 +238,14 @@ Heartbeat message on debug port
 
 refresh watchdog
 
-Never pass by here
+Never pass by hereHere is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{master_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph}
+\end{center}
+\end{figure}
+
 
 \doxysubsection{Variable Documentation}
 \mbox{\Hypertarget{master_8c_ac95ed0fd19288b8f4bf0824357dfab26}\label{master_8c_ac95ed0fd19288b8f4bf0824357dfab26}} 

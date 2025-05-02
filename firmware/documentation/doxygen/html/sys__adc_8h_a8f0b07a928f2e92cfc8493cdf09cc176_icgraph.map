@@ -1,0 +1,8 @@
+<map id="sys_adc_volt" name="sys_adc_volt">
+<area shape="rect" id="node1" title="Read ADC voltage value" alt="" coords="357,81,464,108"/>
+<area shape="rect" id="node2" href="$test_8c.html#ada61a5d73ba9477f5805e729284f4e17" title="Function not used during normal execution The adc_test was used to test the hardware of interconnect ..." alt="" coords="30,5,107,32"/>
+<area shape="rect" id="node3" href="$sys__adc_8c.html#a9ab4088b9e613433252de6f33df7b3f9" title="Read ADC internal temp. sensor in celsius" alt="" coords="180,56,309,83"/>
+<area shape="rect" id="node5" href="$test_8c.html#a2c187f3a1a5e046de0872ebd623e8d56" title="Function not used during normal execution The test_adc was used to test to get all the measure in sam..." alt="" coords="30,107,107,133"/>
+<area shape="rect" id="node6" href="$sys__adc_8c.html#ad7ca531532689111e44dfb8336ecf95d" title="Read ADC VSYS voltage" alt="" coords="189,107,300,133"/>
+<area shape="rect" id="node4" href="$sys__adc_8c.html#a922093bba93b09545c6f7ef59ad876f1" title="Read ADC internal temp. sensor in fahrenheit" alt="" coords="5,56,132,83"/>
+</map>

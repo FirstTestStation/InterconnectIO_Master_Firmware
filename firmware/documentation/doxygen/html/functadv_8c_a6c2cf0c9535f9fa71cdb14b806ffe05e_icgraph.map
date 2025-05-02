@@ -1,0 +1,4 @@
+<map id="read_master_adc" name="read_master_adc">
+<area shape="rect" id="node1" title="Function to read ADC value and return the result. Function called by a SCPI command." alt="" coords="184,5,319,32"/>
+<area shape="rect" id="node2" href="$functadv_8c.html#acb717495a9c37a468e5494f571ef1607" title="Run internal board tests to verifies hardware functionality,." alt="" coords="5,5,136,32"/>
+</map>

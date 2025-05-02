@@ -1,0 +1,4 @@
+<map id="sys_i2c_wbuf" name="sys_i2c_wbuf">
+<area shape="rect" id="node1" title="Write i2c buffer" alt="" coords="227,5,336,32"/>
+<area shape="rect" id="node2" href="$scpi__i2c_8c.html#a76df3108d1a2c822fb1d43090b4274ca" title="Main function called by SCPI command to send or receive data on I2C port." alt="" coords="5,5,179,32"/>
+</map>

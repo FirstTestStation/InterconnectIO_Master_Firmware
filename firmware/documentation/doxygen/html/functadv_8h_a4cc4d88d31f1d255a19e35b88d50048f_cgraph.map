@@ -1,0 +1,4 @@
+<map id="calibrate_power" name="calibrate_power">
+<area shape="rect" id="node1" title="SCPI function to calibrate the current on the power device INA219." alt="" coords="5,5,132,32"/>
+<area shape="rect" id="node2" href="$dev__ina219_8c.html#ab897a88801b40429e32328c6ef29e410" title="Compute the Corrected Full scale calibration based on measurement made by external Ampmeter...." alt="" coords="180,5,383,32"/>
+</map>

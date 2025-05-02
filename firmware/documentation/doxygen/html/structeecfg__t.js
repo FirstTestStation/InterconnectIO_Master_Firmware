@@ -12,6 +12,6 @@ var structeecfg__t =
     [ "partnumber", "structeecfg__t.html#ab5541ae43dbe7deae8dace7016efd4b9", null ],
     [ "serialnumber", "structeecfg__t.html#aa450f29c310d62f88481f1ab744248be", null ],
     [ "slave_force_run", "structeecfg__t.html#a1a561d25bfb780fb584c2b3c1776c6cf", null ],
-    [ "test", "structeecfg__t.html#a34e82dded67ff5e6f1a7699f77276a6a", null ],
+    [ "test", "structeecfg__t.html#a14e689e3b0aaa3509e42477bcb93a180", null ],
     [ "testboard_num", "structeecfg__t.html#a7906b6f906f0784a6eb7b1b4c2caecb4", null ]
 ];

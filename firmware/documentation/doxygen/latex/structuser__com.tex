@@ -5,6 +5,16 @@
 structure to contents the parameters of the user UART  
 
 
+
+
+Collaboration diagram for user\+\_\+com\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{structuser__com__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -38,13 +48,21 @@ uint32\+\_\+t {\bfseries timeout\+\_\+ms}
 \mbox{\Hypertarget{structuser__com_aee1a46803b91382dca3e03b17eeb14de}\label{structuser__com_aee1a46803b91382dca3e03b17eeb14de}} 
 uint8\+\_\+t {\bfseries eol}
 \begin{DoxyCompactList}\small\item\em uart Eol to add at the end of string \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{structuser__com_a77f70921e657f1f7181905cc19ddcb4d}\label{structuser__com_a77f70921e657f1f7181905cc19ddcb4d}} 
-uint8\+\_\+t {\bfseries lastchr}
-\begin{DoxyCompactList}\small\item\em content last character of a string. Used to detect the last character of the receive string \end{DoxyCompactList}\end{DoxyCompactItemize}
+uint8\+\_\+t \mbox{\hyperlink{structuser__com_a77f70921e657f1f7181905cc19ddcb4d}{lastchr}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 structure to contents the parameters of the user UART 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structuser__com_a77f70921e657f1f7181905cc19ddcb4d}\label{structuser__com_a77f70921e657f1f7181905cc19ddcb4d}} 
+\index{user\_com@{user\_com}!lastchr@{lastchr}}
+\index{lastchr@{lastchr}!user\_com@{user\_com}}
+\doxysubsubsection{\texorpdfstring{lastchr}{lastchr}}
+{\footnotesize\ttfamily uint8\+\_\+t user\+\_\+com\+::lastchr}
+
+content last character of a string. Used to detect the last character of the receive string 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

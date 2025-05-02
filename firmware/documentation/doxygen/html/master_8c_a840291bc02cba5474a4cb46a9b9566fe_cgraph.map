@@ -1,0 +1,8 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="Firmware for the Master Pico device running on interconnectIO board." alt="" coords="5,81,60,108"/>
+<area shape="rect" id="node2" href="$master_8c.html#a5f6549f2d2461465f770c1b277910225" title="Initializes the hardware to default settings." alt="" coords="108,5,301,32"/>
+<area shape="rect" id="node3" href="$master_8c.html#aea68381afe044625867caa3e9d3d5836" title="Initialisation of the main communication uart (serial port) the SCPI command are received by the seri..." alt="" coords="145,56,264,83"/>
+<area shape="rect" id="node5" href="$fts__scpi_8c.html#ae1d030d34d5920300f08fbe69d1ee7f7" title="initialization of the SCPI library" alt="" coords="167,107,243,133"/>
+<area shape="rect" id="node6" href="$i2c__com_8c.html#a1e7d8ca7c172d2950dee50f279d07ec9" title="Configuration of the internal I2C port." alt="" coords="149,157,260,184"/>
+<area shape="rect" id="node4" href="$functadv_8c.html#acfe7d8f6b31a062f1253cb4ecb10859e" title="Function to extract number from string. Mainly used to convert EEprom Cfg string to number." alt="" coords="349,56,472,83"/>
+</map>

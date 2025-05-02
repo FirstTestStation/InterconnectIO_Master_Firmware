@@ -1,0 +1,6 @@
+<map id="dev_mcp4725_set" name="dev_mcp4725_set">
+<area shape="rect" id="node1" title="Sets the ADC output for the MCP4725." alt="" coords="184,56,324,83"/>
+<area shape="rect" id="node2" href="$functadv_8c.html#aeb2f97389a21ddcd9bb6f71b3e453412" title="Function used by SCPI command to set DAC voltage The voltage value is validated to be in the range of..." alt="" coords="35,5,107,32"/>
+<area shape="rect" id="node3" href="$functadv_8c.html#acb717495a9c37a468e5494f571ef1607" title="Run internal board tests to verifies hardware functionality,." alt="" coords="5,56,136,83"/>
+<area shape="rect" id="node4" href="$test_8c.html#a7fd0a3e557c0c44cce4de05c0f581406" title="Function used to set a value on the DAC device." alt="" coords="32,107,109,133"/>
+</map>

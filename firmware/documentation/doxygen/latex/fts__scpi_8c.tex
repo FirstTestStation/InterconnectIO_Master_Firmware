@@ -5,22 +5,22 @@
 Software code used to interpret the SCPI command received from external.  
 
 
-{\ttfamily \#include $<$stdio.\+h$>$}\newline
-{\ttfamily \#include $<$string.\+h$>$}\newline
-{\ttfamily \#include $<$stdlib.\+h$>$}\newline
-{\ttfamily \#include \char`\"{}pico/stdlib.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}pico/binary\+\_\+info.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}pico\+\_\+lib2/src/dev/dev\+\_\+ds2431/dev\+\_\+ds2431.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}include/scpi\+\_\+user\+\_\+config.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}include/test.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}include/scpi\+\_\+uart.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}include/scpi\+\_\+spi.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}include/scpi\+\_\+i2c.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}include/fts\+\_\+scpi.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}include/i2c\+\_\+com.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}include/master.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}hardware/resets.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}include/functadv.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}include/i2c\+\_\+com.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}include/master.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}include/scpi\+\_\+i2c.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}include/scpi\+\_\+spi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}include/scpi\+\_\+uart.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}include/scpi\+\_\+user\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}include/test.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pico/binary\+\_\+info.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pico/stdlib.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pico\+\_\+lib2/src/dev/dev\+\_\+ds2431/dev\+\_\+ds2431.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
 {\ttfamily \#include \char`\"{}userconfig.\+h\char`\"{}}\newline
 Include dependency graph for fts\+\_\+scpi.\+c\+:\nopagebreak
 \begin{figure}[H]
@@ -32,7 +32,7 @@ Include dependency graph for fts\+\_\+scpi.\+c\+:\nopagebreak
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{fts__scpi_8c_a9a7c1484c5b4ba87be856a7f2e035e9c}{AIRCR\+\_\+\+Register}}~($\ast$((volatile uint32\+\_\+t$\ast$)(PPB\+\_\+\+BASE + 0x0\+ED0C)))
+\#define \mbox{\hyperlink{fts__scpi_8c_a9a7c1484c5b4ba87be856a7f2e035e9c}{AIRCR\+\_\+\+Register}}~($\ast$((volatile uint32\+\_\+t$\ast$) (PPB\+\_\+\+BASE + 0x0\+ED0C)))
 \begin{DoxyCompactList}\small\item\em AIRCR Register for triggering a system reset. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -41,10 +41,8 @@ size\+\_\+t \mbox{\hyperlink{fts__scpi_8c_ae0f2dedb3d968ef8b00a3bddb46a78f0}{out
 \begin{DoxyCompactList}\small\item\em Function used by module \mbox{\hyperlink{test_8c}{test.\+c}} to capture the SCPI answer from the SCPI command. Used to perform the selftest of the board. \end{DoxyCompactList}\item 
 size\+\_\+t \mbox{\hyperlink{fts__scpi_8c_a3645008c6823af2701d99f6ed8dbe745}{SCPI\+\_\+write}} (scpi\+\_\+t $\ast$context, const char $\ast$data, size\+\_\+t len)
 \begin{DoxyCompactList}\small\item\em The function write the SCPI answer to the main serial port. The answer is also saved on global variable to be analyzed on module \mbox{\hyperlink{test_8c}{test.\+c}}. \end{DoxyCompactList}\item 
-int64\+\_\+t \mbox{\hyperlink{fts__scpi_8c_a83c50f419ca88f80f55abe46090e547c}{reset\+\_\+callback}} (alarm\+\_\+id\+\_\+t id, void $\ast$param)
-\begin{DoxyCompactList}\small\item\em Executes a delayed reset of the Interconnect IO board following the SCPI $\ast$\+RST command. \end{DoxyCompactList}\item 
 scpi\+\_\+result\+\_\+t \mbox{\hyperlink{fts__scpi_8c_a227bd87e4d70c678726de2bc952fce8e}{SCPI\+\_\+\+Reset}} (scpi\+\_\+t $\ast$context)
-\begin{DoxyCompactList}\small\item\em SCPI function to handle the $\ast$\+RST command and schedule a delayed reset. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Executes a delayed reset of the Interconnect IO board following the SCPI $\ast$\+RST command. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{fts__scpi_8c_a2ed9955bb22ad94c13ec34edc9221443}\label{fts__scpi_8c_a2ed9955bb22ad94c13ec34edc9221443}} 
 void {\bfseries SCPI\+\_\+\+Beep} ()
 \begin{DoxyCompactList}\small\item\em Send a beep tone following a SCPI command or internal function. \end{DoxyCompactList}\item 
@@ -100,7 +98,7 @@ This software is licensed under the BSD 3-\/Clause License. See the LICENSE file
 \index{fts\_scpi.c@{fts\_scpi.c}!AIRCR\_Register@{AIRCR\_Register}}
 \index{AIRCR\_Register@{AIRCR\_Register}!fts\_scpi.c@{fts\_scpi.c}}
 \doxysubsubsection{\texorpdfstring{AIRCR\_Register}{AIRCR\_Register}}
-{\footnotesize\ttfamily \#define AIRCR\+\_\+\+Register~($\ast$((volatile uint32\+\_\+t$\ast$)(PPB\+\_\+\+BASE + 0x0\+ED0C)))}
+{\footnotesize\ttfamily \#define AIRCR\+\_\+\+Register~($\ast$((volatile uint32\+\_\+t$\ast$) (PPB\+\_\+\+BASE + 0x0\+ED0C)))}
 
 
 
@@ -124,6 +122,20 @@ Send a burst of beep code to alert for boot error.
 {\em nbeep} & Number of beep on the burst \\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{fts__scpi_8c_a8f1450d6537fd16a2aee2464e2c1389d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fts__scpi_8c_a8f1450d6537fd16a2aee2464e2c1389d_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{fts__scpi_8c_ae0f2dedb3d968ef8b00a3bddb46a78f0}\label{fts__scpi_8c_ae0f2dedb3d968ef8b00a3bddb46a78f0}} 
 \index{fts\_scpi.c@{fts\_scpi.c}!output\_buffer\_write@{output\_buffer\_write}}
 \index{output\_buffer\_write@{output\_buffer\_write}!fts\_scpi.c@{fts\_scpi.c}}
@@ -144,6 +156,13 @@ Function used by module \mbox{\hyperlink{test_8c}{test.\+c}} to capture the SCPI
 \begin{DoxyReturn}{Returns}
 size\+\_\+t length 
 \end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{fts__scpi_8c_ae0f2dedb3d968ef8b00a3bddb46a78f0_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{fts__scpi_8c_af42bc85669ec90cef60c7e9ff2559982}\label{fts__scpi_8c_af42bc85669ec90cef60c7e9ff2559982}} 
 \index{fts\_scpi.c@{fts\_scpi.c}!RegBitHdwrErr@{RegBitHdwrErr}}
 \index{RegBitHdwrErr@{RegBitHdwrErr}!fts\_scpi.c@{fts\_scpi.c}}
@@ -161,6 +180,20 @@ Set Bit on SCPI register Questionable and Operation Send Bust of Beep to signal 
 {\em scbit} & Set or Clear particular bit on register \\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fts__scpi_8c_af42bc85669ec90cef60c7e9ff2559982_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{fts__scpi_8c_af42bc85669ec90cef60c7e9ff2559982_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{fts__scpi_8c_acf3067fd6de75a9dbecc0d7a9d2520a2}\label{fts__scpi_8c_acf3067fd6de75a9dbecc0d7a9d2520a2}} 
 \index{fts\_scpi.c@{fts\_scpi.c}!Relay\_Chanlst@{Relay\_Chanlst}}
 \index{Relay\_Chanlst@{Relay\_Chanlst}!fts\_scpi.c@{fts\_scpi.c}}
@@ -186,28 +219,6 @@ scpi\+\_\+result\+\_\+t Result of the SCPI parsing operation (e.\+g., success or
 \begin{DoxyNote}{Note}
 Compare this implementation to SCPI-\/99 Vol 1, Ch. 8.\+3.\+2 for details on channel parsing. 
 \end{DoxyNote}
-\mbox{\Hypertarget{fts__scpi_8c_a83c50f419ca88f80f55abe46090e547c}\label{fts__scpi_8c_a83c50f419ca88f80f55abe46090e547c}} 
-\index{fts\_scpi.c@{fts\_scpi.c}!reset\_callback@{reset\_callback}}
-\index{reset\_callback@{reset\_callback}!fts\_scpi.c@{fts\_scpi.c}}
-\doxysubsubsection{\texorpdfstring{reset\_callback()}{reset\_callback()}}
-{\footnotesize\ttfamily int64\+\_\+t reset\+\_\+callback (\begin{DoxyParamCaption}\item[{alarm\+\_\+id\+\_\+t}]{id,  }\item[{void $\ast$}]{param }\end{DoxyParamCaption})}
-
-
-
-Executes a delayed reset of the Interconnect IO board following the SCPI $\ast$\+RST command. 
-
-This function schedules a system reset of the master Pico with a 200ms delay. Only the master Pico is reset, as Pico slaves are automatically reset during boot-\/up.
-
-
-\begin{DoxyParams}{Parameters}
-{\em id} & Alarm ID (not used in this implementation) \\
-\hline
-{\em param} & User-\/defined parameter (not used in this implementation) \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-int64\+\_\+t Always returns 0, as this is a one-\/shot timer callback. 
-\end{DoxyReturn}
 \mbox{\Hypertarget{fts__scpi_8c_a9ef6f5ccdda155e42c384b2d26059ead}\label{fts__scpi_8c_a9ef6f5ccdda155e42c384b2d26059ead}} 
 \index{fts\_scpi.c@{fts\_scpi.c}!SCPI\_Error@{SCPI\_Error}}
 \index{SCPI\_Error@{SCPI\_Error}!fts\_scpi.c@{fts\_scpi.c}}
@@ -228,6 +239,13 @@ function called by SCPI when error is found. The function will perform a short b
 \begin{DoxyReturn}{Returns}
 int True if function performed with success 
 \end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{fts__scpi_8c_a9ef6f5ccdda155e42c384b2d26059ead_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{fts__scpi_8c_a227bd87e4d70c678726de2bc952fce8e}\label{fts__scpi_8c_a227bd87e4d70c678726de2bc952fce8e}} 
 \index{fts\_scpi.c@{fts\_scpi.c}!SCPI\_Reset@{SCPI\_Reset}}
 \index{SCPI\_Reset@{SCPI\_Reset}!fts\_scpi.c@{fts\_scpi.c}}
@@ -236,17 +254,17 @@ int True if function performed with success
 
 
 
-SCPI function to handle the $\ast$\+RST command and schedule a delayed reset. 
+Executes a delayed reset of the Interconnect IO board following the SCPI $\ast$\+RST command. 
 
-When the SCPI $\ast$\+RST command is received, this function schedules a system reset after a 200ms delay using the hardware alarm timer.
+This function schedules a system reset of the master Pico with a 200ms delay. Only the master Pico is reset, as Pico slaves are automatically reset during boot-\/up.
 
 
 \begin{DoxyParams}{Parameters}
-{\em context} & SCPI instance (not used in this implementation) \\
+{\em context} & SCPI instance \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-scpi\+\_\+result\+\_\+t SCPI\+\_\+\+RES\+\_\+\+OK if the reset was successfully scheduled. 
+scpi\+\_\+result\+\_\+t True if reset performed with success 
 \end{DoxyReturn}
 \mbox{\Hypertarget{fts__scpi_8c_a3645008c6823af2701d99f6ed8dbe745}\label{fts__scpi_8c_a3645008c6823af2701d99f6ed8dbe745}} 
 \index{fts\_scpi.c@{fts\_scpi.c}!SCPI\_write@{SCPI\_write}}
@@ -270,6 +288,13 @@ The function write the SCPI answer to the main serial port. The answer is also s
 \begin{DoxyReturn}{Returns}
 size\+\_\+t True if string written with success 
 \end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{fts__scpi_8c_a3645008c6823af2701d99f6ed8dbe745_cgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Variable Documentation}

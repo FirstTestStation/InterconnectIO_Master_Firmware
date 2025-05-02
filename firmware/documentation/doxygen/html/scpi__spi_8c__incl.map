@@ -1,10 +1,11 @@
 <map id="firmware/src/scpi_spi.c" name="firmware/src/scpi_spi.c">
-<area shape="rect" id="node1" title="Complete software code library to communicate to the user SPI port using SCPI command." alt="" coords="237,5,407,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,80,76,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="101,80,167,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="192,80,263,107"/>
-<area shape="rect" id="node5" title=" " alt="" coords="287,80,357,107"/>
-<area shape="rect" id="node6" title=" " alt="" coords="382,80,483,107"/>
-<area shape="rect" id="node7" title=" " alt="" coords="508,80,627,107"/>
-<area shape="rect" id="node8" href="$scpi__spi_8h.html" title="Header file defining constants and macros for the SPI communication." alt="" coords="651,80,788,107"/>
+<area shape="rect" id="node1" title="Complete software code library to communicate to the user SPI port using SCPI command." alt="" coords="386,5,557,32"/>
+<area shape="rect" id="node2" href="$scpi__spi_8h.html" title="Header file defining constants and macros for the SPI communication." alt="" coords="5,80,143,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="167,80,285,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="310,80,411,107"/>
+<area shape="rect" id="node6" title=" " alt="" coords="436,80,507,107"/>
+<area shape="rect" id="node7" title=" " alt="" coords="531,80,601,107"/>
+<area shape="rect" id="node8" title=" " alt="" coords="626,80,693,107"/>
+<area shape="rect" id="node9" title=" " alt="" coords="717,80,788,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="33,155,115,181"/>
 </map>

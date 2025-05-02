@@ -1,0 +1,4 @@
+<map id="sys_adc_init" name="sys_adc_init">
+<area shape="rect" id="node1" title="Init ADC channel" alt="" coords="131,5,233,32"/>
+<area shape="rect" id="node2" href="$test_8c.html#a2c187f3a1a5e046de0872ebd623e8d56" title="Function not used during normal execution The test_adc was used to test to get all the measure in sam..." alt="" coords="5,5,83,32"/>
+</map>

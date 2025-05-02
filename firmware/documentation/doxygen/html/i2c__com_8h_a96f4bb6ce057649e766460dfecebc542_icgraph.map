@@ -1,0 +1,4 @@
+<map id="system_execute" name="system_execute">
+<area shape="rect" id="node1" title="function to execute system command on Pico devices. The action is executed on all the Pico devices (1..." alt="" coords="184,5,312,32"/>
+<area shape="rect" id="node2" href="$functadv_8c.html#acb717495a9c37a468e5494f571ef1607" title="Run internal board tests to verifies hardware functionality,." alt="" coords="5,5,136,32"/>
+</map>

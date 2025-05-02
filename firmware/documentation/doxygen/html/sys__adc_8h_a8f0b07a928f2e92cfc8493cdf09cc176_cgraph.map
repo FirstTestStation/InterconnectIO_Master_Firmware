@@ -1,0 +1,4 @@
+<map id="sys_adc_volt" name="sys_adc_volt">
+<area shape="rect" id="node1" title="Read ADC voltage value" alt="" coords="5,5,112,32"/>
+<area shape="rect" id="node2" href="$sys__adc_8c.html#a113cef47f82e7519c1fe0b636f2f47f3" title="Read ADC raw value" alt="" coords="160,5,265,32"/>
+</map>

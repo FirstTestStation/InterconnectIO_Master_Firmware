@@ -1,0 +1,4 @@
+<map id="sys_adc_scale" name="sys_adc_scale">
+<area shape="rect" id="node1" title="Read ADC and scale raw value to low..high" alt="" coords="5,5,120,32"/>
+<area shape="rect" id="node2" href="$sys__adc_8c.html#a113cef47f82e7519c1fe0b636f2f47f3" title="Read ADC raw value" alt="" coords="168,5,273,32"/>
+</map>

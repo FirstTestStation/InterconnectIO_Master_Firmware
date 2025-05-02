@@ -1,0 +1,5 @@
+<map id="sys_adc_vsys" name="sys_adc_vsys">
+<area shape="rect" id="node1" title="Read ADC VSYS voltage" alt="" coords="131,31,241,57"/>
+<area shape="rect" id="node2" href="$test_8c.html#ada61a5d73ba9477f5805e729284f4e17" title="Function not used during normal execution The adc_test was used to test the hardware of interconnect ..." alt="" coords="5,5,83,32"/>
+<area shape="rect" id="node3" href="$test_8c.html#a2c187f3a1a5e046de0872ebd623e8d56" title="Function not used during normal execution The test_adc was used to test to get all the measure in sam..." alt="" coords="5,56,83,83"/>
+</map>

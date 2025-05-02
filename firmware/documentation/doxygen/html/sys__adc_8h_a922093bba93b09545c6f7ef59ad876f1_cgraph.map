@@ -1,0 +1,6 @@
+<map id="sys_adc_temp_f" name="sys_adc_temp_f">
+<area shape="rect" id="node1" title="Read ADC internal temp. sensor in fahrenheit" alt="" coords="5,5,132,32"/>
+<area shape="rect" id="node2" href="$sys__adc_8c.html#a9ab4088b9e613433252de6f33df7b3f9" title="Read ADC internal temp. sensor in celsius" alt="" coords="180,5,309,32"/>
+<area shape="rect" id="node3" href="$sys__adc_8c.html#a8f0b07a928f2e92cfc8493cdf09cc176" title="Read ADC voltage value" alt="" coords="357,5,464,32"/>
+<area shape="rect" id="node4" href="$sys__adc_8c.html#a113cef47f82e7519c1fe0b636f2f47f3" title="Read ADC raw value" alt="" coords="512,5,617,32"/>
+</map>

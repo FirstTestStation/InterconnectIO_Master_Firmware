@@ -1,0 +1,7 @@
+<map id="adc_test" name="adc_test">
+<area shape="rect" id="node1" title="Function not used during normal execution The adc_test was used to test the hardware of interconnect ..." alt="" coords="5,56,83,83"/>
+<area shape="rect" id="node2" href="$sys__adc_8c.html#a9ab4088b9e613433252de6f33df7b3f9" title="Read ADC internal temp. sensor in celsius" alt="" coords="131,5,260,32"/>
+<area shape="rect" id="node3" href="$sys__adc_8c.html#a8f0b07a928f2e92cfc8493cdf09cc176" title="Read ADC voltage value" alt="" coords="308,56,415,83"/>
+<area shape="rect" id="node5" href="$sys__adc_8c.html#ad7ca531532689111e44dfb8336ecf95d" title="Read ADC VSYS voltage" alt="" coords="140,107,251,133"/>
+<area shape="rect" id="node4" href="$sys__adc_8c.html#a113cef47f82e7519c1fe0b636f2f47f3" title="Read ADC raw value" alt="" coords="463,56,568,83"/>
+</map>

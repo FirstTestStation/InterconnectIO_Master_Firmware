@@ -93,26 +93,27 @@ $(document).ready(function(){initNavTree('scpi__spi_8c.html',''); initResizable(
 
 <p>Complete software code library to communicate to the user SPI port using SCPI command.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
-<code>#include &lt;stdio.h&gt;</code><br />
-<code>#include &lt;ctype.h&gt;</code><br />
-<code>#include &lt;stdlib.h&gt;</code><br />
-<code>#include &quot;pico/stdlib.h&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="scpi__spi_8h_source.html">include/scpi_spi.h</a>&quot;</code><br />
 <code>#include &quot;hardware/spi.h&quot;</code><br />
-<code>#include &quot;<a class="el" href="scpi__spi_8h_source.html">include/scpi_spi.h</a>&quot;</code><br />
+<code>#include &quot;pico/stdlib.h&quot;</code><br />
+<code>#include &lt;ctype.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for scpi_spi.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="scpi__spi_8c__incl.png" border="0" usemap="#afirmware_2src_2scpi__spi_8c" alt=""/></div>
 <map name="afirmware_2src_2scpi__spi_8c" id="afirmware_2src_2scpi__spi_8c">
-<area shape="rect" title="Complete software code library to communicate to the user SPI port using SCPI command." alt="" coords="237,5,407,32"/>
-<area shape="rect" title=" " alt="" coords="5,80,76,107"/>
-<area shape="rect" title=" " alt="" coords="101,80,167,107"/>
-<area shape="rect" title=" " alt="" coords="192,80,263,107"/>
-<area shape="rect" title=" " alt="" coords="287,80,357,107"/>
-<area shape="rect" title=" " alt="" coords="382,80,483,107"/>
-<area shape="rect" title=" " alt="" coords="508,80,627,107"/>
-<area shape="rect" href="scpi__spi_8h.html" title="Header file defining constants and macros for the SPI communication." alt="" coords="651,80,788,107"/>
+<area shape="rect" title="Complete software code library to communicate to the user SPI port using SCPI command." alt="" coords="386,5,557,32"/>
+<area shape="rect" href="scpi__spi_8h.html" title="Header file defining constants and macros for the SPI communication." alt="" coords="5,80,143,107"/>
+<area shape="rect" title=" " alt="" coords="167,80,285,107"/>
+<area shape="rect" title=" " alt="" coords="310,80,411,107"/>
+<area shape="rect" title=" " alt="" coords="436,80,507,107"/>
+<area shape="rect" title=" " alt="" coords="531,80,601,107"/>
+<area shape="rect" title=" " alt="" coords="626,80,693,107"/>
+<area shape="rect" title=" " alt="" coords="717,80,788,107"/>
+<area shape="rect" title=" " alt="" coords="33,155,115,181"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -207,6 +208,15 @@ Variables</h2></td></tr>
 <p>function to configure the parameters of the user spi based on the data set on the spi structure </p>
 <p >&lt; Configure the gpio who will be used as chipselect</p>
 <p >&lt; set to high by default</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="scpi__spi_8c_a1c9cd652cc58e98115393248b95185cb_cgraph.png" border="0" usemap="#ascpi__spi_8c_a1c9cd652cc58e98115393248b95185cb_cgraph" alt=""/></div>
+<map name="ascpi__spi_8c_a1c9cd652cc58e98115393248b95185cb_cgraph" id="ascpi__spi_8c_a1c9cd652cc58e98115393248b95185cb_cgraph">
+<area shape="rect" title="function to configure the parameters of the user spi based on the data set on the spi structure" alt="" coords="5,5,131,32"/>
+<area shape="rect" href="scpi__spi_8c.html#ac54dd17786f3ac8a65578d6cd470c1fe" title="function to set the mode to use for spi communication" alt="" coords="179,5,324,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -375,6 +385,15 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="scpi__spi_8c_a2cb5079bd0fb6a96093c5f37f4572fd8_cgraph.png" border="0" usemap="#ascpi__spi_8c_a2cb5079bd0fb6a96093c5f37f4572fd8_cgraph" alt=""/></div>
+<map name="ascpi__spi_8c_a2cb5079bd0fb6a96093c5f37f4572fd8_cgraph" id="ascpi__spi_8c_a2cb5079bd0fb6a96093c5f37f4572fd8_cgraph">
+<area shape="rect" title="Function to update the value of databits to be used." alt="" coords="5,5,167,32"/>
+<area shape="rect" href="scpi__spi_8c.html#ac54dd17786f3ac8a65578d6cd470c1fe" title="function to set the mode to use for spi communication" alt="" coords="215,5,360,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -404,6 +423,16 @@ Variables</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>uint8_t error number </dd></dl>
 <p >&lt; save mode used in structure</p>
 <p >&lt; set format</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="scpi__spi_8c_ac54dd17786f3ac8a65578d6cd470c1fe_icgraph.png" border="0" usemap="#ascpi__spi_8c_ac54dd17786f3ac8a65578d6cd470c1fe_icgraph" alt=""/></div>
+<map name="ascpi__spi_8c_ac54dd17786f3ac8a65578d6cd470c1fe_icgraph" id="ascpi__spi_8c_ac54dd17786f3ac8a65578d6cd470c1fe_icgraph">
+<area shape="rect" title="function to set the mode to use for spi communication" alt="" coords="215,31,360,57"/>
+<area shape="rect" href="scpi__spi_8c.html#a1c9cd652cc58e98115393248b95185cb" title="function to configure the parameters of the user spi based on the data set on the spi structure" alt="" coords="23,5,149,32"/>
+<area shape="rect" href="scpi__spi_8c.html#a2cb5079bd0fb6a96093c5f37f4572fd8" title="Function to update the value of databits to be used." alt="" coords="5,56,167,83"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -531,6 +560,15 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int64_t Return 0 to indicate no further alarms need to be triggered.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>This function is typically called by the system in response to an alarm, and it should return quickly to avoid blocking other operations. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="scpi__spi_8c_a9564c7386c74b91ace471ec614fddbb4_cgraph.png" border="0" usemap="#ascpi__spi_8c_a9564c7386c74b91ace471ec614fddbb4_cgraph" alt=""/></div>
+<map name="ascpi__spi_8c_a9564c7386c74b91ace471ec614fddbb4_cgraph" id="ascpi__spi_8c_a9564c7386c74b91ace471ec614fddbb4_cgraph">
+<area shape="rect" title="Callback function triggered by an alarm to handle SPI timeout." alt="" coords="5,5,144,32"/>
+<area shape="rect" href="scpi__spi_8c.html#a7d19d25392ca2572735f7f2012400f9b" title="function to disable the user spi and configure pins reserved by SPI to normal GPIO,..." alt="" coords="192,5,320,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -653,19 +691,19 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    <a class="code hl_define" href="scpi__spi_8h.html#ad92e1ad5fdc2ccbfa94c9a97e9731801">DEF_SPI_USER</a>,      </div>
-<div class="line">    <a class="code hl_define" href="scpi__spi_8h.html#a5f89522e9b8c162a81770c882e871c8b">DEF_SPI_BAUD</a>,      </div>
-<div class="line">    <a class="code hl_define" href="scpi__spi_8h.html#a28035e900f29737f2852f2039a51d39a">DEF_SPI_DATABITS</a>,  </div>
-<div class="line">    <a class="code hl_define" href="scpi__spi_8h.html#a4217b55d3e322f9327e0fbda933ea696">DEF_SPI_CS</a>,        </div>
-<div class="line">    <a class="code hl_define" href="scpi__spi_8h.html#aef40ff40f2561db8ae3f5242d9b82bf9">DEF_SPI_MODE</a>,      </div>
-<div class="line">    <a class="code hl_define" href="scpi__spi_8h.html#a447f512aa83392f754224e14ebde3fd8">DEF_SPI_STATUS</a>     </div>
+<div class="line">    <a class="code hl_define" href="scpi__spi_8h.html#ad92e1ad5fdc2ccbfa94c9a97e9731801">DEF_SPI_USER</a>,     </div>
+<div class="line">    <a class="code hl_define" href="scpi__spi_8h.html#a5f89522e9b8c162a81770c882e871c8b">DEF_SPI_BAUD</a>,     </div>
+<div class="line">    <a class="code hl_define" href="scpi__spi_8h.html#a28035e900f29737f2852f2039a51d39a">DEF_SPI_DATABITS</a>, </div>
+<div class="line">    <a class="code hl_define" href="scpi__spi_8h.html#a4217b55d3e322f9327e0fbda933ea696">DEF_SPI_CS</a>,       </div>
+<div class="line">    <a class="code hl_define" href="scpi__spi_8h.html#aef40ff40f2561db8ae3f5242d9b82bf9">DEF_SPI_MODE</a>,     </div>
+<div class="line">    <a class="code hl_define" href="scpi__spi_8h.html#a447f512aa83392f754224e14ebde3fd8">DEF_SPI_STATUS</a>    </div>
 <div class="line">}</div>
-<div class="ttc" id="ascpi__spi_8h_html_a28035e900f29737f2852f2039a51d39a"><div class="ttname"><a href="scpi__spi_8h.html#a28035e900f29737f2852f2039a51d39a">DEF_SPI_DATABITS</a></div><div class="ttdeci">#define DEF_SPI_DATABITS</div><div class="ttdoc">spi number of bits used for communication</div><div class="ttdef"><b>Definition:</b> scpi_spi.h:38</div></div>
-<div class="ttc" id="ascpi__spi_8h_html_a4217b55d3e322f9327e0fbda933ea696"><div class="ttname"><a href="scpi__spi_8h.html#a4217b55d3e322f9327e0fbda933ea696">DEF_SPI_CS</a></div><div class="ttdeci">#define DEF_SPI_CS</div><div class="ttdoc">spi gpio used to perform chipselect</div><div class="ttdef"><b>Definition:</b> scpi_spi.h:39</div></div>
-<div class="ttc" id="ascpi__spi_8h_html_a447f512aa83392f754224e14ebde3fd8"><div class="ttname"><a href="scpi__spi_8h.html#a447f512aa83392f754224e14ebde3fd8">DEF_SPI_STATUS</a></div><div class="ttdeci">#define DEF_SPI_STATUS</div><div class="ttdoc">spi is disable by default</div><div class="ttdef"><b>Definition:</b> scpi_spi.h:41</div></div>
-<div class="ttc" id="ascpi__spi_8h_html_a5f89522e9b8c162a81770c882e871c8b"><div class="ttname"><a href="scpi__spi_8h.html#a5f89522e9b8c162a81770c882e871c8b">DEF_SPI_BAUD</a></div><div class="ttdeci">#define DEF_SPI_BAUD</div><div class="ttdoc">spi baudrate is set at 100Khz by default</div><div class="ttdef"><b>Definition:</b> scpi_spi.h:37</div></div>
-<div class="ttc" id="ascpi__spi_8h_html_ad92e1ad5fdc2ccbfa94c9a97e9731801"><div class="ttname"><a href="scpi__spi_8h.html#ad92e1ad5fdc2ccbfa94c9a97e9731801">DEF_SPI_USER</a></div><div class="ttdeci">#define DEF_SPI_USER</div><div class="ttdoc">spi0 is the user communication channel to external</div><div class="ttdef"><b>Definition:</b> scpi_spi.h:36</div></div>
-<div class="ttc" id="ascpi__spi_8h_html_aef40ff40f2561db8ae3f5242d9b82bf9"><div class="ttname"><a href="scpi__spi_8h.html#aef40ff40f2561db8ae3f5242d9b82bf9">DEF_SPI_MODE</a></div><div class="ttdeci">#define DEF_SPI_MODE</div><div class="ttdoc">define mode parameters: cs,cpol,cpha and MSB</div><div class="ttdef"><b>Definition:</b> scpi_spi.h:40</div></div>
+<div class="ttc" id="ascpi__spi_8h_html_a28035e900f29737f2852f2039a51d39a"><div class="ttname"><a href="scpi__spi_8h.html#a28035e900f29737f2852f2039a51d39a">DEF_SPI_DATABITS</a></div><div class="ttdeci">#define DEF_SPI_DATABITS</div><div class="ttdoc">spi number of bits used for communication</div><div class="ttdef"><b>Definition:</b> scpi_spi.h:40</div></div>
+<div class="ttc" id="ascpi__spi_8h_html_a4217b55d3e322f9327e0fbda933ea696"><div class="ttname"><a href="scpi__spi_8h.html#a4217b55d3e322f9327e0fbda933ea696">DEF_SPI_CS</a></div><div class="ttdeci">#define DEF_SPI_CS</div><div class="ttdoc">spi gpio used to perform chipselect</div><div class="ttdef"><b>Definition:</b> scpi_spi.h:41</div></div>
+<div class="ttc" id="ascpi__spi_8h_html_a447f512aa83392f754224e14ebde3fd8"><div class="ttname"><a href="scpi__spi_8h.html#a447f512aa83392f754224e14ebde3fd8">DEF_SPI_STATUS</a></div><div class="ttdeci">#define DEF_SPI_STATUS</div><div class="ttdoc">spi is disable by default</div><div class="ttdef"><b>Definition:</b> scpi_spi.h:43</div></div>
+<div class="ttc" id="ascpi__spi_8h_html_a5f89522e9b8c162a81770c882e871c8b"><div class="ttname"><a href="scpi__spi_8h.html#a5f89522e9b8c162a81770c882e871c8b">DEF_SPI_BAUD</a></div><div class="ttdeci">#define DEF_SPI_BAUD</div><div class="ttdoc">spi baudrate is set at 100Khz by default</div><div class="ttdef"><b>Definition:</b> scpi_spi.h:39</div></div>
+<div class="ttc" id="ascpi__spi_8h_html_ad92e1ad5fdc2ccbfa94c9a97e9731801"><div class="ttname"><a href="scpi__spi_8h.html#ad92e1ad5fdc2ccbfa94c9a97e9731801">DEF_SPI_USER</a></div><div class="ttdeci">#define DEF_SPI_USER</div><div class="ttdoc">spi0 is the user communication channel to external</div><div class="ttdef"><b>Definition:</b> scpi_spi.h:38</div></div>
+<div class="ttc" id="ascpi__spi_8h_html_aef40ff40f2561db8ae3f5242d9b82bf9"><div class="ttname"><a href="scpi__spi_8h.html#aef40ff40f2561db8ae3f5242d9b82bf9">DEF_SPI_MODE</a></div><div class="ttdeci">#define DEF_SPI_MODE</div><div class="ttdoc">define mode parameters: cs,cpol,cpha and MSB</div><div class="ttdef"><b>Definition:</b> scpi_spi.h:42</div></div>
 </div><!-- fragment -->
 <p>Global SPI configuration structure initialized with default values. </p>
 <p >This structure holds the default configuration for the SPI interface, including settings for baud rate, data bits, chip select, SPI mode, and status. </p>

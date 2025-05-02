@@ -1,10 +1,11 @@
 <map id="firmware/src/scpi_uart.c" name="firmware/src/scpi_uart.c">
-<area shape="rect" id="node1" title="Complete software code library to communicate to the user serial port using SCPI command." alt="" coords="249,5,426,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,80,72,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="97,80,167,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="191,80,262,107"/>
-<area shape="rect" id="node5" title=" " alt="" coords="287,80,388,107"/>
-<area shape="rect" id="node6" title=" " alt="" coords="412,80,537,107"/>
-<area shape="rect" id="node7" title=" " alt="" coords="562,80,678,107"/>
-<area shape="rect" id="node8" href="$scpi__uart_8h.html" title="Header file defining constants and macros for the uart communication." alt="" coords="703,80,847,107"/>
+<area shape="rect" id="node1" title="Complete software code library to communicate to the user serial port using SCPI command." alt="" coords="426,5,603,32"/>
+<area shape="rect" id="node2" href="$scpi__uart_8h.html" title="Header file defining constants and macros for the uart communication." alt="" coords="5,80,149,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="174,80,290,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="315,80,440,107"/>
+<area shape="rect" id="node6" title=" " alt="" coords="464,80,565,107"/>
+<area shape="rect" id="node7" title=" " alt="" coords="590,80,661,107"/>
+<area shape="rect" id="node8" title=" " alt="" coords="685,80,752,107"/>
+<area shape="rect" id="node9" title=" " alt="" coords="777,80,847,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="36,155,119,181"/>
 </map>

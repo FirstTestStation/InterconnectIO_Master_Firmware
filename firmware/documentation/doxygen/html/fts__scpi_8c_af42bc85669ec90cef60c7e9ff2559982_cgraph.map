@@ -1,0 +1,5 @@
+<map id="RegBitHdwrErr" name="RegBitHdwrErr">
+<area shape="rect" id="node1" title="Set Bit on SCPI register Questionable and Operation Send Bust of Beep to signal to operator the probl..." alt="" coords="5,5,123,32"/>
+<area shape="rect" id="node2" href="$fts__scpi_8c.html#a8f1450d6537fd16a2aee2464e2c1389d" title="Send a burst of beep code to alert for boot error." alt="" coords="171,5,257,32"/>
+<area shape="rect" id="node3" href="$fts__scpi_8c.html#a2ed9955bb22ad94c13ec34edc9221443" title="Send a beep tone following a SCPI command or internal function." alt="" coords="305,5,396,32"/>
+</map>

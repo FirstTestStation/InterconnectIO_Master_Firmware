@@ -1,0 +1,4 @@
+<map id="test_inst_manual" name="test_inst_manual">
+<area shape="rect" id="node1" title="The function perform the selftest of the instruments connected to the interconnect_IO board...." alt="" coords="5,5,140,32"/>
+<area shape="rect" id="node2" href="$test_8c.html#a0c6f39b967bd2a9a74fd40a40cf54687" title="function to wait for read character from user. The loop refresh the watchdog timeout" alt="" coords="188,5,307,32"/>
+</map>

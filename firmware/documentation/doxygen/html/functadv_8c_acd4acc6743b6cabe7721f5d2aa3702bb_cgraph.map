@@ -1,0 +1,7 @@
+<map id="read_power" name="read_power">
+<area shape="rect" id="node1" title="function to read value from the I2C devices INA219 (current/power monitor). Function called by a SCPI..." alt="" coords="5,81,104,108"/>
+<area shape="rect" id="node2" href="$dev__ina219_8c.html#a439f8a8e2a42bbe0ca5b2b48da9a1e80" title="Gets the Bus voltage (16&#45;bit signed integer, so +&#45;32767)" alt="" coords="158,5,321,32"/>
+<area shape="rect" id="node3" href="$dev__ina219_8c.html#a702f33df6c637c52a60620cf94b77a0c" title="Gets the current value in mA, taking into account the config settings and current LSB." alt="" coords="156,56,323,83"/>
+<area shape="rect" id="node4" href="$dev__ina219_8c.html#a9cecf583ae9c089a9e251c60c2ead1cd" title="Gets the power value in mW, taking into account the config settings and power LSB." alt="" coords="158,107,321,133"/>
+<area shape="rect" id="node5" href="$dev__ina219_8c.html#a9dd812ec2d9030c7edaa1ea397d2c53e" title="Gets the shunt voltage (16&#45;bit signed integer, so +&#45;32767)" alt="" coords="152,157,327,184"/>
+</map>

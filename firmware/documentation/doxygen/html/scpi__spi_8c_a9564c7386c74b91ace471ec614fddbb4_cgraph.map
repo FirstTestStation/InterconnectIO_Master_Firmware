@@ -1,0 +1,4 @@
+<map id="spi_alert_function" name="spi_alert_function">
+<area shape="rect" id="node1" title="Callback function triggered by an alarm to handle SPI timeout." alt="" coords="5,5,144,32"/>
+<area shape="rect" id="node2" href="$scpi__spi_8c.html#a7d19d25392ca2572735f7f2012400f9b" title="function to disable the user spi and configure pins reserved by SPI to normal GPIO,..." alt="" coords="192,5,320,32"/>
+</map>

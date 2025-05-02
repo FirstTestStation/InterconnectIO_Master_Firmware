@@ -5,13 +5,13 @@
 Complete software code library to communicate to the user SPI port using SCPI command.  
 
 
+{\ttfamily \#include \char`\"{}include/scpi\+\_\+spi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hardware/spi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pico/stdlib.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
 {\ttfamily \#include $<$stdint.\+h$>$}\newline
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
-{\ttfamily \#include $<$ctype.\+h$>$}\newline
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
-{\ttfamily \#include \char`\"{}pico/stdlib.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}hardware/spi.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}include/scpi\+\_\+spi.\+h\char`\"{}}\newline
 Include dependency graph for scpi\+\_\+spi.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -96,7 +96,14 @@ function to configure the parameters of the user spi based on the data set on th
 
 \texorpdfstring{$<$}{<} Configure the gpio who will be used as chipselect
 
-\texorpdfstring{$<$}{<} set to high by default\mbox{\Hypertarget{scpi__spi_8c_a87b874a337212219c48b1e44ffc77f5e}\label{scpi__spi_8c_a87b874a337212219c48b1e44ffc77f5e}} 
+\texorpdfstring{$<$}{<} set to high by defaultHere is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{scpi__spi_8c_a1c9cd652cc58e98115393248b95185cb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{scpi__spi_8c_a87b874a337212219c48b1e44ffc77f5e}\label{scpi__spi_8c_a87b874a337212219c48b1e44ffc77f5e}} 
 \index{scpi\_spi.c@{scpi\_spi.c}!scpi\_spi\_get\_baudrate@{scpi\_spi\_get\_baudrate}}
 \index{scpi\_spi\_get\_baudrate@{scpi\_spi\_get\_baudrate}!scpi\_spi.c@{scpi\_spi.c}}
 \doxysubsubsection{\texorpdfstring{scpi\_spi\_get\_baudrate()}{scpi\_spi\_get\_baudrate()}}
@@ -202,6 +209,13 @@ Function to update the value of databits to be used.
 {\em num} & Databits to write \\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{scpi__spi_8c_a2cb5079bd0fb6a96093c5f37f4572fd8_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{scpi__spi_8c_ac54dd17786f3ac8a65578d6cd470c1fe}\label{scpi__spi_8c_ac54dd17786f3ac8a65578d6cd470c1fe}} 
 \index{scpi\_spi.c@{scpi\_spi.c}!scpi\_spi\_set\_mode@{scpi\_spi\_set\_mode}}
 \index{scpi\_spi\_set\_mode@{scpi\_spi\_set\_mode}!scpi\_spi.c@{scpi\_spi.c}}
@@ -222,7 +236,14 @@ uint8\+\_\+t error number
 \end{DoxyReturn}
 \texorpdfstring{$<$}{<} save mode used in structure
 
-\texorpdfstring{$<$}{<} set format\mbox{\Hypertarget{scpi__spi_8c_a0464322f4228d85608e432eb2f104536}\label{scpi__spi_8c_a0464322f4228d85608e432eb2f104536}} 
+\texorpdfstring{$<$}{<} set formatHere is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{scpi__spi_8c_ac54dd17786f3ac8a65578d6cd470c1fe_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{scpi__spi_8c_a0464322f4228d85608e432eb2f104536}\label{scpi__spi_8c_a0464322f4228d85608e432eb2f104536}} 
 \index{scpi\_spi.c@{scpi\_spi.c}!scpi\_spi\_status@{scpi\_spi\_status}}
 \index{scpi\_spi\_status@{scpi\_spi\_status}!scpi\_spi.c@{scpi\_spi.c}}
 \doxysubsubsection{\texorpdfstring{scpi\_spi\_status()}{scpi\_spi\_status()}}
@@ -298,6 +319,13 @@ int64\+\_\+t Return 0 to indicate no further alarms need to be triggered.
 \begin{DoxyNote}{Note}
 This function is typically called by the system in response to an alarm, and it should return quickly to avoid blocking other operations. 
 \end{DoxyNote}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{scpi__spi_8c_a9564c7386c74b91ace471ec614fddbb4_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{scpi__spi_8c_a23385f64b89a24238ba50379892ed47a}\label{scpi__spi_8c_a23385f64b89a24238ba50379892ed47a}} 
 \index{scpi\_spi.c@{scpi\_spi.c}!spi\_bytes\_to\_words@{spi\_bytes\_to\_words}}
 \index{spi\_bytes\_to\_words@{spi\_bytes\_to\_words}!scpi\_spi.c@{scpi\_spi.c}}
@@ -358,12 +386,12 @@ This variable is set to {\ttfamily true} when an SPI timeout occurs and is used 
 {\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{= \{}
-\DoxyCodeLine{    \mbox{\hyperlink{scpi__spi_8h_ad92e1ad5fdc2ccbfa94c9a97e9731801}{DEF\_SPI\_USER}},      }
-\DoxyCodeLine{    \mbox{\hyperlink{scpi__spi_8h_a5f89522e9b8c162a81770c882e871c8b}{DEF\_SPI\_BAUD}},      }
-\DoxyCodeLine{    \mbox{\hyperlink{scpi__spi_8h_a28035e900f29737f2852f2039a51d39a}{DEF\_SPI\_DATABITS}},  }
-\DoxyCodeLine{    \mbox{\hyperlink{scpi__spi_8h_a4217b55d3e322f9327e0fbda933ea696}{DEF\_SPI\_CS}},        }
-\DoxyCodeLine{    \mbox{\hyperlink{scpi__spi_8h_aef40ff40f2561db8ae3f5242d9b82bf9}{DEF\_SPI\_MODE}},      }
-\DoxyCodeLine{    \mbox{\hyperlink{scpi__spi_8h_a447f512aa83392f754224e14ebde3fd8}{DEF\_SPI\_STATUS}}     }
+\DoxyCodeLine{    \mbox{\hyperlink{scpi__spi_8h_ad92e1ad5fdc2ccbfa94c9a97e9731801}{DEF\_SPI\_USER}},     }
+\DoxyCodeLine{    \mbox{\hyperlink{scpi__spi_8h_a5f89522e9b8c162a81770c882e871c8b}{DEF\_SPI\_BAUD}},     }
+\DoxyCodeLine{    \mbox{\hyperlink{scpi__spi_8h_a28035e900f29737f2852f2039a51d39a}{DEF\_SPI\_DATABITS}}, }
+\DoxyCodeLine{    \mbox{\hyperlink{scpi__spi_8h_a4217b55d3e322f9327e0fbda933ea696}{DEF\_SPI\_CS}},       }
+\DoxyCodeLine{    \mbox{\hyperlink{scpi__spi_8h_aef40ff40f2561db8ae3f5242d9b82bf9}{DEF\_SPI\_MODE}},     }
+\DoxyCodeLine{    \mbox{\hyperlink{scpi__spi_8h_a447f512aa83392f754224e14ebde3fd8}{DEF\_SPI\_STATUS}}    }
 \DoxyCodeLine{\}}
 
 \end{DoxyCode}

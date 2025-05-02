@@ -1,0 +1,4 @@
+<map id="SCPI_Error" name="SCPI_Error">
+<area shape="rect" id="node1" title="function called by SCPI when error is found. The function will perform a short beep and turn on the e..." alt="" coords="5,5,95,32"/>
+<area shape="rect" id="node2" href="$fts__scpi_8c.html#a2ed9955bb22ad94c13ec34edc9221443" title="Send a beep tone following a SCPI command or internal function." alt="" coords="143,5,233,32"/>
+</map>

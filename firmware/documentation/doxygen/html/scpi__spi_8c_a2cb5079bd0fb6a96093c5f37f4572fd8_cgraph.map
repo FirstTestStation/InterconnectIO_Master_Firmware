@@ -1,0 +1,4 @@
+<map id="scpi_spi_set_databits" name="scpi_spi_set_databits">
+<area shape="rect" id="node1" title="Function to update the value of databits to be used." alt="" coords="5,5,167,32"/>
+<area shape="rect" id="node2" href="$scpi__spi_8c.html#ac54dd17786f3ac8a65578d6cd470c1fe" title="function to set the mode to use for spi communication" alt="" coords="215,5,360,32"/>
+</map>

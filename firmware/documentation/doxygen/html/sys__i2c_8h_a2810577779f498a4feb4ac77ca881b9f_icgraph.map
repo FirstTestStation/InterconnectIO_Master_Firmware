@@ -1,0 +1,6 @@
+<map id="sys_i2c_rbuf" name="sys_i2c_rbuf">
+<area shape="rect" id="node1" title="Read i2c buffer by byte" alt="" coords="405,31,508,57"/>
+<area shape="rect" id="node2" href="$dev__mcp4725_8c.html#a9a90c2af6bc2745bc5525014652e32e1" title="Sets adc output" alt="" coords="200,5,341,32"/>
+<area shape="rect" id="node4" href="$scpi__i2c_8c.html#a76df3108d1a2c822fb1d43090b4274ca" title="Main function called by SCPI command to send or receive data on I2C port." alt="" coords="184,56,357,83"/>
+<area shape="rect" id="node3" href="$functadv_8c.html#acb717495a9c37a468e5494f571ef1607" title="Run internal board tests to verifies hardware functionality,." alt="" coords="5,5,136,32"/>
+</map>

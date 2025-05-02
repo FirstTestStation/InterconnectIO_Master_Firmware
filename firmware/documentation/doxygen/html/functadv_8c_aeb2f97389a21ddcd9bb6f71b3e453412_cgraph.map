@@ -1,0 +1,5 @@
+<map id="dac_set" name="dac_set">
+<area shape="rect" id="node1" title="Function used by SCPI command to set DAC voltage The voltage value is validated to be in the range of..." alt="" coords="5,31,77,57"/>
+<area shape="rect" id="node2" href="$dev__mcp4725_8c.html#af2f59127345c400e06ab51bc5ede3578" title="Sets adc output and save settings to EEPROM (50ms)" alt="" coords="125,5,276,32"/>
+<area shape="rect" id="node3" href="$dev__mcp4725_8c.html#a18c7b83ea36a97f6f74bf70f6d359ed0" title="Sets the ADC output for the MCP4725." alt="" coords="131,56,271,83"/>
+</map>

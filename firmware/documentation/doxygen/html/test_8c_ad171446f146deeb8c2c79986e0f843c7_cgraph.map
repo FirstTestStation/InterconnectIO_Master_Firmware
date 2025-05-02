@@ -1,0 +1,8 @@
+<map id="test_command" name="test_command">
+<area shape="rect" id="node1" title="The function has been used to test the scpi command function. Mainly used to validate software functi..." alt="" coords="5,107,124,133"/>
+<area shape="rect" id="node2" href="$dev__ina219_8c.html#ad1082efd7eef489c5ed57c7884eac570" title="Initialises the I2C block." alt="" coords="192,5,279,32"/>
+<area shape="rect" id="node3" href="$test_8c.html#a964f12386d49fd5a0df6add2daf20508" title=" " alt="" coords="191,56,279,83"/>
+<area shape="rect" id="node4" href="$test_8c.html#ade29dc0be6bd27144ab8ac944fad90de" title="Function to print message saved on circular buffer." alt="" coords="173,107,298,133"/>
+<area shape="rect" id="node5" href="$test_8c.html#af9513558e25e8efc4248c5f6c4dcd18e" title="Send SCPI command and validate the value for PASS or FAIL. The answer value returned by command is va..." alt="" coords="180,157,291,184"/>
+<area shape="rect" id="node6" href="$test_8c.html#a3a741d0c84f19f8a596e9db8a3055383" title="Send SCPI command and validate the value for PASS or FAIL. The analog value returned by command is va..." alt="" coords="172,208,299,235"/>
+</map>

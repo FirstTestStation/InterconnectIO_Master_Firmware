@@ -40,7 +40,8 @@ extern "C"
 /**
  * @brief UART GPIO pin configuration.
  *
- * We are using GPIO pins 0 and 1 for UART transmission and reception, but other pins can be used as described in the datasheet.
+ * We are using GPIO pins 0 and 1 for UART transmission and reception, but other pins can be used as
+ * described in the datasheet.
  */
 #define UART_TX_PIN 8 /**< GPIO pin for UART TX (Transmit). */
 #define UART_RX_PIN 9 /**< GPIO pin for UART RX (Receive). */
@@ -48,7 +49,8 @@ extern "C"
 /**
  * @brief Redefine default UART pin configuration for PICO.
  *
- * During development, printf output is sent to both USB and serial port. In normal operation, the serial port is used for SCPI communication only.
+ * During development, printf output is sent to both USB and serial port. In normal operation, the
+ * serial port is used for SCPI communication only.
  */
 #undef PICO_DEFAULT_UART_RX_PIN
 #define PICO_DEFAULT_UART_RX_PIN 9 /**< Default RX pin for UART on PICO. */
@@ -73,61 +75,63 @@ extern "C"
 #define PSLAVE_RUN "PICO_SLAVES_RUN"  /**< EEPROM Pico slaves run status. */
 #define TESTBOARD_NUM "TESTBOARD_NUM" /**< EEPROM Test board part number. */
 #define PARAMETER1 "PARAMETER1"       /**< EEPROM user defined field. */
-#define PARAMETER2 "PARAMETER2"        /**< EEPROM user defined field. */
+#define PARAMETER2 "PARAMETER2"       /**< EEPROM user defined field. */
 #define PARAMETER3 "PARAMETER3"       /**< EEPROM user defined field. */
 #define PARAMETER4 "PARAMETER4"       /**< EEPROM user defined field. */
 #define PARAMETER5 "PARAMETER5"       /**< EEPROM user defined field. */
 #define TEST "TEST"                   /**< EEPROM test field. */
 
-  /**
-   * @brief EEPROM configuration structure.
-   *
-   * This structure contains the default values and settings that are stored in EEPROM.
-   * New parameters should be added with proper size allocation, and always include
-   * a null terminator (`+1`) for strings.
-   */
-  typedef struct eecfg_t
-  {
-    char check[1];           /**< Proof character to validate EEPROM read. */
-    char partnumber[13];     /**< Part number stored in EEPROM. */
-    char serialnumber[6];    /**< Serial number stored in EEPROM. */
-    char mod_option[15];     /**< Module options stored in EEPROM. */
-    char com_ser_speed[7];   /**< Communication serial speed. */
-    char com_ser_echo[2];    /**< Serial echo flag for SCPI port. */
-    char slave_force_run[2]; /**< Force master RUN_EN = 1, useful for debugging slave Pico devices. */
-    char testboard_num[13];  /**< Part number of the self-test board. */
-    char parameter1[15];     /**< not defined parameter. */
-    char parameter2[15];     /**< not defined parameter. */
-    char parameter3[15];     /**< not defined parameter. */
-    char parameter4[15];     /**< not defined parameter. */
-    char parameter5[15];     /**< not defined parameter. */
-    char test[10];            /**< reserved to test eeprom */
-  
-  } cfg;
+    /**
+     * @brief EEPROM configuration structure.
+     *
+     * This structure contains the default values and settings that are stored in EEPROM.
+     * New parameters should be added with proper size allocation, and always include
+     * a null terminator (`+1`) for strings.
+     */
+    typedef struct eecfg_t
+    {
+        char check[1];           /**< Proof character to validate EEPROM read. */
+        char partnumber[13];     /**< Part number stored in EEPROM. */
+        char serialnumber[6];    /**< Serial number stored in EEPROM. */
+        char mod_option[15];     /**< Module options stored in EEPROM. */
+        char com_ser_speed[7];   /**< Communication serial speed. */
+        char com_ser_echo[2];    /**< Serial echo flag for SCPI port. */
+        char slave_force_run[2]; /**< Force master RUN_EN = 1, useful for debugging slave Pico
+                                    devices. */
+        char testboard_num[13];  /**< Part number of the self-test board. */
+        char parameter1[15];     /**< not defined parameter. */
+        char parameter2[15];     /**< not defined parameter. */
+        char parameter3[15];     /**< not defined parameter. */
+        char parameter4[15];     /**< not defined parameter. */
+        char parameter5[15];     /**< not defined parameter. */
+        char test[10];           /**< reserved to test eeprom */
 
-  /**
-   * @brief Union that combines the EEPROM configuration structure with a raw data array.
-   */
-  typedef union eef
-  {
-    struct eecfg_t cfg;     /**< EEPROM configuration structure. */
-    char data[sizeof(cfg)]; /**< Raw data representation of the configuration. */
-  } eep;                    /**< Instance of the eef union used for EEPROM operations. */
+    } cfg;
 
-  /**
-   * @var ee
-   * @brief Instance of the EEPROM configuration union.
-   *
-   * This is a global instance of the `eep` union, providing access to the EEPROM configuration.
-   * It can be used to read or write EEPROM data either by individual fields (via `cfg`) or as
-   * a raw byte array (via `data[]`).
-   */
-  extern eep ee; /**< External declaration of EEPROM union for global use. */
+    /**
+     * @brief Union that combines the EEPROM configuration structure with a raw data array.
+     */
+    typedef union eef
+    {
+        struct eecfg_t cfg;     /**< EEPROM configuration structure. */
+        char data[sizeof(cfg)]; /**< Raw data representation of the configuration. */
+    } eep;                      /**< Instance of the eef union used for EEPROM operations. */
+
+    /**
+     * @var ee
+     * @brief Instance of the EEPROM configuration union.
+     *
+     * This is a global instance of the `eep` union, providing access to the EEPROM configuration.
+     * It can be used to read or write EEPROM data either by individual fields (via `cfg`) or as
+     * a raw byte array (via `data[]`).
+     */
+    extern eep ee; /**< External declaration of EEPROM union for global use. */
 
 /**
  * @brief Default value for EEPROM structure.
  *
- * This section defines the default values assigned to the EEPROM structure. Each parameter has a specific role in the system configuration.
+ * This section defines the default values assigned to the EEPROM structure. Each parameter has a
+ * specific role in the system configuration.
  */
 #define EE_CHECK_CHAR '#'               /**< EEPROM check character */
 #define EE_PARTNUMBER "500-1000-010"    /**< Part number of the device */
@@ -137,13 +141,12 @@ extern "C"
 #define EE_CSER_ECHO "0"                /**< Communication flag, Echo ON: 1,  Echo OFF: 0 */
 #define EE_SLAVE_RUN "0"                /**< Slave run status (0 = Disable, 1 = Enable) */
 #define EE_TESTBOARD_NUM "500-1010-020" /**< Part number of the self-test board */
-#define EE_PARAMETER1 "NOT_DEFINED1"     /**< User available parameter */
-#define EE_PARAMETER2 "NOT_DEFINED2"     /**< User available parameter */
-#define EE_PARAMETER3 "NOT_DEFINED3"     /**< User available parameter */
-#define EE_PARAMETER4 "NOT_DEFINED4"     /**< User available parameter */
-#define EE_PARAMETER5 "NOT_DEFINED5"     /**< User available parameter */
-#define EE_TEST       "TEST"            /**< User to test read write of EEprom */
-
+#define EE_PARAMETER1 "NOT_DEFINED1"    /**< User available parameter */
+#define EE_PARAMETER2 "NOT_DEFINED2"    /**< User available parameter */
+#define EE_PARAMETER3 "NOT_DEFINED3"    /**< User available parameter */
+#define EE_PARAMETER4 "NOT_DEFINED4"    /**< User available parameter */
+#define EE_PARAMETER5 "NOT_DEFINED5"    /**< User available parameter */
+#define EE_TEST "TEST"                  /**< User to test read write of EEprom */
 
 /**
  * @brief Default values for the EEPROM structure.
@@ -151,39 +154,38 @@ extern "C"
  * This macro assigns default values to the EEPROM structure.
  * New parameters can be added at the end of the list as needed.
  */
-#define DEF_EEPROM                                                              \
-{                                                                               \
-    EE_CHECK_CHAR,       /**< EEPROM Check Character */                         \
-    EE_PARTNUMBER,       /**< EEPROM Part Number */                             \
-    EE_SERIALNUMBER,     /**< EEPROM Serial Number */                           \
-    EE_MOD_OPTION,       /**< Module Option */                                  \
-    EE_CSER_SPEED,       /**< Communication Serial Speed */                     \
-    EE_CSER_ECHO,        /**< Communication serial echo as integer */           \
-    EE_SLAVE_RUN,        /**< Slave Run Flag */                                 \
-    EE_TESTBOARD_NUM,     /**< Test Board Number */                             \
-    EE_PARAMETER1,        /**< not defined paramater*/                          \
-    EE_PARAMETER2,        /**< not defined paramater*/                          \
-    EE_PARAMETER3,        /**< not defined paramater*/                          \
-    EE_PARAMETER4,        /**< not defined paramater*/                          \
-    EE_PARAMETER5,        /**< not defined paramater*/                          \
-    EE_TEST               /**< used to test eeprom r/w*/                        \
-                                                                                \
-}
+#define DEF_EEPROM                                                                                                     \
+    {                                                                                                                  \
+        EE_CHECK_CHAR,        /**< EEPROM Check Character */                                                           \
+            EE_PARTNUMBER,    /**< EEPROM Part Number */                                                               \
+            EE_SERIALNUMBER,  /**< EEPROM Serial Number */                                                             \
+            EE_MOD_OPTION,    /**< Module Option */                                                                    \
+            EE_CSER_SPEED,    /**< Communication Serial Speed */                                                       \
+            EE_CSER_ECHO,     /**< Communication serial echo as integer */                                             \
+            EE_SLAVE_RUN,     /**< Slave Run Flag */                                                                   \
+            EE_TESTBOARD_NUM, /**< Test Board Number */                                                                \
+            EE_PARAMETER1,    /**< not defined paramater*/                                                             \
+            EE_PARAMETER2,    /**< not defined paramater*/                                                             \
+            EE_PARAMETER3,    /**< not defined paramater*/                                                             \
+            EE_PARAMETER4,    /**< not defined paramater*/                                                             \
+            EE_PARAMETER5,    /**< not defined paramater*/                                                             \
+            EE_TEST           /**< used to test eeprom r/w*/                                                           \
+    }
 
-  //!< Add parameter on struct ParamInfo  file fts_scpi.c  around line 990
+    //!< Add parameter on struct ParamInfo  file fts_scpi.c  around line 990
 
-#define BEEP_I2C_FAIL 3   //!< Define burst of Beep
-#define BEEP_EEP_FAIL 4   //!< Define burst of Beep
-#define BEEP_VSYS_OUT 2   //!< Define burst of Beep
-#define BEEP_TEMP_HIGH 1  //!< Define burst of Beep
-#define BEEP_WATCHDOG 5   //!< Define burst of Beep
+#define BEEP_I2C_FAIL 3  //!< Define burst of Beep
+#define BEEP_EEP_FAIL 4  //!< Define burst of Beep
+#define BEEP_VSYS_OUT 2  //!< Define burst of Beep
+#define BEEP_TEMP_HIGH 1 //!< Define burst of Beep
+#define BEEP_WATCHDOG 5  //!< Define burst of Beep
 
-#define MAX_PICO_TEMP 60  //!< Maximum temperature acceptable for pico
-#define MAX_VSYS_VOLT 6   //!< Maximum voltage to Pico Master Vsys
-#define MIN_VSYS_VOLT 4   //!< Minimum voltage to Pico Master Vsys
+#define MAX_PICO_TEMP 60 //!< Maximum temperature acceptable for pico
+#define MAX_VSYS_VOLT 6  //!< Maximum voltage to Pico Master Vsys
+#define MIN_VSYS_VOLT 4  //!< Minimum voltage to Pico Master Vsys
 
-#define DEFAULT_PWR_VAL 0xc1f  //!< Value of configuration register after ina219_init
+#define DEFAULT_PWR_VAL 0xc1f //!< Value of configuration register after ina219_init
 
-  void Hardware_Default_Setting();
+    void Hardware_Default_Setting();
 
-#endif  //!<
+#endif //!<

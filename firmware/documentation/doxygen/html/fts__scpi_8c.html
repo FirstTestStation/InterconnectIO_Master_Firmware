@@ -93,54 +93,55 @@ $(document).ready(function(){initNavTree('fts__scpi_8c.html',''); initResizable(
 
 <p>Software code used to interpret the SCPI command received from external.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
-<code>#include &lt;string.h&gt;</code><br />
-<code>#include &lt;stdlib.h&gt;</code><br />
-<code>#include &quot;pico/stdlib.h&quot;</code><br />
-<code>#include &quot;pico/binary_info.h&quot;</code><br />
-<code>#include &quot;<a class="el" href="dev__ds2431_8h_source.html">pico_lib2/src/dev/dev_ds2431/dev_ds2431.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="scpi__user__config_8h_source.html">include/scpi_user_config.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="test_8h_source.html">include/test.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="scpi__uart_8h_source.html">include/scpi_uart.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="scpi__spi_8h_source.html">include/scpi_spi.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="scpi__i2c_8h_source.html">include/scpi_i2c.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="fts__scpi_8h_source.html">include/fts_scpi.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="i2c__com_8h_source.html">include/i2c_com.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="master_8h_source.html">include/master.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="fts__scpi_8h_source.html">include/fts_scpi.h</a>&quot;</code><br />
 <code>#include &quot;hardware/resets.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="functadv_8h_source.html">include/functadv.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="i2c__com_8h_source.html">include/i2c_com.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="master_8h_source.html">include/master.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="scpi__i2c_8h_source.html">include/scpi_i2c.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="scpi__spi_8h_source.html">include/scpi_spi.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="scpi__uart_8h_source.html">include/scpi_uart.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="scpi__user__config_8h_source.html">include/scpi_user_config.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="test_8h_source.html">include/test.h</a>&quot;</code><br />
+<code>#include &quot;pico/binary_info.h&quot;</code><br />
+<code>#include &quot;pico/stdlib.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="dev__ds2431_8h_source.html">pico_lib2/src/dev/dev_ds2431/dev_ds2431.h</a>&quot;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
 <code>#include &quot;userconfig.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for fts_scpi.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="fts__scpi_8c__incl.png" border="0" usemap="#afirmware_2src_2fts__scpi_8c" alt=""/></div>
 <map name="afirmware_2src_2fts__scpi_8c" id="afirmware_2src_2fts__scpi_8c">
-<area shape="rect" title="Software code used to interpret the SCPI command received from external." alt="" coords="1110,5,1277,32"/>
-<area shape="rect" title=" " alt="" coords="5,87,72,114"/>
-<area shape="rect" title=" " alt="" coords="97,87,167,114"/>
-<area shape="rect" title=" " alt="" coords="191,87,262,114"/>
-<area shape="rect" title=" " alt="" coords="287,87,388,114"/>
-<area shape="rect" title=" " alt="" coords="412,87,551,114"/>
-<area shape="rect" href="dev__ds2431_8h.html" title="Header to perform communication with OneWire device." alt="" coords="575,80,745,121"/>
-<area shape="rect" href="scpi__user__config_8h.html" title="User responsible device dependent SCPI Configuration." alt="" coords="769,87,961,114"/>
-<area shape="rect" href="test_8h.html" title="Header file defining constants and macros for buffer and message management." alt="" coords="986,87,1097,114"/>
-<area shape="rect" href="scpi__uart_8h.html" title="Header file defining constants and macros for the uart communication." alt="" coords="1121,87,1265,114"/>
-<area shape="rect" href="scpi__spi_8h.html" title="Header file defining constants and macros for the SPI communication." alt="" coords="1290,87,1427,114"/>
-<area shape="rect" href="scpi__i2c_8h.html" title="Header file defining constants and macros for the I2C communication." alt="" coords="1451,87,1589,114"/>
-<area shape="rect" href="fts__scpi_8h.html" title="Header file defining constants and macros used for SCPI interpreter." alt="" coords="1613,87,1747,114"/>
-<area shape="rect" href="i2c__com_8h.html" title="Header file defining constants and macros for internal i2c bus." alt="" coords="1772,87,1911,114"/>
-<area shape="rect" href="master_8h.html" title="Header file defining constants and macros used on the main file." alt="" coords="1935,87,2065,114"/>
-<area shape="rect" title=" " alt="" coords="2089,87,2228,114"/>
-<area shape="rect" href="functadv_8h.html" title="Header file defining constants and macros for the complex function." alt="" coords="2252,87,2393,114"/>
-<area shape="rect" title=" " alt="" coords="2417,87,2519,114"/>
-<area shape="rect" title=" " alt="" coords="1635,169,1725,196"/>
-<area shape="rect" title=" " alt="" coords="2022,169,2141,196"/>
+<area shape="rect" title="Software code used to interpret the SCPI command received from external." alt="" coords="1315,5,1481,32"/>
+<area shape="rect" href="fts__scpi_8h.html" title="Header file defining constants and macros used for SCPI interpreter." alt="" coords="5,87,140,114"/>
+<area shape="rect" title=" " alt="" coords="165,87,303,114"/>
+<area shape="rect" href="functadv_8h.html" title="Header file defining constants and macros for the complex function." alt="" coords="327,87,469,114"/>
+<area shape="rect" href="i2c__com_8h.html" title="Header file defining constants and macros for internal i2c bus." alt="" coords="493,87,631,114"/>
+<area shape="rect" href="master_8h.html" title="Header file defining constants and macros used on the main file." alt="" coords="655,87,786,114"/>
+<area shape="rect" href="scpi__i2c_8h.html" title="Header file defining constants and macros for the I2C communication." alt="" coords="811,87,948,114"/>
+<area shape="rect" href="scpi__spi_8h.html" title="Header file defining constants and macros for the SPI communication." alt="" coords="972,87,1109,114"/>
+<area shape="rect" href="scpi__uart_8h.html" title="Header file defining constants and macros for the uart communication." alt="" coords="1134,87,1278,114"/>
+<area shape="rect" href="scpi__user__config_8h.html" title="User responsible device dependent SCPI Configuration." alt="" coords="1302,87,1494,114"/>
+<area shape="rect" href="test_8h.html" title="Header file defining constants and macros for buffer and message management." alt="" coords="1519,87,1629,114"/>
+<area shape="rect" title=" " alt="" coords="1654,87,1793,114"/>
+<area shape="rect" title=" " alt="" coords="1817,87,1918,114"/>
+<area shape="rect" href="dev__ds2431_8h.html" title="Header to perform communication with OneWire device." alt="" coords="1942,80,2113,121"/>
+<area shape="rect" title=" " alt="" coords="2137,87,2203,114"/>
+<area shape="rect" title=" " alt="" coords="2228,87,2299,114"/>
+<area shape="rect" title=" " alt="" coords="2323,87,2393,114"/>
+<area shape="rect" title=" " alt="" coords="2418,87,2519,114"/>
+<area shape="rect" title=" " alt="" coords="27,169,118,196"/>
+<area shape="rect" title=" " alt="" coords="420,169,539,196"/>
+<area shape="rect" title=" " alt="" coords="999,169,1082,196"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a9a7c1484c5b4ba87be856a7f2e035e9c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fts__scpi_8c.html#a9a7c1484c5b4ba87be856a7f2e035e9c">AIRCR_Register</a>&#160;&#160;&#160;(*((volatile uint32_t*)(PPB_BASE + 0x0ED0C)))</td></tr>
+<tr class="memitem:a9a7c1484c5b4ba87be856a7f2e035e9c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fts__scpi_8c.html#a9a7c1484c5b4ba87be856a7f2e035e9c">AIRCR_Register</a>&#160;&#160;&#160;(*((volatile uint32_t*) (PPB_BASE + 0x0ED0C)))</td></tr>
 <tr class="memdesc:a9a7c1484c5b4ba87be856a7f2e035e9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">AIRCR Register for triggering a system reset.  <a href="fts__scpi_8c.html#a9a7c1484c5b4ba87be856a7f2e035e9c">More...</a><br /></td></tr>
 <tr class="separator:a9a7c1484c5b4ba87be856a7f2e035e9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -152,11 +153,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a3645008c6823af2701d99f6ed8dbe745"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fts__scpi_8c.html#a3645008c6823af2701d99f6ed8dbe745">SCPI_write</a> (scpi_t *context, const char *data, size_t len)</td></tr>
 <tr class="memdesc:a3645008c6823af2701d99f6ed8dbe745"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function write the SCPI answer to the main serial port. The answer is also saved on global variable to be analyzed on module <a class="el" href="test_8c.html" title="Software code used to validate the software and hardware developed on this project.">test.c</a>.  <a href="fts__scpi_8c.html#a3645008c6823af2701d99f6ed8dbe745">More...</a><br /></td></tr>
 <tr class="separator:a3645008c6823af2701d99f6ed8dbe745"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83c50f419ca88f80f55abe46090e547c"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fts__scpi_8c.html#a83c50f419ca88f80f55abe46090e547c">reset_callback</a> (alarm_id_t id, void *param)</td></tr>
-<tr class="memdesc:a83c50f419ca88f80f55abe46090e547c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes a delayed reset of the Interconnect IO board following the SCPI *RST command.  <a href="fts__scpi_8c.html#a83c50f419ca88f80f55abe46090e547c">More...</a><br /></td></tr>
-<tr class="separator:a83c50f419ca88f80f55abe46090e547c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a227bd87e4d70c678726de2bc952fce8e"><td class="memItemLeft" align="right" valign="top">scpi_result_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fts__scpi_8c.html#a227bd87e4d70c678726de2bc952fce8e">SCPI_Reset</a> (scpi_t *context)</td></tr>
-<tr class="memdesc:a227bd87e4d70c678726de2bc952fce8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">SCPI function to handle the *RST command and schedule a delayed reset.  <a href="fts__scpi_8c.html#a227bd87e4d70c678726de2bc952fce8e">More...</a><br /></td></tr>
+<tr class="memdesc:a227bd87e4d70c678726de2bc952fce8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes a delayed reset of the Interconnect IO board following the SCPI *RST command.  <a href="fts__scpi_8c.html#a227bd87e4d70c678726de2bc952fce8e">More...</a><br /></td></tr>
 <tr class="separator:a227bd87e4d70c678726de2bc952fce8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ed9955bb22ad94c13ec34edc9221443"><td class="memItemLeft" align="right" valign="top"><a id="a2ed9955bb22ad94c13ec34edc9221443" name="a2ed9955bb22ad94c13ec34edc9221443"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SCPI_Beep</b> ()</td></tr>
@@ -219,7 +217,7 @@ scpi_command_t&#160;</td><td class="memItemRight" valign="bottom"><b>scpi_comman
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define AIRCR_Register&#160;&#160;&#160;(*((volatile uint32_t*)(PPB_BASE + 0x0ED0C)))</td>
+          <td class="memname">#define AIRCR_Register&#160;&#160;&#160;(*((volatile uint32_t*) (PPB_BASE + 0x0ED0C)))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -253,6 +251,25 @@ scpi_command_t&#160;</td><td class="memItemRight" valign="bottom"><b>scpi_comman
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="fts__scpi_8c_a8f1450d6537fd16a2aee2464e2c1389d_cgraph.png" border="0" usemap="#afts__scpi_8c_a8f1450d6537fd16a2aee2464e2c1389d_cgraph" alt=""/></div>
+<map name="afts__scpi_8c_a8f1450d6537fd16a2aee2464e2c1389d_cgraph" id="afts__scpi_8c_a8f1450d6537fd16a2aee2464e2c1389d_cgraph">
+<area shape="rect" title="Send a burst of beep code to alert for boot error." alt="" coords="5,5,92,32"/>
+<area shape="rect" href="fts__scpi_8c.html#a2ed9955bb22ad94c13ec34edc9221443" title="Send a beep tone following a SCPI command or internal function." alt="" coords="140,5,231,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="fts__scpi_8c_a8f1450d6537fd16a2aee2464e2c1389d_icgraph.png" border="0" usemap="#afts__scpi_8c_a8f1450d6537fd16a2aee2464e2c1389d_icgraph" alt=""/></div>
+<map name="afts__scpi_8c_a8f1450d6537fd16a2aee2464e2c1389d_icgraph" id="afts__scpi_8c_a8f1450d6537fd16a2aee2464e2c1389d_icgraph">
+<area shape="rect" title="Send a burst of beep code to alert for boot error." alt="" coords="349,5,436,32"/>
+<area shape="rect" href="fts__scpi_8c.html#af42bc85669ec90cef60c7e9ff2559982" title="Set Bit on SCPI register Questionable and Operation Send Bust of Beep to signal to operator the probl..." alt="" coords="184,5,301,32"/>
+<area shape="rect" href="functadv_8c.html#acb717495a9c37a468e5494f571ef1607" title="Run internal board tests to verifies hardware functionality,." alt="" coords="5,5,136,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -291,6 +308,15 @@ scpi_command_t&#160;</td><td class="memItemRight" valign="bottom"><b>scpi_comman
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>size_t length </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="fts__scpi_8c_ae0f2dedb3d968ef8b00a3bddb46a78f0_icgraph.png" border="0" usemap="#afts__scpi_8c_ae0f2dedb3d968ef8b00a3bddb46a78f0_icgraph" alt=""/></div>
+<map name="afts__scpi_8c_ae0f2dedb3d968ef8b00a3bddb46a78f0_icgraph" id="afts__scpi_8c_ae0f2dedb3d968ef8b00a3bddb46a78f0_icgraph">
+<area shape="rect" title="Function used by module test.c to capture the SCPI answer from the SCPI command. Used to perform the ..." alt="" coords="144,5,293,32"/>
+<area shape="rect" href="fts__scpi_8c.html#a3645008c6823af2701d99f6ed8dbe745" title="The function write the SCPI answer to the main serial port. The answer is also saved on global variab..." alt="" coords="5,5,96,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -328,6 +354,25 @@ scpi_command_t&#160;</td><td class="memItemRight" valign="bottom"><b>scpi_comman
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="fts__scpi_8c_af42bc85669ec90cef60c7e9ff2559982_cgraph.png" border="0" usemap="#afts__scpi_8c_af42bc85669ec90cef60c7e9ff2559982_cgraph" alt=""/></div>
+<map name="afts__scpi_8c_af42bc85669ec90cef60c7e9ff2559982_cgraph" id="afts__scpi_8c_af42bc85669ec90cef60c7e9ff2559982_cgraph">
+<area shape="rect" title="Set Bit on SCPI register Questionable and Operation Send Bust of Beep to signal to operator the probl..." alt="" coords="5,5,123,32"/>
+<area shape="rect" href="fts__scpi_8c.html#a8f1450d6537fd16a2aee2464e2c1389d" title="Send a burst of beep code to alert for boot error." alt="" coords="171,5,257,32"/>
+<area shape="rect" href="fts__scpi_8c.html#a2ed9955bb22ad94c13ec34edc9221443" title="Send a beep tone following a SCPI command or internal function." alt="" coords="305,5,396,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="fts__scpi_8c_af42bc85669ec90cef60c7e9ff2559982_icgraph.png" border="0" usemap="#afts__scpi_8c_af42bc85669ec90cef60c7e9ff2559982_icgraph" alt=""/></div>
+<map name="afts__scpi_8c_af42bc85669ec90cef60c7e9ff2559982_icgraph" id="afts__scpi_8c_af42bc85669ec90cef60c7e9ff2559982_icgraph">
+<area shape="rect" title="Set Bit on SCPI register Questionable and Operation Send Bust of Beep to signal to operator the probl..." alt="" coords="184,5,301,32"/>
+<area shape="rect" href="functadv_8c.html#acb717495a9c37a468e5494f571ef1607" title="Run internal board tests to verifies hardware functionality,." alt="" coords="5,5,136,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -371,45 +416,6 @@ scpi_command_t&#160;</td><td class="memItemRight" valign="bottom"><b>scpi_comman
 
 </div>
 </div>
-<a id="a83c50f419ca88f80f55abe46090e547c" name="a83c50f419ca88f80f55abe46090e547c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83c50f419ca88f80f55abe46090e547c">&#9670;&nbsp;</a></span>reset_callback()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int64_t reset_callback </td>
-          <td>(</td>
-          <td class="paramtype">alarm_id_t&#160;</td>
-          <td class="paramname"><em>id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>param</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Executes a delayed reset of the Interconnect IO board following the SCPI *RST command. </p>
-<p >This function schedules a system reset of the master Pico with a 200ms delay. Only the master Pico is reset, as Pico slaves are automatically reset during boot-up.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">id</td><td>Alarm ID (not used in this implementation) </td></tr>
-    <tr><td class="paramname">param</td><td>User-defined parameter (not used in this implementation) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>int64_t Always returns 0, as this is a one-shot timer callback. </dd></dl>
-
-</div>
-</div>
 <a id="a9ef6f5ccdda155e42c384b2d26059ead" name="a9ef6f5ccdda155e42c384b2d26059ead"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9ef6f5ccdda155e42c384b2d26059ead">&#9670;&nbsp;</a></span>SCPI_Error()</h2>
 
@@ -445,6 +451,15 @@ scpi_command_t&#160;</td><td class="memItemRight" valign="bottom"><b>scpi_comman
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int True if function performed with success </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="fts__scpi_8c_a9ef6f5ccdda155e42c384b2d26059ead_cgraph.png" border="0" usemap="#afts__scpi_8c_a9ef6f5ccdda155e42c384b2d26059ead_cgraph" alt=""/></div>
+<map name="afts__scpi_8c_a9ef6f5ccdda155e42c384b2d26059ead_cgraph" id="afts__scpi_8c_a9ef6f5ccdda155e42c384b2d26059ead_cgraph">
+<area shape="rect" title="function called by SCPI when error is found. The function will perform a short beep and turn on the e..." alt="" coords="5,5,95,32"/>
+<area shape="rect" href="fts__scpi_8c.html#a2ed9955bb22ad94c13ec34edc9221443" title="Send a beep tone following a SCPI command or internal function." alt="" coords="143,5,233,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -464,15 +479,15 @@ scpi_command_t&#160;</td><td class="memItemRight" valign="bottom"><b>scpi_comman
       </table>
 </div><div class="memdoc">
 
-<p>SCPI function to handle the *RST command and schedule a delayed reset. </p>
-<p >When the SCPI *RST command is received, this function schedules a system reset after a 200ms delay using the hardware alarm timer.</p>
+<p>Executes a delayed reset of the Interconnect IO board following the SCPI *RST command. </p>
+<p >This function schedules a system reset of the master Pico with a 200ms delay. Only the master Pico is reset, as Pico slaves are automatically reset during boot-up.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">context</td><td>SCPI instance (not used in this implementation) </td></tr>
+    <tr><td class="paramname">context</td><td>SCPI instance </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>scpi_result_t SCPI_RES_OK if the reset was successfully scheduled. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>scpi_result_t True if reset performed with success </dd></dl>
 
 </div>
 </div>
@@ -518,6 +533,15 @@ scpi_command_t&#160;</td><td class="memItemRight" valign="bottom"><b>scpi_comman
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>size_t True if string written with success </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="fts__scpi_8c_a3645008c6823af2701d99f6ed8dbe745_cgraph.png" border="0" usemap="#afts__scpi_8c_a3645008c6823af2701d99f6ed8dbe745_cgraph" alt=""/></div>
+<map name="afts__scpi_8c_a3645008c6823af2701d99f6ed8dbe745_cgraph" id="afts__scpi_8c_a3645008c6823af2701d99f6ed8dbe745_cgraph">
+<area shape="rect" title="The function write the SCPI answer to the main serial port. The answer is also saved on global variab..." alt="" coords="5,5,96,32"/>
+<area shape="rect" href="fts__scpi_8c.html#ae0f2dedb3d968ef8b00a3bddb46a78f0" title="Function used by module test.c to capture the SCPI answer from the SCPI command. Used to perform the ..." alt="" coords="144,5,293,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -591,9 +615,9 @@ scpi_command_t&#160;</td><td class="memItemRight" valign="bottom"><b>scpi_comman
 <div class="line">    .flush = SCPI_Flush,</div>
 <div class="line">    .reset = <a class="code hl_function" href="fts__scpi_8c.html#a227bd87e4d70c678726de2bc952fce8e">SCPI_Reset</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="afts__scpi_8c_html_a227bd87e4d70c678726de2bc952fce8e"><div class="ttname"><a href="fts__scpi_8c.html#a227bd87e4d70c678726de2bc952fce8e">SCPI_Reset</a></div><div class="ttdeci">scpi_result_t SCPI_Reset(scpi_t *context)</div><div class="ttdoc">SCPI function to handle the *RST command and schedule a delayed reset.</div><div class="ttdef"><b>Definition:</b> fts_scpi.c:159</div></div>
-<div class="ttc" id="afts__scpi_8c_html_a3645008c6823af2701d99f6ed8dbe745"><div class="ttname"><a href="fts__scpi_8c.html#a3645008c6823af2701d99f6ed8dbe745">SCPI_write</a></div><div class="ttdeci">size_t SCPI_write(scpi_t *context, const char *data, size_t len)</div><div class="ttdoc">The function write the SCPI answer to the main serial port. The answer is also saved on global variab...</div><div class="ttdef"><b>Definition:</b> fts_scpi.c:99</div></div>
-<div class="ttc" id="afts__scpi_8c_html_a9ef6f5ccdda155e42c384b2d26059ead"><div class="ttname"><a href="fts__scpi_8c.html#a9ef6f5ccdda155e42c384b2d26059ead">SCPI_Error</a></div><div class="ttdeci">int SCPI_Error(scpi_t *context, int_fast16_t err)</div><div class="ttdoc">function called by SCPI when error is found. The function will perform a short beep and turn on the e...</div><div class="ttdef"><b>Definition:</b> fts_scpi.c:226</div></div>
+<div class="ttc" id="afts__scpi_8c_html_a227bd87e4d70c678726de2bc952fce8e"><div class="ttname"><a href="fts__scpi_8c.html#a227bd87e4d70c678726de2bc952fce8e">SCPI_Reset</a></div><div class="ttdeci">scpi_result_t SCPI_Reset(scpi_t *context)</div><div class="ttdoc">Executes a delayed reset of the Interconnect IO board following the SCPI *RST command.</div><div class="ttdef"><b>Definition:</b> fts_scpi.c:140</div></div>
+<div class="ttc" id="afts__scpi_8c_html_a3645008c6823af2701d99f6ed8dbe745"><div class="ttname"><a href="fts__scpi_8c.html#a3645008c6823af2701d99f6ed8dbe745">SCPI_write</a></div><div class="ttdeci">size_t SCPI_write(scpi_t *context, const char *data, size_t len)</div><div class="ttdoc">The function write the SCPI answer to the main serial port. The answer is also saved on global variab...</div><div class="ttdef"><b>Definition:</b> fts_scpi.c:98</div></div>
+<div class="ttc" id="afts__scpi_8c_html_a9ef6f5ccdda155e42c384b2d26059ead"><div class="ttname"><a href="fts__scpi_8c.html#a9ef6f5ccdda155e42c384b2d26059ead">SCPI_Error</a></div><div class="ttdeci">int SCPI_Error(scpi_t *context, int_fast16_t err)</div><div class="ttdoc">function called by SCPI when error is found. The function will perform a short beep and turn on the e...</div><div class="ttdef"><b>Definition:</b> fts_scpi.c:205</div></div>
 </div><!-- fragment -->
 <p>Additional callbacks to be used by the SCPI library. </p>
 

@@ -1,0 +1,4 @@
+<map id="gpio_execute" name="gpio_execute">
+<area shape="rect" id="node1" title="Function to execute action on GPIO bit." alt="" coords="5,5,113,32"/>
+<area shape="rect" id="node2" href="$i2c__com_8c.html#a3f9110484e69200a1424e98797a5e12e" title="The function of the code is to read and write data on internal I2C port." alt="" coords="161,5,268,32"/>
+</map>

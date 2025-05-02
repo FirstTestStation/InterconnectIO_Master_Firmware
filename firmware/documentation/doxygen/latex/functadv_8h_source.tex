@@ -8,67 +8,67 @@
 \DoxyCodeLine{17 }
 \DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}hardware/i2c.h"{}}}
 \DoxyCodeLine{19 }
-\DoxyCodeLine{21 \textcolor{preprocessor}{\#define ADC0 26       }}
-\DoxyCodeLine{22 \textcolor{preprocessor}{\#define ADC1 27       }}
-\DoxyCodeLine{23 \textcolor{preprocessor}{\#define ADC2 28       }}
-\DoxyCodeLine{24 \textcolor{preprocessor}{\#define ADC3 29       }}
-\DoxyCodeLine{25 \textcolor{preprocessor}{\#define ADC\_REF 3.0f  }}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define ADC0 26      }}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define ADC1 27      }}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#define ADC2 28      }}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#define ADC3 29      }}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#define ADC\_REF 3.0f }}
 \DoxyCodeLine{26 }
-\DoxyCodeLine{28 \textcolor{preprocessor}{\#define MINDACVOLT 0    }}
-\DoxyCodeLine{29 \textcolor{preprocessor}{\#define MAXDACVOLT 3.3  }}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#define MINDACVOLT 0   }}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#define MAXDACVOLT 3.3 }}
 \DoxyCodeLine{30 }
-\DoxyCodeLine{32 \textcolor{preprocessor}{\#define NOERR 0  }}
-\DoxyCodeLine{33 \textcolor{preprocessor}{\#define EOOR 1   }}
-\DoxyCodeLine{34 \textcolor{preprocessor}{\#define EDE 2    }}
-\DoxyCodeLine{35 \textcolor{preprocessor}{\#define ERE 3    }}
-\DoxyCodeLine{36 \textcolor{preprocessor}{\#define ECE 4    }}
-\DoxyCodeLine{37 \textcolor{preprocessor}{\#define EMP 5    }}
-\DoxyCodeLine{38 \textcolor{preprocessor}{\#define EIVN 6   }}
-\DoxyCodeLine{39 \textcolor{preprocessor}{\#define ENDE 7   }}
-\DoxyCodeLine{40 \textcolor{preprocessor}{\#define EBE 8    }}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#define NOERR 0 }}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#define EOOR 1  }}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#define EDE 2   }}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#define ERE 3   }}
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#define ECE 4   }}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#define EMP 5   }}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#define EIVN 6  }}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define ENDE 7  }}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define EBE 8   }}
 \DoxyCodeLine{41 }
-\DoxyCodeLine{43 \textcolor{preprocessor}{\#define ADD\_EEPROM\_BASE 0x40  }}
-\DoxyCodeLine{44 \textcolor{preprocessor}{\#define TEST\_EEPROM\_ADD 0x0   }}
-\DoxyCodeLine{45 \textcolor{preprocessor}{\#define EE\_PAGESIZE 32        }}
-\DoxyCodeLine{46 \textcolor{preprocessor}{\#define EEMODEL 32            }}
-\DoxyCodeLine{47 \textcolor{preprocessor}{\#define EESIZE 4096           }}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#define ADD\_EEPROM\_BASE 0x40 }}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#define TEST\_EEPROM\_ADD 0x0  }}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#define EE\_PAGESIZE 32       }}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#define EEMODEL 32           }}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#define EESIZE 4096          }}
 \DoxyCodeLine{48 }
-\DoxyCodeLine{50 \textcolor{preprocessor}{\#define GPIO\_CTRL\_REG (IO\_BANK0\_BASE + 0x04)  }}
-\DoxyCodeLine{51 \textcolor{preprocessor}{\#define GPIO\_CTRL\_MPY 8                       }}
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#define GPIO\_CTRL\_REG (IO\_BANK0\_BASE + 0x04) }}
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#define GPIO\_CTRL\_MPY 8                      }}
 \DoxyCodeLine{52 }
-\DoxyCodeLine{53 \textcolor{preprocessor}{\#define GPIO\_IRQOVER\_BITS 28  }}
-\DoxyCodeLine{54 \textcolor{preprocessor}{\#define GPIO\_INOVER\_BITS 16   }}
-\DoxyCodeLine{55 \textcolor{preprocessor}{\#define GPIO\_OEOVER\_BITS 12   }}
-\DoxyCodeLine{56 \textcolor{preprocessor}{\#define GPIO\_OUTOVER\_BITS 8   }}
-\DoxyCodeLine{57 \textcolor{preprocessor}{\#define GPIO\_ALT\_BITS 0       }}
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#define GPIO\_IRQOVER\_BITS 28 }}
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#define GPIO\_INOVER\_BITS 16  }}
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#define GPIO\_OEOVER\_BITS 12  }}
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#define GPIO\_OUTOVER\_BITS 8  }}
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#define GPIO\_ALT\_BITS 0      }}
 \DoxyCodeLine{58 }
-\DoxyCodeLine{59 \textcolor{preprocessor}{\#define GPIO\_ALT\_SPI\_VAL 1    }}
-\DoxyCodeLine{60 \textcolor{preprocessor}{\#define GPIO\_ALT\_UART\_VAL 2   }}
-\DoxyCodeLine{61 \textcolor{preprocessor}{\#define GPIO\_ALT\_I2C\_VAL 3    }}
-\DoxyCodeLine{62 \textcolor{preprocessor}{\#define GPIO\_ALT\_PWM\_VAL 4    }}
-\DoxyCodeLine{63 \textcolor{preprocessor}{\#define GPIO\_ALT\_SIO\_VAL 5    }}
-\DoxyCodeLine{64 \textcolor{preprocessor}{\#define GPIO\_ALT\_PIO0\_VAL 6   }}
-\DoxyCodeLine{65 \textcolor{preprocessor}{\#define GPIO\_ALT\_PIO1\_VAL 7   }}
-\DoxyCodeLine{66 \textcolor{preprocessor}{\#define GPIO\_ALT\_USB\_VAL 9    }}
-\DoxyCodeLine{67 \textcolor{preprocessor}{\#define GPIO\_ALT\_NONE\_VAL 31  }}
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#define GPIO\_ALT\_SPI\_VAL 1   }}
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#define GPIO\_ALT\_UART\_VAL 2  }}
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#define GPIO\_ALT\_I2C\_VAL 3   }}
+\DoxyCodeLine{62 \textcolor{preprocessor}{\#define GPIO\_ALT\_PWM\_VAL 4   }}
+\DoxyCodeLine{63 \textcolor{preprocessor}{\#define GPIO\_ALT\_SIO\_VAL 5   }}
+\DoxyCodeLine{64 \textcolor{preprocessor}{\#define GPIO\_ALT\_PIO0\_VAL 6  }}
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#define GPIO\_ALT\_PIO1\_VAL 7  }}
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#define GPIO\_ALT\_USB\_VAL 9   }}
+\DoxyCodeLine{67 \textcolor{preprocessor}{\#define GPIO\_ALT\_NONE\_VAL 31 }}
 \DoxyCodeLine{68 }
-\DoxyCodeLine{69 \textcolor{preprocessor}{\#define GPIO\_SYNC\_BYPASS\_REG (SYSCFG\_BASE + 0x0C)  }}
+\DoxyCodeLine{69 \textcolor{preprocessor}{\#define GPIO\_SYNC\_BYPASS\_REG (SYSCFG\_BASE + 0x0C) }}
 \DoxyCodeLine{70 }
-\DoxyCodeLine{72 \textcolor{preprocessor}{\#define PAD\_GPIO\_VOLTAGE\_REG (PADS\_BANK0\_BASE + 0x00)  }}
-\DoxyCodeLine{73 \textcolor{preprocessor}{\#define PAD\_GPIO\_REG (PADS\_BANK0\_BASE + 0x04)          }}
-\DoxyCodeLine{74 \textcolor{preprocessor}{\#define PAD\_GPIO\_MPY 4                                 }}
+\DoxyCodeLine{72 \textcolor{preprocessor}{\#define PAD\_GPIO\_VOLTAGE\_REG (PADS\_BANK0\_BASE + 0x00) }}
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#define PAD\_GPIO\_REG (PADS\_BANK0\_BASE + 0x04)         }}
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#define PAD\_GPIO\_MPY 4                                }}
 \DoxyCodeLine{75 }
-\DoxyCodeLine{76 \textcolor{preprocessor}{\#define PAD\_GPIO\_SWC\_REG (PADS\_BANK0\_BASE + 0x7C)  }}
-\DoxyCodeLine{77 \textcolor{preprocessor}{\#define PAD\_GPIO\_SWD\_REG (PADS\_BANK0\_BASE + 0x80)  }}
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#define PAD\_GPIO\_SWC\_REG (PADS\_BANK0\_BASE + 0x7C) }}
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#define PAD\_GPIO\_SWD\_REG (PADS\_BANK0\_BASE + 0x80) }}
 \DoxyCodeLine{78 }
-\DoxyCodeLine{79 \textcolor{preprocessor}{\#define PAD\_VOLTAGE\_BIT 0  }}
-\DoxyCodeLine{80 \textcolor{preprocessor}{\#define PAD\_OD\_BIT 7       }}
-\DoxyCodeLine{81 \textcolor{preprocessor}{\#define PAD\_IE\_BIT 6       }}
-\DoxyCodeLine{82 \textcolor{preprocessor}{\#define PAD\_DRIVE\_BITS 4   }}
-\DoxyCodeLine{83 \textcolor{preprocessor}{\#define PAD\_PUE\_BIT 3      }}
-\DoxyCodeLine{84 \textcolor{preprocessor}{\#define PAD\_PDE\_BIT 2      }}
-\DoxyCodeLine{85 \textcolor{preprocessor}{\#define PAD\_SCHMITT\_BIT 1  }}
-\DoxyCodeLine{86 \textcolor{preprocessor}{\#define PAD\_SLEW\_BIT 0     }}
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#define PAD\_VOLTAGE\_BIT 0 }}
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#define PAD\_OD\_BIT 7      }}
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#define PAD\_IE\_BIT 6      }}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define PAD\_DRIVE\_BITS 4  }}
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#define PAD\_PUE\_BIT 3     }}
+\DoxyCodeLine{84 \textcolor{preprocessor}{\#define PAD\_PDE\_BIT 2     }}
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#define PAD\_SCHMITT\_BIT 1 }}
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#define PAD\_SLEW\_BIT 0    }}
 \DoxyCodeLine{87 }
 \DoxyCodeLine{97 \textcolor{preprocessor}{\#define min(a, b) ((a) < (b) ? (a) : (b))}}
 \DoxyCodeLine{98 }
@@ -84,6 +84,6 @@
 \DoxyCodeLine{108 \textcolor{keywordtype}{bool} \mbox{\hyperlink{functadv_8h_a990568f28f616bb1e19a49e1a8ac9950}{Boot\_check}}(\textcolor{keywordtype}{void});}
 \DoxyCodeLine{109 \textcolor{keywordtype}{bool} \mbox{\hyperlink{functadv_8h_acb717495a9c37a468e5494f571ef1607}{IOBoard\_Selftest}}();}
 \DoxyCodeLine{110 }
-\DoxyCodeLine{111 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{//}}
+\DoxyCodeLine{111 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//}}
 
 \end{DoxyCode}

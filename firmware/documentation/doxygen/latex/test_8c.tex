@@ -5,27 +5,27 @@
 Software code used to validate the software and hardware developed on this project.  
 
 
-{\ttfamily \#include $<$stdio.\+h$>$}\newline
-{\ttfamily \#include $<$stdlib.\+h$>$}\newline
-{\ttfamily \#include \char`\"{}pico/stdlib.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}pico/binary\+\_\+info.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}include/scpi\+\_\+user\+\_\+config.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}pico\+\_\+lib2/src/dev/dev\+\_\+ina219/dev\+\_\+ina219.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}pico\+\_\+lib2/src/dev/dev\+\_\+mcp4725/dev\+\_\+mcp4725.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}pico\+\_\+lib2/src/dev/dev\+\_\+24lc32/dev\+\_\+24lc32.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}pico\+\_\+lib2/src/dev/dev\+\_\+ds2431/dev\+\_\+ds2431.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}pico\+\_\+lib2/src/sys/include/sys\+\_\+adc.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}hardware/watchdog.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}hardware/uart.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}hardware/spi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}include/test.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}hardware/i2c.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}include/functadv.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hardware/spi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hardware/uart.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hardware/watchdog.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}include/fts\+\_\+scpi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}include/functadv.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}include/i2c\+\_\+com.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}include/master.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}include/scpi\+\_\+spi.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}include/scpi\+\_\+i2c.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}include/test.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}include/scpi\+\_\+spi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}include/scpi\+\_\+user\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pico/binary\+\_\+info.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pico/stdlib.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pico\+\_\+lib2/src/dev/dev\+\_\+24lc32/dev\+\_\+24lc32.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pico\+\_\+lib2/src/dev/dev\+\_\+ds2431/dev\+\_\+ds2431.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pico\+\_\+lib2/src/dev/dev\+\_\+ina219/dev\+\_\+ina219.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pico\+\_\+lib2/src/dev/dev\+\_\+mcp4725/dev\+\_\+mcp4725.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pico\+\_\+lib2/src/sys/include/sys\+\_\+adc.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
 Include dependency graph for test.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -255,6 +255,13 @@ This macro assigns the result of {\ttfamily SCPI\+\_\+\+Input} to a variable nam
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test_8c_ada61a5d73ba9477f5805e729284f4e17_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{test_8c_ac470ff61e56e684cfbe729e66aedf0c1}\label{test_8c_ac470ff61e56e684cfbe729e66aedf0c1}} 
 \index{test.c@{test.c}!add\_message@{add\_message}}
 \index{add\_message@{add\_message}!test.c@{test.c}}
@@ -282,7 +289,14 @@ Function to add\+\_\+message to circular buffer.
 
 \texorpdfstring{$<$}{<} Initialize End index of the buffer
 
-\texorpdfstring{$<$}{<} Initialize Flag indicating if the buffer is full\mbox{\Hypertarget{test_8c_a78b67679ee11d44f8ca2ad1a9ab58d53}\label{test_8c_a78b67679ee11d44f8ca2ad1a9ab58d53}} 
+\texorpdfstring{$<$}{<} Initialize Flag indicating if the buffer is fullHere is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test_8c_a964f12386d49fd5a0df6add2daf20508_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{test_8c_a78b67679ee11d44f8ca2ad1a9ab58d53}\label{test_8c_a78b67679ee11d44f8ca2ad1a9ab58d53}} 
 \index{test.c@{test.c}!internal\_test\_sequence@{internal\_test\_sequence}}
 \index{internal\_test\_sequence@{internal\_test\_sequence}!test.c@{test.c}}
 \doxysubsubsection{\texorpdfstring{internal\_test\_sequence()}{internal\_test\_sequence()}}
@@ -299,7 +313,14 @@ Main routine to perform internal test using selftest board. The routine has been
 {\em run} & Test number to run, if equal to 0, the test menu will be displayed \\
 \hline
 \end{DoxyParams}
-Open Power Relay to remove power on Selftest board\mbox{\Hypertarget{test_8c_a33510a8b3333bfec3368b10acddafd28}\label{test_8c_a33510a8b3333bfec3368b10acddafd28}} 
+Open Power Relay to remove power on Selftest boardHere is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test_8c_a78b67679ee11d44f8ca2ad1a9ab58d53_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{test_8c_a33510a8b3333bfec3368b10acddafd28}\label{test_8c_a33510a8b3333bfec3368b10acddafd28}} 
 \index{test.c@{test.c}!internal\_test\_sequence\_result@{internal\_test\_sequence\_result}}
 \index{internal\_test\_sequence\_result@{internal\_test\_sequence\_result}!test.c@{test.c}}
 \doxysubsubsection{\texorpdfstring{internal\_test\_sequence\_result()}{internal\_test\_sequence\_result()}}
@@ -331,6 +352,13 @@ return pointer to result str
 \begin{DoxyReturn}{Returns}
 int return 0 when completed 
 \end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{test_8c_a47a0e9953fea609fecae7ddc8fbc33a3_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{test_8c_afced784f998c7b95f4563f9ff40d5fc8}\label{test_8c_afced784f998c7b95f4563f9ff40d5fc8}} 
 \index{test.c@{test.c}!power\_test@{power\_test}}
 \index{power\_test@{power\_test}!test.c@{test.c}}
@@ -358,6 +386,13 @@ int return 0 when completed
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{test_8c_afced784f998c7b95f4563f9ff40d5fc8_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{test_8c_ade29dc0be6bd27144ab8ac944fad90de}\label{test_8c_ade29dc0be6bd27144ab8ac944fad90de}} 
 \index{test.c@{test.c}!print\_messages@{print\_messages}}
 \index{print\_messages@{print\_messages}!test.c@{test.c}}
@@ -373,6 +408,13 @@ Function to print message saved on circular buffer.
 {\em buffer} & pointer to structure who contains messages \\
 \hline
 \end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test_8c_ade29dc0be6bd27144ab8ac944fad90de_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{test_8c_a0c6f39b967bd2a9a74fd40a40cf54687}\label{test_8c_a0c6f39b967bd2a9a74fd40a40cf54687}} 
 \index{test.c@{test.c}!read\_uart\_char@{read\_uart\_char}}
 \index{read\_uart\_char@{read\_uart\_char}!test.c@{test.c}}
@@ -386,6 +428,13 @@ function to wait for read character from user. The loop refresh the watchdog tim
 \begin{DoxyReturn}{Returns}
 char character entry by the user 
 \end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test_8c_a0c6f39b967bd2a9a74fd40a40cf54687_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{test_8c_a9313b8b09e2402dbd3215a879dfa18d2}\label{test_8c_a9313b8b09e2402dbd3215a879dfa18d2}} 
 \index{test.c@{test.c}!removeCRLF@{removeCRLF}}
 \index{removeCRLF@{removeCRLF}!test.c@{test.c}}
@@ -423,6 +472,13 @@ String without CR and LF
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test_8c_a2c187f3a1a5e046de0872ebd623e8d56_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{test_8c_af9513558e25e8efc4248c5f6c4dcd18e}\label{test_8c_af9513558e25e8efc4248c5f6c4dcd18e}} 
 \index{test.c@{test.c}!test\_cmd\_out@{test\_cmd\_out}}
 \index{test\_cmd\_out@{test\_cmd\_out}!test.c@{test.c}}
@@ -454,7 +510,14 @@ String without CR and LF
 \end{DoxyReturn}
 Send command to SCPI engine
 
-refresh watchdog\mbox{\Hypertarget{test_8c_a3a741d0c84f19f8a596e9db8a3055383}\label{test_8c_a3a741d0c84f19f8a596e9db8a3055383}} 
+refresh watchdogHere is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test_8c_af9513558e25e8efc4248c5f6c4dcd18e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{test_8c_a3a741d0c84f19f8a596e9db8a3055383}\label{test_8c_a3a741d0c84f19f8a596e9db8a3055383}} 
 \index{test.c@{test.c}!test\_cmd\_result@{test\_cmd\_result}}
 \index{test\_cmd\_result@{test\_cmd\_result}!test.c@{test.c}}
 \doxysubsubsection{\texorpdfstring{test\_cmd\_result()}{test\_cmd\_result()}}
@@ -491,7 +554,14 @@ refresh watchdog\mbox{\Hypertarget{test_8c_a3a741d0c84f19f8a596e9db8a3055383}\la
 \end{DoxyReturn}
 refresh watchdog
 
-Send command to SCPI engine\mbox{\Hypertarget{test_8c_a032a8eab3b1447960ec13ee39358c450}\label{test_8c_a032a8eab3b1447960ec13ee39358c450}} 
+Send command to SCPI engineHere is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test_8c_a3a741d0c84f19f8a596e9db8a3055383_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{test_8c_a032a8eab3b1447960ec13ee39358c450}\label{test_8c_a032a8eab3b1447960ec13ee39358c450}} 
 \index{test.c@{test.c}!test\_cmd\_substring@{test\_cmd\_substring}}
 \index{test\_cmd\_substring@{test\_cmd\_substring}!test.c@{test.c}}
 \doxysubsubsection{\texorpdfstring{test\_cmd\_substring()}{test\_cmd\_substring()}}
@@ -519,7 +589,14 @@ This function checks whether a given SCPI command string contains the specified 
 \begin{DoxyReturn}{Returns}
 true if the expected substring is found in the command string, false otherwise. 
 \end{DoxyReturn}
-Send command to SCPI engine\mbox{\Hypertarget{test_8c_ad171446f146deeb8c2c79986e0f843c7}\label{test_8c_ad171446f146deeb8c2c79986e0f843c7}} 
+Send command to SCPI engineHere is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test_8c_a032a8eab3b1447960ec13ee39358c450_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{test_8c_ad171446f146deeb8c2c79986e0f843c7}\label{test_8c_ad171446f146deeb8c2c79986e0f843c7}} 
 \index{test.c@{test.c}!test\_command@{test\_command}}
 \index{test\_command@{test\_command}!test.c@{test.c}}
 \doxysubsubsection{\texorpdfstring{test\_command()}{test\_command()}}
@@ -538,7 +615,21 @@ Turn OFF red led
 
 PAD REGISTER
 
-PRINT FINAL REPORT AFTER TEST COMPLETION\mbox{\Hypertarget{test_8c_a7fd0a3e557c0c44cce4de05c0f581406}\label{test_8c_a7fd0a3e557c0c44cce4de05c0f581406}} 
+PRINT FINAL REPORT AFTER TEST COMPLETIONHere is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{test_8c_ad171446f146deeb8c2c79986e0f843c7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{test_8c_ad171446f146deeb8c2c79986e0f843c7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{test_8c_a7fd0a3e557c0c44cce4de05c0f581406}\label{test_8c_a7fd0a3e557c0c44cce4de05c0f581406}} 
 \index{test.c@{test.c}!test\_dac@{test\_dac}}
 \index{test\_dac@{test\_dac}!test.c@{test.c}}
 \doxysubsubsection{\texorpdfstring{test\_dac()}{test\_dac()}}
@@ -560,6 +651,13 @@ true if the value was successfully set on the DAC.
 
 false if an error occurred while setting the DAC value. 
 \end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{test_8c_a7fd0a3e557c0c44cce4de05c0f581406_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{test_8c_a3c9d45ad6f08748305ee5abf775a9544}\label{test_8c_a3c9d45ad6f08748305ee5abf775a9544}} 
 \index{test.c@{test.c}!test\_eeprom@{test\_eeprom}}
 \index{test\_eeprom@{test\_eeprom}!test.c@{test.c}}
@@ -602,6 +700,13 @@ Mainly used to validate the reading of 16 bits register using I2C word \mbox{\Hy
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{test_8c_a74346a55978a0cec00fea16b92e3cd35_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{test_8c_a7c4492986b11310638a7730bf6658532}\label{test_8c_a7c4492986b11310638a7730bf6658532}} 
 \index{test.c@{test.c}!test\_inst\_manual@{test\_inst\_manual}}
 \index{test\_inst\_manual@{test\_inst\_manual}!test.c@{test.c}}
@@ -627,7 +732,21 @@ Wait to let time to relay to close and power the selftest board
 
 Open Power Relay et remove 5V to Selftest board
 
-Wait to let time to relay to close and power the selftest board\mbox{\Hypertarget{test_8c_a0acd1ee00e871f30689aab1a7246feb0}\label{test_8c_a0acd1ee00e871f30689aab1a7246feb0}} 
+Wait to let time to relay to close and power the selftest boardHere is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{test_8c_a7c4492986b11310638a7730bf6658532_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{test_8c_a7c4492986b11310638a7730bf6658532_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{test_8c_a0acd1ee00e871f30689aab1a7246feb0}\label{test_8c_a0acd1ee00e871f30689aab1a7246feb0}} 
 \index{test.c@{test.c}!test\_ioboard@{test\_ioboard}}
 \index{test\_ioboard@{test\_ioboard}!test.c@{test.c}}
 \doxysubsubsection{\texorpdfstring{test\_ioboard()}{test\_ioboard()}}
@@ -640,7 +759,14 @@ Wait to let time to relay to close and power the selftest board\mbox{\Hypertarge
 \item Function not used during normal execution The function is used to validate the hardware after parts has been soldered and pico has firmware programmed 
 \end{DoxyItemize}
 
-Normally run step by step with debugger and hardware verified by visual check or by measuring voltage \mbox{\Hypertarget{test_8c_ac70b7d6422a8c2b63fd63ed04ed046e6}\label{test_8c_ac70b7d6422a8c2b63fd63ed04ed046e6}} 
+Normally run step by step with debugger and hardware verified by visual check or by measuring voltage Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test_8c_a0acd1ee00e871f30689aab1a7246feb0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{test_8c_ac70b7d6422a8c2b63fd63ed04ed046e6}\label{test_8c_ac70b7d6422a8c2b63fd63ed04ed046e6}} 
 \index{test.c@{test.c}!test\_selftest@{test\_selftest}}
 \index{test\_selftest@{test\_selftest}!test.c@{test.c}}
 \doxysubsubsection{\texorpdfstring{test\_selftest()}{test\_selftest()}}
@@ -690,7 +816,21 @@ Test the High side of relay
 
 Test the LOW side of relay
 
-PRINT FINAL REPORT AFTER TEST COMPLETION\mbox{\Hypertarget{test_8c_ae9ec3dc653dc7431f107092091e4dafc}\label{test_8c_ae9ec3dc653dc7431f107092091e4dafc}} 
+PRINT FINAL REPORT AFTER TEST COMPLETIONHere is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{test_8c_ac70b7d6422a8c2b63fd63ed04ed046e6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{test_8c_ac70b7d6422a8c2b63fd63ed04ed046e6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{test_8c_ae9ec3dc653dc7431f107092091e4dafc}\label{test_8c_ae9ec3dc653dc7431f107092091e4dafc}} 
 \index{test.c@{test.c}!test\_spi\_adx@{test\_spi\_adx}}
 \index{test\_spi\_adx@{test\_spi\_adx}!test.c@{test.c}}
 \doxysubsubsection{\texorpdfstring{test\_spi\_adx()}{test\_spi\_adx()}}

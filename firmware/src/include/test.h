@@ -31,25 +31,25 @@
  * @def V
  * @brief Constant for volts.
  */
-#define V 1  ///< Volts
+#define V 1 ///< Volts
 
 /**
  * @def I
  * @brief Constant for milliAmps.
  */
-#define I 2  ///< mA
+#define I 2 ///< mA
 
 /**
  * @def P
  * @brief Constant for milliWatts.
  */
-#define P 3  ///< mW
+#define P 3 ///< mW
 
 /**
  * @def S
  * @brief Constant for milliVolts.
  */
-#define S 4  ///< mV
+#define S 4 ///< mV
 
 /**
  * @def  test buffer size

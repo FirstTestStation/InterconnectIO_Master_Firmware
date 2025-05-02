@@ -1,0 +1,4 @@
+<map id="cfg_eeprom_read_full" name="cfg_eeprom_read_full">
+<area shape="rect" id="node1" title="Read the entire contents of the configuration eeprom and store data on eeprom config structure EEprom..." alt="" coords="5,5,168,32"/>
+<area shape="rect" id="node2" href="$functadv_8c.html#a5733933b4f9b59a48e7a72422b4c63a7" title="This function check if the eeprom is detected and if the data is valid." alt="" coords="216,5,363,32"/>
+</map>

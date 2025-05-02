@@ -310,9 +310,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setup_master</b> ()</
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">  {                                                                                                                                                  \</div>
-<div class="line">    {0, 1, 2, 3, 4, 5, 6, 7}, { 10, 11, 12, 13, 14, 15, 16, 17 }                                                                                     \</div>
-<div class="line">  }</div>
+<b>Value:</b><div class="fragment"><div class="line">    {                                                                                                                  \</div>
+<div class="line">        {0, 1, 2, 3, 4, 5, 6, 7},                                                                                      \</div>
+<div class="line">        {                                                                                                              \</div>
+<div class="line">            10, 11, 12, 13, 14, 15, 16, 17                                                                             \</div>
+<div class="line">        }                                                                                                              \</div>
+<div class="line">    }</div>
 </div><!-- fragment -->
 <p>Array of digital bit indices assigned to Pico GPx for Port0 and Port1. </p>
 
@@ -468,10 +471,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setup_master</b> ()</
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">  {                                                                                                                                                  \</div>
-<div class="line">    {0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7}, {0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7},                                              \</div>
-<div class="line">        {10, 11, 12, 13, 14, 15, 16, 17, 10, 11, 12, 13, 14, 15, 16, 17}, {10, 11, 12, 13, 14, 15, 16, 17, 10, 11, 12, 13, 14, 15, 16, 17},          \</div>
-<div class="line">  }</div>
+<b>Value:</b><div class="fragment"><div class="line">    {                                                                                                                  \</div>
+<div class="line">        {0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7}, {0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7},            \</div>
+<div class="line">            {10, 11, 12, 13, 14, 15, 16, 17, 10, 11, 12, 13, 14, 15, 16, 17},                                          \</div>
+<div class="line">            {10, 11, 12, 13, 14, 15, 16, 17, 10, 11, 12, 13, 14, 15, 16, 17},                                          \</div>
+<div class="line">    }</div>
 </div><!-- fragment -->
 <p>GPIO configuration for relay actuation and digital ports. </p>
 <p >Array of relay indices assigned to Pico GPIOs for relay actuation.</p>
@@ -613,6 +617,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setup_master</b> ()</
 <dl class="section return"><dt>Returns</dt><dd>true Action executed with success </dd>
 <dd>
 false Action stopped with error </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="i2c__com_8h_a2dc087f9c9da6f696935dc364f9003e2_cgraph.png" border="0" usemap="#ai2c__com_8h_a2dc087f9c9da6f696935dc364f9003e2_cgraph" alt=""/></div>
+<map name="ai2c__com_8h_a2dc087f9c9da6f696935dc364f9003e2_cgraph" id="ai2c__com_8h_a2dc087f9c9da6f696935dc364f9003e2_cgraph">
+<area shape="rect" title="Function to execute the digital command to perform action on GPIO port located on pico slave1." alt="" coords="5,5,127,32"/>
+<area shape="rect" href="i2c__com_8c.html#a3f9110484e69200a1424e98797a5e12e" title="The function of the code is to read and write data on internal I2C port." alt="" coords="175,5,281,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -680,6 +693,15 @@ false Action stopped due to error </dd></dl>
 <p >Set I2C address</p>
 <p >Set I2C address</p>
 <p >Set I2C address</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="i2c__com_8h_ab088f05e0e9346b5a3a4fa3a06a6c33b_cgraph.png" border="0" usemap="#ai2c__com_8h_ab088f05e0e9346b5a3a4fa3a06a6c33b_cgraph" alt=""/></div>
+<map name="ai2c__com_8h_ab088f05e0e9346b5a3a4fa3a06a6c33b_cgraph" id="ai2c__com_8h_ab088f05e0e9346b5a3a4fa3a06a6c33b_cgraph">
+<area shape="rect" title="Function to execute action on GPIO bit." alt="" coords="5,5,113,32"/>
+<area shape="rect" href="i2c__com_8c.html#a3f9110484e69200a1424e98797a5e12e" title="The function of the code is to read and write data on internal I2C port." alt="" coords="161,5,268,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -727,6 +749,15 @@ false Action stopped due to error </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>true Action completed with success </dd>
 <dd>
 false Action stopped with error </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="i2c__com_8h_a6ab31ae372e2f5df7d1d2791fc42491a_cgraph.png" border="0" usemap="#ai2c__com_8h_a6ab31ae372e2f5df7d1d2791fc42491a_cgraph" alt=""/></div>
+<map name="ai2c__com_8h_a6ab31ae372e2f5df7d1d2791fc42491a_cgraph" id="ai2c__com_8h_a6ab31ae372e2f5df7d1d2791fc42491a_cgraph">
+<area shape="rect" title="From a list of relay (list) and the action to perform the sub will perform the action (close,..." alt="" coords="5,5,119,32"/>
+<area shape="rect" href="i2c__com_8c.html#a3f9110484e69200a1424e98797a5e12e" title="The function of the code is to read and write data on internal I2C port." alt="" coords="167,5,273,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -788,6 +819,19 @@ false Action stopped with error </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>true I2C communication completed without error </dd>
 <dd>
 false I2C communication has error </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="i2c__com_8h_a3f9110484e69200a1424e98797a5e12e_icgraph.png" border="0" usemap="#ai2c__com_8h_a3f9110484e69200a1424e98797a5e12e_icgraph" alt=""/></div>
+<map name="ai2c__com_8h_a3f9110484e69200a1424e98797a5e12e_icgraph" id="ai2c__com_8h_a3f9110484e69200a1424e98797a5e12e_icgraph">
+<area shape="rect" title="The function of the code is to read and write data on internal I2C port." alt="" coords="360,81,467,108"/>
+<area shape="rect" href="i2c__com_8c.html#a2dc087f9c9da6f696935dc364f9003e2" title="Function to execute the digital command to perform action on GPIO port located on pico slave1." alt="" coords="187,5,309,32"/>
+<area shape="rect" href="i2c__com_8c.html#ab088f05e0e9346b5a3a4fa3a06a6c33b" title="Function to execute action on GPIO bit." alt="" coords="194,56,302,83"/>
+<area shape="rect" href="i2c__com_8c.html#a6ab31ae372e2f5df7d1d2791fc42491a" title="From a list of relay (list) and the action to perform the sub will perform the action (close,..." alt="" coords="191,107,305,133"/>
+<area shape="rect" href="i2c__com_8c.html#a96f4bb6ce057649e766460dfecebc542" title="function to execute system command on Pico devices. The action is executed on all the Pico devices (1..." alt="" coords="184,157,312,184"/>
+<area shape="rect" href="functadv_8c.html#acb717495a9c37a468e5494f571ef1607" title="Run internal board tests to verifies hardware functionality,." alt="" coords="5,157,136,184"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -830,6 +874,24 @@ false I2C communication has error </dd></dl>
 false Action stopped due to error </dd></dl>
 <p >Set I2C address</p>
 <p >Set I2C address</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="i2c__com_8h_a96f4bb6ce057649e766460dfecebc542_cgraph.png" border="0" usemap="#ai2c__com_8h_a96f4bb6ce057649e766460dfecebc542_cgraph" alt=""/></div>
+<map name="ai2c__com_8h_a96f4bb6ce057649e766460dfecebc542_cgraph" id="ai2c__com_8h_a96f4bb6ce057649e766460dfecebc542_cgraph">
+<area shape="rect" title="function to execute system command on Pico devices. The action is executed on all the Pico devices (1..." alt="" coords="5,5,133,32"/>
+<area shape="rect" href="i2c__com_8c.html#a3f9110484e69200a1424e98797a5e12e" title="The function of the code is to read and write data on internal I2C port." alt="" coords="181,5,288,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="i2c__com_8h_a96f4bb6ce057649e766460dfecebc542_icgraph.png" border="0" usemap="#ai2c__com_8h_a96f4bb6ce057649e766460dfecebc542_icgraph" alt=""/></div>
+<map name="ai2c__com_8h_a96f4bb6ce057649e766460dfecebc542_icgraph" id="ai2c__com_8h_a96f4bb6ce057649e766460dfecebc542_icgraph">
+<area shape="rect" title="function to execute system command on Pico devices. The action is executed on all the Pico devices (1..." alt="" coords="184,5,312,32"/>
+<area shape="rect" href="functadv_8c.html#acb717495a9c37a468e5494f571ef1607" title="Run internal board tests to verifies hardware functionality,." alt="" coords="5,5,136,32"/>
+</map>
+</div>
 
 </div>
 </div>

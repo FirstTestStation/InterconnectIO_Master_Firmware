@@ -1,0 +1,5 @@
+<map id="scpi_spi_set_mode" name="scpi_spi_set_mode">
+<area shape="rect" id="node1" title="function to set the mode to use for spi communication" alt="" coords="215,31,360,57"/>
+<area shape="rect" id="node2" href="$scpi__spi_8c.html#a1c9cd652cc58e98115393248b95185cb" title="function to configure the parameters of the user spi based on the data set on the spi structure" alt="" coords="23,5,149,32"/>
+<area shape="rect" id="node3" href="$scpi__spi_8c.html#a2cb5079bd0fb6a96093c5f37f4572fd8" title="Function to update the value of databits to be used." alt="" coords="5,56,167,83"/>
+</map>

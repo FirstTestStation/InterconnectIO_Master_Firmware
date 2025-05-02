@@ -93,26 +93,27 @@ $(document).ready(function(){initNavTree('scpi__uart_8c.html',''); initResizable
 
 <p>Complete software code library to communicate to the user serial port using SCPI command.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
-<code>#include &lt;string.h&gt;</code><br />
-<code>#include &lt;ctype.h&gt;</code><br />
-<code>#include &quot;pico/stdlib.h&quot;</code><br />
-<code>#include &quot;hardware/uart.h&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="scpi__uart_8h_source.html">include/scpi_uart.h</a>&quot;</code><br />
 <code>#include &quot;hardware/irq.h&quot;</code><br />
-<code>#include &quot;<a class="el" href="scpi__uart_8h_source.html">include/scpi_uart.h</a>&quot;</code><br />
+<code>#include &quot;hardware/uart.h&quot;</code><br />
+<code>#include &quot;pico/stdlib.h&quot;</code><br />
+<code>#include &lt;ctype.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for scpi_uart.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="scpi__uart_8c__incl.png" border="0" usemap="#afirmware_2src_2scpi__uart_8c" alt=""/></div>
 <map name="afirmware_2src_2scpi__uart_8c" id="afirmware_2src_2scpi__uart_8c">
-<area shape="rect" title="Complete software code library to communicate to the user serial port using SCPI command." alt="" coords="249,5,426,32"/>
-<area shape="rect" title=" " alt="" coords="5,80,72,107"/>
-<area shape="rect" title=" " alt="" coords="97,80,167,107"/>
-<area shape="rect" title=" " alt="" coords="191,80,262,107"/>
-<area shape="rect" title=" " alt="" coords="287,80,388,107"/>
-<area shape="rect" title=" " alt="" coords="412,80,537,107"/>
-<area shape="rect" title=" " alt="" coords="562,80,678,107"/>
-<area shape="rect" href="scpi__uart_8h.html" title="Header file defining constants and macros for the uart communication." alt="" coords="703,80,847,107"/>
+<area shape="rect" title="Complete software code library to communicate to the user serial port using SCPI command." alt="" coords="426,5,603,32"/>
+<area shape="rect" href="scpi__uart_8h.html" title="Header file defining constants and macros for the uart communication." alt="" coords="5,80,149,107"/>
+<area shape="rect" title=" " alt="" coords="174,80,290,107"/>
+<area shape="rect" title=" " alt="" coords="315,80,440,107"/>
+<area shape="rect" title=" " alt="" coords="464,80,565,107"/>
+<area shape="rect" title=" " alt="" coords="590,80,661,107"/>
+<area shape="rect" title=" " alt="" coords="685,80,752,107"/>
+<area shape="rect" title=" " alt="" coords="777,80,847,107"/>
+<area shape="rect" title=" " alt="" coords="36,155,119,181"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -548,28 +549,28 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    <a class="code hl_define" href="scpi__uart_8h.html#ab10a1ba308338c61ba9da7d034b7d4f7">USER_UART</a>,           </div>
-<div class="line">    <a class="code hl_define" href="scpi__uart_8h.html#a475e9358573ed20b335ae083b108261f">DEF_USER_BAUD</a>,       </div>
-<div class="line">    <a class="code hl_define" href="scpi__uart_8h.html#a9fd6e3b732812e729e72a6ec9203038d">DEF_USER_PARITY</a>,     </div>
-<div class="line">    <a class="code hl_define" href="scpi__uart_8h.html#accaee9330a5b89340f788bd0ae2ba540">DEF_USER_BITS</a>,       </div>
-<div class="line">    <a class="code hl_define" href="scpi__uart_8h.html#a12c053b86a87119de60637ccc4dd4f86">DEF_USER_STOP</a>,       </div>
-<div class="line">    <a class="code hl_define" href="scpi__uart_8h.html#a7f410a5eaa51b5b7a962eb20abf96077">DEF_USER_HANDSHAKE</a>,  </div>
-<div class="line">    <a class="code hl_define" href="scpi__uart_8h.html#a266e7368d402e301d4e3eefd57b913b1">DEF_USER_STATUS</a>,     </div>
-<div class="line">    <a class="code hl_define" href="scpi__uart_8h.html#a475e9358573ed20b335ae083b108261f">DEF_USER_BAUD</a>,       </div>
-<div class="line">    <a class="code hl_define" href="scpi__uart_8h.html#a8039b06489690dc2aec2fc790af162ad">DEF_TIMEOUT_MS</a>,      </div>
-<div class="line">    <a class="code hl_define" href="scpi__uart_8h.html#a8946ff8fb16989090bfa173b39f71e7f">DEF_EOL</a>,             </div>
-<div class="line">    <a class="code hl_define" href="scpi__uart_8h.html#acf576a875f3b53b45cd89698e34aeec7">DEF_LASTCHAR</a>         </div>
+<div class="line">    <a class="code hl_define" href="scpi__uart_8h.html#ab10a1ba308338c61ba9da7d034b7d4f7">USER_UART</a>,          </div>
+<div class="line">    <a class="code hl_define" href="scpi__uart_8h.html#a475e9358573ed20b335ae083b108261f">DEF_USER_BAUD</a>,      </div>
+<div class="line">    <a class="code hl_define" href="scpi__uart_8h.html#a9fd6e3b732812e729e72a6ec9203038d">DEF_USER_PARITY</a>,    </div>
+<div class="line">    <a class="code hl_define" href="scpi__uart_8h.html#accaee9330a5b89340f788bd0ae2ba540">DEF_USER_BITS</a>,      </div>
+<div class="line">    <a class="code hl_define" href="scpi__uart_8h.html#a12c053b86a87119de60637ccc4dd4f86">DEF_USER_STOP</a>,      </div>
+<div class="line">    <a class="code hl_define" href="scpi__uart_8h.html#a7f410a5eaa51b5b7a962eb20abf96077">DEF_USER_HANDSHAKE</a>, </div>
+<div class="line">    <a class="code hl_define" href="scpi__uart_8h.html#a266e7368d402e301d4e3eefd57b913b1">DEF_USER_STATUS</a>,    </div>
+<div class="line">    <a class="code hl_define" href="scpi__uart_8h.html#a475e9358573ed20b335ae083b108261f">DEF_USER_BAUD</a>,      </div>
+<div class="line">    <a class="code hl_define" href="scpi__uart_8h.html#a8039b06489690dc2aec2fc790af162ad">DEF_TIMEOUT_MS</a>,     </div>
+<div class="line">    <a class="code hl_define" href="scpi__uart_8h.html#a8946ff8fb16989090bfa173b39f71e7f">DEF_EOL</a>,            </div>
+<div class="line">    <a class="code hl_define" href="scpi__uart_8h.html#acf576a875f3b53b45cd89698e34aeec7">DEF_LASTCHAR</a>        </div>
 <div class="line">}</div>
-<div class="ttc" id="ascpi__uart_8h_html_a12c053b86a87119de60637ccc4dd4f86"><div class="ttname"><a href="scpi__uart_8h.html#a12c053b86a87119de60637ccc4dd4f86">DEF_USER_STOP</a></div><div class="ttdeci">#define DEF_USER_STOP</div><div class="ttdoc">Default number of stop bits.</div><div class="ttdef"><b>Definition:</b> scpi_uart.h:44</div></div>
-<div class="ttc" id="ascpi__uart_8h_html_a266e7368d402e301d4e3eefd57b913b1"><div class="ttname"><a href="scpi__uart_8h.html#a266e7368d402e301d4e3eefd57b913b1">DEF_USER_STATUS</a></div><div class="ttdeci">#define DEF_USER_STATUS</div><div class="ttdoc">Default status (disabled)</div><div class="ttdef"><b>Definition:</b> scpi_uart.h:46</div></div>
-<div class="ttc" id="ascpi__uart_8h_html_a475e9358573ed20b335ae083b108261f"><div class="ttname"><a href="scpi__uart_8h.html#a475e9358573ed20b335ae083b108261f">DEF_USER_BAUD</a></div><div class="ttdeci">#define DEF_USER_BAUD</div><div class="ttdoc">Default configuration values for user UART.</div><div class="ttdef"><b>Definition:</b> scpi_uart.h:41</div></div>
-<div class="ttc" id="ascpi__uart_8h_html_a7f410a5eaa51b5b7a962eb20abf96077"><div class="ttname"><a href="scpi__uart_8h.html#a7f410a5eaa51b5b7a962eb20abf96077">DEF_USER_HANDSHAKE</a></div><div class="ttdeci">#define DEF_USER_HANDSHAKE</div><div class="ttdoc">Default handshake setting (no handshake)</div><div class="ttdef"><b>Definition:</b> scpi_uart.h:45</div></div>
-<div class="ttc" id="ascpi__uart_8h_html_a8039b06489690dc2aec2fc790af162ad"><div class="ttname"><a href="scpi__uart_8h.html#a8039b06489690dc2aec2fc790af162ad">DEF_TIMEOUT_MS</a></div><div class="ttdeci">#define DEF_TIMEOUT_MS</div><div class="ttdoc">Default timeout duration in milliseconds.</div><div class="ttdef"><b>Definition:</b> scpi_uart.h:47</div></div>
-<div class="ttc" id="ascpi__uart_8h_html_a8946ff8fb16989090bfa173b39f71e7f"><div class="ttname"><a href="scpi__uart_8h.html#a8946ff8fb16989090bfa173b39f71e7f">DEF_EOL</a></div><div class="ttdeci">#define DEF_EOL</div><div class="ttdoc">Default character added at the end of string (1= ' ')</div><div class="ttdef"><b>Definition:</b> scpi_uart.h:48</div></div>
-<div class="ttc" id="ascpi__uart_8h_html_a9fd6e3b732812e729e72a6ec9203038d"><div class="ttname"><a href="scpi__uart_8h.html#a9fd6e3b732812e729e72a6ec9203038d">DEF_USER_PARITY</a></div><div class="ttdeci">#define DEF_USER_PARITY</div><div class="ttdoc">Default parity setting (no parity)</div><div class="ttdef"><b>Definition:</b> scpi_uart.h:42</div></div>
-<div class="ttc" id="ascpi__uart_8h_html_ab10a1ba308338c61ba9da7d034b7d4f7"><div class="ttname"><a href="scpi__uart_8h.html#ab10a1ba308338c61ba9da7d034b7d4f7">USER_UART</a></div><div class="ttdeci">#define USER_UART</div><div class="ttdoc">uart for the user communication</div><div class="ttdef"><b>Definition:</b> scpi_uart.h:34</div></div>
-<div class="ttc" id="ascpi__uart_8h_html_accaee9330a5b89340f788bd0ae2ba540"><div class="ttname"><a href="scpi__uart_8h.html#accaee9330a5b89340f788bd0ae2ba540">DEF_USER_BITS</a></div><div class="ttdeci">#define DEF_USER_BITS</div><div class="ttdoc">Default number of data bits.</div><div class="ttdef"><b>Definition:</b> scpi_uart.h:43</div></div>
-<div class="ttc" id="ascpi__uart_8h_html_acf576a875f3b53b45cd89698e34aeec7"><div class="ttname"><a href="scpi__uart_8h.html#acf576a875f3b53b45cd89698e34aeec7">DEF_LASTCHAR</a></div><div class="ttdeci">#define DEF_LASTCHAR</div><div class="ttdoc">Default last character for received strings.</div><div class="ttdef"><b>Definition:</b> scpi_uart.h:49</div></div>
+<div class="ttc" id="ascpi__uart_8h_html_a12c053b86a87119de60637ccc4dd4f86"><div class="ttname"><a href="scpi__uart_8h.html#a12c053b86a87119de60637ccc4dd4f86">DEF_USER_STOP</a></div><div class="ttdeci">#define DEF_USER_STOP</div><div class="ttdoc">Default number of stop bits.</div><div class="ttdef"><b>Definition:</b> scpi_uart.h:46</div></div>
+<div class="ttc" id="ascpi__uart_8h_html_a266e7368d402e301d4e3eefd57b913b1"><div class="ttname"><a href="scpi__uart_8h.html#a266e7368d402e301d4e3eefd57b913b1">DEF_USER_STATUS</a></div><div class="ttdeci">#define DEF_USER_STATUS</div><div class="ttdoc">Default status (disabled)</div><div class="ttdef"><b>Definition:</b> scpi_uart.h:48</div></div>
+<div class="ttc" id="ascpi__uart_8h_html_a475e9358573ed20b335ae083b108261f"><div class="ttname"><a href="scpi__uart_8h.html#a475e9358573ed20b335ae083b108261f">DEF_USER_BAUD</a></div><div class="ttdeci">#define DEF_USER_BAUD</div><div class="ttdoc">Default configuration values for user UART.</div><div class="ttdef"><b>Definition:</b> scpi_uart.h:43</div></div>
+<div class="ttc" id="ascpi__uart_8h_html_a7f410a5eaa51b5b7a962eb20abf96077"><div class="ttname"><a href="scpi__uart_8h.html#a7f410a5eaa51b5b7a962eb20abf96077">DEF_USER_HANDSHAKE</a></div><div class="ttdeci">#define DEF_USER_HANDSHAKE</div><div class="ttdoc">Default handshake setting (no handshake)</div><div class="ttdef"><b>Definition:</b> scpi_uart.h:47</div></div>
+<div class="ttc" id="ascpi__uart_8h_html_a8039b06489690dc2aec2fc790af162ad"><div class="ttname"><a href="scpi__uart_8h.html#a8039b06489690dc2aec2fc790af162ad">DEF_TIMEOUT_MS</a></div><div class="ttdeci">#define DEF_TIMEOUT_MS</div><div class="ttdoc">Default timeout duration in milliseconds.</div><div class="ttdef"><b>Definition:</b> scpi_uart.h:49</div></div>
+<div class="ttc" id="ascpi__uart_8h_html_a8946ff8fb16989090bfa173b39f71e7f"><div class="ttname"><a href="scpi__uart_8h.html#a8946ff8fb16989090bfa173b39f71e7f">DEF_EOL</a></div><div class="ttdeci">#define DEF_EOL</div><div class="ttdoc">Default character added at the end of string (1= ' ')</div><div class="ttdef"><b>Definition:</b> scpi_uart.h:50</div></div>
+<div class="ttc" id="ascpi__uart_8h_html_a9fd6e3b732812e729e72a6ec9203038d"><div class="ttname"><a href="scpi__uart_8h.html#a9fd6e3b732812e729e72a6ec9203038d">DEF_USER_PARITY</a></div><div class="ttdeci">#define DEF_USER_PARITY</div><div class="ttdoc">Default parity setting (no parity)</div><div class="ttdef"><b>Definition:</b> scpi_uart.h:44</div></div>
+<div class="ttc" id="ascpi__uart_8h_html_ab10a1ba308338c61ba9da7d034b7d4f7"><div class="ttname"><a href="scpi__uart_8h.html#ab10a1ba308338c61ba9da7d034b7d4f7">USER_UART</a></div><div class="ttdeci">#define USER_UART</div><div class="ttdoc">uart for the user communication</div><div class="ttdef"><b>Definition:</b> scpi_uart.h:36</div></div>
+<div class="ttc" id="ascpi__uart_8h_html_accaee9330a5b89340f788bd0ae2ba540"><div class="ttname"><a href="scpi__uart_8h.html#accaee9330a5b89340f788bd0ae2ba540">DEF_USER_BITS</a></div><div class="ttdeci">#define DEF_USER_BITS</div><div class="ttdoc">Default number of data bits.</div><div class="ttdef"><b>Definition:</b> scpi_uart.h:45</div></div>
+<div class="ttc" id="ascpi__uart_8h_html_acf576a875f3b53b45cd89698e34aeec7"><div class="ttname"><a href="scpi__uart_8h.html#acf576a875f3b53b45cd89698e34aeec7">DEF_LASTCHAR</a></div><div class="ttdeci">#define DEF_LASTCHAR</div><div class="ttdoc">Default last character for received strings.</div><div class="ttdef"><b>Definition:</b> scpi_uart.h:51</div></div>
 </div><!-- fragment -->
 <p>Global structure to hold user UART communication parameters. </p>
 <p >The structure <code>u_com</code> contains various configuration settings for the UART interface, including baud rate, parity, data bits, and other communication settings. This structure is initialized with default values. </p>

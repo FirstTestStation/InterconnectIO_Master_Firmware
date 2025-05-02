@@ -1,0 +1,9 @@
+<map id="test_selftest" name="test_selftest">
+<area shape="rect" id="node1" title="Run test sequence to validate hardware with selftest board" alt="" coords="5,132,108,159"/>
+<area shape="rect" id="node2" href="$test_8c.html#a964f12386d49fd5a0df6add2daf20508" title=" " alt="" coords="187,5,275,32"/>
+<area shape="rect" id="node3" href="$dev__ds2431_8c.html#a9842d8b3b4047b13c98cc8543af98012" title="Main function to perform a read of all eeprom on 1&#45;wire link." alt="" coords="159,56,302,83"/>
+<area shape="rect" id="node4" href="$test_8c.html#ade29dc0be6bd27144ab8ac944fad90de" title="Function to print message saved on circular buffer." alt="" coords="168,107,293,133"/>
+<area shape="rect" id="node5" href="$test_8c.html#af9513558e25e8efc4248c5f6c4dcd18e" title="Send SCPI command and validate the value for PASS or FAIL. The answer value returned by command is va..." alt="" coords="175,157,286,184"/>
+<area shape="rect" id="node6" href="$test_8c.html#a3a741d0c84f19f8a596e9db8a3055383" title="Send SCPI command and validate the value for PASS or FAIL. The analog value returned by command is va..." alt="" coords="167,208,294,235"/>
+<area shape="rect" id="node7" href="$test_8c.html#a032a8eab3b1447960ec13ee39358c450" title="Tests if the given command string contains the expected substring." alt="" coords="156,259,305,285"/>
+</map>

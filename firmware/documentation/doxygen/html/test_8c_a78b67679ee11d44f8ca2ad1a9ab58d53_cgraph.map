@@ -1,0 +1,14 @@
+<map id="internal_test_sequence" name="internal_test_sequence">
+<area shape="rect" id="node1" title="Main routine to perform internal test using selftest board. The routine has been used to validate har..." alt="" coords="5,107,179,133"/>
+<area shape="rect" id="node2" href="$test_8c.html#a0c6f39b967bd2a9a74fd40a40cf54687" title="function to wait for read character from user. The loop refresh the watchdog timeout" alt="" coords="425,5,543,32"/>
+<area shape="rect" id="node3" href="$test_8c.html#ad171446f146deeb8c2c79986e0f843c7" title="The function has been used to test the scpi command function. Mainly used to validate software functi..." alt="" coords="235,132,353,159"/>
+<area shape="rect" id="node9" href="$test_8c.html#a7c4492986b11310638a7730bf6658532" title="The function perform the selftest of the instruments connected to the interconnect_IO board...." alt="" coords="227,69,361,96"/>
+<area shape="rect" id="node10" href="$test_8c.html#ac70b7d6422a8c2b63fd63ed04ed046e6" title="Run test sequence to validate hardware with selftest board" alt="" coords="243,208,345,235"/>
+<area shape="rect" id="node4" href="$dev__ina219_8c.html#ad1082efd7eef489c5ed57c7884eac570" title="Initialises the I2C block." alt="" coords="441,56,527,83"/>
+<area shape="rect" id="node5" href="$test_8c.html#a964f12386d49fd5a0df6add2daf20508" title=" " alt="" coords="440,208,528,235"/>
+<area shape="rect" id="node6" href="$test_8c.html#ade29dc0be6bd27144ab8ac944fad90de" title="Function to print message saved on circular buffer." alt="" coords="421,259,547,285"/>
+<area shape="rect" id="node7" href="$test_8c.html#af9513558e25e8efc4248c5f6c4dcd18e" title="Send SCPI command and validate the value for PASS or FAIL. The answer value returned by command is va..." alt="" coords="429,107,539,133"/>
+<area shape="rect" id="node8" href="$test_8c.html#a3a741d0c84f19f8a596e9db8a3055383" title="Send SCPI command and validate the value for PASS or FAIL. The analog value returned by command is va..." alt="" coords="421,157,547,184"/>
+<area shape="rect" id="node11" href="$dev__ds2431_8c.html#a9842d8b3b4047b13c98cc8543af98012" title="Main function to perform a read of all eeprom on 1&#45;wire link." alt="" coords="413,309,555,336"/>
+<area shape="rect" id="node12" href="$test_8c.html#a032a8eab3b1447960ec13ee39358c450" title="Tests if the given command string contains the expected substring." alt="" coords="409,360,559,387"/>
+</map>

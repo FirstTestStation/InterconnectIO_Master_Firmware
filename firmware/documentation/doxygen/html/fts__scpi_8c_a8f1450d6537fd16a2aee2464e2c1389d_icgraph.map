@@ -1,0 +1,5 @@
+<map id="ErrorBeep" name="ErrorBeep">
+<area shape="rect" id="node1" title="Send a burst of beep code to alert for boot error." alt="" coords="349,5,436,32"/>
+<area shape="rect" id="node2" href="$fts__scpi_8c.html#af42bc85669ec90cef60c7e9ff2559982" title="Set Bit on SCPI register Questionable and Operation Send Bust of Beep to signal to operator the probl..." alt="" coords="184,5,301,32"/>
+<area shape="rect" id="node3" href="$functadv_8c.html#acb717495a9c37a468e5494f571ef1607" title="Run internal board tests to verifies hardware functionality,." alt="" coords="5,5,136,32"/>
+</map>

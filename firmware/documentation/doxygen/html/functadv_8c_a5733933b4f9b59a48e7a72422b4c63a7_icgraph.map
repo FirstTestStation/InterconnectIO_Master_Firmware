@@ -1,0 +1,7 @@
+<map id="eeprom_data_valid" name="eeprom_data_valid">
+<area shape="rect" id="node1" title="This function check if the eeprom is detected and if the data is valid." alt="" coords="245,81,392,108"/>
+<area shape="rect" id="node2" href="$functadv_8c.html#a334e43ee30644a3623e33207987bad9d" title="Read the entire contents of the configuration eeprom and store data on eeprom config structure EEprom..." alt="" coords="20,5,183,32"/>
+<area shape="rect" id="node3" href="$functadv_8c.html#a84b836efc8bc5a3e76177273b7992b3f" title="Function to read and write data on the I2C configuration eeprom." alt="" coords="40,56,163,83"/>
+<area shape="rect" id="node4" href="$functadv_8c.html#ae0302adfd83eb620eb11b76936403670" title="Write the default values on EEprom. EEprom is written by page EEprom structure is global (defined on ..." alt="" coords="5,107,197,133"/>
+<area shape="rect" id="node5" href="$functadv_8c.html#acb717495a9c37a468e5494f571ef1607" title="Run internal board tests to verifies hardware functionality,." alt="" coords="36,157,167,184"/>
+</map>

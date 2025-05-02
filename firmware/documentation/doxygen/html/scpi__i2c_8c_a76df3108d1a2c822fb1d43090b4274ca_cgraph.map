@@ -1,0 +1,6 @@
+<map id="scpi_i2c_wri_read_data" name="scpi_i2c_wri_read_data">
+<area shape="rect" id="node1" title="Main function called by SCPI command to send or receive data on I2C port." alt="" coords="5,56,179,83"/>
+<area shape="rect" id="node2" href="$sys__i2c_8c.html#a2810577779f498a4feb4ac77ca881b9f" title="Read i2c buffer by byte" alt="" coords="247,5,349,32"/>
+<area shape="rect" id="node3" href="$sys__i2c_8c.html#a59f00ac8fb021f155d9390fe61d955a8" title="Write i2c buffer" alt="" coords="243,56,353,83"/>
+<area shape="rect" id="node4" href="$sys__i2c_8c.html#abde7dcba2bebdde2b8fe0371b5d8230c" title="Write i2c buffer and read byte data" alt="" coords="227,107,369,133"/>
+</map>

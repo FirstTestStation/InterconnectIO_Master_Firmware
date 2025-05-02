@@ -17,100 +17,99 @@
 \DoxyCodeLine{36 \textcolor{preprocessor}{\#define DATA\_BITS 8             }}
 \DoxyCodeLine{37 \textcolor{preprocessor}{\#define STOP\_BITS 1             }}
 \DoxyCodeLine{38 \textcolor{preprocessor}{\#define PARITY UART\_PARITY\_NONE }}
-\DoxyCodeLine{45 \textcolor{preprocessor}{\#define UART\_TX\_PIN 8 }}
-\DoxyCodeLine{46 \textcolor{preprocessor}{\#define UART\_RX\_PIN 9 }}
-\DoxyCodeLine{53 \textcolor{preprocessor}{\#undef PICO\_DEFAULT\_UART\_RX\_PIN}}
-\DoxyCodeLine{54 \textcolor{preprocessor}{\#define PICO\_DEFAULT\_UART\_RX\_PIN 9 }}
-\DoxyCodeLine{56 \textcolor{preprocessor}{\#undef PICO\_DEFAULT\_UART\_TX\_PIN}}
-\DoxyCodeLine{57 \textcolor{preprocessor}{\#define PICO\_DEFAULT\_UART\_TX\_PIN 8 }}
-\DoxyCodeLine{59 \textcolor{preprocessor}{\#undef PICO\_DEFAULT\_UART\_BAUD\_RATE}}
-\DoxyCodeLine{60 \textcolor{preprocessor}{\#define PICO\_DEFAULT\_UART\_BAUD\_RATE 115200 }}
-\DoxyCodeLine{67 \textcolor{preprocessor}{\#define CHECK "{}CHECK"{}}                 }
-\DoxyCodeLine{68 \textcolor{preprocessor}{\#define PARTNUMBER "{}PARTNUMBER"{}}       }
-\DoxyCodeLine{69 \textcolor{preprocessor}{\#define SERIALNUMBER "{}SERIALNUMBER"{}}   }
-\DoxyCodeLine{70 \textcolor{preprocessor}{\#define MOD\_OPTION "{}MOD\_OPTION"{}}       }
-\DoxyCodeLine{71 \textcolor{preprocessor}{\#define COM\_SER\_SPEED "{}COM\_SER\_SPEED"{}} }
-\DoxyCodeLine{72 \textcolor{preprocessor}{\#define COM\_SER\_ECHO "{}COM\_SER\_ECHO"{}}   }
-\DoxyCodeLine{73 \textcolor{preprocessor}{\#define PSLAVE\_RUN "{}PICO\_SLAVES\_RUN"{}}  }
-\DoxyCodeLine{74 \textcolor{preprocessor}{\#define TESTBOARD\_NUM "{}TESTBOARD\_NUM"{}} }
-\DoxyCodeLine{75 \textcolor{preprocessor}{\#define PARAMETER1 "{}PARAMETER1"{}}       }
-\DoxyCodeLine{76 \textcolor{preprocessor}{\#define PARAMETER2 "{}PARAMETER2"{}}        }
-\DoxyCodeLine{77 \textcolor{preprocessor}{\#define PARAMETER3 "{}PARAMETER3"{}}       }
-\DoxyCodeLine{78 \textcolor{preprocessor}{\#define PARAMETER4 "{}PARAMETER4"{}}       }
-\DoxyCodeLine{79 \textcolor{preprocessor}{\#define PARAMETER5 "{}PARAMETER5"{}}       }
-\DoxyCodeLine{80 \textcolor{preprocessor}{\#define TEST "{}TEST"{}}                   }
-\DoxyCodeLine{89   \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structeecfg__t}{eecfg\_t}}}
-\DoxyCodeLine{90   \{}
-\DoxyCodeLine{91     \textcolor{keywordtype}{char} \mbox{\hyperlink{structeecfg__t_a39242af8bca8a24f99aadedb809d11cc}{check}}[1];           }
-\DoxyCodeLine{92     \textcolor{keywordtype}{char} \mbox{\hyperlink{structeecfg__t_ab5541ae43dbe7deae8dace7016efd4b9}{partnumber}}[13];     }
-\DoxyCodeLine{93     \textcolor{keywordtype}{char} \mbox{\hyperlink{structeecfg__t_aa450f29c310d62f88481f1ab744248be}{serialnumber}}[6];    }
-\DoxyCodeLine{94     \textcolor{keywordtype}{char} \mbox{\hyperlink{structeecfg__t_ab202fd8330c199d5acde705e9652be59}{mod\_option}}[15];     }
-\DoxyCodeLine{95     \textcolor{keywordtype}{char} \mbox{\hyperlink{structeecfg__t_ac92941ffc66884c525bec223de13a2f0}{com\_ser\_speed}}[7];   }
-\DoxyCodeLine{96     \textcolor{keywordtype}{char} \mbox{\hyperlink{structeecfg__t_ae855817aeb35a9f7ba9a48f1def59502}{com\_ser\_echo}}[2];    }
-\DoxyCodeLine{97     \textcolor{keywordtype}{char} \mbox{\hyperlink{structeecfg__t_a1a561d25bfb780fb584c2b3c1776c6cf}{slave\_force\_run}}[2]; }
-\DoxyCodeLine{98     \textcolor{keywordtype}{char} \mbox{\hyperlink{structeecfg__t_a7906b6f906f0784a6eb7b1b4c2caecb4}{testboard\_num}}[13];  }
-\DoxyCodeLine{99     \textcolor{keywordtype}{char} \mbox{\hyperlink{structeecfg__t_a8adca3039c9ba799b0295d848be1503d}{parameter1}}[15];     }
-\DoxyCodeLine{100     \textcolor{keywordtype}{char} \mbox{\hyperlink{structeecfg__t_a8186d126f8f6db52d9a9a5d7293a66a2}{parameter2}}[15];     }
-\DoxyCodeLine{101     \textcolor{keywordtype}{char} \mbox{\hyperlink{structeecfg__t_a472f2bed2d3cd15b0ad5054993ea8211}{parameter3}}[15];     }
-\DoxyCodeLine{102     \textcolor{keywordtype}{char} \mbox{\hyperlink{structeecfg__t_a66807b211391b625fedf30b22d37f8d9}{parameter4}}[15];     }
-\DoxyCodeLine{103     \textcolor{keywordtype}{char} \mbox{\hyperlink{structeecfg__t_ab713ff4fb842ab1544ed2ea1d064f1d7}{parameter5}}[15];     }
-\DoxyCodeLine{104     \textcolor{keywordtype}{char} \mbox{\hyperlink{structeecfg__t_a34e82dded67ff5e6f1a7699f77276a6a}{test}}[90];            }
-\DoxyCodeLine{106   \} \mbox{\hyperlink{master_8h_aff604f626fb9ec96578d8e620974f9f7}{cfg}};}
-\DoxyCodeLine{107 }
-\DoxyCodeLine{111   \textcolor{keyword}{typedef} \textcolor{keyword}{union }\mbox{\hyperlink{unioneef}{eef}}}
-\DoxyCodeLine{112   \{}
-\DoxyCodeLine{113     \textcolor{keyword}{struct }\mbox{\hyperlink{structeecfg__t}{eecfg\_t}} \mbox{\hyperlink{structeecfg__t}{cfg}};     }
-\DoxyCodeLine{114     \textcolor{keywordtype}{char} \mbox{\hyperlink{unioneef_a8598cdb884d1dc3d0df9c6c04893db8b}{data}}[\textcolor{keyword}{sizeof}(\mbox{\hyperlink{unioneef_aaaec6f0358036fa7d2eeb417747784f1}{cfg}})]; }
-\DoxyCodeLine{115   \} \mbox{\hyperlink{master_8h_a6ee16918c98b75fe7c46964a9b8c34ea}{eep}};                    }
-\DoxyCodeLine{125   \textcolor{keyword}{extern} \mbox{\hyperlink{unioneef}{eep}} \mbox{\hyperlink{master_8h_a670da91be64127c92faac35c8300e814}{ee}}; }
-\DoxyCodeLine{132 \textcolor{preprocessor}{\#define EE\_CHECK\_CHAR '\#'               }}
-\DoxyCodeLine{133 \textcolor{preprocessor}{\#define EE\_PARTNUMBER "{}500-\/1000-\/010"{}}    }
-\DoxyCodeLine{134 \textcolor{preprocessor}{\#define EE\_SERIALNUMBER "{}00001"{}}         }
-\DoxyCodeLine{135 \textcolor{preprocessor}{\#define EE\_MOD\_OPTION "{}DAC,PWR"{}}         }
-\DoxyCodeLine{136 \textcolor{preprocessor}{\#define EE\_CSER\_SPEED "{}115200"{}}          }
-\DoxyCodeLine{137 \textcolor{preprocessor}{\#define EE\_CSER\_ECHO "{}0"{}}                }
-\DoxyCodeLine{138 \textcolor{preprocessor}{\#define EE\_SLAVE\_RUN "{}0"{}}                }
-\DoxyCodeLine{139 \textcolor{preprocessor}{\#define EE\_TESTBOARD\_NUM "{}500-\/1010-\/020"{}} }
-\DoxyCodeLine{140 \textcolor{preprocessor}{\#define EE\_PARAMETER1 "{}NOT\_DEFINED1"{}}     }
-\DoxyCodeLine{141 \textcolor{preprocessor}{\#define EE\_PARAMETER2 "{}NOT\_DEFINED2"{}}     }
-\DoxyCodeLine{142 \textcolor{preprocessor}{\#define EE\_PARAMETER3 "{}NOT\_DEFINED3"{}}     }
-\DoxyCodeLine{143 \textcolor{preprocessor}{\#define EE\_PARAMETER4 "{}NOT\_DEFINED4"{}}     }
-\DoxyCodeLine{144 \textcolor{preprocessor}{\#define EE\_PARAMETER5 "{}NOT\_DEFINED5"{}}     }
-\DoxyCodeLine{145 \textcolor{preprocessor}{\#define EE\_TEST       "{}TEST"{}}            }
-\DoxyCodeLine{154 \textcolor{preprocessor}{\#define DEF\_EEPROM                                                              \(\backslash\)}}
-\DoxyCodeLine{155 \textcolor{preprocessor}{\{                                                                               \(\backslash\)}}
-\DoxyCodeLine{156 \textcolor{preprocessor}{    EE\_CHECK\_CHAR,                                \(\backslash\)}}
-\DoxyCodeLine{157 \textcolor{preprocessor}{    EE\_PARTNUMBER,                                    \(\backslash\)}}
-\DoxyCodeLine{158 \textcolor{preprocessor}{    EE\_SERIALNUMBER,                                \(\backslash\)}}
-\DoxyCodeLine{159 \textcolor{preprocessor}{    EE\_MOD\_OPTION,                                         \(\backslash\)}}
-\DoxyCodeLine{160 \textcolor{preprocessor}{    EE\_CSER\_SPEED,                            \(\backslash\)}}
-\DoxyCodeLine{161 \textcolor{preprocessor}{    EE\_CSER\_ECHO,                   \(\backslash\)}}
-\DoxyCodeLine{162 \textcolor{preprocessor}{    EE\_SLAVE\_RUN,                                         \(\backslash\)}}
-\DoxyCodeLine{163 \textcolor{preprocessor}{    EE\_TESTBOARD\_NUM,                                  \(\backslash\)}}
-\DoxyCodeLine{164 \textcolor{preprocessor}{    EE\_PARAMETER1,                                  \(\backslash\)}}
-\DoxyCodeLine{165 \textcolor{preprocessor}{    EE\_PARAMETER2,                                  \(\backslash\)}}
-\DoxyCodeLine{166 \textcolor{preprocessor}{    EE\_PARAMETER3,                                  \(\backslash\)}}
-\DoxyCodeLine{167 \textcolor{preprocessor}{    EE\_PARAMETER4,                                  \(\backslash\)}}
-\DoxyCodeLine{168 \textcolor{preprocessor}{    EE\_PARAMETER5,                                  \(\backslash\)}}
-\DoxyCodeLine{169 \textcolor{preprocessor}{    EE\_TEST                                       \(\backslash\)}}
-\DoxyCodeLine{170 \textcolor{preprocessor}{                                                                                \(\backslash\)}}
-\DoxyCodeLine{171 \textcolor{preprocessor}{\}}}
-\DoxyCodeLine{172 }
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#define UART\_TX\_PIN 8 }}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#define UART\_RX\_PIN 9 }}
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#undef PICO\_DEFAULT\_UART\_RX\_PIN}}
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#define PICO\_DEFAULT\_UART\_RX\_PIN 9 }}
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#undef PICO\_DEFAULT\_UART\_TX\_PIN}}
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#define PICO\_DEFAULT\_UART\_TX\_PIN 8 }}
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#undef PICO\_DEFAULT\_UART\_BAUD\_RATE}}
+\DoxyCodeLine{62 \textcolor{preprocessor}{\#define PICO\_DEFAULT\_UART\_BAUD\_RATE 115200 }}
+\DoxyCodeLine{69 \textcolor{preprocessor}{\#define CHECK "{}CHECK"{}}                 }
+\DoxyCodeLine{70 \textcolor{preprocessor}{\#define PARTNUMBER "{}PARTNUMBER"{}}       }
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#define SERIALNUMBER "{}SERIALNUMBER"{}}   }
+\DoxyCodeLine{72 \textcolor{preprocessor}{\#define MOD\_OPTION "{}MOD\_OPTION"{}}       }
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#define COM\_SER\_SPEED "{}COM\_SER\_SPEED"{}} }
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#define COM\_SER\_ECHO "{}COM\_SER\_ECHO"{}}   }
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#define PSLAVE\_RUN "{}PICO\_SLAVES\_RUN"{}}  }
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#define TESTBOARD\_NUM "{}TESTBOARD\_NUM"{}} }
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#define PARAMETER1 "{}PARAMETER1"{}}       }
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#define PARAMETER2 "{}PARAMETER2"{}}       }
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#define PARAMETER3 "{}PARAMETER3"{}}       }
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#define PARAMETER4 "{}PARAMETER4"{}}       }
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#define PARAMETER5 "{}PARAMETER5"{}}       }
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define TEST "{}TEST"{}}                   }
+\DoxyCodeLine{91     \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structeecfg__t}{eecfg\_t}}}
+\DoxyCodeLine{92     \{}
+\DoxyCodeLine{93         \textcolor{keywordtype}{char} \mbox{\hyperlink{structeecfg__t_a39242af8bca8a24f99aadedb809d11cc}{check}}[1];           }
+\DoxyCodeLine{94         \textcolor{keywordtype}{char} \mbox{\hyperlink{structeecfg__t_ab5541ae43dbe7deae8dace7016efd4b9}{partnumber}}[13];     }
+\DoxyCodeLine{95         \textcolor{keywordtype}{char} \mbox{\hyperlink{structeecfg__t_aa450f29c310d62f88481f1ab744248be}{serialnumber}}[6];    }
+\DoxyCodeLine{96         \textcolor{keywordtype}{char} \mbox{\hyperlink{structeecfg__t_ab202fd8330c199d5acde705e9652be59}{mod\_option}}[15];     }
+\DoxyCodeLine{97         \textcolor{keywordtype}{char} \mbox{\hyperlink{structeecfg__t_ac92941ffc66884c525bec223de13a2f0}{com\_ser\_speed}}[7];   }
+\DoxyCodeLine{98         \textcolor{keywordtype}{char} \mbox{\hyperlink{structeecfg__t_ae855817aeb35a9f7ba9a48f1def59502}{com\_ser\_echo}}[2];    }
+\DoxyCodeLine{99         \textcolor{keywordtype}{char} \mbox{\hyperlink{structeecfg__t_a1a561d25bfb780fb584c2b3c1776c6cf}{slave\_force\_run}}[2]; }
+\DoxyCodeLine{101         \textcolor{keywordtype}{char} \mbox{\hyperlink{structeecfg__t_a7906b6f906f0784a6eb7b1b4c2caecb4}{testboard\_num}}[13];  }
+\DoxyCodeLine{102         \textcolor{keywordtype}{char} \mbox{\hyperlink{structeecfg__t_a8adca3039c9ba799b0295d848be1503d}{parameter1}}[15];     }
+\DoxyCodeLine{103         \textcolor{keywordtype}{char} \mbox{\hyperlink{structeecfg__t_a8186d126f8f6db52d9a9a5d7293a66a2}{parameter2}}[15];     }
+\DoxyCodeLine{104         \textcolor{keywordtype}{char} \mbox{\hyperlink{structeecfg__t_a472f2bed2d3cd15b0ad5054993ea8211}{parameter3}}[15];     }
+\DoxyCodeLine{105         \textcolor{keywordtype}{char} \mbox{\hyperlink{structeecfg__t_a66807b211391b625fedf30b22d37f8d9}{parameter4}}[15];     }
+\DoxyCodeLine{106         \textcolor{keywordtype}{char} \mbox{\hyperlink{structeecfg__t_ab713ff4fb842ab1544ed2ea1d064f1d7}{parameter5}}[15];     }
+\DoxyCodeLine{107         \textcolor{keywordtype}{char} \mbox{\hyperlink{structeecfg__t_a14e689e3b0aaa3509e42477bcb93a180}{test}}[10];           }
+\DoxyCodeLine{109     \} \mbox{\hyperlink{master_8h_aff604f626fb9ec96578d8e620974f9f7}{cfg}};}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{114     \textcolor{keyword}{typedef} \textcolor{keyword}{union }\mbox{\hyperlink{unioneef}{eef}}}
+\DoxyCodeLine{115     \{}
+\DoxyCodeLine{116         \textcolor{keyword}{struct }\mbox{\hyperlink{structeecfg__t}{eecfg\_t}} \mbox{\hyperlink{structeecfg__t}{cfg}};     }
+\DoxyCodeLine{117         \textcolor{keywordtype}{char} \mbox{\hyperlink{unioneef_a8598cdb884d1dc3d0df9c6c04893db8b}{data}}[\textcolor{keyword}{sizeof}(\mbox{\hyperlink{unioneef_aaaec6f0358036fa7d2eeb417747784f1}{cfg}})]; }
+\DoxyCodeLine{118     \} \mbox{\hyperlink{master_8h_a6ee16918c98b75fe7c46964a9b8c34ea}{eep}};                      }
+\DoxyCodeLine{128     \textcolor{keyword}{extern} \mbox{\hyperlink{unioneef}{eep}} \mbox{\hyperlink{master_8h_a670da91be64127c92faac35c8300e814}{ee}}; }
+\DoxyCodeLine{136 \textcolor{preprocessor}{\#define EE\_CHECK\_CHAR '\#'               }}
+\DoxyCodeLine{137 \textcolor{preprocessor}{\#define EE\_PARTNUMBER "{}500-\/1000-\/010"{}}    }
+\DoxyCodeLine{138 \textcolor{preprocessor}{\#define EE\_SERIALNUMBER "{}00001"{}}         }
+\DoxyCodeLine{139 \textcolor{preprocessor}{\#define EE\_MOD\_OPTION "{}DAC,PWR"{}}         }
+\DoxyCodeLine{140 \textcolor{preprocessor}{\#define EE\_CSER\_SPEED "{}115200"{}}          }
+\DoxyCodeLine{141 \textcolor{preprocessor}{\#define EE\_CSER\_ECHO "{}0"{}}                }
+\DoxyCodeLine{142 \textcolor{preprocessor}{\#define EE\_SLAVE\_RUN "{}0"{}}                }
+\DoxyCodeLine{143 \textcolor{preprocessor}{\#define EE\_TESTBOARD\_NUM "{}500-\/1010-\/020"{}} }
+\DoxyCodeLine{144 \textcolor{preprocessor}{\#define EE\_PARAMETER1 "{}NOT\_DEFINED1"{}}    }
+\DoxyCodeLine{145 \textcolor{preprocessor}{\#define EE\_PARAMETER2 "{}NOT\_DEFINED2"{}}    }
+\DoxyCodeLine{146 \textcolor{preprocessor}{\#define EE\_PARAMETER3 "{}NOT\_DEFINED3"{}}    }
+\DoxyCodeLine{147 \textcolor{preprocessor}{\#define EE\_PARAMETER4 "{}NOT\_DEFINED4"{}}    }
+\DoxyCodeLine{148 \textcolor{preprocessor}{\#define EE\_PARAMETER5 "{}NOT\_DEFINED5"{}}    }
+\DoxyCodeLine{149 \textcolor{preprocessor}{\#define EE\_TEST "{}TEST"{}}                  }
+\DoxyCodeLine{157 \textcolor{preprocessor}{\#define DEF\_EEPROM                                                                                                     \(\backslash\)}}
+\DoxyCodeLine{158 \textcolor{preprocessor}{    \{                                                                                                                  \(\backslash\)}}
+\DoxyCodeLine{159 \textcolor{preprocessor}{        EE\_CHECK\_CHAR,                                                                   \(\backslash\)}}
+\DoxyCodeLine{160 \textcolor{preprocessor}{            EE\_PARTNUMBER,                                                                   \(\backslash\)}}
+\DoxyCodeLine{161 \textcolor{preprocessor}{            EE\_SERIALNUMBER,                                                               \(\backslash\)}}
+\DoxyCodeLine{162 \textcolor{preprocessor}{            EE\_MOD\_OPTION,                                                                        \(\backslash\)}}
+\DoxyCodeLine{163 \textcolor{preprocessor}{            EE\_CSER\_SPEED,                                                           \(\backslash\)}}
+\DoxyCodeLine{164 \textcolor{preprocessor}{            EE\_CSER\_ECHO,                                                  \(\backslash\)}}
+\DoxyCodeLine{165 \textcolor{preprocessor}{            EE\_SLAVE\_RUN,                                                                        \(\backslash\)}}
+\DoxyCodeLine{166 \textcolor{preprocessor}{            EE\_TESTBOARD\_NUM,                                                                 \(\backslash\)}}
+\DoxyCodeLine{167 \textcolor{preprocessor}{            EE\_PARAMETER1,                                                                 \(\backslash\)}}
+\DoxyCodeLine{168 \textcolor{preprocessor}{            EE\_PARAMETER2,                                                                 \(\backslash\)}}
+\DoxyCodeLine{169 \textcolor{preprocessor}{            EE\_PARAMETER3,                                                                 \(\backslash\)}}
+\DoxyCodeLine{170 \textcolor{preprocessor}{            EE\_PARAMETER4,                                                                 \(\backslash\)}}
+\DoxyCodeLine{171 \textcolor{preprocessor}{            EE\_PARAMETER5,                                                                 \(\backslash\)}}
+\DoxyCodeLine{172 \textcolor{preprocessor}{            EE\_TEST                                                                      \(\backslash\)}}
+\DoxyCodeLine{173 \textcolor{preprocessor}{    \}}}
 \DoxyCodeLine{174 }
-\DoxyCodeLine{175 \textcolor{preprocessor}{\#define BEEP\_I2C\_FAIL 3   }}
-\DoxyCodeLine{176 \textcolor{preprocessor}{\#define BEEP\_EEP\_FAIL 4   }}
-\DoxyCodeLine{177 \textcolor{preprocessor}{\#define BEEP\_VSYS\_OUT 2   }}
-\DoxyCodeLine{178 \textcolor{preprocessor}{\#define BEEP\_TEMP\_HIGH 1  }}
-\DoxyCodeLine{179 \textcolor{preprocessor}{\#define BEEP\_WATCHDOG 5   }}
-\DoxyCodeLine{180 }
-\DoxyCodeLine{181 \textcolor{preprocessor}{\#define MAX\_PICO\_TEMP 60  }}
-\DoxyCodeLine{182 \textcolor{preprocessor}{\#define MAX\_VSYS\_VOLT 6   }}
-\DoxyCodeLine{183 \textcolor{preprocessor}{\#define MIN\_VSYS\_VOLT 4   }}
-\DoxyCodeLine{184 }
-\DoxyCodeLine{185 \textcolor{preprocessor}{\#define DEFAULT\_PWR\_VAL 0xc1f  }}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{177 \textcolor{preprocessor}{\#define BEEP\_I2C\_FAIL 3  }}
+\DoxyCodeLine{178 \textcolor{preprocessor}{\#define BEEP\_EEP\_FAIL 4  }}
+\DoxyCodeLine{179 \textcolor{preprocessor}{\#define BEEP\_VSYS\_OUT 2  }}
+\DoxyCodeLine{180 \textcolor{preprocessor}{\#define BEEP\_TEMP\_HIGH 1 }}
+\DoxyCodeLine{181 \textcolor{preprocessor}{\#define BEEP\_WATCHDOG 5  }}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{183 \textcolor{preprocessor}{\#define MAX\_PICO\_TEMP 60 }}
+\DoxyCodeLine{184 \textcolor{preprocessor}{\#define MAX\_VSYS\_VOLT 6  }}
+\DoxyCodeLine{185 \textcolor{preprocessor}{\#define MIN\_VSYS\_VOLT 4  }}
 \DoxyCodeLine{186 }
-\DoxyCodeLine{187   \textcolor{keywordtype}{void} \mbox{\hyperlink{master_8h_a5f6549f2d2461465f770c1b277910225}{Hardware\_Default\_Setting}}();}
+\DoxyCodeLine{187 \textcolor{preprocessor}{\#define DEFAULT\_PWR\_VAL 0xc1f }}
 \DoxyCodeLine{188 }
-\DoxyCodeLine{189 \textcolor{preprocessor}{\#endif  }}
+\DoxyCodeLine{189     \textcolor{keywordtype}{void} \mbox{\hyperlink{master_8h_a5f6549f2d2461465f770c1b277910225}{Hardware\_Default\_Setting}}();}
+\DoxyCodeLine{190 }
+\DoxyCodeLine{191 \textcolor{preprocessor}{\#endif }}
 
 \end{DoxyCode}

@@ -1,0 +1,6 @@
+<map id="test_cmd_result" name="test_cmd_result">
+<area shape="rect" id="node1" title="Send SCPI command and validate the value for PASS or FAIL. The analog value returned by command is va..." alt="" coords="393,31,520,57"/>
+<area shape="rect" id="node2" href="$test_8c.html#ad171446f146deeb8c2c79986e0f843c7" title="The function has been used to test the scpi command function. Mainly used to validate software functi..." alt="" coords="227,5,345,32"/>
+<area shape="rect" id="node4" href="$test_8c.html#ac70b7d6422a8c2b63fd63ed04ed046e6" title="Run test sequence to validate hardware with selftest board" alt="" coords="235,56,337,83"/>
+<area shape="rect" id="node3" href="$test_8c.html#a78b67679ee11d44f8ca2ad1a9ab58d53" title="Main routine to perform internal test using selftest board. The routine has been used to validate har..." alt="" coords="5,31,179,57"/>
+</map>

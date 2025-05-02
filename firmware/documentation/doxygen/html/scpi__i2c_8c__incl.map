@@ -1,13 +1,13 @@
 <map id="firmware/src/scpi_i2c.c" name="firmware/src/scpi_i2c.c">
-<area shape="rect" id="node1" title="Complete software code library to communicate to the user I2C port using SCPI command." alt="" coords="274,5,445,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="172,169,243,196"/>
-<area shape="rect" id="node3" title=" " alt="" coords="28,87,94,114"/>
-<area shape="rect" id="node4" title=" " alt="" coords="119,87,190,114"/>
-<area shape="rect" id="node5" title=" " alt="" coords="214,87,284,114"/>
-<area shape="rect" id="node6" title=" " alt="" coords="309,87,410,114"/>
-<area shape="rect" id="node7" title=" " alt="" coords="674,169,792,196"/>
-<area shape="rect" id="node8" title=" " alt="" coords="640,87,778,114"/>
-<area shape="rect" id="node9" href="$sys__i2c_8h.html" title="I2C Functions Module." alt="" coords="435,80,615,121"/>
-<area shape="rect" id="node11" href="$scpi__i2c_8h.html" title="Header file defining constants and macros for the I2C communication." alt="" coords="854,87,991,114"/>
-<area shape="rect" id="node10" title=" " alt="" coords="484,169,566,196"/>
+<area shape="rect" id="node1" title="Complete software code library to communicate to the user I2C port using SCPI command." alt="" coords="458,5,629,32"/>
+<area shape="rect" id="node2" href="$scpi__i2c_8h.html" title="Header file defining constants and macros for the I2C communication." alt="" coords="5,87,143,114"/>
+<area shape="rect" id="node4" title=" " alt="" coords="221,169,340,196"/>
+<area shape="rect" id="node5" title=" " alt="" coords="474,87,613,114"/>
+<area shape="rect" id="node6" title=" " alt="" coords="637,87,738,114"/>
+<area shape="rect" id="node7" href="$sys__i2c_8h.html" title="I2C Functions Module." alt="" coords="219,80,399,121"/>
+<area shape="rect" id="node8" title=" " alt="" coords="383,169,453,196"/>
+<area shape="rect" id="node9" title=" " alt="" coords="763,87,833,114"/>
+<area shape="rect" id="node10" title=" " alt="" coords="858,87,925,114"/>
+<area shape="rect" id="node11" title=" " alt="" coords="949,87,1020,114"/>
+<area shape="rect" id="node3" title=" " alt="" coords="87,169,170,196"/>
 </map>

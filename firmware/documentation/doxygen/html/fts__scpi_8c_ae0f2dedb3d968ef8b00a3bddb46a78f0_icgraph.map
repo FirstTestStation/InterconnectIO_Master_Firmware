@@ -1,0 +1,4 @@
+<map id="output_buffer_write" name="output_buffer_write">
+<area shape="rect" id="node1" title="Function used by module test.c to capture the SCPI answer from the SCPI command. Used to perform the ..." alt="" coords="144,5,293,32"/>
+<area shape="rect" id="node2" href="$fts__scpi_8c.html#a3645008c6823af2701d99f6ed8dbe745" title="The function write the SCPI answer to the main serial port. The answer is also saved on global variab..." alt="" coords="5,5,96,32"/>
+</map>

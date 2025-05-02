@@ -1,0 +1,4 @@
+<map id="digital_execute" name="digital_execute">
+<area shape="rect" id="node1" title="Function to execute the digital command to perform action on GPIO port located on pico slave1." alt="" coords="5,5,127,32"/>
+<area shape="rect" id="node2" href="$i2c__com_8c.html#a3f9110484e69200a1424e98797a5e12e" title="The function of the code is to read and write data on internal I2C port." alt="" coords="175,5,281,32"/>
+</map>

@@ -20,6 +20,8 @@ extern "C"
 {
 #endif
 
+#include <stdbool.h>
+
 /**
  * @def USER_I2C_SDA_PIN
  * @brief GPIO pin used for I2C SDA (Data line).
@@ -32,11 +34,11 @@ extern "C"
  */
 #define USER_I2C_SCL_PIN 7
 
-#define DEF_I2C_USER i2c1   //!< i2c1 is the user communication channel to external
-#define DEF_I2C_BAUD 1E5    //!< i2c baudrate is set at 100Khz by default
-#define DEF_I2C_ADDR 0      //!< Default device Address
-#define DEF_I2C_DATABITS 8  //!< i2c number of bits used for communication
-#define DEF_I2C_STATUS 0    //!< spi is disable by default
+#define DEF_I2C_USER i2c1  //!< i2c1 is the user communication channel to external
+#define DEF_I2C_BAUD 1E5   //!< i2c baudrate is set at 100Khz by default
+#define DEF_I2C_ADDR 0     //!< Default device Address
+#define DEF_I2C_DATABITS 8 //!< i2c number of bits used for communication
+#define DEF_I2C_STATUS 0   //!< spi is disable by default
 
 /**
  * @brief Error codes for I2C operations.
@@ -82,22 +84,22 @@ extern "C"
  */
 #define I2C_NOT_ENABLED 53
 
-  void scpi_i2c_enable(void);
-  void scpi_i2c_disable(void);
-  bool scpi_i2c_status(void);
-  void scpi_i2c_set_baudrate(uint32_t speed);
-  uint32_t scpi_i2c_get_baudrate(void);
+    void scpi_i2c_enable(void);
+    void scpi_i2c_disable(void);
+    bool scpi_i2c_status(void);
+    void scpi_i2c_set_baudrate(uint32_t speed);
+    uint32_t scpi_i2c_get_baudrate(void);
 
-  uint8_t scpi_i2c_set_databits(uint32_t num);
-  uint32_t scpi_i2c_get_databits(void);
+    uint8_t scpi_i2c_set_databits(uint32_t num);
+    uint32_t scpi_i2c_get_databits(void);
 
-  uint8_t scpi_i2c_set_address(uint32_t num);
-  uint32_t scpi_i2c_get_address(void);
+    uint8_t scpi_i2c_set_address(uint32_t num);
+    uint32_t scpi_i2c_get_address(void);
 
-  int8_t scpi_i2c_wri_read_data(uint8_t* wdata, uint8_t wlen, uint8_t* rdata, uint8_t rlen, bool* wflag);
+    int8_t scpi_i2c_wri_read_data(uint8_t* wdata, uint8_t wlen, uint8_t* rdata, uint8_t rlen, bool* wflag);
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif  // _SCPI_I2C_H_
+#endif // _SCPI_I2C_H_

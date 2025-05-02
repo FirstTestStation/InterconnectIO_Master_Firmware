@@ -1,0 +1,4 @@
+<map id="Hardware_Default_Setting" name="Hardware_Default_Setting">
+<area shape="rect" id="node1" title="Initializes the hardware to default settings." alt="" coords="108,5,301,32"/>
+<area shape="rect" id="node2" href="$master_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Firmware for the Master Pico device running on interconnectIO board." alt="" coords="5,5,60,32"/>
+</map>

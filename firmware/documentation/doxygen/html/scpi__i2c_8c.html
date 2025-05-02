@@ -94,31 +94,31 @@ $(document).ready(function(){initNavTree('scpi__i2c_8c.html',''); initResizable(
 
 <p>Complete software code library to communicate to the user I2C port using SCPI command.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
-<code>#include &lt;stdio.h&gt;</code><br />
-<code>#include &lt;ctype.h&gt;</code><br />
-<code>#include &lt;stdlib.h&gt;</code><br />
-<code>#include &quot;pico/stdlib.h&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="scpi__i2c_8h_source.html">include/scpi_i2c.h</a>&quot;</code><br />
 <code>#include &quot;hardware/i2c.h&quot;</code><br />
 <code>#include &quot;hardware/resets.h&quot;</code><br />
+<code>#include &quot;pico/stdlib.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="sys__i2c_8h_source.html">pico_lib2/src/sys/include/sys_i2c.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="scpi__i2c_8h_source.html">include/scpi_i2c.h</a>&quot;</code><br />
+<code>#include &lt;ctype.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for scpi_i2c.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="scpi__i2c_8c__incl.png" border="0" usemap="#afirmware_2src_2scpi__i2c_8c" alt=""/></div>
 <map name="afirmware_2src_2scpi__i2c_8c" id="afirmware_2src_2scpi__i2c_8c">
-<area shape="rect" title="Complete software code library to communicate to the user I2C port using SCPI command." alt="" coords="274,5,445,32"/>
-<area shape="rect" title=" " alt="" coords="172,169,243,196"/>
-<area shape="rect" title=" " alt="" coords="28,87,94,114"/>
-<area shape="rect" title=" " alt="" coords="119,87,190,114"/>
-<area shape="rect" title=" " alt="" coords="214,87,284,114"/>
-<area shape="rect" title=" " alt="" coords="309,87,410,114"/>
-<area shape="rect" title=" " alt="" coords="674,169,792,196"/>
-<area shape="rect" title=" " alt="" coords="640,87,778,114"/>
-<area shape="rect" href="sys__i2c_8h.html" title="I2C Functions Module." alt="" coords="435,80,615,121"/>
-<area shape="rect" href="scpi__i2c_8h.html" title="Header file defining constants and macros for the I2C communication." alt="" coords="854,87,991,114"/>
-<area shape="rect" title=" " alt="" coords="484,169,566,196"/>
+<area shape="rect" title="Complete software code library to communicate to the user I2C port using SCPI command." alt="" coords="458,5,629,32"/>
+<area shape="rect" href="scpi__i2c_8h.html" title="Header file defining constants and macros for the I2C communication." alt="" coords="5,87,143,114"/>
+<area shape="rect" title=" " alt="" coords="221,169,340,196"/>
+<area shape="rect" title=" " alt="" coords="474,87,613,114"/>
+<area shape="rect" title=" " alt="" coords="637,87,738,114"/>
+<area shape="rect" href="sys__i2c_8h.html" title="I2C Functions Module." alt="" coords="219,80,399,121"/>
+<area shape="rect" title=" " alt="" coords="383,169,453,196"/>
+<area shape="rect" title=" " alt="" coords="763,87,833,114"/>
+<area shape="rect" title=" " alt="" coords="858,87,925,114"/>
+<area shape="rect" title=" " alt="" coords="949,87,1020,114"/>
+<area shape="rect" title=" " alt="" coords="87,169,170,196"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -403,6 +403,17 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int8_t Error code. Returns a negative value if an error occurs. </dd></dl>
 <p >&lt; set flag to return the size of data (byte or word)</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="scpi__i2c_8c_a76df3108d1a2c822fb1d43090b4274ca_cgraph.png" border="0" usemap="#ascpi__i2c_8c_a76df3108d1a2c822fb1d43090b4274ca_cgraph" alt=""/></div>
+<map name="ascpi__i2c_8c_a76df3108d1a2c822fb1d43090b4274ca_cgraph" id="ascpi__i2c_8c_a76df3108d1a2c822fb1d43090b4274ca_cgraph">
+<area shape="rect" title="Main function called by SCPI command to send or receive data on I2C port." alt="" coords="5,56,179,83"/>
+<area shape="rect" href="sys__i2c_8c.html#a2810577779f498a4feb4ac77ca881b9f" title="Read i2c buffer by byte" alt="" coords="247,5,349,32"/>
+<area shape="rect" href="sys__i2c_8c.html#a59f00ac8fb021f155d9390fe61d955a8" title="Write i2c buffer" alt="" coords="243,56,353,83"/>
+<area shape="rect" href="sys__i2c_8c.html#abde7dcba2bebdde2b8fe0371b5d8230c" title="Write i2c buffer and read byte data" alt="" coords="227,107,369,133"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -419,17 +430,17 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    <a class="code hl_define" href="scpi__i2c_8h.html#aaec56e626f45401fa1b84e5973c74fc5">DEF_I2C_USER</a>,      </div>
-<div class="line">    <a class="code hl_define" href="scpi__i2c_8h.html#ab7bf14e0711319dead16797ab6770cd6">DEF_I2C_ADDR</a>,      </div>
-<div class="line">    <a class="code hl_define" href="scpi__i2c_8h.html#aa624f7fec4cea656f43a3a1e8564ed8e">DEF_I2C_BAUD</a>,      </div>
-<div class="line">    <a class="code hl_define" href="scpi__i2c_8h.html#af09c840cb71e0590be7bf8b935e4fb7e">DEF_I2C_DATABITS</a>,  </div>
-<div class="line">    <a class="code hl_define" href="scpi__i2c_8h.html#a3a7f86cdc0f64be0ea3ab2ee4b8b845b">DEF_I2C_STATUS</a>     </div>
+<div class="line">    <a class="code hl_define" href="scpi__i2c_8h.html#aaec56e626f45401fa1b84e5973c74fc5">DEF_I2C_USER</a>,     </div>
+<div class="line">    <a class="code hl_define" href="scpi__i2c_8h.html#ab7bf14e0711319dead16797ab6770cd6">DEF_I2C_ADDR</a>,     </div>
+<div class="line">    <a class="code hl_define" href="scpi__i2c_8h.html#aa624f7fec4cea656f43a3a1e8564ed8e">DEF_I2C_BAUD</a>,     </div>
+<div class="line">    <a class="code hl_define" href="scpi__i2c_8h.html#af09c840cb71e0590be7bf8b935e4fb7e">DEF_I2C_DATABITS</a>, </div>
+<div class="line">    <a class="code hl_define" href="scpi__i2c_8h.html#a3a7f86cdc0f64be0ea3ab2ee4b8b845b">DEF_I2C_STATUS</a>    </div>
 <div class="line">}</div>
-<div class="ttc" id="ascpi__i2c_8h_html_a3a7f86cdc0f64be0ea3ab2ee4b8b845b"><div class="ttname"><a href="scpi__i2c_8h.html#a3a7f86cdc0f64be0ea3ab2ee4b8b845b">DEF_I2C_STATUS</a></div><div class="ttdeci">#define DEF_I2C_STATUS</div><div class="ttdoc">spi is disable by default</div><div class="ttdef"><b>Definition:</b> scpi_i2c.h:39</div></div>
-<div class="ttc" id="ascpi__i2c_8h_html_aa624f7fec4cea656f43a3a1e8564ed8e"><div class="ttname"><a href="scpi__i2c_8h.html#aa624f7fec4cea656f43a3a1e8564ed8e">DEF_I2C_BAUD</a></div><div class="ttdeci">#define DEF_I2C_BAUD</div><div class="ttdoc">i2c baudrate is set at 100Khz by default</div><div class="ttdef"><b>Definition:</b> scpi_i2c.h:36</div></div>
-<div class="ttc" id="ascpi__i2c_8h_html_aaec56e626f45401fa1b84e5973c74fc5"><div class="ttname"><a href="scpi__i2c_8h.html#aaec56e626f45401fa1b84e5973c74fc5">DEF_I2C_USER</a></div><div class="ttdeci">#define DEF_I2C_USER</div><div class="ttdoc">i2c1 is the user communication channel to external</div><div class="ttdef"><b>Definition:</b> scpi_i2c.h:35</div></div>
-<div class="ttc" id="ascpi__i2c_8h_html_ab7bf14e0711319dead16797ab6770cd6"><div class="ttname"><a href="scpi__i2c_8h.html#ab7bf14e0711319dead16797ab6770cd6">DEF_I2C_ADDR</a></div><div class="ttdeci">#define DEF_I2C_ADDR</div><div class="ttdoc">Default device Address.</div><div class="ttdef"><b>Definition:</b> scpi_i2c.h:37</div></div>
-<div class="ttc" id="ascpi__i2c_8h_html_af09c840cb71e0590be7bf8b935e4fb7e"><div class="ttname"><a href="scpi__i2c_8h.html#af09c840cb71e0590be7bf8b935e4fb7e">DEF_I2C_DATABITS</a></div><div class="ttdeci">#define DEF_I2C_DATABITS</div><div class="ttdoc">i2c number of bits used for communication</div><div class="ttdef"><b>Definition:</b> scpi_i2c.h:38</div></div>
+<div class="ttc" id="ascpi__i2c_8h_html_a3a7f86cdc0f64be0ea3ab2ee4b8b845b"><div class="ttname"><a href="scpi__i2c_8h.html#a3a7f86cdc0f64be0ea3ab2ee4b8b845b">DEF_I2C_STATUS</a></div><div class="ttdeci">#define DEF_I2C_STATUS</div><div class="ttdoc">spi is disable by default</div><div class="ttdef"><b>Definition:</b> scpi_i2c.h:41</div></div>
+<div class="ttc" id="ascpi__i2c_8h_html_aa624f7fec4cea656f43a3a1e8564ed8e"><div class="ttname"><a href="scpi__i2c_8h.html#aa624f7fec4cea656f43a3a1e8564ed8e">DEF_I2C_BAUD</a></div><div class="ttdeci">#define DEF_I2C_BAUD</div><div class="ttdoc">i2c baudrate is set at 100Khz by default</div><div class="ttdef"><b>Definition:</b> scpi_i2c.h:38</div></div>
+<div class="ttc" id="ascpi__i2c_8h_html_aaec56e626f45401fa1b84e5973c74fc5"><div class="ttname"><a href="scpi__i2c_8h.html#aaec56e626f45401fa1b84e5973c74fc5">DEF_I2C_USER</a></div><div class="ttdeci">#define DEF_I2C_USER</div><div class="ttdoc">i2c1 is the user communication channel to external</div><div class="ttdef"><b>Definition:</b> scpi_i2c.h:37</div></div>
+<div class="ttc" id="ascpi__i2c_8h_html_ab7bf14e0711319dead16797ab6770cd6"><div class="ttname"><a href="scpi__i2c_8h.html#ab7bf14e0711319dead16797ab6770cd6">DEF_I2C_ADDR</a></div><div class="ttdeci">#define DEF_I2C_ADDR</div><div class="ttdoc">Default device Address.</div><div class="ttdef"><b>Definition:</b> scpi_i2c.h:39</div></div>
+<div class="ttc" id="ascpi__i2c_8h_html_af09c840cb71e0590be7bf8b935e4fb7e"><div class="ttname"><a href="scpi__i2c_8h.html#af09c840cb71e0590be7bf8b935e4fb7e">DEF_I2C_DATABITS</a></div><div class="ttdeci">#define DEF_I2C_DATABITS</div><div class="ttdoc">i2c number of bits used for communication</div><div class="ttdef"><b>Definition:</b> scpi_i2c.h:40</div></div>
 </div><!-- fragment -->
 <p>Global variable to hold the user I2C configuration. </p>
 <p >This variable is initialized with default settings for the I2C interface, including the I2C instance, device address, baud rate, data bits, and status. </p>
