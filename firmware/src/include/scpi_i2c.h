@@ -21,6 +21,7 @@ extern "C"
 #endif
 
 #include <stdbool.h>
+#include <stdint.h>
 
 /**
  * @def USER_I2C_SDA_PIN

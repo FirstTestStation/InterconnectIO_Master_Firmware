@@ -12,50 +12,54 @@
  * See the LICENSE file for more details.
  */
 
+#include <stdbool.h>
+#include <stddef.h> // For size_t
+#include <stdint.h>
+
 #ifndef test_H
-#define test_H
+#    define test_H
 
 /**
  * @def BUFFER_SIZE
  * @brief Maximum depth size of the circular buffer.
  */
-#define BUFFER_SIZE 64
+#    define BUFFER_SIZE 64
 
 /**
  * @def MESSAGE_LENGTH
  * @brief Maximum number of characters per string.
  */
-#define MESSAGE_LENGTH 120
+#    define MESSAGE_LENGTH 120
 
 /**
  * @def V
  * @brief Constant for volts.
  */
-#define V 1 ///< Volts
+#    define V 1 ///< Volts
 
 /**
  * @def I
  * @brief Constant for milliAmps.
  */
-#define I 2 ///< mA
+#    define I 2 ///< mA
 
 /**
  * @def P
  * @brief Constant for milliWatts.
  */
-#define P 3 ///< mW
+#    define P 3 ///< mW
 
 /**
  * @def S
  * @brief Constant for milliVolts.
  */
-#define S 4 ///< mV
+#    define S 4 ///< mV
 
 /**
  * @def  test buffer size
  * @brief Maximum size of the buffer used to store the SCPI answer
  */
-#define MAX_OUT_BUFFER 1024
+#    define MAX_OUT_BUFFER 1024
 
 extern char out_buffer[MAX_OUT_BUFFER];
 extern size_t out_buffer_pos;

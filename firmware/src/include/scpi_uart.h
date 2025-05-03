@@ -16,6 +16,8 @@
 #define _SCPI_UART_H_
 
 #include <stdbool.h>
+#include <stddef.h> // For size_t
+#include <stdint.h>
 
 #ifdef __cplusplus
 extern "C"

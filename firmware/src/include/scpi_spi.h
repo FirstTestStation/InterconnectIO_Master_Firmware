@@ -21,6 +21,8 @@ extern "C"
 #endif
 
 #include <stdbool.h>
+#include <stddef.h> // For size_t
+#include <stdint.h>
 
 /**
  * @brief User-defined SPI pin configurations.
