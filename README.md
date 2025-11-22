@@ -72,7 +72,7 @@ The main communication for the InterconnectIO Board is based on the SCPI standar
 
 | SCPI_COMMAND| COMMENT
 | :-----| :----- |
-|*IDN?  | Identification string
+|*IDN?  | Identification string (Project, Hardware, PartNumber SN Serial Number, Version)
 |*RST   | Reset Command
 |*CLS   | Clear Status
 |*ESE   | Standard Event Status Enable Register

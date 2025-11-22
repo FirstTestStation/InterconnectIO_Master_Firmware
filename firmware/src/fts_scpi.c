@@ -37,6 +37,17 @@
 #include "userconfig.h" // contains Major and Minor version
 
 /**
+ * @brief SCPI Identification IDN fields.
+ */
+static char idn1_manuf[] = "FirstTestStation"; // Field 1: Manufacturer (Fixed, defined locally)
+
+static char idn2_model[] = "InterconnectIO"; // Field 2: Model (Fixed, defined locally)
+
+char idn3_serial[IDN3_MAX_SIZE]; // // Field 3: Serial/Part Number,extern here
+
+char idn4_version[IDN4_MAX_SIZE]; // // Field 4: Version,extern here
+
+/**
  * @brief SCPI instance for managing SCPI command processing.
  */
 scpi_t scpi_context; ///< Holds the SCPI context instance for command execution.
@@ -410,8 +421,7 @@ scpi_result_t Relay_Chanlst(scpi_t* context, uint16_t* array)
             do
             { /* if valid, iterate over channel_list_param index while res == valid (do-while cause
                  we have to do it once) */
-                res = SCPI_ExprChannelListEntry(context, &channel_list_param, chanlst_idx, &is_range, values_from,
-                                                values_to, 4, &dimensions);
+                res = SCPI_ExprChannelListEntry(context, &channel_list_param, chanlst_idx, &is_range, values_from, values_to, 4, &dimensions);
                 if (is_range == FALSE)
                 { /* still can have multiple dimensions */
                     if (dimensions == 1)
@@ -476,8 +486,8 @@ scpi_result_t Relay_Chanlst(scpi_t* context, uint16_t* array)
                 }
                 /* increase index */
                 chanlst_idx++;
-            } while (SCPI_EXPR_OK == SCPI_ExprChannelListEntry(context, &channel_list_param, chanlst_idx, &is_range,
-                                                               values_from, values_to, 4, &dimensions));
+            } while (SCPI_EXPR_OK ==
+                     SCPI_ExprChannelListEntry(context, &channel_list_param, chanlst_idx, &is_range, values_from, values_to, 4, &dimensions));
             /* while checks, whether incremented index is valid */
         }
         /* do something at the end if needed */
@@ -1157,21 +1167,20 @@ static scpi_result_t Callback_eeprom_scpi(scpi_t* context)
     // Each parameter to Read/Write on EEPROM need to be added on this array
     // The last field (true or false is to validate if the parameter is a number or not
 
-    struct ParamInfo members[] = {
-        {CHECK, offsetof(cfg, check), sizeof(((cfg*) 0)->check), FALSE},
-        {PARTNUMBER, offsetof(cfg, partnumber), sizeof(((cfg*) 0)->partnumber), FALSE},
-        {SERIALNUMBER, offsetof(cfg, serialnumber), sizeof(((cfg*) 0)->serialnumber), FALSE},
-        {MOD_OPTION, offsetof(cfg, mod_option), sizeof(((cfg*) 0)->mod_option), FALSE},
-        {COM_SER_SPEED, offsetof(cfg, com_ser_speed), sizeof(((cfg*) 0)->com_ser_speed), TRUE},
-        {COM_SER_ECHO, offsetof(cfg, com_ser_echo), sizeof(((cfg*) 0)->com_ser_echo), TRUE},
-        {PSLAVE_RUN, offsetof(cfg, slave_force_run), sizeof(((cfg*) 0)->slave_force_run), TRUE},
-        {TESTBOARD_NUM, offsetof(cfg, testboard_num), sizeof(((cfg*) 0)->testboard_num), FALSE},
-        {PARAMETER1, offsetof(cfg, parameter1), sizeof(((cfg*) 0)->parameter1), FALSE},
-        {PARAMETER2, offsetof(cfg, parameter2), sizeof(((cfg*) 0)->parameter2), FALSE},
-        {PARAMETER3, offsetof(cfg, parameter3), sizeof(((cfg*) 0)->parameter3), FALSE},
-        {PARAMETER4, offsetof(cfg, parameter4), sizeof(((cfg*) 0)->parameter4), FALSE},
-        {PARAMETER5, offsetof(cfg, parameter5), sizeof(((cfg*) 0)->parameter5), FALSE},
-        {TEST, offsetof(cfg, test), sizeof(((cfg*) 0)->test), FALSE}
+    struct ParamInfo members[] = {{CHECK, offsetof(cfg, check), sizeof(((cfg*) 0)->check), FALSE},
+                                  {PARTNUMBER, offsetof(cfg, partnumber), sizeof(((cfg*) 0)->partnumber), FALSE},
+                                  {SERIALNUMBER, offsetof(cfg, serialnumber), sizeof(((cfg*) 0)->serialnumber), FALSE},
+                                  {MOD_OPTION, offsetof(cfg, mod_option), sizeof(((cfg*) 0)->mod_option), FALSE},
+                                  {COM_SER_SPEED, offsetof(cfg, com_ser_speed), sizeof(((cfg*) 0)->com_ser_speed), TRUE},
+                                  {COM_SER_ECHO, offsetof(cfg, com_ser_echo), sizeof(((cfg*) 0)->com_ser_echo), TRUE},
+                                  {PSLAVE_RUN, offsetof(cfg, slave_force_run), sizeof(((cfg*) 0)->slave_force_run), TRUE},
+                                  {TESTBOARD_NUM, offsetof(cfg, testboard_num), sizeof(((cfg*) 0)->testboard_num), FALSE},
+                                  {PARAMETER1, offsetof(cfg, parameter1), sizeof(((cfg*) 0)->parameter1), FALSE},
+                                  {PARAMETER2, offsetof(cfg, parameter2), sizeof(((cfg*) 0)->parameter2), FALSE},
+                                  {PARAMETER3, offsetof(cfg, parameter3), sizeof(((cfg*) 0)->parameter3), FALSE},
+                                  {PARAMETER4, offsetof(cfg, parameter4), sizeof(((cfg*) 0)->parameter4), FALSE},
+                                  {PARAMETER5, offsetof(cfg, parameter5), sizeof(((cfg*) 0)->parameter5), FALSE},
+                                  {TEST, offsetof(cfg, test), sizeof(((cfg*) 0)->test), FALSE}
 
     };
 
@@ -1262,8 +1271,7 @@ static scpi_result_t Callback_eeprom_scpi(scpi_t* context)
             {
                 if (strcmp(varname, members[i].name) == 0)
                 {
-                    fprintf(stdout, "Cfg struct parameter: %s , offset: %u, size: %u\n", varname, members[i].offset,
-                            members[i].size);
+                    fprintf(stdout, "Cfg struct parameter: %s , offset: %u, size: %u\n", varname, members[i].offset, members[i].size);
                     found = true;
                     break;
                 }
@@ -1428,8 +1436,10 @@ static scpi_result_t Callback_com_scpi(scpi_t* context)
             char str[NB_INFO];
             size_t i, j;
             j = 0;
+            size_t x = param1.len;
             strcpy(str, param1.ptr);
-            for (i = 0; i < strlen(str); i++)
+            // for (i = 0; i < strlen(str); i++)
+            for (i = 0; i < x; i++)
             {
                 // remove not informative character from string
                 if (str[i] != '\'' && str[i] != '"')
@@ -1437,6 +1447,7 @@ static scpi_result_t Callback_com_scpi(scpi_t* context)
                     winfo[j++] = str[i];
                 }
             }
+            winfo[j] = '\0'; // add end of string marker
         }
     }
 
@@ -2339,6 +2350,6 @@ scpi_command_t scpi_commands[] = {
 void init_scpi()
 {
     // Initialize the SCPI library.
-    SCPI_Init(&scpi_context, scpi_commands, &scpi_interface, scpi_units_def, SCPI_IDN1, SCPI_IDN2, SCPI_IDN3, SCPI_IDN4,
-              scpi_input_buffer, SCPI_INPUT_BUFFER_SIZE, scpi_error_queue, SCPI_ERROR_QUEUE_SIZE);
+    SCPI_Init(&scpi_context, scpi_commands, &scpi_interface, scpi_units_def, idn1_manuf, idn2_model, idn3_serial, idn4_version, scpi_input_buffer,
+              SCPI_INPUT_BUFFER_SIZE, scpi_error_queue, SCPI_ERROR_QUEUE_SIZE);
 }

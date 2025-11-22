@@ -20,6 +20,10 @@ extern "C"
 {
 #endif
 
+    // Declare the variables defined in master.c as 'extern'
+    extern char idn3_serial[];
+    extern char idn4_version[];
+
 /**
  * @brief maximum time before watchdog trig
  *
@@ -154,22 +158,22 @@ extern "C"
  * This macro assigns default values to the EEPROM structure.
  * New parameters can be added at the end of the list as needed.
  */
-#define DEF_EEPROM                                                                                                     \
-    {                                                                                                                  \
-        EE_CHECK_CHAR,        /**< EEPROM Check Character */                                                           \
-            EE_PARTNUMBER,    /**< EEPROM Part Number */                                                               \
-            EE_SERIALNUMBER,  /**< EEPROM Serial Number */                                                             \
-            EE_MOD_OPTION,    /**< Module Option */                                                                    \
-            EE_CSER_SPEED,    /**< Communication Serial Speed */                                                       \
-            EE_CSER_ECHO,     /**< Communication serial echo as integer */                                             \
-            EE_SLAVE_RUN,     /**< Slave Run Flag */                                                                   \
-            EE_TESTBOARD_NUM, /**< Test Board Number */                                                                \
-            EE_PARAMETER1,    /**< not defined paramater*/                                                             \
-            EE_PARAMETER2,    /**< not defined paramater*/                                                             \
-            EE_PARAMETER3,    /**< not defined paramater*/                                                             \
-            EE_PARAMETER4,    /**< not defined paramater*/                                                             \
-            EE_PARAMETER5,    /**< not defined paramater*/                                                             \
-            EE_TEST           /**< used to test eeprom r/w*/                                                           \
+#define DEF_EEPROM                                                                                                                                   \
+    {                                                                                                                                                \
+        EE_CHECK_CHAR,        /**< EEPROM Check Character */                                                                                         \
+            EE_PARTNUMBER,    /**< EEPROM Part Number */                                                                                             \
+            EE_SERIALNUMBER,  /**< EEPROM Serial Number */                                                                                           \
+            EE_MOD_OPTION,    /**< Module Option */                                                                                                  \
+            EE_CSER_SPEED,    /**< Communication Serial Speed */                                                                                     \
+            EE_CSER_ECHO,     /**< Communication serial echo as integer */                                                                           \
+            EE_SLAVE_RUN,     /**< Slave Run Flag */                                                                                                 \
+            EE_TESTBOARD_NUM, /**< Test Board Number */                                                                                              \
+            EE_PARAMETER1,    /**< not defined paramater*/                                                                                           \
+            EE_PARAMETER2,    /**< not defined paramater*/                                                                                           \
+            EE_PARAMETER3,    /**< not defined paramater*/                                                                                           \
+            EE_PARAMETER4,    /**< not defined paramater*/                                                                                           \
+            EE_PARAMETER5,    /**< not defined paramater*/                                                                                           \
+            EE_TEST           /**< used to test eeprom r/w*/                                                                                         \
     }
 
     //!< Add parameter on struct ParamInfo  file fts_scpi.c  around line 990

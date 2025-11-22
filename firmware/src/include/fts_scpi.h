@@ -33,13 +33,14 @@ extern "C"
  */
 #define SCPI_ERROR_QUEUE_SIZE 20 /**< Size of the SCPI error queue. */
 
-/**
- * @brief "IDN?" fields. Their meanings are "suggestions" in the standard.
- */
-#define SCPI_IDN1 "FirstTestStation" /**< Manufacturer. */
-#define SCPI_IDN2 "InterconnectIO"   /**< Model. */
-#define SCPI_IDN3 "2022A"            /**< Design Date. */
-#define SCPI_IDN4 "1.0"              /**< Design Version. */
+// Define the maximum sizes as constants accessible everywhere
+#define IDN3_MAX_SIZE 32
+#define IDN4_MAX_SIZE 16
+
+    // Declare the variable IDN fields as 'extern'.
+    // This tells the compiler the storage is allocated in another file (fts_scpi.c).
+    extern char idn3_serial[];
+    extern char idn4_version[];
 
 /**
  * @brief Maximum number of rows for relay matrix.

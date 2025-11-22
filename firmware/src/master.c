@@ -405,6 +405,11 @@ int main(void)
 
     stdio_init_all();
 
+    // Initialize IDN4 version string for SCPI identification
+    snprintf(idn4_version, IDN4_MAX_SIZE, "%d.%d", IO_MASTER_VERSION_MAJOR, IO_MASTER_VERSION_MINOR);
+    // Initialize IDN3 string by Concatenate Part Number and Serial Number
+    snprintf(idn3_serial, IDN3_MAX_SIZE, "%sSN%s", eed.cfg.partnumber, eed.cfg.serialnumber);
+
     // Required only if want to use serial ports as stdio
     // stdio_uart_init_full(UART_ID,PICO_DEFAULT_UART_BAUD_RATE,PICO_DEFAULT_UART_TX_PIN,PICO_DEFAULT_UART_RX_PIN);
 
@@ -457,8 +462,7 @@ int main(void)
         /** Heartbeat message on debug port*/
         if (mess > 1500)
         {
-            fprintf(stdout, "Heartbeat Master,Baudrate: %d, version: %d.%d\n", serspeed, IO_MASTER_VERSION_MAJOR,
-                    IO_MASTER_VERSION_MINOR);
+            fprintf(stdout, "Heartbeat Master,Baudrate: %d, version: %d.%d\n", serspeed, IO_MASTER_VERSION_MAJOR, IO_MASTER_VERSION_MINOR);
             mess = 0;
         }
 
