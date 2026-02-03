@@ -19,6 +19,10 @@
 #ifndef dev_ds2431
 #define dev_ds2431
 
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+
 /**
  * @brief GPIO pin connected to the One-Wire bus.
  */
@@ -37,7 +41,7 @@
 /**
  * @brief Test address available to check read/write during testing.
  */
-#define ADDR_TEST 0x60
+#define ADDR_TEST 0x40
 
 /**
  * @brief Size of the self-test field.
@@ -54,22 +58,22 @@
  */
 typedef struct
 {
-  uint8_t id;       /**< Chip ID. */
-  const char* name; /**< Name of the chip. */
-  uint8_t pages;    /**< Number of pages. */
-  uint8_t size;     /**< Size of the chip. */
-  bool available;   /**< Availability status of the chip. */
-} model_type;       ///< Typedef for the model structure
+    uint8_t id;       /**< Chip ID. */
+    const char* name; /**< Name of the chip. */
+    uint8_t pages;    /**< Number of pages. */
+    uint8_t size;     /**< Size of the chip. */
+    bool available;   /**< Availability status of the chip. */
+} model_type;         ///< Typedef for the model structure
 
 /**
  * @brief Structure used to contain information about each OneWire device found on the link.
  */
 struct rom
 {
-  uint8_t id[MAX_ONEWIRE][8];      /**< Contains the device ID in byte format. */
-  char idstr[MAX_ONEWIRE][16 + 1]; /**< Contains string representation of the device ID + null character. */
-  int ecode[MAX_ONEWIRE];          /**< Contains error codes for each device on the link. */
-  size_t nbid;                     /**< Counter for the number of devices found on the OneWire link. */
+    uint8_t id[MAX_ONEWIRE][8];      /**< Contains the device ID in byte format. */
+    char idstr[MAX_ONEWIRE][16 + 1]; /**< Contains string representation of the device ID + null character. */
+    int ecode[MAX_ONEWIRE];          /**< Contains error codes for each device on the link. */
+    size_t nbid;                     /**< Counter for the number of devices found on the OneWire link. */
 };
 
 /**
