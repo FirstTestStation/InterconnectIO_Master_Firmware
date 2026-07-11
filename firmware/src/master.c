@@ -54,7 +54,7 @@ static const uint32_t GPIO_MASTER_OUT_MASK = 0b000111110010011111111110000000011
 // Message queue is used to save the SCPI command received by the serial port.
 
 #define MESSAGE_SIZE 92 //!<  Maximum size of message to be send on the USB port for debug
-#define QUEUE_SIZE 12   //!<  Maximum message received and not processed
+#define QUEUE_SIZE 56   //!<  Maximum message received and not processed
 
 /**
  * @struct  MESSAGE
@@ -174,12 +174,14 @@ bool deque(MESSAGE* message, char* size)
  */
 static struct
 {
-    MESSAGE rx; ///< The received message containing character data.
-    uint8_t ch; ///< Character counter to track the number of characters received.
-    bool echo;  ///< Flag to enable or disable echoing of received characters.
-} rxser;        ///< Global instance for handling received serial data
+    MESSAGE rx;    ///< The received message containing character data.
+    uint8_t ch;    ///< Character counter to track the number of characters received.
+    bool echo;     ///< Flag to enable or disable echoing of received characters.
+    bool overflow; ///< Flag to indicate if the receive buffer has overflowed.
+} rxser;           ///< Global instance for handling received serial data
 
-eep ee; ///< Global variable representing the EEPROM data
+volatile bool overflow_reported = false; ///< To report overflow only once
+eep ee;                                  ///< Global variable representing the EEPROM data
 
 /**
  * @brief RX Main communication interrupt handler
@@ -189,20 +191,22 @@ void on_uart_rx()
 {
     while (uart_is_readable(UART_ID))
     {
-        uart_read_blocking(UART_ID, &rxser.rx.data[rxser.ch],
-                           1); // read one character and save on array
+        uart_read_blocking(UART_ID, &rxser.rx.data[rxser.ch], 1); // read one character and save on array
         // Can we send it back?
         if (uart_is_writable(UART_ID) && rxser.echo)
         {
             // send back
             uart_putc(UART_ID, rxser.rx.data[rxser.ch]); // Send ECHO
         }
-        // if line feed received or carriage return
         if (rxser.rx.data[rxser.ch] == 0x0a || rxser.rx.data[rxser.ch] == 0x0d)
-        {                                      // if end of line is received
-            rxser.rx.data[rxser.ch + 1] = 0x0; // add null termination after carriage return
-            enque(&rxser.rx, rxser.ch + 1);    // save received data & size on message queue
-            rxser.ch = 0;                      // Message received, clear counter
+        {
+
+            if (!enque(&rxser.rx, rxser.ch + 1))
+            {
+                rxser.overflow = true; // set overflow flag if queue is full
+            }
+
+            rxser.ch = 0;
         }
         else
         {
@@ -213,6 +217,7 @@ void on_uart_rx()
         }
     }
 }
+
 /**
  * @brief
  *
@@ -482,6 +487,24 @@ int main(void)
             }
             fprintf(stdout, "SCPI Command: %s \r\n", &rec.data[0]);    // send message to debug port
             result = SCPI_Input(&scpi_context, &rec.data[0], nb_char); // send command to SCPI parser
+
+            if (rxser.overflow) // check if queue overflow flag is set by ISR
+            {
+                if (!overflow_reported) // only push error once until queue has recovered
+                {
+                    SCPI_ErrorPush(&scpi_context, UART_RXQUEUE_OVERFLOW);
+                    overflow_reported = true; // don't push again until queue has recovered
+                }
+                rxser.overflow = false; // clear per-event flag regardless, so ISR can re-latch on the *next* drop
+            }
+
+            // Reset the "reported" latch once the queue actually has room again,
+            // so a *future* overflow episode can raise a fresh error.
+            if (queue.current_load < QUEUE_SIZE)
+            {
+                overflow_reported = false;
+            }
+
             sleep_ms(50);
             gpio_put(PICO_DEFAULT_LED_PIN, 1); // Turn ON board led
         }

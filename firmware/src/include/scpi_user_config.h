@@ -44,43 +44,43 @@ extern "C"
  * Each error code consists of an error identifier,
  * an associated error number, and a descriptive message.
  */
-#define LIST_OF_USER_ERRORS                                                                                            \
-    X(SCPI_RELAYS_LIST_ERROR, -185, "Relays channel list error. single dimension only")                                \
-    X(RELAY_NUMBERING_ERROR, -186, "A Relay channel is invalid and raise an error")                                    \
-    X(I2C_COMMUNICATION_ERROR, -106, "I2C internal communication error, run selftest")                                 \
-    X(VSYS_OUT_LIMITS, -302, "Voltage VSYS of Master Pico is out limit, run selftest")                                 \
-    X(TEMP_MASTER_HIGH, -303, "Internal Temperature of Master Pico is too High, run selftest")                         \
-    X(WATCHDOG_TRIG, -304, "Master Pico Watchdog Trig")                                                                \
-    X(SELFTEST_FAIL, -305, "Selftest failed")                                                                          \
-    X(NB_ONEWIRE, -371, "Number of Onewire devices is different of expected number")                                   \
-    X(STR_ONEWIRE, -372, "The Write data is different of the Read data on Onewire devices")                            \
-    X(WR_ONEWIRE, -373, "Error raise during Write - Read on Onewire devices")                                          \
-    X(WRITE_ONEWIRE, -374, "Error raise during Write action on Onewire devices")                                       \
-    X(NO_ONEWIRES, -375, "Presence of Onewire devices has not been detected")                                          \
-    X(READ_ONEWIRES, -376, "Error raise during read of Onewire devices")                                               \
-    X(HEX_VALIDID, -377, "Onewire device ID contains illegal character (hexadecimal only)")                            \
-    X(UART_NUMBER_ERROR, -378, "Uart protocol number is invalid, check value for Data_bits or Stop_bits")              \
-    X(UART_LETTER_ERROR, -379,                                                                                         \
-      "Uart protocol letter is invalid, check letter used to define parity (expected: O,N,E)")                         \
-    X(UART_PROTOCOL_ERROR, -380, "Uart protocol value is invalid, expect 3 characters on any orders ex: 8N1,7O1")      \
-    X(UART_RX_ERROR, -381, "Uart serial communication error, Timeout occur on waiting to receive char")                \
-    X(UART_LASTCHAR_ERROR, -382,                                                                                       \
-      "Uart Timeout occur on waiting to receive last character of string (last char is the same "                      \
-      "of Tx)")                                                                                                        \
-    X(UART_RXBUFFER_ERROR, -383, "Uart Receiver buffer overrun. String received too long")                             \
-    X(UART_ENABLE_ERROR, -384, "Uart Serial communication not enabled, send command to enable SERIAL")                 \
-    X(SPI_MODE_ERROR, -385, "SPI mode number is invalid, expect Mode value between 0 and 7")                           \
-    X(SPI_CS_ERROR, -386, "SPI chipselect gpio number is invalid.")                                                    \
-    X(SPI_TIMEOUT_ERROR, -387, "SPI timeout error (no device?)")                                                       \
-    X(SPI_ENABLE_ERROR, -388, "SPI master not enabled, send command to enable SPI")                                    \
-    X(MEMORY_ALLOCATION_ERROR, -389, "Internal error, memory allocation raise error.")                                 \
-    X(ARB_WORD_FORMAT_ERROR, -390, "Arbitrary block data length is odd, expect even number for word size.")            \
-    X(I2C_GENERIC_ERROR, -391, "I2C Generic Error (Error not defined).")                                               \
-    X(I2C_TIMEOUT_ERROR, -392, "I2C Operation timed out.")                                                             \
-    X(I2C_ADDRESS_NACK_ERROR, -393, "I2C No acknowledgment from the addressed device (Address NACK).")                 \
-    X(I2C_DATA_NACK_ERROR, -394, "I2C No acknowledgment after sending data.(Data NACK)")                               \
-    X(I2C_BUS_ERROR, -395, "An error occurred on the I2C bus.(Bus Error)")                                             \
-    X(I2C_ENABLE_ERROR, -396, "I2C master not enabled, send command to enable I2C")
+#define LIST_OF_USER_ERRORS                                                                                                                          \
+    X(SCPI_RELAYS_LIST_ERROR, -185, "Relays channel list error. single dimension only")                                                              \
+    X(RELAY_NUMBERING_ERROR, -186, "A Relay channel is invalid and raise an error")                                                                  \
+    X(I2C_COMMUNICATION_ERROR, -106, "I2C internal communication error, run selftest")                                                               \
+    X(VSYS_OUT_LIMITS, -302, "Voltage VSYS of Master Pico is out limit, run selftest")                                                               \
+    X(TEMP_MASTER_HIGH, -303, "Internal Temperature of Master Pico is too High, run selftest")                                                       \
+    X(WATCHDOG_TRIG, -304, "Master Pico Watchdog Trig")                                                                                              \
+    X(SELFTEST_FAIL, -305, "Selftest failed")                                                                                                        \
+    X(NB_ONEWIRE, -371, "Number of Onewire devices is different of expected number")                                                                 \
+    X(STR_ONEWIRE, -372, "The Write data is different of the Read data on Onewire devices")                                                          \
+    X(WR_ONEWIRE, -373, "Error raise during Write - Read on Onewire devices")                                                                        \
+    X(WRITE_ONEWIRE, -374, "Error raise during Write action on Onewire devices")                                                                     \
+    X(NO_ONEWIRES, -375, "Presence of Onewire devices has not been detected")                                                                        \
+    X(READ_ONEWIRES, -376, "Error raise during read of Onewire devices")                                                                             \
+    X(HEX_VALIDID, -377, "Onewire device ID contains illegal character (hexadecimal only)")                                                          \
+    X(UART_NUMBER_ERROR, -378, "Uart protocol number is invalid, check value for Data_bits or Stop_bits")                                            \
+    X(UART_LETTER_ERROR, -379, "Uart protocol letter is invalid, check letter used to define parity (expected: O,N,E)")                              \
+    X(UART_PROTOCOL_ERROR, -380, "Uart protocol value is invalid, expect 3 characters on any orders ex: 8N1,7O1")                                    \
+    X(UART_RX_ERROR, -381, "Uart serial communication error, Timeout occur on waiting to receive char")                                              \
+    X(UART_LASTCHAR_ERROR, -382,                                                                                                                     \
+      "Uart Timeout occur on waiting to receive last character of string (last char is the same "                                                    \
+      "of Tx)")                                                                                                                                      \
+    X(UART_RXBUFFER_ERROR, -383, "Uart Receiver buffer overrun. String received too long")                                                           \
+    X(UART_ENABLE_ERROR, -384, "Uart Serial communication not enabled, send command to enable SERIAL")                                               \
+    X(SPI_MODE_ERROR, -385, "SPI mode number is invalid, expect Mode value between 0 and 7")                                                         \
+    X(SPI_CS_ERROR, -386, "SPI chipselect gpio number is invalid.")                                                                                  \
+    X(SPI_TIMEOUT_ERROR, -387, "SPI timeout error (no device?)")                                                                                     \
+    X(SPI_ENABLE_ERROR, -388, "SPI master not enabled, send command to enable SPI")                                                                  \
+    X(MEMORY_ALLOCATION_ERROR, -389, "Internal error, memory allocation raise error.")                                                               \
+    X(ARB_WORD_FORMAT_ERROR, -390, "Arbitrary block data length is odd, expect even number for word size.")                                          \
+    X(I2C_GENERIC_ERROR, -391, "I2C Generic Error (Error not defined).")                                                                             \
+    X(I2C_TIMEOUT_ERROR, -392, "I2C Operation timed out.")                                                                                           \
+    X(I2C_ADDRESS_NACK_ERROR, -393, "I2C No acknowledgment from the addressed device (Address NACK).")                                               \
+    X(I2C_DATA_NACK_ERROR, -394, "I2C No acknowledgment after sending data.(Data NACK)")                                                             \
+    X(I2C_BUS_ERROR, -395, "An error occurred on the I2C bus.(Bus Error)")                                                                           \
+    X(I2C_ENABLE_ERROR, -396, "I2C master not enabled, send command to enable I2C")                                                                  \
+    X(UART_RXQUEUE_OVERFLOW, -397, "RX Queue is Full. Too many commands sent in too short a time. Add Delay.")
 
 // Definition of each bit of the Operation Condition Event Register (QER)
 #define OPER_BOOT_FAIL 0     ///< Bit 0: Indicates a boot failure.
